@@ -8,6 +8,11 @@ $(function () {
   var $sec2MainTitle = $("#sec2MainTitle");
   var $sec2ServiceTitle = $("#sec2ServiceTitle");
   var $sec2ServiceDesc = $("#sec2ServiceDesc");
+  var $sec7Track = $("#sec7Track");
+  var $sec7Cards = $sec7Track.find(".sec7-result-card");
+  var $sec7Prev = $("#sec7Prev");
+  var $sec7Next = $("#sec7Next");
+  var sec7CarouselIndex = 0;
   var sec2TabData = {
     pico: {
       image: "./assets/images/main/sec2-dul-2371.png",
@@ -85,6 +90,33 @@ $(function () {
     $sec2Tabs.find('button[data-tab="' + tabKey + '"]').closest("li").addClass("is-active");
   }
 
+  function getSec7PerView() {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      return 1;
+    }
+
+    return 2;
+  }
+
+  function renderSec7Carousel() {
+    var perView;
+    var maxIndex;
+    var cardWidth;
+
+    if (!$sec7Track.length || !$sec7Cards.length) {
+      return;
+    }
+
+    perView = getSec7PerView();
+    maxIndex = Math.max($sec7Cards.length - perView, 0);
+    sec7CarouselIndex = Math.min(sec7CarouselIndex, maxIndex);
+    cardWidth = $sec7Cards.first().outerWidth(true);
+
+    $sec7Track.css("transform", "translateX(" + -(sec7CarouselIndex * cardWidth) + "px)");
+    $sec7Prev.prop("disabled", maxIndex === 0);
+    $sec7Next.prop("disabled", maxIndex === 0);
+  }
+
   $menuButton.on("click", function () {
     $gnb.toggleClass("is-open");
   });
@@ -105,5 +137,40 @@ $(function () {
     renderSec2Tab(tabKey);
   });
 
+  $sec7Prev.on("click", function () {
+    var maxIndex = Math.max($sec7Cards.length - getSec7PerView(), 0);
+
+    if (!maxIndex) {
+      return;
+    }
+
+    if (sec7CarouselIndex === 0) {
+      sec7CarouselIndex = maxIndex;
+    } else {
+      sec7CarouselIndex -= 1;
+    }
+
+    renderSec7Carousel();
+  });
+
+  $sec7Next.on("click", function () {
+    var maxIndex = Math.max($sec7Cards.length - getSec7PerView(), 0);
+
+    if (!maxIndex) {
+      return;
+    }
+
+    if (sec7CarouselIndex >= maxIndex) {
+      sec7CarouselIndex = 0;
+    } else {
+      sec7CarouselIndex += 1;
+    }
+
+    renderSec7Carousel();
+  });
+
+  $(window).on("resize", renderSec7Carousel);
+
   renderSec2Tab("pico");
+  renderSec7Carousel();
 });
