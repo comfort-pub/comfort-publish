@@ -272,8 +272,8 @@ img {
 
 .bu6i4108-1 {
   width: 100vw;
-  height: clamp(394px, 44.7396vw, 859px);
-  top: clamp(18px, 2.9167vw, 56px);
+  height: 100%;
+  top: 0;
   transform: none;
   margin: 0;
   padding:
@@ -930,6 +930,7 @@ img {
   line-height: normal;
   letter-spacing: -0.9px;
   color: #333;
+  white-space: nowrap;
 }
 
 #sec4 .sec4-doctor strong {
@@ -945,6 +946,7 @@ img {
   line-height: normal;
   letter-spacing: -0.6px;
   color: #333;
+  white-space: nowrap;
 }
 
 #sec4 .sec4-detail-btn {
@@ -1069,8 +1071,8 @@ img {
 }
 
 #sec5 .sec5-stage {
-  --sec5-stage-width: 860px;
-  --sec5-stage-height: calc(860px * 816 / 980);
+  --sec5-stage-width: clamp(860px, 66.3076vw, 980px);
+  --sec5-stage-height: calc(var(--sec5-stage-width) * 816 / 980);
   position: absolute;
   left: 50%;
   top: clamp(130px, 9.8958vw, 190px);
@@ -1441,6 +1443,11 @@ img {
   margin-bottom: clamp(48px, 4.1667vw, 80px);
 }
 
+#sec7 .sec7-results-copy {
+  flex: 0 0 611px;
+  min-width: 611px;
+}
+
 #sec7 .sec7-results-kicker {
   font-family: "Philosopher", serif;
   font-size: clamp(18px, 1.25vw, 24px);
@@ -1456,6 +1463,7 @@ img {
   line-height: normal;
   letter-spacing: -1.3px;
   color: #333;
+  white-space: nowrap;
 }
 
 #sec7 .sec7-results-actions {
@@ -1732,11 +1740,12 @@ img {
 #sec7 .sec7-route-title {
   width: 129px;
   max-width: 100%;
-  font-size: clamp(26px, 1.875vw, 36px);
+  font-size: 36px;
   font-weight: 700;
   line-height: normal;
   letter-spacing: normal;
   color: #fff;
+  white-space: nowrap;
 }
 
 #sec7 .sec7-route-address {
@@ -2141,20 +2150,20 @@ img {
   }
 
   #sec5 {
-    height: auto;
-    min-height: auto;
-    padding: 72px 0 0;
+    height: 700px;
+    min-height: 700px;
+    padding: 62px 0 0;
   }
 
   #sec5 .sec5-stage {
-    position: relative;
-    left: auto;
-    top: auto;
+    position: absolute;
+    left: 50%;
+    top: 130px;
     bottom: auto;
-    transform: none;
-    width: min(100%, 860px);
-    height: 430px;
-    margin: 28px auto -32px;
+    transform: translateX(-50%);
+    width: 860px;
+    height: calc(860px * 816 / 980);
+    margin: 0;
   }
 
   #sec6 {
@@ -2206,6 +2215,16 @@ img {
   #sec7 .sec7-results-head {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  #sec7 .sec7-results-copy {
+    flex: none;
+    min-width: 0;
+    width: 100%;
+  }
+
+  #sec7 .sec7-results-title {
+    white-space: normal;
   }
 
   #sec7 .sec7-results-actions {
@@ -2423,45 +2442,58 @@ img {
     padding: 72px 0 0;
   }
 
-  #sec5 .sec5-inner,
+  #sec5 .sec5-inner {
+    width: min(calc(100% - 40px), 1380px);
+  }
+
   #sec6 .sec6-inner {
     width: min(calc(100% - 40px), 420px);
   }
 
   #sec5 .sec5-stage {
-    position: relative;
-    left: auto;
-    top: auto;
+    position: absolute;
+    left: 50%;
+    top: 130px;
     bottom: auto;
-    transform: none;
-    width: 100%;
-    height: 240px;
-    margin: 32px auto -20px;
+    transform: translateX(-50%);
+    width: 860px;
+    height: calc(860px * 816 / 980);
+    margin: 0;
   }
 
   #sec5 .sec5-machine--1 {
-    width: 23%;
+    left: calc(100% * 30 / 980);
+    top: 0;
+    width: calc(100% * 359 / 980);
+    height: 100%;
   }
 
   #sec5 .sec5-machine--2 {
-    left: 16%;
-    width: 26%;
+    left: calc(100% * 273 / 980);
+    top: calc(100% * 52 / 816);
+    width: calc(100% * 312 / 980);
+    height: calc(100% * 688 / 816);
   }
 
   #sec5 .sec5-machine--3 {
-    left: 43%;
-    width: 30%;
+    left: calc(100% * 464 / 980);
+    top: calc(100% * 69 / 816);
+    width: calc(100% * 325 / 980);
+    height: calc(100% * 717 / 816);
   }
 
   #sec5 .sec5-machine--4 {
-    left: 69%;
-    width: 31%;
+    left: calc(100% * 618 / 980);
+    top: calc(100% * 66 / 816);
+    width: calc(100% * 336 / 980);
+    height: calc(100% * 741 / 816);
   }
 
   #sec5 .sec5-machine-light {
-    top: 14%;
-    right: -48%;
-    width: 122%;
+    left: calc(100% * 744 / 980);
+    top: calc(100% * 186 / 816);
+    width: calc(100% * 424 / 980);
+    height: calc(100% * 211 / 816);
   }
 
   #sec6 {
@@ -2603,6 +2635,11 @@ img {
   #sec7 .sec7-route-address,
   #sec7 .sec7-route-note {
     width: 100%;
+  }
+
+  #sec7 .sec7-route-title {
+    white-space: normal;
+    font-size: 26px;
   }
 
   #sec7 .sec7-route-address,
