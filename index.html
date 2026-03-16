@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;700&family=Philosopher:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="./css/style.css" />
 </head>
-<body>
+<body class="page page--main" data-page="main">
   <div id="wrap">
     <div class="header-area">
       <header class="header">
@@ -40,8 +40,8 @@
       </div>
     </div>
 
-    <main class="container">
-      <section id="mv">
+    <main class="container page-main">
+      <section id="mv" class="page-section section--main-hero">
         <div class="mv-background"></div>
         <div class="mv-background-image"></div>
         <div class="mv-content">
@@ -53,7 +53,7 @@
         </div>
       </section>
 
-      <section id="sec2">
+      <section id="sec2" class="page-section section--main-tattoo-overview">
         <div class="sec2-layer">
           <div class="sec2-image-wrap">
             <div class="sec2-treatment-image"></div>
@@ -65,7 +65,7 @@
               <defs>
                 <path id="logo-circle-text-path" d="M 72,75 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" />
               </defs>
-              <text class="logo-ring-text" textLength="364" lengthAdjust="spacingAndGlyphs">
+              <text class="logo-ring-text" textLength="377" lengthAdjust="spacing">
                 <textPath href="#logo-circle-text-path" startOffset="0%">
                   Comfort Plastic Surgery Comfort Plastic Surgery
                 </textPath>
@@ -106,7 +106,7 @@
         </div>
       </section>
 
-      <section id="sec3">
+      <section id="sec3" class="page-section section--main-feature-highlights">
         <div class="sec3-inner">
           <div class="sec3-head">
             <p class="sec3-kicker">COMFORT PS: Tattoo Removal</p>
@@ -150,7 +150,7 @@
         </div>
       </section>
 
-      <section id="sec4">
+      <section id="sec4" class="page-section section--main-doctor-profile">
         <div class="sec4-inner">
           <div class="sec4-copy sec4-copy--top">
             <p class="sec4-kicker">COMFORT PS: Minimizing Pain</p>
@@ -180,7 +180,7 @@
         </div>
       </section>
 
-      <section id="sec5">
+      <section id="sec5" class="page-section section--main-laser-showcase">
         <div class="sec5-inner">
           <div class="sec5-head">
             <p class="sec5-kicker">Tattoo Removal: Pico Laser</p>
@@ -212,7 +212,7 @@
         </div>
       </section>
 
-      <section id="sec6">
+      <section id="sec6" class="page-section section--main-aftercare">
         <div class="sec6-inner">
           <div class="sec6-head">
             <p class="sec6-kicker">Post-Treatment Care System</p>
@@ -255,7 +255,7 @@
 
     </main>
 
-    <footer id="sec7">
+    <footer id="sec7" class="page-section section--main-contact">
       <section class="sec7-results">
         <div class="sec7-results-inner">
           <div class="sec7-results-head">
@@ -382,6 +382,12 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./js/data/site-map.js"></script>
+  <script src="./js/data/pages/main.js"></script>
+  <script src="./js/common/header-menu.js"></script>
+  <script src="./js/pages/main/sec2-tabs.js"></script>
+  <script src="./js/pages/main/sec3-cards.js"></script>
+  <script src="./js/pages/main/sec7-results.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>

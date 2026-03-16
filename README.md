@@ -1,11 +1,11 @@
 # comfort-publish
 
 컴포트성형외과 퍼블리싱 프로젝트입니다.  
-정적 HTML/CSS/JS 기반으로 구성되어 있으며, 현재는 PC 시안 중심으로 초안이 작성된 상태입니다.
+현재 구현 범위는 메인 페이지(`index.html`)이며, 이후 상세 페이지가 붙을 수 있도록 구조를 멀티페이지 기준으로 분리해두었습니다.
 
 ## 실행 방법
 
-프로젝트 루트에서 간단한 정적 서버를 띄우면 됩니다.
+프로젝트 루트에서 정적 서버를 실행합니다.
 
 ```bash
 python3 -m http.server 8000
@@ -17,45 +17,96 @@ python3 -m http.server 8000
 http://localhost:8000
 ```
 
-## 파일 구조
+## 현재 범위
+
+- 현재 구현 완료: 메인 페이지
+- 현재 엔트리 파일: `index.html`
+- 향후 상세 페이지 위치: `pages/*`
+- 공통 네비게이션/페이지 맵 데이터: `js/data/site-map.js`
+
+## 디렉터리 구조
 
 ```text
-index.html
-css/style.css
-js/main.js
-assets/images/main/*
+.
+├── index.html
+├── css
+│   ├── style.css
+│   ├── common
+│   │   └── base.css
+│   └── pages
+│       └── main
+│           ├── index.css
+│           ├── responsive.css
+│           └── sections
+│               ├── hero.css
+│               ├── tattoo-overview.css
+│               ├── feature-highlights.css
+│               ├── doctor-profile.css
+│               ├── laser-showcase.css
+│               ├── aftercare.css
+│               └── contact.css
+├── js
+│   ├── main.js
+│   ├── common
+│   │   └── header-menu.js
+│   ├── data
+│   │   ├── site-map.js
+│   │   └── pages
+│   │       └── main.js
+│   └── pages
+│       └── main
+│           ├── sec2-tabs.js
+│           ├── sec3-cards.js
+│           └── sec7-results.js
+├── pages
+│   ├── README.md
+│   ├── comfort-intro
+│   ├── tattoo-removal
+│   ├── comfort-anesthesia
+│   └── injection
+└── assets
+    └── images
 ```
 
-## 네이밍 원칙
+## 구조 원칙
 
-디자인 툴에서 넘어온 산출물식 이름 대신, 현재 코드에서는 의미 기반 이름으로 정리하는 방향을 사용합니다.
+- `css/common/*`: 사이트 공통 스타일
+- `css/pages/<page>/*`: 페이지 단위 스타일
+- `css/pages/<page>/sections/*`: 섹션 단위 스타일
+- `js/common/*`: 공통 UI 동작
+- `js/data/*`: 페이지 맵, 메뉴, 탭/결과 데이터 같은 콘텐츠성 데이터
+- `js/pages/<page>/*`: 페이지 전용 인터랙션
+- `pages/<group>/*`: 이후 추가될 상세 페이지 HTML 위치
 
-- 이미지 파일명: 화면/역할 기준으로 작성
-- 클래스명: 섹션 + 역할 기준으로 작성
-- 예시:
-  - `mv-bu6i4108.png` → `hero-clinic-interior.png`
-  - `sec2-dul-2371.png` → `tattoo-removal-treatment.png`
-  - `rectangle-1-copy` → `header-dropdown-panel`
-  - `group-11` → `gnb-list`
-  - `rectangle-40` → `quick-menu-link`
+## 페이지 맵 기준
 
-남은 파일이나 클래스도 같은 기준으로 계속 정리할 예정입니다.
+향후 확장 대상은 아래 5개 묶음입니다.
 
-## 주요 섹션
+- `메인`
+- `컴포트 소개`
+- `문신제거`
+- `컴포트 마취`
+- `주사시술`
 
-- `mv`: 메인 비주얼
-- `sec2`: 문신제거 서비스 소개 / 탭 인터랙션
-- `sec3`: 컴포트만의 강점 카드
-- `sec4`: 의료진/케어 소개
-- `sec5`: 피코 레이저 소개
-- `sec6`: 시술 후 케어 시스템 카드
-- `sec7`: 결과 캐러셀, 오시는 길, 푸터
+상세 분류는 [`pages/README.md`](/Users/kang-gwanghun/IdeaProjects/comfort-publish/pages/README.md)와 [`js/data/site-map.js`](/Users/kang-gwanghun/IdeaProjects/comfort-publish/js/data/site-map.js)에 함께 정리합니다.
+
+## 메인 페이지 데이터 분리
+
+현재 메인 페이지의 콘텐츠성 데이터는 아래로 분리했습니다.
+
+- 탭 콘텐츠 / 결과 fallback: `js/data/pages/main.js`
+- 전체 페이지군 / 메뉴 구조: `js/data/site-map.js`
+
+현재 메인 페이지의 기능 로직은 아래로 분리했습니다.
+
+- 헤더 드롭다운 메뉴: `js/common/header-menu.js`
+- `sec2` 탭 인터랙션: `js/pages/main/sec2-tabs.js`
+- `sec3` 카드 활성 상태: `js/pages/main/sec3-cards.js`
+- `sec7` 결과 캐러셀: `js/pages/main/sec7-results.js`
 
 ## sec7 결과 영역 백엔드 연동
 
-`sec7` 결과 캐러셀은 백엔드 연동 가능한 형태로 구성되어 있습니다.
-
-`index.html`의 `#sec7Carousel`에 API 주소를 넣으면 됩니다.
+`sec7` 결과 캐러셀은 API 연동 가능한 형태로 유지했습니다.
 
 ```html
 <div class="sec7-results-carousel" id="sec7Carousel" data-api-url="">
@@ -69,66 +120,9 @@ assets/images/main/*
 <div class="sec7-results-carousel" id="sec7Carousel" data-api-url="/api/results">
 ```
 
-### 지원하는 응답 형태
+지원 응답 형태:
 
 - 배열 직접 반환
-- 또는 `items`, `results`, `data` 키 내부 배열
+- 또는 `items`, `results`, `data` 내부 배열
 
-예시:
-
-```json
-{
-  "items": [
-    {
-      "round": "[손가락] 5회차",
-      "caption": "시술 후 4개월 경과",
-      "beforeImageUrl": "https://example.com/before.jpg",
-      "afterImageUrl": "https://example.com/after.jpg",
-      "beforePosition": "center",
-      "afterPosition": "center"
-    }
-  ]
-}
-```
-
-### 허용 필드명
-
-- 회차: `round`, `roundLabel`, `title`
-- 설명: `caption`, `elapsedText`, `description`
-- 비포 이미지: `beforeImageUrl`, `beforeImage`
-- 애프터 이미지: `afterImageUrl`, `afterImage`
-- 포지션: `beforePosition`, `afterPosition`
-
-API가 비어 있거나 실패하면 프론트에 들어 있는 샘플 데이터로 fallback 됩니다.
-
-## 주요 변경내용
-
-### 2026-03-13
-
-- `sec4` 타이포와 한 줄 처리 보정
-- `sec5` 피코 레이저 기기 배치 및 크기 보정
-- `sec7` 타이틀/오시는 길 레이아웃 보정
-- 이미지 파일명과 일부 클래스명을 의미 기반 네이밍으로 정리
-- `sec5` 장비 이미지, `sec7` 결과 샘플 이미지, `sec4` 의료진 이미지 자산명 정리
-- 헤더 드롭다운, 메인 비주얼, `sec2` 로고 영역의 비의미 클래스명 정리
-
-### 2026-03-12
-
-- 헤더 메뉴/활성 상태 정리
-- `sec2` 서비스 탭 및 타이틀 인터랙션 정리
-- `sec3` 카드 활성/비활성 상태 정리
-- `sec4` 카피/이미지 비율 재조정
-- `sec5` 피코 레이저 섹션 레이어 정리
-- `sec6` 케어 카드 활성/비활성 구조 정리
-- `sec7` 결과 캐러셀, 오시는 길, 푸터 구성 및 결과 API 연동 준비
-
-## 현재 상태
-
-- PC 시안 기준 초안 작성 완료
-- 반응형 완벽 대응은 아직 아님
-- MO 디자인 완료 후 별도 반영 예정
-
-## 배포 참고
-
-정적 사이트 구조이므로 GitHub Pages 사용이 가능합니다.  
-루트 엔트리 파일은 `index.html`을 유지하는 것을 권장합니다.
+API가 비어 있거나 실패하면 `js/data/pages/main.js`의 fallback 데이터를 사용합니다.

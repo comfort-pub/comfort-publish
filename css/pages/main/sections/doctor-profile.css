@@ -1,0 +1,141 @@
+#sec4 {
+  padding: clamp(110px, 8.0729vw, 155px) 0 clamp(140px, 10.4167vw, 200px);
+  background: #fff;
+}
+
+#sec4 .sec4-inner {
+  width: min(calc(100% - 40px), clamp(320px, 71.3542vw, 1370px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns:
+    minmax(300px, clamp(300px, 29.5833vw, 568px))
+    minmax(320px, clamp(320px, 33.8542vw, 650px));
+  grid-template-areas:
+    "top visual"
+    "bottom visual";
+  align-items: center;
+  justify-content: space-between;
+  column-gap: clamp(40px, 6.4063vw, 123px);
+  row-gap: clamp(50px, 4.1146vw, 79px);
+}
+
+#sec4 .sec4-copy {
+  width: 100%;
+  max-width: 568px;
+}
+
+#sec4 .sec4-copy--top {
+  grid-area: top;
+  padding-top: clamp(0px, 3.0208vw, 58px);
+}
+
+#sec4 .sec4-copy--bottom {
+  grid-area: bottom;
+}
+
+#sec4 .sec4-quote {
+  width: min(100%, 568px);
+  margin-top: clamp(34px, 2.8646vw, 55px);
+  margin-left: clamp(-8px, -0.4167vw, -1px);
+  font-family: "Noto Serif KR", serif;
+  font-size: clamp(28px, 1.875vw, 36px);
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.9px;
+  color: #333;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+#sec4 .sec4-highlight {
+  width: min(100%, 465px);
+  margin-top: clamp(50px, 4.1146vw, 79px);
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(10px, 0.8333vw, 16px);
+  font-size: clamp(28px, 1.875vw, 36px);
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.9px;
+  color: #176eae;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+#sec4 .sec4-copy--bottom .sec4-highlight {
+  margin-top: 0;
+}
+
+#sec4 .sec4-highlight span {
+  white-space: nowrap;
+}
+
+#sec4 .sec4-highlight-icon {
+  width: clamp(24px, 1.7708vw, 34px);
+  height: clamp(24px, 1.7708vw, 34px);
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  transform: translateY(-1px);
+}
+
+#sec4 .sec4-doctor {
+  width: min(100%, 219px);
+  margin-top: clamp(12px, 0.9375vw, 18px);
+  font-size: clamp(28px, 1.875vw, 36px);
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.9px;
+  color: #333;
+  white-space: nowrap;
+}
+
+#sec4 .sec4-doctor strong {
+  font-size: inherit;
+  font-weight: 700;
+}
+
+#sec4 .sec4-desc {
+  width: min(100%, 320px);
+  margin-top: clamp(12px, 0.8854vw, 17px);
+  letter-spacing: -0.6px;
+  color: #333;
+  white-space: nowrap;
+}
+
+#sec4 .sec4-detail-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 0.625vw, 12px);
+  width: clamp(132px, 8.8542vw, 170px);
+  height: clamp(44px, 2.8646vw, 55px);
+  margin-top: clamp(36px, 3.4896vw, 67px);
+  padding: clamp(14px, 0.9896vw, 19px) clamp(18px, 1.5104vw, 29px);
+  border-radius: clamp(22px, 1.4323vw, 27.5px);
+  background: #176eae;
+  color: #fff;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  font-size: clamp(14px, 0.9375vw, 18px);
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.45px;
+  white-space: nowrap;
+}
+
+#sec4 .sec4-detail-btn::after {
+  content: none;
+}
+
+#sec4 .sec4-visual {
+  grid-area: visual;
+  justify-self: end;
+  width: clamp(320px, 33.8542vw, 650px);
+  height: clamp(280px, 28.6458vw, 550px);
+  border-radius: clamp(24px, 1.5625vw, 30px);
+  background: url("../../../../assets/images/main/sec4_visual.png") no-repeat center / auto 100%;
+  box-shadow: 0 30px 70px rgba(16, 32, 45, 0.08);
+}
+

@@ -1,0 +1,271 @@
+#sec3 {
+  position: relative;
+  margin-top: clamp(84px, 8.3333vw, 160px);
+  padding: clamp(96px, 7.8125vw, 150px) 0 clamp(92px, 8.0729vw, 155px);
+  background: url("../../../../assets/images/main/sec3-feature-background.png") no-repeat center / cover;
+  overflow: hidden;
+}
+
+#sec3::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 28%, rgba(24, 110, 174, 0.22), transparent 32%),
+    linear-gradient(180deg, rgba(0, 14, 27, 0.18) 0%, rgba(0, 14, 27, 0.34) 100%);
+}
+
+#sec3 .sec3-inner {
+  position: relative;
+  z-index: 1;
+  width: min(calc(100% - 40px), clamp(320px, 74.375vw, 1428px));
+  margin: 0 auto;
+}
+
+#sec3 .sec3-head {
+  width: min(100%, clamp(320px, 46.25vw, 888px));
+  margin: 0 auto clamp(52px, 5.2083vw, 100px);
+  text-align: center;
+}
+
+#sec3 .sec3-title {
+  margin-top: clamp(24px, 1.9792vw, 38px);
+  color: #fff;
+}
+
+#sec3 .sec3-desc {
+  margin-top: clamp(24px, 2.0833vw, 40px);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+#sec3 .sec3-card-list {
+  width: min(100%, clamp(320px, 71.25vw, 1368px));
+  margin: 0 auto;
+  display: flex;
+  gap: clamp(12px, 1.0417vw, 20px);
+}
+
+#sec3 .sec3-card {
+  position: relative;
+  flex: 266 1 0;
+  min-width: 0;
+  min-height: clamp(360px, 24.2708vw, 466px);
+  padding: clamp(24px, 1.7708vw, 34px);
+  display: flex;
+  align-items: flex-end;
+  border-radius: clamp(20px, 1.3021vw, 25px);
+  overflow: hidden;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition:
+    flex-grow 0.35s ease,
+    opacity 0.25s ease,
+    filter 0.25s ease,
+    transform 0.25s ease,
+    aspect-ratio 0.35s ease;
+}
+
+#sec3 .sec3-card.is-active {
+  flex-grow: 510;
+  opacity: 1;
+  filter: none;
+}
+
+#sec3 .sec3-card:not(.is-active) {
+  opacity: 0.9;
+  filter: saturate(0.82);
+}
+
+#sec3 .sec3-card-list:hover .sec3-card,
+#sec3 .sec3-card-list:focus-within .sec3-card {
+  flex-grow: 266;
+  opacity: 0.9;
+  filter: saturate(0.82);
+}
+
+#sec3 .sec3-card-list:hover .sec3-card:hover,
+#sec3 .sec3-card-list:focus-within .sec3-card:focus-visible {
+  flex-grow: 510;
+  opacity: 1;
+  filter: none;
+}
+
+#sec3 .sec3-card:hover {
+  transform: none;
+}
+
+#sec3 .sec3-card:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 4px;
+}
+
+#sec3 .sec3-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 10, 14, 0.04) 0%, rgba(8, 10, 14, 0.72) 100%);
+  transition: background 0.3s ease;
+}
+
+#sec3 .sec3-card-copy {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  width: clamp(210px, 17.1875vw, 330px);
+}
+
+#sec3 .sec3-card-en {
+  font-family: "Philosopher", serif;
+  font-size: clamp(14px, 0.9375vw, 18px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: rgba(255, 255, 255, 0.92);
+  transition: color 0.25s ease;
+}
+
+#sec3 .sec3-card-title {
+  display: block;
+  margin-top: clamp(10px, 0.8854vw, 17px);
+  font-size: clamp(22px, 1.5625vw, 30px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -1px;
+  color: #fff;
+  word-break: keep-all;
+  transition: color 0.25s ease;
+}
+
+#sec3 .sec3-card-desc {
+  margin-top: clamp(14px, 1.1458vw, 22px);
+  font-size: clamp(14px, 0.9375vw, 18px);
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: -0.4px;
+  color: rgba(255, 255, 255, 0.88);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease,
+    max-height 0.35s ease;
+}
+
+#sec3 .sec3-card--experience .sec3-card-copy {
+  width: clamp(220px, 18.2292vw, 350px);
+}
+
+#sec3 .sec3-card.is-active .sec3-card-desc,
+#sec3 .sec3-card-list:hover .sec3-card:hover .sec3-card-desc,
+#sec3 .sec3-card-list:focus-within .sec3-card:focus-visible .sec3-card-desc {
+  opacity: 1;
+  max-height: 120px;
+}
+
+#sec3 .sec3-card-list:hover .sec3-card .sec3-card-desc,
+#sec3 .sec3-card-list:focus-within .sec3-card .sec3-card-desc {
+  opacity: 0;
+  max-height: 0;
+}
+
+#sec3 .sec3-card-list:hover .sec3-card:hover .sec3-card-desc,
+#sec3 .sec3-card-list:focus-within .sec3-card:focus-visible .sec3-card-desc {
+  opacity: 1;
+  max-height: 120px;
+}
+
+#sec3 .sec3-card.is-active .sec3-card-en,
+#sec3 .sec3-card.is-active .sec3-card-title,
+#sec3 .sec3-card.is-active .sec3-card-desc {
+  color: #2f2f2f;
+}
+
+#sec3 .sec3-card--experience {
+  background-image: url("../../../../assets/images/main/sec3-experience-card.png");
+  background-position: center;
+}
+
+#sec3 .sec3-card-list:hover .sec3-card--experience::before,
+#sec3 .sec3-card-list:focus-within .sec3-card--experience::before {
+  background: linear-gradient(180deg, rgba(8, 10, 14, 0.04) 0%, rgba(8, 10, 14, 0.72) 100%);
+}
+
+#sec3 .sec3-card--experience.is-active::before {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.62) 100%);
+}
+
+#sec3 .sec3-card-list:hover .sec3-card--experience .sec3-card-en,
+#sec3 .sec3-card-list:hover .sec3-card--experience .sec3-card-title,
+#sec3 .sec3-card-list:hover .sec3-card--experience .sec3-card-desc,
+#sec3 .sec3-card-list:focus-within .sec3-card--experience .sec3-card-en,
+#sec3 .sec3-card-list:focus-within .sec3-card--experience .sec3-card-title,
+#sec3 .sec3-card-list:focus-within .sec3-card--experience .sec3-card-desc {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+#sec3 .sec3-card-list:hover .sec3-card--experience:hover::before,
+#sec3 .sec3-card-list:focus-within .sec3-card--experience:focus-visible::before {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.62) 100%);
+}
+
+#sec3 .sec3-card-list:hover .sec3-card--experience:hover .sec3-card-en,
+#sec3 .sec3-card-list:hover .sec3-card--experience:hover .sec3-card-title,
+#sec3 .sec3-card-list:hover .sec3-card--experience:hover .sec3-card-desc,
+#sec3 .sec3-card-list:focus-within .sec3-card--experience:focus-visible .sec3-card-en,
+#sec3 .sec3-card-list:focus-within .sec3-card--experience:focus-visible .sec3-card-title,
+#sec3 .sec3-card-list:focus-within .sec3-card--experience:focus-visible .sec3-card-desc {
+  color: #2f2f2f;
+}
+
+#sec3 .sec3-card--experience.is-active .sec3-card-en,
+#sec3 .sec3-card--experience.is-active .sec3-card-title,
+#sec3 .sec3-card--experience.is-active .sec3-card-desc {
+  color: #2f2f2f;
+}
+
+#sec3 .sec3-card--pain-care {
+  background-image: url("../../../../assets/images/main/sec3-pain-care-card.png");
+  background-position: center;
+}
+
+#sec3 .sec3-card--pain-care::before {
+  background: linear-gradient(180deg, rgba(0, 18, 33, 0.14) 0%, rgba(0, 18, 33, 0.8) 100%);
+}
+
+#sec3 .sec3-card--pain-care.is-active::before,
+#sec3 .sec3-card-list:hover .sec3-card--pain-care:hover::before,
+#sec3 .sec3-card-list:focus-within .sec3-card--pain-care:focus-visible::before {
+  background: linear-gradient(180deg, rgba(0, 18, 33, 0.02) 0%, rgba(0, 18, 33, 0.12) 100%);
+}
+
+#sec3 .sec3-card--pico-laser {
+  background-image: url("../../../../assets/images/main/sec3-pico-laser-card.png");
+  background-position: center;
+}
+
+#sec3 .sec3-card--pico-laser::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+#sec3 .sec3-card--pico-laser.is-active::before,
+#sec3 .sec3-card-list:hover .sec3-card--pico-laser:hover::before,
+#sec3 .sec3-card-list:focus-within .sec3-card--pico-laser:focus-visible::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.12) 100%);
+}
+
+#sec3 .sec3-card--custom-care {
+  background-image: url("../../../../assets/images/main/sec3-custom-care-card.png");
+  background-position: center;
+}
+
+#sec3 .sec3-card--custom-care::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.68) 100%);
+}
+
+#sec3 .sec3-card--custom-care.is-active::before,
+#sec3 .sec3-card-list:hover .sec3-card--custom-care:hover::before,
+#sec3 .sec3-card-list:focus-within .sec3-card--custom-care:focus-visible::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.12) 100%);
+}
