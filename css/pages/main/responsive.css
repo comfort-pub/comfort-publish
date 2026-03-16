@@ -419,7 +419,7 @@
   }
 
   #sec2 .sec2-logo-ring .logo-ring-text {
-    font-size: clamp(14px, calc(100vw * 18 / 800), 18px);
+    font-size: clamp(16px, calc(100vw * 22 / 800), 22px);
     letter-spacing: 0;
   }
 
