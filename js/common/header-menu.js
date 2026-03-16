@@ -70,6 +70,113 @@
       $quickMenu.html(html);
     }
 
+    function clearSubmenuTransition($submenu) {
+      var submenuNode = $submenu.get(0);
+
+      if (!submenuNode || !submenuNode._submenuTransitionHandler) {
+        return;
+      }
+
+      submenuNode.removeEventListener("transitionend", submenuNode._submenuTransitionHandler);
+      submenuNode._submenuTransitionHandler = null;
+    }
+
+    function setSubmenuFocusability($submenu, isOpen) {
+      $submenu.attr("aria-hidden", isOpen ? "false" : "true");
+      $submenu.find(".mobile-menu-link").attr("tabindex", isOpen ? "0" : "-1");
+    }
+
+    function openSubmenu($submenu, immediate) {
+      var submenuNode = $submenu.get(0);
+
+      if (!submenuNode) {
+        return;
+      }
+
+      clearSubmenuTransition($submenu);
+      $submenu.prop("hidden", false).addClass("is-open");
+      setSubmenuFocusability($submenu, true);
+
+      if (immediate) {
+        submenuNode.style.height = "auto";
+        submenuNode.style.opacity = "1";
+        return;
+      }
+
+      submenuNode.style.height = "0px";
+      submenuNode.style.opacity = "0";
+      submenuNode.offsetHeight;
+      submenuNode.style.height = submenuNode.scrollHeight + "px";
+      submenuNode.style.opacity = "1";
+
+      submenuNode._submenuTransitionHandler = function (event) {
+        if (event.target !== submenuNode || event.propertyName !== "height") {
+          return;
+        }
+
+        clearSubmenuTransition($submenu);
+
+        if ($submenu.hasClass("is-open")) {
+          submenuNode.style.height = "auto";
+        }
+      };
+
+      submenuNode.addEventListener("transitionend", submenuNode._submenuTransitionHandler);
+    }
+
+    function closeSubmenu($submenu, immediate) {
+      var submenuNode = $submenu.get(0);
+
+      if (!submenuNode) {
+        return;
+      }
+
+      clearSubmenuTransition($submenu);
+      $submenu.removeClass("is-open");
+
+      if (immediate) {
+        submenuNode.style.height = "0px";
+        submenuNode.style.opacity = "0";
+        $submenu.prop("hidden", true);
+        setSubmenuFocusability($submenu, false);
+        return;
+      }
+
+      submenuNode.style.height = submenuNode.scrollHeight + "px";
+      submenuNode.style.opacity = "1";
+      submenuNode.offsetHeight;
+      submenuNode.style.height = "0px";
+      submenuNode.style.opacity = "0";
+
+      submenuNode._submenuTransitionHandler = function (event) {
+        if (event.target !== submenuNode || event.propertyName !== "height") {
+          return;
+        }
+
+        clearSubmenuTransition($submenu);
+
+        if (!$submenu.hasClass("is-open")) {
+          $submenu.prop("hidden", true);
+          setSubmenuFocusability($submenu, false);
+        }
+      };
+
+      submenuNode.addEventListener("transitionend", submenuNode._submenuTransitionHandler);
+    }
+
+    function setMobileGroupState($group, isOpen, immediate) {
+      var $submenu = $group.find(".mobile-menu-submenu");
+
+      $group.toggleClass("is-open", isOpen);
+      $group.find(".mobile-menu-toggle").attr("aria-expanded", isOpen ? "true" : "false");
+
+      if (isOpen) {
+        openSubmenu($submenu, immediate);
+      } else {
+        closeSubmenu($submenu, immediate);
+      }
+    }
+
     function setActiveDesktopMenu(menuKey) {
       if (!$gnbItems.length) {
         return;
@@ -100,7 +207,7 @@
         html += '<span class="mobile-menu-toggle-label">' + escapeHtml(menu.label) + "</span>";
         html += '<span class="mobile-menu-toggle-icon" aria-hidden="true"></span>';
         html += "</button>";
-        html += '<div class="mobile-menu-submenu"' + (isOpen ? "" : " hidden") + ">";
+        html += '<div class="mobile-menu-submenu" aria-hidden="' + (isOpen ? "false" : "true") + '"' + (isOpen ? "" : " hidden") + ">";
 
         $.each(menuItems, function (_, item) {
           var menuItem = $.isPlainObject(item) ? item : { label: item, href: "#" };
@@ -108,7 +215,7 @@
           var pageKey = escapeHtml(menuItem.pageKey || "");
           var label = escapeHtml(menuItem.label || "");
 
-          html += '<a href="' + href + '" class="mobile-menu-link" data-page-key="' + pageKey + '">' + label + "</a>";
+          html += '<a href="' + href + '" class="mobile-menu-link" data-page-key="' + pageKey + '" tabindex="' + (isOpen ? "0" : "-1") + '">' + label + "</a>";
         });
 
         html += "</div>";
@@ -118,7 +225,7 @@
       $mobileMenuGroups.html(html);
     }
 
-    function setOpenMobileGroup(menuKey) {
+    function setOpenMobileGroup(menuKey, immediate) {
       if (!$mobileMenuGroups.length) {
         return;
       }
@@ -129,22 +236,20 @@
         var $group = $(this);
         var isTarget = String($group.data("menu")) === lastOpenMenuKey;
 
-        $group.toggleClass("is-open", isTarget);
-        $group.find(".mobile-menu-toggle").attr("aria-expanded", isTarget ? "true" : "false");
-        $group.find(".mobile-menu-submenu").prop("hidden", !isTarget);
+        setMobileGroupState($group, isTarget, immediate);
       });
 
       setActiveDesktopMenu(lastOpenMenuKey);
     }
 
-    function closeMobileGroups() {
+    function closeMobileGroups(immediate) {
       if (!$mobileMenuGroups.length) {
         return;
       }
 
-      $mobileMenuGroups.find(".mobile-menu-group").removeClass("is-open");
-      $mobileMenuGroups.find(".mobile-menu-toggle").attr("aria-expanded", "false");
-      $mobileMenuGroups.find(".mobile-menu-submenu").prop("hidden", true);
+      $mobileMenuGroups.find(".mobile-menu-group").each(function () {
+        setMobileGroupState($(this), false, immediate);
+      });
     }
 
     function openMobileMenu() {
@@ -156,7 +261,7 @@
         renderMobileMenu();
       }
 
-      setOpenMobileGroup(lastOpenMenuKey);
+      setOpenMobileGroup(lastOpenMenuKey, true);
       $headerArea.addClass("is-mobile-menu-open");
       lockedScrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop || 0;
       document.body.style.setProperty("--mobile-scroll-lock-offset", (-lockedScrollTop) + "px");
@@ -221,6 +326,7 @@
 
     if ($mobileMenuGroups.length) {
       renderMobileMenu();
+      setOpenMobileGroup(defaultMenuKey, true);
 
       $mobileMenuGroups.on("click", ".mobile-menu-toggle", function () {
         var $group = $(this).closest(".mobile-menu-group");
@@ -228,9 +334,9 @@
         var isOpen = $group.hasClass("is-open");
 
         if (isOpen) {
-          closeMobileGroups();
+          closeMobileGroups(false);
         } else {
-          setOpenMobileGroup(menuKey);
+          setOpenMobileGroup(menuKey, false);
         }
       });
 
