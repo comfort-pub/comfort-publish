@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+@media (max-width: 1280px) {
+  .tattoo-floating-actions {
+    right: 20px;
+  }
+
+  .tattoo-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .page--tattoo-overview .page-section,
+  .page--tattoo-overview #sec7 {
+    scroll-margin-top: 84px;
+  }
+
+  .tattoo-floating-actions {
+    display: none;
+  }
+
+  .tattoo-hero-content {
+    width: min(calc(100% - 40px), 900px);
+    padding-bottom: 72px;
+  }
+
+  .tattoo-intro {
+    padding: 84px 0 96px;
+  }
+
+  .tattoo-intro-inner,
+  .tattoo-experience-layout,
+  .tattoo-laser-layout,
+  .tattoo-sedation-intro,
+  .tattoo-aftercare-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tattoo-intro-copy,
+  .tattoo-aftercare-copy {
+    order: 1;
+  }
+
+  .tattoo-intro-media,
+  .tattoo-aftercare-grid {
+    order: 2;
+  }
+
+  .tattoo-process-row,
+  .tattoo-process-row--reverse {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tattoo-process-row--reverse .tattoo-process-media,
+  .tattoo-process-row--reverse .tattoo-process-copy {
+    order: initial;
+  }
+
+  .tattoo-process-media,
+  .tattoo-process-copy {
+    padding: 36px 20px;
+  }
+
+  .tattoo-aftercare-grid {
+    max-width: 760px;
+  }
+
+  .tattoo-sedation-steps {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .tattoo-summary {
+    padding-bottom: 136px;
+  }
+
+  .tattoo-summary-grid {
+    gap: 28px;
+  }
+
+  .tattoo-faq-trigger {
+    grid-template-columns: 40px minmax(0, 1fr) 28px;
+    min-height: 80px;
+  }
+
+  .tattoo-faq-panel {
+    padding: 0 28px 24px 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tattoo-section-inner,
+  .tattoo-faq-inner,
+  .tattoo-hero-content {
+    width: calc(100% - 40px);
+  }
+
+  .tattoo-section-title,
+  .tattoo-difference-title,
+  .tattoo-summary-title,
+  .tattoo-faq-title,
+  .tattoo-commitment-title,
+  .tattoo-quality-title {
+    font-size: clamp(30px, 8.5vw, 40px);
+  }
+
+  .tattoo-hero-title {
+    font-size: clamp(32px, 9vw, 42px);
+  }
+
+  .tattoo-hero-kicker {
+    font-size: clamp(28px, 8.2vw, 38px);
+  }
+
+  .tattoo-panel-title,
+  .tattoo-process-title,
+  .tattoo-laser-title,
+  .tattoo-sedation-title,
+  .tattoo-experience-name,
+  .tattoo-aftercare-title {
+    font-size: clamp(28px, 7.4vw, 34px);
+  }
+
+  .tattoo-result-grid,
+  .tattoo-aftercare-grid,
+  .tattoo-summary-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tattoo-aftercare-card {
+    min-height: auto;
+    border-right: 0;
+  }
+
+  .tattoo-aftercare-card:nth-last-child(-n + 2) {
+    border-bottom: 1px solid rgba(24, 49, 77, 0.08);
+  }
+
+  .tattoo-aftercare-card:last-child {
+    border-bottom: 0;
+  }
+
+  .tattoo-venn {
+    width: 100%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tattoo-venn-plus {
+    font-size: 48px;
+  }
+
+  .tattoo-quality-points {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tattoo-quality-point {
+    width: min(100%, 260px);
+  }
+
+  .tattoo-faq-trigger {
+    column-gap: 6px;
+  }
+}

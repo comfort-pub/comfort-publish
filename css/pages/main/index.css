@@ -25,12 +25,18 @@
 #sec4 .sec4-kicker,
 #sec5 .sec5-kicker,
 #sec6 .sec6-kicker,
-#sec7 .sec7-results-kicker {
+#sec7 .sec7-results-kicker,
+.page--main .section-kicker-common {
   font-family: "Philosopher", serif;
   font-size: var(--main-kicker-font-size);
   font-weight: 400;
   line-height: 1.2;
   color: #176eae;
+}
+
+.page--main .section-kicker-common--center {
+  justify-content: center;
+  width: 100%;
 }
 
 #sec2 .sec2-service-title,
@@ -43,7 +49,8 @@
 #sec3 .sec3-desc,
 #sec4 .sec4-desc,
 #sec5 .sec5-desc,
-#sec6 .sec6-card-overlay-desc {
+#sec6 .sec6-card-overlay-desc,
+.page--main .section-desc-common {
   font-size: var(--main-body-font-size);
   font-weight: 300;
   line-height: 1.6;
@@ -53,11 +60,36 @@
 #sec3 .sec3-title,
 #sec5 .sec5-title,
 #sec6 .sec6-title,
-#sec7 .sec7-results-title {
+#sec7 .sec7-results-title,
+.page--main .section-title-common {
   font-size: var(--main-title-font-size);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -1.3px;
+}
+
+.page--main .detail-btn-common {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 0.625vw, 12px);
+  width: clamp(132px, 8.8542vw, 170px);
+  height: clamp(44px, 2.8646vw, 55px);
+  margin-top: clamp(28px, 2.1875vw, 42px);
+  padding: clamp(14px, 0.9896vw, 19px) clamp(18px, 1.5104vw, 29px);
+  border-radius: clamp(22px, 1.4323vw, 27.5px);
+  background: #176eae;
+  color: #fff;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  font-size: clamp(14px, 0.9375vw, 18px);
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.45px;
+  white-space: nowrap;
+}
+
+.page--main .detail-btn-common::after {
+  content: none;
 }
 
 .btn-arrow-icon {
