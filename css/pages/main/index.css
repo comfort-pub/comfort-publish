@@ -16,6 +16,17 @@
   display: block;
 }
 
+.page--main[data-page="main"] .scroll-reveal {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+  will-change: auto;
+}
+
+.page--main[data-page="main"] .scroll-reveal.is-visible {
+  animation: none;
+}
+
 .page-section {
   position: relative;
 }

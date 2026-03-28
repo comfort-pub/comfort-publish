@@ -52,9 +52,26 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .tattoo-process::before {
+    display: none;
+  }
+
+  .tattoo-process-grid::before,
+  .tattoo-process-row::after {
+    left: 0;
+    width: 100%;
+    transform: none;
+  }
+
   .tattoo-process-row--reverse .tattoo-process-media,
   .tattoo-process-row--reverse .tattoo-process-copy {
     order: initial;
+  }
+
+  .tattoo-process-media,
+  .tattoo-process-row--reverse .tattoo-process-media {
+    border-right: 0;
+    border-left: 0;
   }
 
   .tattoo-process-media,
@@ -68,7 +85,12 @@
 
   .tattoo-sedation-steps {
     grid-template-columns: minmax(0, 1fr);
+    width: 100%;
     gap: 40px;
+  }
+
+  .tattoo-sedation-steps::before {
+    display: none;
   }
 
   .tattoo-summary {
@@ -122,10 +144,45 @@
     font-size: clamp(28px, 7.4vw, 34px);
   }
 
-  .tattoo-result-grid,
   .tattoo-aftercare-grid,
   .tattoo-summary-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tattoo-result-carousel {
+    width: min(100%, 100%);
+  }
+
+  .tattoo-result-card {
+    flex-basis: calc(100vw - 40px);
+    width: calc(100vw - 40px);
+    padding: 28px 20px;
+  }
+
+  .tattoo-result-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .tattoo-result-slot,
+  .media-placeholder--result {
+    width: 100%;
+  }
+
+  .tattoo-difference-title,
+  .tattoo-panel-title {
+    white-space: normal;
+  }
+
+  .tattoo-commitment {
+    min-height: auto;
+    padding: 84px 0;
+  }
+
+  .tattoo-commitment-inner,
+  .tattoo-commitment-title,
+  .tattoo-commitment-desc {
+    width: 100%;
   }
 
   .tattoo-aftercare-card {

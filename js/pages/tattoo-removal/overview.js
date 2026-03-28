@@ -5,21 +5,125 @@
   site.modules.initTattooOverview = function initTattooOverview(options) {
     var $faqItems = options.faqItems || $();
     var $scrollTopButton = options.scrollTopButton || $();
+    var $resultCarousel = options.resultCarousel || $();
+    var $resultDots = options.resultDots || $();
+    var $aftercareCards = options.aftercareCards || $();
+    var resultTimerId = null;
+    var currentResultIndex = 0;
+    var resultScrollSyncTimerId = null;
 
-    function setFaqItemState($item, isOpen) {
+    function setActiveResultDot(index) {
+      $resultDots.removeClass("is-active");
+      $resultDots.eq(index).addClass("is-active");
+    }
+
+    function scrollResultTo($carousel, $cards, index, behavior) {
+      var card = $cards.get(index);
+      var cardWidth;
+      var targetLeft;
+
+      if (!card) {
+        return;
+      }
+
+      cardWidth = $cards.first().outerWidth(true);
+      targetLeft = cardWidth * index;
+
+      $carousel.get(0).scrollTo({
+        left: targetLeft,
+        behavior: behavior || "smooth"
+      });
+      currentResultIndex = index;
+      setActiveResultDot(index);
+    }
+
+    function syncResultIndexFromScroll($carousel, $cards) {
+      var scrollLeft = $carousel.scrollLeft();
+      var cardWidth = $cards.first().outerWidth(true);
+      var nearestIndex = 0;
+
+      if (cardWidth) {
+        nearestIndex = Math.round(scrollLeft / cardWidth);
+      }
+
+      nearestIndex = Math.max(0, Math.min(nearestIndex, $cards.length - 1));
+
+      currentResultIndex = nearestIndex;
+      setActiveResultDot(nearestIndex);
+    }
+
+    function startResultAutoplay($carousel, $cards) {
+      if (!$carousel.length || $cards.length < 2) {
+        return;
+      }
+
+      if (resultTimerId) {
+        window.clearInterval(resultTimerId);
+      }
+
+      resultTimerId = window.setInterval(function () {
+        var nextIndex = (currentResultIndex + 1) % $cards.length;
+
+        scrollResultTo($carousel, $cards, nextIndex, "smooth");
+      }, 2000);
+    }
+
+    function setFaqItemState($item, isOpen, skipAnimation) {
       var $trigger = $item.find(".tattoo-faq-trigger");
       var $panel = $item.find(".tattoo-faq-panel");
+      var panel = $panel.get(0);
 
       $item.toggleClass("is-open", isOpen);
       $trigger.attr("aria-expanded", isOpen ? "true" : "false");
-      $panel.prop("hidden", !isOpen);
+
+      if (!panel) {
+        return;
+      }
+
+      panel.removeEventListener("transitionend", panel._faqTransitionEndHandler);
+
+      if (skipAnimation) {
+        $panel.prop("hidden", !isOpen);
+        panel.style.height = isOpen ? "auto" : "0px";
+        panel.style.opacity = isOpen ? "1" : "0";
+        return;
+      }
+
+      if (isOpen) {
+        $panel.prop("hidden", false);
+        panel.style.height = "0px";
+        panel.style.opacity = "0";
+        panel.offsetHeight;
+        panel.style.height = panel.scrollHeight + "px";
+        panel.style.opacity = "1";
+        panel._faqTransitionEndHandler = function (event) {
+          if (event.propertyName !== "height") {
+            return;
+          }
+          panel.style.height = "auto";
+        };
+        panel.addEventListener("transitionend", panel._faqTransitionEndHandler, { once: true });
+      } else {
+        panel.style.height = panel.scrollHeight + "px";
+        panel.style.opacity = "1";
+        panel.offsetHeight;
+        panel.style.height = "0px";
+        panel.style.opacity = "0";
+        panel._faqTransitionEndHandler = function (event) {
+          if (event.propertyName !== "height") {
+            return;
+          }
+          $panel.prop("hidden", true);
+        };
+        panel.addEventListener("transitionend", panel._faqTransitionEndHandler, { once: true });
+      }
     }
 
     if ($faqItems.length) {
       $faqItems.each(function (index) {
         var $item = $(this);
         var isOpen = $item.hasClass("is-open") || index === 0;
-        setFaqItemState($item, isOpen);
+        setFaqItemState($item, isOpen, true);
       });
 
       $faqItems.on("click", ".tattoo-faq-trigger", function () {
@@ -42,6 +146,57 @@
           top: 0,
           behavior: "smooth"
         });
+      });
+    }
+
+    if ($aftercareCards.length) {
+      $aftercareCards.on("click keydown", function (event) {
+        if (event.type === "keydown" && event.key !== "Enter" && event.key !== " ") {
+          return;
+        }
+
+        if (event.type === "keydown") {
+          event.preventDefault();
+        }
+
+        $aftercareCards.removeClass("is-active");
+        $(this).addClass("is-active");
+      });
+    }
+
+    if ($resultCarousel.length) {
+      var $resultCards = $resultCarousel.find(".tattoo-result-card");
+
+      scrollResultTo($resultCarousel, $resultCards, 0, "auto");
+      setActiveResultDot(0);
+      startResultAutoplay($resultCarousel, $resultCards);
+
+      $resultDots.on("click", function () {
+        var index = Number($(this).data("resultDot"));
+
+        scrollResultTo($resultCarousel, $resultCards, index, "smooth");
+        startResultAutoplay($resultCarousel, $resultCards);
+      });
+
+      $resultCarousel.on("scroll", function () {
+        if (resultScrollSyncTimerId) {
+          window.clearTimeout(resultScrollSyncTimerId);
+        }
+
+        resultScrollSyncTimerId = window.setTimeout(function () {
+          syncResultIndexFromScroll($resultCarousel, $resultCards);
+        }, 120);
+      });
+
+      $resultCarousel.on("pointerdown wheel touchstart", function () {
+        if (resultTimerId) {
+          window.clearInterval(resultTimerId);
+          resultTimerId = null;
+        }
+      });
+
+      $resultCarousel.on("pointerup touchend mouseleave", function () {
+        startResultAutoplay($resultCarousel, $resultCards);
       });
     }
   };

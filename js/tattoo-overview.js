@@ -21,7 +21,10 @@ $(function () {
   if (typeof modules.initTattooOverview === "function") {
     modules.initTattooOverview({
       faqItems: $(".tattoo-faq-item"),
-      scrollTopButton: $("[data-scroll-top]")
+      scrollTopButton: $("[data-scroll-top]"),
+      resultCarousel: $("[data-result-carousel]"),
+      resultDots: $("[data-result-dot]"),
+      aftercareCards: $("[data-aftercare-card]")
     });
   }
 
