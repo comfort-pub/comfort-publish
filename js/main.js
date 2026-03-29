@@ -49,6 +49,13 @@ $(function () {
     });
   }
 
+  $("[data-scroll-top]").on("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
   if (typeof modules.initScrollReveal === "function") {
     modules.initScrollReveal({
       root: document,

@@ -23,7 +23,7 @@
   --tattoo-hero-title-width: min(100%, calc(100vw * 560 / 1920));
   --tattoo-hero-desc-width: min(100%, calc(100vw * 620 / 1920));
   --tattoo-intro-title-width: min(100%, calc(100vw * 460 / 1920));
-  --tattoo-intro-desc-width: min(100%, calc(100vw * 442 / 1920));
+  --tattoo-intro-desc-width: min(100%, calc(100vw * 520 / 1920));
   --tattoo-difference-title-width: min(100%, calc(100vw * 760 / 1920));
   --tattoo-panel-title-width: min(100%, calc(100vw * 420 / 1920));
   --tattoo-commitment-title-width: min(100%, calc(100vw * 660 / 1920));
@@ -163,8 +163,12 @@
 }
 
 .tattoo-section-desc--narrow {
-  width: min(100%, calc(100vw * 720 / 1920));
-  max-width: 100%;
+  width: fit-content;
+  max-width: min(100%, calc(100vw * 720 / 1920));
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
   white-space: nowrap;
 }
 
@@ -264,59 +268,6 @@
 
 .media-placeholder--equipment {
   min-height: clamp(260px, 23.4375vw, 450px);
-}
-
-.tattoo-floating-actions {
-  position: fixed;
-  right: clamp(18px, 2.5vw, 48px);
-  top: 50%;
-  z-index: 60;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  transform: translateY(-50%);
-}
-
-.tattoo-floating-action,
-.tattoo-floating-top {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 74px;
-  min-height: 74px;
-  padding: 12px;
-  border: 1px solid rgba(23, 110, 174, 0.12);
-  border-radius: 999px;
-  background: #fff;
-  box-shadow: 0 12px 24px rgba(15, 33, 53, 0.08);
-  color: var(--tattoo-blue);
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.35;
-  text-align: center;
-}
-
-.tattoo-floating-action {
-  background: var(--tattoo-blue);
-  color: #fff;
-}
-
-.tattoo-floating-top {
-  min-height: 56px;
-  width: 56px;
-  padding: 0;
-  cursor: pointer;
-}
-
-.tattoo-floating-top svg {
-  width: 22px;
-  height: 22px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 .tattoo-hero {
@@ -507,13 +458,6 @@
 
 .tattoo-photo--summary-1 {
   background-image: url("../../../assets/images/sub_tatto_removal/DUL_2395.png");
-}
-
-.tattoo-photo--summary-2 {
-  background-image: url("../../../assets/images/sub_tatto_removal/Group 29.png");
-  background-size: 118% auto;
-  background-position: center 48%;
-  background-color: #fff;
 }
 
 .tattoo-photo--summary-3 {
@@ -1239,19 +1183,13 @@
   --tattoo-quality-stage-height: calc(var(--tattoo-quality-stage-width) * 816 / 980);
   position: absolute;
   left: 50%;
-  top: clamp(190px, calc(100vw * 280 / 1920), 280px);
+  top: clamp(214px, calc(100vw * 318 / 1920), 318px);
   width: var(--tattoo-quality-stage-width);
   height: var(--tattoo-quality-stage-height);
   margin: 0;
   overflow: visible;
   transform: translateX(-50%);
   z-index: 1;
-  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.12) 10%, rgba(0, 0, 0, 0.55) 22%, #000 36%);
-  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.12) 10%, rgba(0, 0, 0, 0.55) 22%, #000 36%);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
 }
 
 .tattoo-quality-machine {
@@ -1263,6 +1201,12 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.14) 10%, rgba(0, 0, 0, 0.62) 24%, #000 38%, #000 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.14) 10%, rgba(0, 0, 0, 0.62) 24%, #000 38%, #000 100%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
 }
 
 .tattoo-quality-machine--left {
@@ -1318,15 +1262,15 @@
 
 .tattoo-sedation-intro {
   display: grid;
-  grid-template-columns: minmax(0, calc(100vw * 485 / 1920)) minmax(0, calc(100vw * 550 / 1920));
+  grid-template-columns: minmax(0, calc(100vw * 520 / 1920)) minmax(0, calc(100vw * 550 / 1920));
   align-items: center;
   justify-content: center;
-  gap: clamp(72px, calc(100vw * 120 / 1920), 120px);
+  gap: clamp(48px, calc(100vw * 88 / 1920), 88px);
   margin-top: clamp(58px, 4.6875vw, 90px);
 }
 
 .tattoo-sedation-copy {
-  width: min(100%, calc(100vw * 485 / 1920));
+  width: min(100%, calc(100vw * 520 / 1920));
   padding-top: 0;
 }
 
@@ -1364,7 +1308,7 @@
 
 .tattoo-sedation-desc,
 .tattoo-sedation-note {
-  width: min(100%, calc(100vw * 560 / 1920));
+  width: min(100%, calc(100vw * 680 / 1920));
   color: #555;
   font-size: var(--tattoo-body-small-size);
   font-weight: 300;
@@ -1440,7 +1384,7 @@
   justify-content: center;
   width: min(100%, calc(100vw * 300 / 1920));
   min-height: clamp(132px, calc(100vw * 170 / 1920), 170px);
-  padding: clamp(41px, calc(100vw * 59 / 1920), 59px) clamp(24px, calc(100vw * 34 / 1920), 34px) clamp(44px, calc(100vw * 64 / 1920), 64px);
+  padding: clamp(41px, calc(100vw * 59 / 1920), 59px) clamp(14px, calc(100vw * 22 / 1920), 22px) clamp(44px, calc(100vw * 64 / 1920), 64px);
   border-radius: 30px;
   background-color: #f7f7f7;
   color: var(--tattoo-text);
@@ -1679,6 +1623,13 @@
   aspect-ratio: auto;
 }
 
+.tattoo-summary-card .tattoo-photo--summary-2 {
+  background-image: url("../../../assets/images/sub_tatto_removal/Group 29.png");
+  background-size: 115% auto;
+  background-position: 25% 10%;
+  background-color: #fff;
+}
+
 .tattoo-summary-card-title {
   margin-top: 0;
   font-size: clamp(22px, 1.5104vw, 29px);
@@ -1689,8 +1640,9 @@
 }
 
 .tattoo-summary-card-desc {
-  width: min(100%, calc(100vw * 182 / 1920));
-  margin: clamp(22px, calc(100vw * 31 / 1920), 31px) auto 0;
+  width: min(100%, calc(100vw * 300 / 1920));
+  margin: clamp(4px, calc(100vw * 6 / 1920), 6px) auto 0;
+  padding: 0;
   color: #333;
   font-size: var(--tattoo-body-small-size);
   font-weight: 400;

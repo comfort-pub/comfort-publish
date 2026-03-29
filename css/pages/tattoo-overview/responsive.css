@@ -10,6 +10,18 @@
   }
 }
 
+@media (max-width: 1180px) {
+  .tattoo-experience-layout {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    width: min(100%, 520px);
+  }
+
+  .tattoo-experience-media {
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 1024px) {
   .page--tattoo-overview .page-section,
   .page--tattoo-overview #sec7 {
@@ -199,8 +211,8 @@
   }
 
   .tattoo-venn {
-    width: 100%;
-    max-width: 420px;
+    width: min(100%, 450px);
+    max-width: 450px;
     margin-left: auto;
     margin-right: auto;
   }

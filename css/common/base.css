@@ -276,6 +276,112 @@ img {
   color: #fff;
 }
 
+.floating-quick-actions,
+.tattoo-floating-actions {
+  position: fixed;
+  right: clamp(18px, 2.5vw, 48px);
+  top: 50%;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  transform: translateY(-50%);
+}
+
+.floating-quick-menu,
+.tattoo-floating-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 88px;
+  padding: 44px 12px 42px;
+  border-radius: 54px;
+  background: #176eae;
+  box-shadow: 0 14px 28px rgba(15, 33, 53, 0.14);
+}
+
+.floating-quick-action,
+.tattoo-floating-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.floating-quick-action-icon-wrap,
+.tattoo-floating-action-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-quick-action-icon,
+.tattoo-floating-action-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.floating-quick-action-label,
+.floating-quick-action-sub,
+.tattoo-floating-action-label,
+.tattoo-floating-action-sub {
+  display: block;
+  color: #fff;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.floating-quick-action-label,
+.tattoo-floating-action-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.floating-quick-action-sub,
+.tattoo-floating-action-sub {
+  margin-top: -4px;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.floating-quick-top,
+.tattoo-floating-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(72px, calc(100vw * 90 / 1920), 90px);
+  min-height: clamp(72px, calc(100vw * 90 / 1920), 90px);
+  padding: 0;
+  border: 1px solid rgba(19, 36, 54, 0.08);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 16px 30px rgba(15, 33, 53, 0.12);
+  color: #333;
+  cursor: pointer;
+}
+
+.floating-quick-top svg,
+.tattoo-floating-top svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 body.is-mobile-menu-open {
   position: fixed;
   inset: 0;
