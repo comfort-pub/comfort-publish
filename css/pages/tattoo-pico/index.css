@@ -59,6 +59,10 @@
   background: #fff;
 }
 
+.pico-comfort-section {
+  background: #f5f5f5;
+}
+
 .pico-custom-section {
   padding: clamp(96px, calc(100vw * 126 / 1920), 126px) 0;
   background: #f5f5f5;
@@ -175,6 +179,19 @@
 
 .pico-section-title--left {
   text-align: left;
+}
+
+.pico-section-title--wavelength {
+  width: min(100%, 821px);
+  margin: 0 auto 62px;
+  color: #333;
+  font-size: clamp(36px, calc(100vw * 52 / 1920), 52px);
+  line-height: normal;
+  text-align: center;
+}
+
+.pico-section-title-lightness {
+  font-weight: 400;
 }
 
 .pico-section-text {
@@ -368,7 +385,7 @@
 }
 
 .pico-feature-icon {
-  background: url("../../../assets/images/sub_pico_laser/check.png") no-repeat center center / contain;
+  background: url("../../../assets/images/common/check.png") no-repeat center center / contain;
 }
 
 .pico-care-icon,
@@ -523,11 +540,16 @@
 .pico-machine-card-copy {
   position: absolute;
   left: 50%;
-  bottom: 54px;
+  top: 50%;
   width: calc(100% - 48px);
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   text-align: center;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -535,11 +557,12 @@
 .pico-machine-card-copy h4 {
   font-size: clamp(24px, calc(100vw * 28 / 1920), 28px);
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .pico-machine-card-copy p {
-  margin-top: 8px;
   font-size: clamp(12px, calc(100vw * 13 / 1920), 13px);
+  line-height: 1.45;
 }
 
 .pico-machine-card:hover,
@@ -563,9 +586,26 @@
 
 
 .pico-machine-band {
-  margin-top: 56px;
-  padding: clamp(50px, calc(100vw * 64 / 1920), 64px) 0;
-  background: #e6f0fa;
+  min-height: clamp(320px, calc(100vw * 500 / 1920), 500px);
+  margin-top: 0;
+  padding:
+    clamp(72px, calc(100vw * 113 / 1920), 113px)
+    0
+    clamp(62px, calc(100vw * 96 / 1920), 96px);
+  background: #eef3f9;
+}
+
+.pico-machine-band .tattoo-section-inner {
+  width: min(calc(100% - 40px), clamp(320px, calc(100vw * 1180 / 1920), 1180px));
+}
+
+.pico-wavelength-section {
+  min-height: clamp(1120px, calc(100vw * 1650 / 1920), 1650px);
+  padding:
+    clamp(74px, calc(100vw * 114 / 1920), 114px)
+    0
+    clamp(80px, calc(100vw * 122 / 1920), 122px);
+  background: #f5f5f5;
 }
 
 .pico-band-title {
@@ -590,18 +630,46 @@
 }
 
 .pico-band-point {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
   padding: 14px 16px;
   border: 1px solid rgba(42, 111, 174, 0.12);
   background: #fff;
   color: #333;
   font-size: clamp(15px, calc(100vw * 16 / 1920), 16px);
-  text-align: center;
+  text-align: left;
+}
+
+.pico-band-point-text {
+  flex: 1;
+}
+
+.pico-band-point-icon {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  color: #264d7f;
+}
+
+.pico-band-point-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .pico-wavelength-visual {
-  width: min(100%, 900px);
+  width: min(100%, calc(100vw * 1045 / 1920));
   min-height: 330px;
   margin: 38px auto 0;
+  border: 0;
+  background: url("../../../assets/images/sub_pico_laser/skin.png") no-repeat center center / contain;
 }
 
 .pico-wavelength-bottom {
@@ -611,15 +679,36 @@
   margin: 54px auto 0;
 }
 
-.pico-accent {
-  color: #2a78bf;
-  font-size: clamp(24px, calc(100vw * 28 / 1920), 28px);
+.pico-wavelength-copy {
+  width: min(100%, clamp(320px, calc(100vw * 524 / 1920), 524px));
+  min-height: clamp(120px, calc(100vw * 191 / 1920), 191px);
+  margin: clamp(64px, calc(100vw * 118 / 1920), 118px) clamp(56px, calc(100vw * 107 / 1920), 107px) clamp(96px, calc(100vw * 183 / 1920), 183px) 0;
+  align-self: start;
+  justify-self: start;
+}
+
+.pico-wavelength-title {
+  width: min(100%, 522px);
+  margin: 0 0 30px 2px;
+  color: #333;
+  font-size: clamp(36px, calc(100vw * 52 / 1920), 52px);
+  line-height: normal;
+  text-align: left;
+}
+
+.pico-wavelength-title-accent {
   font-weight: 400;
+  color: #176eae;
+  white-space: nowrap;
+}
+
+.pico-wavelength-title-line {
+  white-space: nowrap;
 }
 
 .pico-care-cards {
   display: grid;
-  gap: 18px;
+  gap: 20px;
 }
 
 .pico-care-card {
@@ -627,51 +716,101 @@
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 24px;
   align-items: center;
-  min-height: 104px;
+  width: min(100%, 550px);
+  height: clamp(110px, calc(100vw * 170 / 1920), 170px);
   padding: 20px 24px;
-  border-radius: 12px;
+  border-radius: 20px;
   background: #fff;
-  box-shadow: 0 12px 24px rgba(32, 52, 73, 0.06);
+  box-shadow: 0 8px 18px rgba(32, 52, 73, 0.04);
+  box-sizing: border-box;
 }
 
 .pico-care-card h4 {
-  color: #2a78bf;
-  font-size: clamp(17px, calc(100vw * 18 / 1920), 18px);
+  width: auto;
+  max-width: 100%;
+  margin: 0 0 21px;
+  color: #176eae;
+  font-size: clamp(18px, calc(100vw * 24 / 1920), 24px);
   font-weight: 700;
+  line-height: 1.25;
+  text-align: left;
 }
 
 .pico-care-card p {
-  margin-top: 10px;
-  color: #666;
-  font-size: clamp(12px, calc(100vw * 13 / 1920), 13px);
-  line-height: 1.6;
+  width: auto;
+  max-width: 337px;
+  margin-top: 0;
+  color: #333;
+  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-weight: 400;
+  line-height: 1.67;
+  text-align: left;
+  word-break: keep-all;
 }
 
 .pico-care-icon {
   width: 54px;
   height: 54px;
-  border-width: 3px;
+  border: 0;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.pico-care-icon--arrow {
+  background-image: url("../../../assets/images/sub_surgery/arrow.png");
+}
+
+.pico-care-icon--band {
+  background-image: url("../../../assets/images/sub_surgery/band.png");
+}
+
+.pico-care-icon--computer {
+  background-image: url("../../../assets/images/sub_surgery/computer.png");
 }
 
 .pico-fractat-intro {
-  grid-template-columns: minmax(0, 470px) minmax(0, 500px);
+  grid-template-columns: minmax(0, 470px) minmax(0, 540px);
   gap: clamp(24px, calc(100vw * 36 / 1920), 36px);
-  width: min(100%, 1100px);
+  justify-content: space-between;
+  width: min(100%, 1300px);
   margin: 36px auto 0;
+  padding: 0 90px;
+  box-sizing: border-box;
+}
+
+.pico-fractat-desc {
+  width: min(100%, 540px);
+  margin: 68px 0 0 1px;
+  color: #555;
+  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-weight: 300;
+  line-height: 1.67;
+  text-align: left;
 }
 
 .pico-fractat-media {
-  min-height: 300px;
+  width: min(100%, 650px);
+  height: clamp(220px, calc(100vw * 430 / 1920), 430px);
+  margin: 100px 50px 50px 0;
+  border: 0;
+  background: url("../../../assets/images/sub_surgery/fractat.png") no-repeat center center / cover;
 }
 
 .pico-fractat-benefits {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  width: min(100%, 1100px);
-  margin: 28px auto 0;
-  padding: 24px;
-  background: #f3f3f3;
+  grid-template-columns: repeat(2, minmax(0, calc((100% - 21px) / 2)));
+  column-gap: 21px;
+  row-gap: 20px;
+  width: min(100%, clamp(320px, calc(100vw * 1300 / 1920), 1300px));
+  height: clamp(260px, calc(100vw * 420 / 1920), 420px);
+  margin: 50px auto 104px;
+  padding: 50px 89px 50px 90px;
+  background: #f5f5f5;
+  box-sizing: border-box;
+  justify-content: start;
+  align-content: start;
 }
 
 .pico-fractat-benefit {
@@ -679,54 +818,117 @@
   grid-template-columns: auto minmax(0, 1fr);
   gap: 18px;
   align-items: center;
-  min-height: 74px;
+  width: 100%;
+  height: clamp(96px, calc(100vw * 150 / 1920), 150px);
   padding: 0 18px;
-  border-radius: 10px;
+  border-radius: 15px;
   background: #fff;
   color: #444;
   font-size: clamp(13px, calc(100vw * 14 / 1920), 14px);
   line-height: 1.55;
+  box-sizing: border-box;
+}
+
+.pico-benefit-icon {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.pico-benefit-icon--1 {
+  background-image: url("../../../assets/images/sub_surgery/benefit_1.png");
+}
+
+.pico-benefit-icon--2 {
+  background-image: url("../../../assets/images/sub_surgery/benefit_2.png");
+}
+
+.pico-benefit-icon--3 {
+  background-image: url("../../../assets/images/sub_surgery/benefit_3.png");
+}
+
+.pico-benefit-icon--4 {
+  background-image: url("../../../assets/images/sub_surgery/benefit_4.png");
 }
 
 .pico-fractat-recommend {
-  grid-template-columns: minmax(0, 260px) minmax(0, 720px);
-  gap: 24px;
-  width: min(100%, 1100px);
+  grid-template-columns: minmax(0, 230px) minmax(0, 770px);
+  column-gap: 119px;
+  width: min(100%, 1130px);
   margin: 42px auto 0;
 }
 
-.pico-fractat-recommend-copy p {
-  color: #444;
-  font-size: clamp(16px, calc(100vw * 18 / 1920), 18px);
+.pico-fractat-recommend-copy h3 {
+  width: min(100%, 230px);
+  margin: 0 0 100px 0;
+  color: #28313b;
+  font-size: clamp(36px, calc(100vw * 52 / 1920), 52px);
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.3px;
+  text-align: left;
 }
 
-.pico-fractat-recommend-copy h3 {
-  margin-top: 6px;
-  color: #222;
-  font-size: clamp(42px, calc(100vw * 50 / 1920), 50px);
-  font-weight: 700;
-  line-height: 1.14;
+.pico-fractat-recommend-light {
+  font-weight: 300;
 }
 
 .pico-fractat-recommend-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 380px);
   gap: 10px;
+  width: 770px;
 }
 
 .pico-recommend-pill {
-  padding: 12px 16px;
-  border: 1px solid #e6e6e6;
-  background: #fff;
-  color: #444;
-  font-size: clamp(13px, calc(100vw * 14 / 1920), 14px);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 380px;
+  min-height: 80px;
+  padding: 0 29px;
+  border-radius: 5px;
+  background: #f2f2f2;
+  color: #101920;
+  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-weight: 300;
+  box-sizing: border-box;
+}
+
+.pico-recommend-pill span:last-child {
+  width: 147px;
+  height: 17px;
+  margin: 3px 0 4px 20px;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.45px;
+  text-align: left;
+  color: #101920;
+}
+
+.pico-recommend-pill-icon {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  background: url("../../../assets/images/sub_pico_laser/check.png") no-repeat center center / contain;
 }
 
 .pico-recommend-note {
   grid-column: 1 / -1;
-  margin-top: 8px;
-  color: #777;
-  font-size: 14px;
+  width: 375px;
+  margin: 21px 0 0 auto;
+  color: #101920;
+  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-weight: 300;
+  letter-spacing: -0.45px;
   text-align: right;
 }
 
@@ -740,7 +942,8 @@
 .pico-comfort-item {
   display: grid;
   grid-template-columns: minmax(0, 400px) minmax(0, 470px);
-  justify-content: space-between;
+  column-gap: 101px;
+  justify-content: start;
   align-items: center;
 }
 
@@ -752,6 +955,44 @@
   min-height: 200px;
 }
 
+.pico-media-placeholder--comfort-1 {
+  width: clamp(320px, calc(100vw * 600 / 1920), 600px);
+  max-width: 600px;
+  height: clamp(197px, calc(100vw * 370 / 1920), 370px);
+  max-height: 370px;
+  margin: 0 101px 0 0;
+  border: 0;
+  background: url("../../../assets/images/sub_surgery/pico-laser-4.png") no-repeat center center / contain;
+}
+
+.pico-media-placeholder--comfort-2 {
+  width: min(100%, 400px);
+  min-height: 0;
+  height: auto;
+  border: 0;
+  background: transparent;
+}
+
+.pico-media-placeholder--comfort-3 {
+  width: min(100%, 400px);
+  min-height: 0;
+  height: auto;
+  border: 0;
+  background: transparent;
+}
+
+.pico-comfort-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+}
+
+.pico-comfort-image--comfort-2,
+.pico-comfort-image--comfort-3 {
+  object-fit: contain;
+}
+
 .pico-comfort-item--reverse .pico-media-placeholder {
   order: 2;
 }
@@ -761,17 +1002,27 @@
 }
 
 .pico-comfort-copy h4 {
-  color: #555;
-  font-size: clamp(22px, calc(100vw * 28 / 1920), 28px);
+  width: min(100%, 522px);
+  margin: 0;
+  color: #333;
+  font-family: "Noto Serif KR", serif;
+  font-size: clamp(28px, calc(100vw * 36 / 1920), 36px);
   font-weight: 400;
-  line-height: 1.35;
+  line-height: normal;
+  letter-spacing: -0.9px;
+  text-align: left;
+  white-space: nowrap;
 }
 
 .pico-comfort-copy p {
-  margin-top: 8px;
-  color: #888;
-  font-size: clamp(13px, calc(100vw * 14 / 1920), 14px);
-  line-height: 1.65;
+  width: min(100%, 454px);
+  margin: 0;
+  color: #333;
+  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-weight: 400;
+  line-height: 1.67;
+  letter-spacing: -0.45px;
+  text-align: left;
 }
 
 .pico-comfort-marquee {
@@ -783,40 +1034,83 @@
   overflow: hidden;
 }
 
-.pico-summary-title {
-  color: #222;
-  font-size: clamp(46px, calc(100vw * 54 / 1920), 54px);
+.tattoo-summary {
+  min-height: clamp(760px, calc(100vw * 1000 / 1920), 1000px);
+  padding: clamp(72px, calc(100vw * 95 / 1920), 95px) 0 clamp(78px, calc(100vw * 104 / 1920), 104px);
+  background: #fff;
+}
+
+.tattoo-summary-title {
+  color: var(--tattoo-text);
+  font-size: clamp(42px, 2.8125vw, 54px);
   font-weight: 700;
   line-height: 1.28;
+  letter-spacing: -0.04em;
   text-align: center;
 }
 
-.pico-summary-grid {
+.tattoo-summary-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 44px;
+  gap: clamp(16px, 1.25vw, 24px);
+  margin-top: clamp(52px, 4.1667vw, 80px);
 }
 
-.pico-summary-card {
+.tattoo-summary-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tattoo-summary-card .media-placeholder--card {
+  width: min(100%, calc(100vw * 330 / 1920));
+  height: clamp(190px, calc(100vw * 250 / 1920), 250px);
+  margin: 0 0 clamp(24px, calc(100vw * 35 / 1920), 35px);
+  border: 0;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: auto;
+}
+
+.tattoo-summary-card .tattoo-photo--summary-1 {
+  background-image: url("../../../assets/images/sub_tatto_removal/DUL_2395.png");
+}
+
+.tattoo-summary-card .tattoo-photo--summary-2 {
+  background-image: url("../../../assets/images/sub_tatto_removal/Group 29.png");
+  background-size: 115% auto;
+  background-position: 25% 10%;
+  background-color: #fff;
+}
+
+.tattoo-summary-card .tattoo-photo--summary-3 {
+  background-image: url("../../../assets/images/sub_tatto_removal/DUL_2406.png");
+}
+
+.tattoo-summary-card .tattoo-photo--summary-4 {
+  background-image: url("../../../assets/images/sub_tatto_removal/DUL_2453.png");
+}
+
+.tattoo-summary-card-title {
+  margin-top: 0;
+  font-size: clamp(22px, 1.5104vw, 29px);
+  font-weight: 700;
+  line-height: 1.34;
+  letter-spacing: -0.04em;
   text-align: center;
 }
 
-.pico-summary-card .pico-media-placeholder {
-  min-height: 178px;
-}
-
-.pico-summary-card h4 {
-  margin-top: 18px;
-  color: #222;
-  font-size: clamp(19px, calc(100vw * 21 / 1920), 21px);
-  font-weight: 700;
-  line-height: 1.35;
-}
-
-.pico-summary-card p {
-  margin-top: 4px;
-  color: #666;
-  font-size: clamp(12px, calc(100vw * 13 / 1920), 13px);
-  line-height: 1.6;
+.tattoo-summary-card-desc {
+  width: min(100%, calc(100vw * 300 / 1920));
+  margin: clamp(4px, calc(100vw * 6 / 1920), 6px) auto 0;
+  padding: 0;
+  color: #333;
+  font-size: var(--tattoo-body-small-size);
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.45px;
+  text-align: center;
 }
