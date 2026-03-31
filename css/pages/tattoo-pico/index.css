@@ -1,0 +1,822 @@
+@charset "UTF-8";
+
+.page--tattoo-pico .scroll-reveal {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+  will-change: auto;
+}
+
+.page--tattoo-pico .scroll-reveal.is-visible {
+  animation: none;
+}
+
+.page-tattoo-pico-reference {
+  background: #fff;
+}
+
+.tattoo-pico-hero .tattoo-sub-hero-visual {
+  min-height: clamp(420px, calc(100vw * 915 / 1920), 915px);
+  background:
+    linear-gradient(90deg, rgba(15, 22, 31, 0.52) 0%, rgba(15, 22, 31, 0.2) 48%, rgba(15, 22, 31, 0.38) 100%),
+    url("../../../assets/images/sub_pico_laser/DUL_2396 (1).png") no-repeat center center / cover;
+}
+
+.tattoo-pico-hero .tattoo-sub-hero-content {
+  justify-content: flex-end;
+  width: var(--tattoo-shell-wide);
+  padding-bottom: clamp(68px, calc(100vw * 130 / 1920), 130px);
+}
+
+.tattoo-pico-hero .tattoo-sub-hero-kicker {
+  font-size: clamp(40px, calc(100vw * 52 / 1920), 52px);
+  letter-spacing: -1.4px;
+}
+
+.tattoo-pico-hero .tattoo-sub-hero-title {
+  margin-top: 4px;
+  font-size: clamp(34px, calc(100vw * 42 / 1920), 42px);
+}
+
+.tattoo-pico-hero .tattoo-sub-hero-desc {
+  margin-top: 18px;
+  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-weight: 700;
+  line-height: 1.42;
+}
+
+.pico-intro-section,
+.pico-wavelength-section,
+.pico-fractat-section,
+.pico-comfort-section,
+.pico-summary-section {
+  padding: clamp(100px, calc(100vw * 132 / 1920), 132px) 0;
+  background: #fff;
+}
+
+.pico-machine-section {
+  padding: 0;
+  background: #fff;
+}
+
+.pico-custom-section {
+  padding: clamp(96px, calc(100vw * 126 / 1920), 126px) 0;
+  background: #f5f5f5;
+}
+
+.pico-compare-section {
+  padding:
+    clamp(84px, calc(100vw * 118 / 1920), 118px)
+    0
+    clamp(114px, calc(100vw * 160 / 1920), 160px);
+  background: #101920;
+}
+
+.pico-compare-section .tattoo-section-inner {
+  width: min(calc(100% - 40px), clamp(320px, calc(100vw * 1300 / 1920), 1300px));
+}
+
+.pico-intro-layout,
+.pico-wavelength-bottom,
+.pico-fractat-intro,
+.pico-fractat-recommend {
+  display: grid;
+  align-items: center;
+}
+
+.pico-intro-layout {
+  grid-template-columns: minmax(0, 650px) minmax(0, 610px);
+  gap: clamp(30px, calc(100vw * 51 / 1920), 51px);
+  width: min(100%, 1311px);
+  margin: 0 auto;
+}
+
+.pico-video-placeholder,
+.pico-media-placeholder,
+.pico-wavelength-visual {
+  border-radius: 10px;
+  border: 1px solid #e2e2e2;
+  background: #d9d9d9;
+}
+
+.pico-video-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 650px);
+  min-height: 430px;
+  border-radius: 20px;
+  color: #9fa4aa;
+  font-size: 54px;
+  font-weight: 700;
+}
+
+.pico-intro-copy {
+  padding-right: 0;
+}
+
+.pico-intro-kicker {
+  width: min(100%, 279px);
+  margin: 0;
+  font-family: "Philosopher", serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.22px;
+  line-height: normal;
+  text-align: left;
+}
+
+.pico-intro-title {
+  width: min(100%, 610px);
+  margin-top: 49px;
+  color: #333;
+  font-size: 52px;
+  line-height: normal;
+  text-align: left;
+}
+
+.pico-intro-desc {
+  width: min(100%, 525px);
+  margin-top: 62px;
+  margin-right: auto;
+  font-size: 18px;
+  line-height: 1.67;
+  text-align: left;
+}
+
+.pico-eyebrow {
+  color: #2c78bf;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(16px, calc(100vw * 18 / 1920), 18px);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.pico-section-head {
+  text-align: center;
+}
+
+.pico-section-head--dark .pico-eyebrow {
+  color: #2c78bf;
+}
+
+.pico-section-title {
+  margin-top: 14px;
+  color: #2b2b2b;
+  font-size: clamp(36px, calc(100vw * 44 / 1920), 44px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -1.3px;
+}
+
+.pico-section-title--light {
+  color: #fff;
+}
+
+.pico-section-title--left {
+  text-align: left;
+}
+
+.pico-section-text {
+  margin-top: 6px;
+  color: #777;
+  font-size: clamp(12px, calc(100vw * 14 / 1920), 14px);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.pico-section-text--light {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.pico-section-text--left {
+  text-align: left;
+}
+
+.pico-compare-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 640px));
+  justify-content: center;
+  gap: 20px;
+  width: min(100%, 1300px);
+  margin: 110px auto 0;
+}
+
+.pico-compare-card {
+  overflow: hidden;
+  width: min(100%, 640px);
+  aspect-ratio: 640 / 610;
+  min-width: 0;
+  padding: 0 0 33px;
+  border: solid 3px #b0b0b0;
+  border-radius: 20px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.pico-compare-card:last-child {
+  border-color: #2a6fae;
+}
+
+.pico-compare-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(46px, calc(100vw * 55 / 1920), 55px);
+  color: #fff;
+  font-size: clamp(20px, calc(100vw * 24 / 1920), 24px);
+  font-weight: 700;
+}
+
+.pico-compare-card-title--gray {
+  background: #b5b2b2;
+}
+
+.pico-compare-card-title--blue {
+  background: #2a6fae;
+}
+
+.pico-compare-card-body {
+  height: calc(100% - clamp(46px, calc(100vw * 55 / 1920), 55px) - 33px);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.pico-compare-card-body--legacy {
+  background-image: url("../../../assets/images/sub_pico_laser/basic.png");
+}
+
+.pico-compare-card-body--pico {
+  background-image: url("../../../assets/images/sub_pico_laser/pico.png");
+}
+
+.pico-compare-kicker {
+  margin: 0;
+  font-family: "Philosopher", serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.22px;
+}
+
+.section-title-common.pico-compare-title,
+.pico-compare-title {
+  margin-top: 29px;
+  color: #fff;
+  font-size: clamp(36px, calc(100vw * 52 / 1920), 52px);
+  text-align: center;
+}
+
+.section-desc-common.pico-compare-desc,
+.pico-compare-desc {
+  width: min(100%, 999px);
+  margin: 50px auto 0;
+  color: #fff;
+  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-weight: 300;
+  line-height: 1.67;
+  text-align: center;
+}
+
+.pico-compare-desc-normal {
+  font-weight: 400;
+}
+
+.pico-compare-desc-bold {
+  font-weight: 700;
+}
+
+.pico-feature-layout {
+  display: grid;
+  grid-template-columns: 410px 680px;
+  gap: clamp(28px, calc(100vw * 44 / 1920), 44px);
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 1134px);
+  margin: clamp(70px, calc(100vw * 92 / 1920), 92px) auto 0;
+}
+
+.pico-feature-title {
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  color: #fff;
+  font-size: clamp(36px, calc(100vw * 42 / 1920), 42px);
+  font-weight: 700;
+  line-height: 1.24;
+}
+
+.pico-feature-desc {
+  width: 100%;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(13px, calc(100vw * 14 / 1920), 14px);
+  line-height: 1.65;
+}
+
+.pico-feature-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 220px;
+}
+
+.pico-feature-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.pico-feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+  width: 220px;
+  height: 220px;
+  padding: 28px 18px;
+  border-radius: 10px;
+  background: #f5f5f5;
+  text-align: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.pico-feature-card p {
+  width: 100%;
+  max-width: 180px;
+  color: #333;
+  font-size: clamp(16px, calc(100vw * 20 / 1920), 20px);
+  font-weight: 700;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+.pico-feature-icon,
+.pico-care-icon,
+.pico-benefit-icon {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+}
+
+.pico-feature-icon {
+  background: url("../../../assets/images/sub_pico_laser/check.png") no-repeat center center / contain;
+}
+
+.pico-care-icon,
+.pico-benefit-icon {
+  border-radius: 50%;
+  border: 2px solid #444;
+}
+
+.pico-machine-inner {
+  position: relative;
+  height: clamp(760px, calc(100vw * 1138 / 1920), 1138px);
+  --pico-machine-card-size: clamp(260px, calc(100vw * 400 / 1920), 400px);
+  --pico-machine-card-gap: clamp(16px, calc(100vw * 29 / 1920), 29px);
+  overflow: hidden;
+}
+
+.pico-machine-rings {
+  position: absolute;
+  left: 50%;
+  top: clamp(-118px, calc(100vw * -58 / 1920), -58px);
+  width: clamp(520px, calc(100vw * 784.7 / 1920), 784.7px);
+  height: clamp(520px, calc(100vw * 784.7 / 1920), 784.7px);
+  background: url("../../../assets/images/sub_pico_laser/동그라미.png") no-repeat center center / contain;
+  transform: translateX(-50%);
+}
+
+.pico-machine-rings::before,
+.pico-machine-rings::after {
+  content: none;
+}
+
+.pico-machine-inner .pico-section-head {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 640px);
+  margin: 0 auto;
+  padding-top: clamp(94px, calc(100vw * 116 / 1920), 116px);
+}
+
+.pico-machine-title {
+  width: min(100%, 611px);
+  margin: 45px auto 46px;
+  color: #333;
+  font-size: clamp(36px, calc(100vw * 52 / 1920), 52px);
+  line-height: normal;
+  text-align: center;
+}
+
+.pico-machine-desc {
+  width: min(100%, 433px);
+  margin: 0 auto;
+  color: #555;
+  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  line-height: 1.67;
+  text-align: center;
+}
+
+.pico-machine-cards {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, var(--pico-machine-card-size));
+  justify-content: center;
+  gap: var(--pico-machine-card-gap);
+  width: min(
+    100%,
+    calc((var(--pico-machine-card-size) * 3) + (var(--pico-machine-card-gap) * 2))
+  );
+  margin: 106px auto 69px;
+}
+
+.pico-machine-card {
+  position: relative;
+  width: var(--pico-machine-card-size);
+  height: var(--pico-machine-card-size);
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  background: #f5f5f5;
+  overflow: hidden;
+  transition: transform 0.2s ease, color 0.2s ease;
+  outline: none;
+  box-shadow: none;
+}
+
+.pico-machine-card--blue {
+  background: #f5f5f5;
+  isolation: isolate;
+}
+
+.pico-machine-card::before {
+  content: none;
+}
+
+.pico-machine-photo {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  overflow: hidden;
+  outline: none;
+  box-shadow: none;
+}
+
+.pico-machine-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(33, 104, 168, 0.82);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.pico-machine-photo--left {
+  --pico-left-front-x: -70px;
+  --pico-left-front-y: -150px;
+  --pico-left-front-size: 100%;
+  --pico-left-back-x: -40px;
+  --pico-left-back-y: -160px;
+  --pico-left-back-size: 100%;
+  background:
+    url("../../../assets/images/main/pico-laser-machine-right-front.png") no-repeat left var(--pico-left-front-x) bottom var(--pico-left-front-y) / var(--pico-left-front-size) auto,
+    url("../../../assets/images/main/pico-laser-machine-right-back.png") no-repeat right var(--pico-left-back-x) bottom var(--pico-left-back-y) / var(--pico-left-back-size) auto,
+    #ececec;
+}
+
+.pico-machine-photo--center {
+  --pico-center-size: 82%;
+  --pico-center-y: -120px;
+  background-color: #ececec;
+  background-image: url("../../../assets/images/main/pico-laser-machine-center.png");
+  background-size: var(--pico-center-size) auto;
+  background-position: center bottom var(--pico-center-y);
+}
+
+.pico-machine-photo--right {
+  --pico-right-size: 80%;
+  --pico-right-y: -170px;
+  background-color: #ececec;
+  background-image: url("../../../assets/images/main/pico-laser-machine-left.png");
+  background-size: var(--pico-right-size) auto;
+  background-position: center bottom var(--pico-right-y);
+}
+
+.pico-machine-card-copy {
+  position: absolute;
+  left: 50%;
+  bottom: 54px;
+  width: calc(100% - 48px);
+  color: #fff;
+  text-align: center;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.pico-machine-card-copy h4 {
+  font-size: clamp(24px, calc(100vw * 28 / 1920), 28px);
+  font-weight: 700;
+}
+
+.pico-machine-card-copy p {
+  margin-top: 8px;
+  font-size: clamp(12px, calc(100vw * 13 / 1920), 13px);
+}
+
+.pico-machine-card:hover,
+.pico-machine-card:focus-visible {
+  overflow: hidden;
+  z-index: 2;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.pico-machine-card:hover .pico-machine-card-copy,
+.pico-machine-card:focus-visible .pico-machine-card-copy {
+  opacity: 1;
+}
+
+.pico-machine-card:hover .pico-machine-photo::after,
+.pico-machine-card:focus-visible .pico-machine-photo::after {
+  opacity: 1;
+}
+
+
+.pico-machine-band {
+  margin-top: 56px;
+  padding: clamp(50px, calc(100vw * 64 / 1920), 64px) 0;
+  background: #e6f0fa;
+}
+
+.pico-band-title {
+  color: #333;
+  font-size: clamp(34px, calc(100vw * 42 / 1920), 42px);
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.pico-band-title span {
+  color: #2a6fae;
+  font-weight: 700;
+}
+
+.pico-band-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  width: min(100%, 1120px);
+  margin: 34px auto 0;
+}
+
+.pico-band-point {
+  padding: 14px 16px;
+  border: 1px solid rgba(42, 111, 174, 0.12);
+  background: #fff;
+  color: #333;
+  font-size: clamp(15px, calc(100vw * 16 / 1920), 16px);
+  text-align: center;
+}
+
+.pico-wavelength-visual {
+  width: min(100%, 900px);
+  min-height: 330px;
+  margin: 38px auto 0;
+}
+
+.pico-wavelength-bottom {
+  grid-template-columns: minmax(0, 370px) minmax(0, 560px);
+  gap: clamp(34px, calc(100vw * 54 / 1920), 54px);
+  width: min(100%, 1040px);
+  margin: 54px auto 0;
+}
+
+.pico-accent {
+  color: #2a78bf;
+  font-size: clamp(24px, calc(100vw * 28 / 1920), 28px);
+  font-weight: 400;
+}
+
+.pico-care-cards {
+  display: grid;
+  gap: 18px;
+}
+
+.pico-care-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  min-height: 104px;
+  padding: 20px 24px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 24px rgba(32, 52, 73, 0.06);
+}
+
+.pico-care-card h4 {
+  color: #2a78bf;
+  font-size: clamp(17px, calc(100vw * 18 / 1920), 18px);
+  font-weight: 700;
+}
+
+.pico-care-card p {
+  margin-top: 10px;
+  color: #666;
+  font-size: clamp(12px, calc(100vw * 13 / 1920), 13px);
+  line-height: 1.6;
+}
+
+.pico-care-icon {
+  width: 54px;
+  height: 54px;
+  border-width: 3px;
+}
+
+.pico-fractat-intro {
+  grid-template-columns: minmax(0, 470px) minmax(0, 500px);
+  gap: clamp(24px, calc(100vw * 36 / 1920), 36px);
+  width: min(100%, 1100px);
+  margin: 36px auto 0;
+}
+
+.pico-fractat-media {
+  min-height: 300px;
+}
+
+.pico-fractat-benefits {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  width: min(100%, 1100px);
+  margin: 28px auto 0;
+  padding: 24px;
+  background: #f3f3f3;
+}
+
+.pico-fractat-benefit {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  min-height: 74px;
+  padding: 0 18px;
+  border-radius: 10px;
+  background: #fff;
+  color: #444;
+  font-size: clamp(13px, calc(100vw * 14 / 1920), 14px);
+  line-height: 1.55;
+}
+
+.pico-fractat-recommend {
+  grid-template-columns: minmax(0, 260px) minmax(0, 720px);
+  gap: 24px;
+  width: min(100%, 1100px);
+  margin: 42px auto 0;
+}
+
+.pico-fractat-recommend-copy p {
+  color: #444;
+  font-size: clamp(16px, calc(100vw * 18 / 1920), 18px);
+}
+
+.pico-fractat-recommend-copy h3 {
+  margin-top: 6px;
+  color: #222;
+  font-size: clamp(42px, calc(100vw * 50 / 1920), 50px);
+  font-weight: 700;
+  line-height: 1.14;
+}
+
+.pico-fractat-recommend-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.pico-recommend-pill {
+  padding: 12px 16px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  color: #444;
+  font-size: clamp(13px, calc(100vw * 14 / 1920), 14px);
+}
+
+.pico-recommend-note {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  color: #777;
+  font-size: 14px;
+  text-align: right;
+}
+
+.pico-comfort-grid {
+  display: grid;
+  gap: 48px;
+  width: min(100%, 1100px);
+  margin: 42px auto 0;
+}
+
+.pico-comfort-item {
+  display: grid;
+  grid-template-columns: minmax(0, 400px) minmax(0, 470px);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pico-comfort-item--reverse {
+  grid-template-columns: minmax(0, 470px) minmax(0, 400px);
+}
+
+.pico-comfort-item .pico-media-placeholder {
+  min-height: 200px;
+}
+
+.pico-comfort-item--reverse .pico-media-placeholder {
+  order: 2;
+}
+
+.pico-comfort-item--reverse .pico-comfort-copy {
+  order: 1;
+}
+
+.pico-comfort-copy h4 {
+  color: #555;
+  font-size: clamp(22px, calc(100vw * 28 / 1920), 28px);
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.pico-comfort-copy p {
+  margin-top: 8px;
+  color: #888;
+  font-size: clamp(13px, calc(100vw * 14 / 1920), 14px);
+  line-height: 1.65;
+}
+
+.pico-comfort-marquee {
+  margin-top: 34px;
+  color: rgba(20, 30, 40, 0.05);
+  font-family: "Philosopher", serif;
+  font-size: clamp(54px, calc(100vw * 78 / 1920), 78px);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.pico-summary-title {
+  color: #222;
+  font-size: clamp(46px, calc(100vw * 54 / 1920), 54px);
+  font-weight: 700;
+  line-height: 1.28;
+  text-align: center;
+}
+
+.pico-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 44px;
+}
+
+.pico-summary-card {
+  text-align: center;
+}
+
+.pico-summary-card .pico-media-placeholder {
+  min-height: 178px;
+}
+
+.pico-summary-card h4 {
+  margin-top: 18px;
+  color: #222;
+  font-size: clamp(19px, calc(100vw * 21 / 1920), 21px);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.pico-summary-card p {
+  margin-top: 4px;
+  color: #666;
+  font-size: clamp(12px, calc(100vw * 13 / 1920), 13px);
+  line-height: 1.6;
+}

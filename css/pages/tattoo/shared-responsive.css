@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+@media (max-width: 1024px) {
+  .page--tattoo .page-section,
+  .page--tattoo #sec7 {
+    scroll-margin-top: 84px;
+  }
+
+  .page--tattoo .tattoo-floating-actions {
+    display: none;
+  }
+
+  .page--tattoo .tattoo-sub-hero-content {
+    width: min(calc(100% - 40px), 900px);
+    padding-bottom: 72px;
+  }
+
+  .page--tattoo .tattoo-sub-split,
+  .page--tattoo .tattoo-info-grid--three,
+  .page--tattoo .tattoo-info-grid--four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .page--tattoo .tattoo-section-inner,
+  .page--tattoo .tattoo-sub-hero-content {
+    width: calc(100% - 40px);
+  }
+
+  .page--tattoo .section-title-common {
+    font-size: clamp(30px, 8.5vw, 40px);
+  }
+
+  .page--tattoo .section-desc-common,
+  .page--tattoo .tattoo-sub-desc {
+    font-size: clamp(15px, 4vw, 18px);
+  }
+
+  .page--tattoo .tattoo-sub-hero-title {
+    font-size: clamp(32px, 9vw, 42px);
+  }
+
+  .page--tattoo .tattoo-sub-hero-kicker {
+    font-size: clamp(28px, 8.2vw, 38px);
+  }
+
+  .page--tattoo .tattoo-sub-split,
+  .page--tattoo .tattoo-info-grid--three,
+  .page--tattoo .tattoo-info-grid--four {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .page--tattoo .tattoo-section-desc--narrow {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+  }
+}

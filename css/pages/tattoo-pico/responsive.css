@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+@media (max-width: 1024px) {
+  .page--tattoo-pico .page-section,
+  .page--tattoo-pico #sec7 {
+    scroll-margin-top: 84px;
+  }
+
+  .page--tattoo-pico .tattoo-floating-actions {
+    display: none;
+  }
+
+  .pico-intro-layout,
+  .pico-wavelength-bottom,
+  .pico-fractat-intro,
+  .pico-fractat-recommend,
+  .pico-comfort-item,
+  .pico-comfort-item--reverse {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pico-machine-cards,
+  .pico-band-points,
+  .pico-wavelength-grid,
+  .pico-fractat-benefits,
+  .pico-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pico-fractat-recommend-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pico-compare-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .pico-machine-cards {
+    width: 100%;
+    gap: 18px;
+  }
+
+  .pico-machine-card {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .pico-machine-card .pico-media-placeholder {
+    min-height: 0;
+  }
+
+  .pico-machine-section {
+    padding: 84px 0 0;
+  }
+
+  .pico-machine-inner {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .pico-comfort-item--reverse .pico-media-placeholder,
+  .pico-comfort-item--reverse .pico-comfort-copy {
+    order: initial;
+  }
+}
+
+@media (max-width: 900px) {
+  .pico-feature-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pico-feature-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .pico-feature-card {
+    width: 100%;
+    padding: 42px 24px 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page--tattoo-pico .tattoo-section-inner,
+  .page--tattoo-pico .tattoo-sub-hero-content {
+    width: calc(100% - 40px);
+  }
+
+  .pico-intro-section,
+  .pico-wavelength-section,
+  .pico-fractat-section,
+  .pico-comfort-section,
+  .pico-summary-section,
+  .pico-compare-section {
+    padding: 84px 0;
+  }
+
+  .pico-machine-section {
+    padding: 84px 0 0;
+  }
+
+  .pico-compare-grid,
+  .pico-machine-cards,
+  .pico-band-points,
+  .pico-feature-cards,
+  .pico-wavelength-grid,
+  .pico-fractat-benefits,
+  .pico-fractat-recommend-list,
+  .pico-summary-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pico-section-title,
+  .pico-feature-title,
+  .pico-summary-title {
+    font-size: clamp(30px, 8.5vw, 40px);
+  }
+
+  .pico-video-placeholder,
+  .pico-wavelength-visual,
+  .pico-fractat-media,
+  .pico-comfort-item .pico-media-placeholder,
+  .pico-summary-card .pico-media-placeholder {
+    min-height: 220px;
+  }
+
+  .pico-video-placeholder,
+  .pico-intro-kicker,
+  .pico-intro-title,
+  .pico-intro-desc,
+  .pico-feature-title,
+  .pico-feature-desc {
+    width: 100%;
+  }
+
+  .pico-compare-card {
+    aspect-ratio: auto;
+    height: auto;
+    min-height: 420px;
+  }
+
+  .pico-compare-card-body {
+    height: 320px;
+  }
+
+  .pico-machine-card,
+  .pico-machine-card .pico-media-placeholder {
+    min-height: 240px;
+  }
+
+  .pico-machine-rings {
+    width: min(100%, 520px);
+    height: min(100vw, 520px);
+    top: -20px;
+  }
+
+  .pico-feature-card {
+    aspect-ratio: auto;
+    min-height: 220px;
+    padding: 40px 24px;
+  }
+
+  .pico-fractat-benefits {
+    padding: 20px;
+  }
+
+  .pico-fractat-recommend-copy h3 {
+    font-size: clamp(38px, 10vw, 48px);
+  }
+}
