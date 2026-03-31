@@ -61,6 +61,12 @@
     overflow: visible;
   }
 
+  .pico-machine-band,
+  .pico-wavelength-section,
+  .pico-comfort-section {
+    min-height: 0;
+  }
+
   .pico-comfort-item--reverse .pico-media-placeholder,
   .pico-comfort-item--reverse .pico-comfort-copy {
     order: initial;

@@ -117,6 +117,7 @@
 
 .pico-intro-copy {
   padding-right: 0;
+  white-space: nowrap;
 }
 
 .pico-intro-kicker {
@@ -650,18 +651,21 @@
   flex: 0 0 auto;
   width: 34px;
   height: 34px;
-  color: #264d7f;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
-.pico-band-point-icon svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.pico-band-point-icon--1 {
+  background-image: url("../../../assets/images/sub_pico_laser/pico-point-icon-1.png");
+}
+
+.pico-band-point-icon--2 {
+  background-image: url("../../../assets/images/sub_pico_laser/pico-point-icon-2.png");
+}
+
+.pico-band-point-icon--3 {
+  background-image: url("../../../assets/images/sub_pico_laser/pico-point-icon-3.png");
 }
 
 .pico-wavelength-visual {
@@ -673,16 +677,17 @@
 }
 
 .pico-wavelength-bottom {
-  grid-template-columns: minmax(0, 370px) minmax(0, 560px);
-  gap: clamp(34px, calc(100vw * 54 / 1920), 54px);
-  width: min(100%, 1040px);
+  grid-template-columns: minmax(0, 522px) minmax(0, 550px);
+  column-gap: clamp(60px, calc(100vw * 107 / 1920), 107px);
+  width: min(100%, 1179px);
   margin: 54px auto 0;
+  align-items: start;
 }
 
 .pico-wavelength-copy {
   width: min(100%, clamp(320px, calc(100vw * 524 / 1920), 524px));
   min-height: clamp(120px, calc(100vw * 191 / 1920), 191px);
-  margin: clamp(64px, calc(100vw * 118 / 1920), 118px) clamp(56px, calc(100vw * 107 / 1920), 107px) clamp(96px, calc(100vw * 183 / 1920), 183px) 0;
+  margin: clamp(64px, calc(100vw * 118 / 1920), 118px) 0 0 0;
   align-self: start;
   justify-self: start;
 }
@@ -709,6 +714,7 @@
 .pico-care-cards {
   display: grid;
   gap: 20px;
+  width: min(100%, 550px);
 }
 
 .pico-care-card {
@@ -856,14 +862,15 @@
 }
 
 .pico-fractat-recommend {
-  grid-template-columns: minmax(0, 230px) minmax(0, 770px);
+  grid-template-columns: 230px 770px;
   column-gap: 119px;
-  width: min(100%, 1130px);
+  width: 1130px;
+  max-width: 1130px;
   margin: 42px auto 0;
 }
 
 .pico-fractat-recommend-copy h3 {
-  width: min(100%, 230px);
+  width: 230px;
   margin: 0 0 100px 0;
   color: #28313b;
   font-size: clamp(36px, calc(100vw * 52 / 1920), 52px);
@@ -871,6 +878,13 @@
   line-height: normal;
   letter-spacing: -1.3px;
   text-align: left;
+  word-break: keep-all;
+}
+
+.pico-fractat-recommend-copy h3 span,
+.pico-fractat-recommend-copy h3 br + *,
+.pico-fractat-recommend-light {
+  white-space: nowrap;
 }
 
 .pico-fractat-recommend-light {
@@ -900,9 +914,10 @@
 }
 
 .pico-recommend-pill span:last-child {
-  width: 147px;
-  height: 17px;
-  margin: 3px 0 4px 20px;
+  width: auto;
+  max-width: none;
+  height: auto;
+  margin: 0 0 0 20px;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
   font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
   font-weight: 400;
@@ -912,6 +927,7 @@
   letter-spacing: -0.45px;
   text-align: left;
   color: #101920;
+  white-space: nowrap;
 }
 
 .pico-recommend-pill-icon {
@@ -934,39 +950,43 @@
 
 .pico-comfort-grid {
   display: grid;
-  gap: 48px;
-  width: min(100%, 1100px);
+  gap: 56px;
+  width: 1223px;
+  max-width: 1223px;
   margin: 42px auto 0;
 }
 
 .pico-comfort-item {
   display: grid;
-  grid-template-columns: minmax(0, 400px) minmax(0, 470px);
+  grid-template-columns: 600px 522px;
   column-gap: 101px;
   justify-content: start;
   align-items: center;
+  width: 1223px;
+  max-width: 1223px;
 }
 
 .pico-comfort-item--reverse {
-  grid-template-columns: minmax(0, 470px) minmax(0, 400px);
+  grid-template-columns: 522px 600px;
 }
 
 .pico-comfort-item .pico-media-placeholder {
-  min-height: 200px;
+  min-height: 0;
 }
 
 .pico-media-placeholder--comfort-1 {
-  width: clamp(320px, calc(100vw * 600 / 1920), 600px);
+  width: 600px;
   max-width: 600px;
-  height: clamp(197px, calc(100vw * 370 / 1920), 370px);
+  height: 370px;
   max-height: 370px;
-  margin: 0 101px 0 0;
+  margin: 0;
   border: 0;
   background: url("../../../assets/images/sub_surgery/pico-laser-4.png") no-repeat center center / contain;
 }
 
 .pico-media-placeholder--comfort-2 {
-  width: min(100%, 400px);
+  width: 600px;
+  max-width: 600px;
   min-height: 0;
   height: auto;
   border: 0;
@@ -974,7 +994,8 @@
 }
 
 .pico-media-placeholder--comfort-3 {
-  width: min(100%, 400px);
+  width: 600px;
+  max-width: 600px;
   min-height: 0;
   height: auto;
   border: 0;
@@ -1001,12 +1022,17 @@
   order: 1;
 }
 
+.pico-comfort-copy {
+  width: 522px;
+  min-width: 522px;
+}
+
 .pico-comfort-copy h4 {
-  width: min(100%, 522px);
+  width: 522px;
   margin: 0;
   color: #333;
   font-family: "Noto Serif KR", serif;
-  font-size: clamp(28px, calc(100vw * 36 / 1920), 36px);
+  font-size: 36px;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.9px;
@@ -1015,10 +1041,10 @@
 }
 
 .pico-comfort-copy p {
-  width: min(100%, 454px);
+  width: 454px;
   margin: 0;
   color: #333;
-  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.67;
   letter-spacing: -0.45px;
