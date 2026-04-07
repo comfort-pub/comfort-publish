@@ -180,7 +180,7 @@
 .tattoo-sub-hero-kicker {
   color: #fff;
   font-family: "Philosopher", serif;
-  font-size: 42px;
+  font-size: 60px;
   font-weight: 400;
   letter-spacing: -1px;
 }
@@ -189,7 +189,7 @@
   margin-top: 18px;
   color: #fff;
   font-family: "Noto Serif KR", serif;
-  font-size: 46px;
+  font-size: 48px;
   font-weight: 400;
   letter-spacing: -1.2px;
 }
@@ -197,7 +197,7 @@
 .tattoo-sub-hero-desc {
   margin-top: 24px;
   color: rgba(255, 255, 255, 0.92);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 1.55;
 }
