@@ -1,27 +1,5 @@
 @charset "UTF-8";
 
-@media (max-width: 1280px) {
-  .tattoo-floating-actions {
-    right: 20px;
-  }
-
-  .tattoo-summary-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 1180px) {
-  .tattoo-experience-layout {
-    grid-template-columns: minmax(0, 1fr);
-    justify-items: center;
-    width: min(100%, 520px);
-  }
-
-  .tattoo-experience-media {
-    margin: 0 auto;
-  }
-}
-
 @media (max-width: 1024px) {
   .page--tattoo-overview .page-section,
   .page--tattoo-overview #sec7 {

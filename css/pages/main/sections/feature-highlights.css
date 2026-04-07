@@ -1,7 +1,7 @@
 #sec3 {
   position: relative;
-  margin-top: clamp(84px, 8.3333vw, 160px);
-  padding: clamp(96px, 7.8125vw, 150px) 0 clamp(92px, 8.0729vw, 155px);
+  margin-top: 160px;
+  padding: 150px 0 155px;
   background: url("../../../../assets/images/main/sec3-feature-background.png") no-repeat center / cover;
   overflow: hidden;
 }
@@ -18,42 +18,42 @@
 #sec3 .sec3-inner {
   position: relative;
   z-index: 1;
-  width: min(calc(100% - 40px), clamp(320px, 74.375vw, 1428px));
+  width: 1428px;
   margin: 0 auto;
 }
 
 #sec3 .sec3-head {
-  width: min(100%, clamp(320px, 46.25vw, 888px));
-  margin: 0 auto clamp(52px, 5.2083vw, 100px);
+  width: 888px;
+  margin: 0 auto 100px;
   text-align: center;
 }
 
 #sec3 .sec3-title {
-  margin-top: clamp(24px, 1.9792vw, 38px);
+  margin-top: 38px;
   color: #fff;
 }
 
 #sec3 .sec3-desc {
-  margin-top: clamp(24px, 2.0833vw, 40px);
+  margin-top: 40px;
   color: rgba(255, 255, 255, 0.88);
 }
 
 #sec3 .sec3-card-list {
-  width: min(100%, clamp(320px, 71.25vw, 1368px));
+  width: 1368px;
   margin: 0 auto;
   display: flex;
-  gap: clamp(12px, 1.0417vw, 20px);
+  gap: 20px;
 }
 
 #sec3 .sec3-card {
   position: relative;
   flex: 266 1 0;
   min-width: 0;
-  min-height: clamp(360px, 24.2708vw, 466px);
-  padding: clamp(24px, 1.7708vw, 34px);
+  min-height: 466px;
+  padding: 34px;
   display: flex;
   align-items: flex-end;
-  border-radius: clamp(20px, 1.3021vw, 25px);
+  border-radius: 25px;
   overflow: hidden;
   cursor: pointer;
   background-repeat: no-repeat;
@@ -113,12 +113,12 @@
   position: relative;
   z-index: 1;
   flex: 0 0 auto;
-  width: clamp(210px, 17.1875vw, 330px);
+  width: 330px;
 }
 
 #sec3 .sec3-card-en {
   font-family: "Philosopher", serif;
-  font-size: clamp(14px, 0.9375vw, 18px);
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.15;
   color: rgba(255, 255, 255, 0.92);
@@ -127,8 +127,8 @@
 
 #sec3 .sec3-card-title {
   display: block;
-  margin-top: clamp(10px, 0.8854vw, 17px);
-  font-size: clamp(22px, 1.5625vw, 30px);
+  margin-top: 17px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1.18;
   letter-spacing: -1px;
@@ -138,8 +138,8 @@
 }
 
 #sec3 .sec3-card-desc {
-  margin-top: clamp(14px, 1.1458vw, 22px);
-  font-size: clamp(14px, 0.9375vw, 18px);
+  margin-top: 22px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.45;
   letter-spacing: -0.4px;
@@ -154,7 +154,7 @@
 }
 
 #sec3 .sec3-card--experience .sec3-card-copy {
-  width: clamp(220px, 18.2292vw, 350px);
+  width: 350px;
 }
 
 #sec3 .sec3-card.is-active .sec3-card-desc,

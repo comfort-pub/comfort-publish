@@ -5,6 +5,7 @@
 @import url("./pages/main/sections/contact.css");
 @import url("./pages/main/responsive.css");
 @import url("./pages/tattoo/shared.css");
-@import url("./pages/tattoo/shared-responsive.css");
 @import url("./pages/tattoo-pico/index.css");
+@import url("./pages/tattoo/shared-components.css");
+@import url("./pages/tattoo/shared-responsive.css");
 @import url("./pages/tattoo-pico/responsive.css");

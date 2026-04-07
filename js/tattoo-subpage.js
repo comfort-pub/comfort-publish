@@ -25,6 +25,13 @@ $(function () {
     });
   });
 
+  if (typeof modules.initTattooOverview === "function") {
+    modules.initTattooOverview({
+      resultCarousel: $("[data-result-carousel]"),
+      resultDots: $("[data-result-dot]")
+    });
+  }
+
   if (typeof modules.initScrollReveal === "function") {
     modules.initScrollReveal({
       root: document,

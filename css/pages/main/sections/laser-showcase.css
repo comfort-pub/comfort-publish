@@ -1,9 +1,9 @@
 #sec5 {
-  --sec5-height: clamp(700px, 43.75vw, 840px);
+  --sec5-height: 840px;
   position: relative;
   isolation: isolate;
   height: var(--sec5-height);
-  padding: clamp(62px, 4.5313vw, 87px) 0 0;
+  padding: 87px 0 0;
   background-color: #2a3138;
   overflow: hidden;
 }
@@ -23,43 +23,44 @@
 #sec5 .sec5-inner {
   position: relative;
   z-index: 2;
-  width: min(calc(100% - 40px), clamp(320px, 71.875vw, 1380px));
+  width: 1380px;
   margin: 0 auto;
 }
 
 #sec5 .sec5-head {
   position: relative;
   z-index: 4;
-  width: min(100%, clamp(320px, 45.5208vw, 874px));
+  width: 1037px;
   margin: 0 auto;
   text-align: center;
 }
 
 #sec5 .sec5-title {
-  margin-top: clamp(28px, 2.2917vw, 44px);
+  margin-top: 44px;
   color: #fff;
 }
 
 #sec5 .sec5-desc {
-  width: min(100%, clamp(320px, 54.0104vw, 1037px));
-  margin: clamp(26px, 1.9792vw, 38px) auto 0;
+  width: 1037px;
+  margin: 38px auto 0;
   color: rgba(255, 255, 255, 0.86);
+  white-space: nowrap;
 }
 
 #sec5 .sec5-detail-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(8px, 0.625vw, 12px);
-  width: clamp(132px, 8.8542vw, 170px);
-  height: clamp(44px, 2.8646vw, 55px);
-  margin-top: clamp(28px, 2.1875vw, 42px);
-  padding: clamp(14px, 0.9896vw, 19px) clamp(18px, 1.5104vw, 29px);
-  border-radius: clamp(22px, 1.4323vw, 27.5px);
+  gap: 12px;
+  width: 170px;
+  height: 55px;
+  margin-top: 42px;
+  padding: 19px 29px;
+  border-radius: 27.5px;
   background: #176eae;
   color: #fff;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
-  font-size: clamp(14px, 0.9375vw, 18px);
+  font-size: 18px;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.45px;
@@ -71,11 +72,11 @@
 }
 
 #sec5 .sec5-stage {
-  --sec5-stage-width: clamp(860px, 66.3076vw, 980px);
-  --sec5-stage-height: calc(var(--sec5-stage-width) * 816 / 980);
+  --sec5-stage-width: 980px;
+  --sec5-stage-height: 816px;
   position: absolute;
   left: 50%;
-  top: clamp(130px, 9.8958vw, 190px);
+  top: 190px;
   width: var(--sec5-stage-width);
   height: var(--sec5-stage-height);
   margin: 0;
@@ -96,43 +97,43 @@
 }
 
 #sec5 .sec5-machine--left {
-  left: calc(100% * 30 / 980);
+  left: 30px;
   top: 0;
-  width: calc(100% * 359 / 980);
+  width: 359px;
   height: 100%;
   z-index: 3;
 }
 
 #sec5 .sec5-machine--center {
-  left: calc(100% * 273 / 980);
-  top: calc(100% * 52 / 816);
-  width: calc(100% * 312 / 980);
-  height: calc(100% * 688 / 816);
+  left: 273px;
+  top: 52px;
+  width: 312px;
+  height: 688px;
   z-index: 4;
 }
 
 #sec5 .sec5-machine--right-front {
-  left: calc(100% * 464 / 980);
-  top: calc(100% * 69 / 816);
-  width: calc(100% * 325 / 980);
-  height: calc(100% * 717 / 816);
+  left: 464px;
+  top: 69px;
+  width: 325px;
+  height: 717px;
   z-index: 2;
 }
 
 #sec5 .sec5-machine--right-back {
-  left: calc(100% * 618 / 980);
-  top: calc(100% * 66 / 816);
-  width: calc(100% * 336 / 980);
-  height: calc(100% * 741 / 816);
+  left: 618px;
+  top: 66px;
+  width: 336px;
+  height: 741px;
   z-index: 1;
 }
 
 #sec5 .sec5-flare {
   position: absolute;
-  left: calc(100% * 744 / 980);
-  top: calc(100% * 186 / 816);
-  width: calc(100% * 424 / 980);
-  height: calc(100% * 211 / 816);
+  left: 744px;
+  top: 186px;
+  width: 424px;
+  height: 211px;
   background: url("../../../../assets/images/main/pico-laser-flare.png") no-repeat center / contain;
   mix-blend-mode: screen;
   opacity: 0.95;
@@ -144,4 +145,3 @@
 #sec5 .sec5-machine--right-back::before {
   content: none;
 }
-

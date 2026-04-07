@@ -10,6 +10,10 @@
     display: none;
   }
 
+  .page--tattoo .tattoo-section-inner {
+    width: min(calc(100% - 40px), 900px);
+  }
+
   .page--tattoo .tattoo-sub-hero-content {
     width: min(calc(100% - 40px), 900px);
     padding-bottom: 72px;

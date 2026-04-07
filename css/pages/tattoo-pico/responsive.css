@@ -67,9 +67,34 @@
     min-height: 0;
   }
 
-  .pico-comfort-item--reverse .pico-media-placeholder,
-  .pico-comfort-item--reverse .pico-comfort-copy {
-    order: initial;
+  .pico-comfort-grid,
+  .pico-comfort-item,
+  .pico-comfort-item--reverse,
+  .pico-comfort-media-box,
+  .pico-comfort-copy-box,
+  .pico-comfort-copy {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .pico-comfort-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pico-comfort-item {
+    display: grid;
+    row-gap: 24px;
+  }
+
+  .pico-comfort-media-box {
+    height: auto;
+  }
+
+  .pico-comfort-item .pico-comfort-media-box,
+  .pico-comfort-item .pico-comfort-copy-box {
+    grid-column: auto;
+    grid-row: auto;
   }
 }
 

@@ -10,24 +10,24 @@
   --tattoo-line: rgba(27, 43, 62, 0.1);
   --tattoo-soft: #f5f7fa;
   --tattoo-soft-blue: #edf4fb;
-  --tattoo-shell-wide: min(calc(100% - 40px), clamp(320px, 83.3333vw, 1600px));
-  --tattoo-shell: min(calc(100% - 40px), clamp(320px, 75vw, 1440px));
-  --tattoo-hero-kicker-size: clamp(36px, calc(100vw * 68 / 1920), 68px);
-  --tattoo-hero-title-size: clamp(32px, calc(100vw * 48 / 1920), 48px);
-  --tattoo-hero-desc-size: clamp(18px, calc(100vw * 24 / 1920), 24px);
-  --tattoo-intro-title-size: clamp(34px, calc(100vw * 52 / 1920), 52px);
-  --tattoo-body-small-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
-  --tattoo-difference-title-size: clamp(40px, calc(100vw * 60 / 1920), 60px);
-  --tattoo-panel-title-size: clamp(34px, calc(100vw * 52 / 1920), 52px);
-  --tattoo-commitment-title-size: clamp(34px, calc(100vw * 48 / 1920), 48px);
-  --tattoo-hero-title-width: min(100%, calc(100vw * 560 / 1920));
-  --tattoo-hero-desc-width: min(100%, calc(100vw * 620 / 1920));
-  --tattoo-intro-title-width: min(100%, calc(100vw * 460 / 1920));
-  --tattoo-intro-desc-width: min(100%, calc(100vw * 520 / 1920));
-  --tattoo-difference-title-width: min(100%, calc(100vw * 760 / 1920));
-  --tattoo-panel-title-width: min(100%, calc(100vw * 420 / 1920));
-  --tattoo-commitment-title-width: min(100%, calc(100vw * 660 / 1920));
-  --tattoo-commitment-desc-width: min(100%, calc(100vw * 565 / 1920));
+  --tattoo-shell-wide: 1600px;
+  --tattoo-shell: 1440px;
+  --tattoo-hero-kicker-size: 68px;
+  --tattoo-hero-title-size: 48px;
+  --tattoo-hero-desc-size: 24px;
+  --tattoo-intro-title-size: 52px;
+  --tattoo-body-small-size: 18px;
+  --tattoo-difference-title-size: 60px;
+  --tattoo-panel-title-size: 52px;
+  --tattoo-commitment-title-size: 48px;
+  --tattoo-hero-title-width: 560px;
+  --tattoo-hero-desc-width: 620px;
+  --tattoo-intro-title-width: 460px;
+  --tattoo-intro-desc-width: 520px;
+  --tattoo-difference-title-width: 760px;
+  --tattoo-panel-title-width: 420px;
+  --tattoo-commitment-title-width: 660px;
+  --tattoo-commitment-desc-width: 565px;
   color: var(--tattoo-text);
   background: #fff;
 }
@@ -108,63 +108,13 @@
   display: block;
 }
 
-.tattoo-section-inner {
-  width: var(--tattoo-shell);
-  margin: 0 auto;
-}
-
-.tattoo-special-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: clamp(160px, calc(100vw * 213 / 1920), 213px);
-  height: clamp(34px, calc(100vw * 44 / 1920), 44px);
-  padding: clamp(10px, calc(100vw * 16 / 1920), 16px) clamp(26px, calc(100vw * 49 / 1920), 49px);
-  border: 1px solid #176eae;
-  border-radius: clamp(17px, calc(100vw * 22 / 1920), 22px);
-  background: transparent;
-  color: var(--tattoo-blue);
-  font-family: "Poppins", sans-serif;
-  font-size: clamp(12px, calc(100vw * 14 / 1920), 14px);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.tattoo-heading-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.page--tattoo-overview .section-title-common {
-  color: #333;
-  font-family: "Pretendard", "Noto Sans KR", sans-serif;
-  font-size: var(--tattoo-intro-title-size);
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -1.3px;
-}
-
-.page--tattoo-overview .section-desc-common {
-  color: #555;
-  font-family: "Pretendard", "Noto Sans KR", sans-serif;
-  font-size: var(--tattoo-body-small-size);
-  font-weight: 300;
-  line-height: 1.67;
-  letter-spacing: normal;
-  word-break: keep-all;
-}
-
 .tattoo-section-title--intro {
   margin-top: 20px;
 }
 
 .tattoo-section-desc--narrow {
   width: fit-content;
-  max-width: min(100%, calc(100vw * 720 / 1920));
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0;
@@ -173,31 +123,23 @@
 }
 
 .tattoo-section-title--experience {
-  width: min(100%, calc(100vw * 560 / 1920));
-  margin: clamp(22px, calc(100vw * 33 / 1920), 33px) auto clamp(38px, calc(100vw * 60 / 1920), 60px);
+  width: 560px;
+  margin: 33px auto 60px;
   text-align: center;
   color: #28313b;
-  font-size: clamp(34px, calc(100vw * 52 / 1920), 52px);
+  font-size: 52px;
   font-weight: 300;
   line-height: normal;
   letter-spacing: -1.3px;
   white-space: nowrap;
 }
 
-.tattoo-section-title-light {
-  font-weight: 300;
-}
-
-.tattoo-section-title-strong {
-  font-weight: 700;
-}
-
 .tattoo-section-title--laser {
-  width: min(100%, calc(100vw * 760 / 1920));
-  margin: clamp(22px, calc(100vw * 33 / 1920), 33px) auto clamp(38px, calc(100vw * 60 / 1920), 60px);
+  width: 760px;
+  margin: 33px auto 60px;
   text-align: center;
   color: #28313b;
-  font-size: clamp(34px, calc(100vw * 52 / 1920), 52px);
+  font-size: 52px;
   font-weight: 300;
   line-height: normal;
   letter-spacing: -1.3px;
@@ -210,25 +152,8 @@
 }
 
 .tattoo-section-title--sedation {
-  width: min(100%, calc(100vw * 560 / 1920));
-  margin: clamp(22px, calc(100vw * 33 / 1920), 33px) auto clamp(38px, calc(100vw * 60 / 1920), 60px);
-  text-align: center;
-}
-
-.media-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  border: 1px solid rgba(29, 51, 73, 0.14);
-  border-radius: 28px;
-  background:
-    linear-gradient(135deg, rgba(23, 110, 174, 0.14), rgba(237, 244, 251, 0.88)),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(243, 247, 250, 0.82));
-  color: #6d7b8f;
-  font-size: clamp(18px, 1.1458vw, 22px);
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  width: 560px;
+  margin: 33px auto 60px;
   text-align: center;
 }
 
@@ -238,7 +163,7 @@
 }
 
 .media-placeholder--hero {
-  min-height: clamp(560px, 45.8333vw, 880px);
+  min-height: 880px;
   border: 0;
   background:
     linear-gradient(90deg, rgba(24, 31, 41, 0.62) 0%, rgba(24, 31, 41, 0.48) 36%, rgba(24, 31, 41, 0.3) 60%, rgba(24, 31, 41, 0.58) 100%),
@@ -247,27 +172,8 @@
   font-size: 0;
 }
 
-.media-placeholder--landscape {
-  aspect-ratio: 1.45 / 1;
-}
-
-.media-placeholder--portrait {
-  aspect-ratio: 0.78 / 1;
-}
-
-.media-placeholder--result {
-  aspect-ratio: 0.88 / 1;
-  border-radius: 18px;
-  font-size: clamp(16px, 1.0417vw, 20px);
-}
-
-.media-placeholder--card {
-  aspect-ratio: 1.28 / 1;
-  border-radius: 18px;
-}
-
 .media-placeholder--equipment {
-  min-height: clamp(260px, 23.4375vw, 450px);
+  min-height: 450px;
 }
 
 .tattoo-hero {
@@ -294,9 +200,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: var(--tattoo-shell-wide);
+  width: var(--tattoo-shell);
   margin: 0 auto;
-  padding-bottom: clamp(78px, 8.8542vw, 170px);
+  padding-bottom: 170px;
   z-index: 2;
 }
 
@@ -312,7 +218,7 @@
 
 .tattoo-hero-title {
   width: var(--tattoo-hero-title-width);
-  margin-top: clamp(12px, calc(100vw * 16 / 1920), 16px);
+  margin-top: 16px;
   color: #fff;
   font-family: "Noto Serif KR", serif;
   font-size: var(--tattoo-hero-title-size);
@@ -327,7 +233,7 @@
 
 .tattoo-hero-desc {
   width: var(--tattoo-hero-desc-width);
-  margin-top: clamp(18px, calc(100vw * 26 / 1920), 26px);
+  margin-top: 26px;
   color: #fff;
   font-size: var(--tattoo-hero-desc-size);
   font-weight: 700;
@@ -338,16 +244,17 @@
 }
 
 .tattoo-intro {
-  padding: clamp(90px, 7.2917vw, 140px) 0 clamp(100px, 7.8125vw, 150px);
+  padding: 140px 0 150px;
   background: #fff;
 }
 
 .tattoo-intro-inner {
-  width: var(--tattoo-shell-wide);
+  width: var(--tattoo-shell);
   display: grid;
-  grid-template-columns: minmax(0, 1.06fr) minmax(360px, 0.94fr);
+  grid-template-columns: 650px 520px;
   align-items: center;
-  gap: clamp(40px, 4.6875vw, 90px);
+  justify-content: center;
+  gap: 90px;
 }
 
 .tattoo-intro-copy .section-title-common,
@@ -357,7 +264,7 @@
 
 .tattoo-section-title--intro {
   width: var(--tattoo-intro-title-width);
-  margin: clamp(34px, calc(100vw * 49 / 1920), 49px) 0 clamp(42px, calc(100vw * 62 / 1920), 62px);
+  margin: 49px 0 62px;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
   font-size: var(--tattoo-intro-title-size);
   font-weight: 700;
@@ -391,7 +298,7 @@
 
 .tattoo-intro-copy .section-desc-common {
   width: var(--tattoo-intro-desc-width);
-  margin: clamp(42px, calc(100vw * 62 / 1920), 62px) 0 0 1px;
+  margin: 62px 0 0 1px;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
   font-size: var(--tattoo-body-small-size);
   font-weight: 300;
@@ -495,7 +402,7 @@
 .tattoo-difference {
   position: relative;
   overflow: hidden;
-  padding: clamp(110px, 8.3333vw, 160px) 0 clamp(130px, 9.375vw, 180px);
+  padding: 160px 0 180px;
   background: #101920;
 }
 
@@ -503,9 +410,9 @@
   position: relative;
   left: 50%;
   width: 100vw;
-  margin-top: clamp(24px, calc(100vw * 34 / 1920), 34px);
+  margin-top: 34px;
   margin-right: 0;
-  margin-bottom: clamp(28px, calc(100vw * 38 / 1920), 38px);
+  margin-bottom: 38px;
   margin-left: -50vw;
   overflow: hidden;
   pointer-events: none;
@@ -523,10 +430,10 @@
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
-  padding-right: clamp(56px, 4.6875vw, 90px);
+  padding-right: 90px;
   color: rgba(181, 193, 210, 0.2);
   font-family: "Philosopher", serif;
-  font-size: clamp(64px, 5.4167vw, 104px);
+  font-size: 104px;
   font-weight: 400;
   letter-spacing: -1.6px;
   line-height: 1;
@@ -536,7 +443,7 @@
 .tattoo-difference-inner {
   position: relative;
   z-index: 1;
-  width: var(--tattoo-shell-wide);
+  width: var(--tattoo-shell);
 }
 
 .tattoo-difference-title {
@@ -554,138 +461,6 @@
   text-rendering: optimizeLegibility;
 }
 
-.tattoo-result-panel {
-  width: min(100%, 1240px);
-  margin: 0 auto;
-  padding: clamp(48px, 4.1667vw, 80px) clamp(24px, 3.125vw, 60px) clamp(56px, 4.1667vw, 80px);
-  border-radius: 0;
-  background: #fff;
-}
-
-.tattoo-panel-title {
-  width: var(--tattoo-panel-title-width);
-  margin: clamp(32px, calc(100vw * 47 / 1920), 47px) auto 0;
-  color: var(--tattoo-text);
-  font-size: var(--tattoo-panel-title-size);
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -1.3px;
-  text-align: center;
-  white-space: nowrap;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-.tattoo-result-carousel {
-  width: min(100%, 686px);
-  margin: clamp(42px, 3.125vw, 60px) auto 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-}
-
-.tattoo-result-carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.tattoo-result-track {
-  display: flex;
-  gap: 0;
-  width: max-content;
-}
-
-.tattoo-result-card {
-  flex: 0 0 686px;
-  width: 686px;
-  margin: 0 auto;
-  padding: 40px 44px;
-  border: 1px solid rgba(17, 32, 46, 0.1);
-  border-radius: 18px;
-  background: #fff;
-  scroll-snap-align: start;
-}
-
-.tattoo-result-round {
-  font-size: clamp(18px, 1.1458vw, 22px);
-  font-weight: 500;
-  text-align: center;
-  color: var(--tattoo-text);
-}
-
-.tattoo-result-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  justify-content: center;
-  gap: 43px;
-  margin-top: 40px;
-}
-
-.tattoo-result-slot {
-  position: relative;
-  width: 280px;
-  overflow: hidden;
-  border-radius: 0;
-}
-
-.tattoo-result-badge {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 72px;
-  height: 26px;
-  padding: 0 12px;
-  background: #111;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
-
-.tattoo-result-dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 24px;
-}
-
-.tattoo-result-dot {
-  width: 15px;
-  height: 15px;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(16, 25, 32, 0.18);
-  cursor: pointer;
-}
-
-.tattoo-result-dot.is-active {
-  background: #101920;
-}
-
-.page--tattoo-overview .section-kicker-common--center {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
-.media-placeholder--result {
-  width: 280px;
-  height: 330px;
-  margin: 0;
-  aspect-ratio: auto;
-  overflow: hidden;
-  border-radius: 0;
-  border: 1px solid #939393;
-  background-color: #eef3f9;
-}
-
 @keyframes tattoo-difference-roll {
   from {
     transform: translateX(0);
@@ -698,19 +473,19 @@
 
 .tattoo-commitment {
   min-height: 400px;
-  padding: clamp(78px, calc(100vw * 111 / 1920), 111px) 0;
+  padding: 111px 0;
   background: #f4f4f4;
 }
 
 .tattoo-commitment-inner {
-  width: min(100%, calc(100vw * 760 / 1920));
+  width: 760px;
   margin: 0 auto;
   padding: 0;
 }
 
 .tattoo-commitment-title {
-  width: min(100%, calc(100vw * 760 / 1920));
-  margin: 0 auto clamp(36px, calc(100vw * 56 / 1920), 56px);
+  width: 760px;
+  margin: 0 auto 56px;
   color: #101920;
   font-family: "Noto Serif KR", serif;
   font-size: var(--tattoo-commitment-title-size);
@@ -723,7 +498,7 @@
 }
 
 .tattoo-commitment-desc {
-  width: var(--tattoo-commitment-desc-width);
+  width: 760px;
   margin: 0 auto;
   color: #101920;
   font-size: var(--tattoo-body-small-size);
@@ -731,12 +506,13 @@
   line-height: normal;
   letter-spacing: -0.45px;
   text-align: center;
+  white-space: nowrap;
 }
 
 .tattoo-process {
   position: relative;
   overflow: hidden;
-  padding: clamp(110px, 9.1146vw, 175px) 0 0;
+  padding: 175px 0 0;
   background: #fff;
 }
 
@@ -762,13 +538,13 @@
 }
 
 .tattoo-process-heading .section-title-common {
-  margin-top: clamp(18px, calc(100vw * 26 / 1920), 26px);
+  margin-top: 26px;
   text-align: left;
 }
 
 .tattoo-process-grid {
   position: relative;
-  margin-top: clamp(54px, 4.1667vw, 80px);
+  margin-top: 80px;
 }
 
 .tattoo-process-grid::before {
@@ -786,7 +562,7 @@
 .tattoo-process-row {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 720px);
   align-items: center;
   min-height: 420px;
 }
@@ -816,7 +592,7 @@
 
 .tattoo-process-media,
 .tattoo-process-copy {
-  padding: clamp(44px, 3.6458vw, 70px);
+  padding: 70px;
 }
 
 .tattoo-process-copy {
@@ -828,7 +604,7 @@
 .tattoo-process-step {
   color: var(--tattoo-blue);
   font-family: "Philosopher", serif;
-  font-size: clamp(16px, calc(100vw * 20 / 1920), 20px);
+  font-size: 20px;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.5px;
@@ -836,10 +612,10 @@
 }
 
 .tattoo-process-title {
-  width: min(100%, calc(100vw * 520 / 1920));
-  margin: clamp(12px, calc(100vw * 18 / 1920), 18px) 0 clamp(18px, calc(100vw * 26 / 1920), 26px) 1px;
+  width: 520px;
+  margin: 18px 0 26px 1px;
   font-family: "Noto Serif KR", serif;
-  font-size: clamp(28px, calc(100vw * 36 / 1920), 36px);
+  font-size: 36px;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.9px;
@@ -850,7 +626,7 @@
 }
 
 .tattoo-process-desc {
-  width: min(100%, calc(100vw * 442 / 1920));
+  width: 442px;
   margin: 0;
   color: #555;
   font-size: var(--tattoo-body-small-size);
@@ -862,25 +638,25 @@
 }
 
 .tattoo-experience {
-  padding: clamp(110px, 9.1146vw, 175px) 0;
+  padding: 175px 0;
   background: #f4f4f4;
 }
 
 .tattoo-experience-layout {
   display: grid;
-  grid-template-columns: minmax(0, calc(100vw * 520 / 1920)) minmax(0, calc(100vw * 520 / 1920));
+  grid-template-columns: 520px 520px;
   align-items: start;
   justify-content: center;
-  gap: clamp(28px, calc(100vw * 56 / 1920), 56px);
-  width: min(100%, calc(100vw * 1096 / 1920));
-  margin-top: clamp(58px, 4.6875vw, 90px);
+  gap: 56px;
+  width: 1096px;
+  margin-top: 90px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .tattoo-experience-media {
-  width: min(100%, calc(100vw * 500 / 1920));
-  height: clamp(420px, calc(100vw * 570 / 1920), 570px);
+  width: 500px;
+  height: 570px;
   margin: 0 0 0 auto;
   border-radius: 20px;
   background-color: transparent;
@@ -898,9 +674,9 @@
 
 .tattoo-experience-kicker {
   color: var(--tattoo-blue);
-  width: min(100%, calc(100vw * 367 / 1920));
-  margin: 0 0 clamp(14px, calc(100vw * 20 / 1920), 20px);
-  font-size: clamp(26px, calc(100vw * 36 / 1920), 36px);
+  width: 367px;
+  margin: 0 0 20px;
+  font-size: 36px;
   font-weight: 300;
   line-height: normal;
   letter-spacing: -0.9px;
@@ -909,10 +685,10 @@
 }
 
 .tattoo-experience-name {
-  width: min(100%, calc(100vw * 360 / 1920));
-  margin: 0 0 clamp(38px, calc(100vw * 54 / 1920), 54px);
+  width: 360px;
+  margin: 0 0 54px;
   color: #333;
-  font-size: clamp(34px, calc(100vw * 48 / 1920), 48px);
+  font-size: 48px;
   font-weight: 300;
   line-height: normal;
   letter-spacing: -1.2px;
@@ -931,7 +707,7 @@
 
 .tattoo-venn {
   position: relative;
-  width: min(100%, calc(100vw * 450 / 1920));
+  width: 450px;
   aspect-ratio: 1 / 1.02;
   margin-top: 32px;
 }
@@ -961,8 +737,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: clamp(148px, calc(100vw * 200 / 1920), 200px);
-  height: clamp(148px, calc(100vw * 200 / 1920), 200px);
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   color: #fff;
   line-height: normal;
@@ -975,28 +751,28 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  padding: clamp(44px, calc(100vw * 62 / 1920), 62px) clamp(34px, calc(100vw * 47 / 1920), 47px) clamp(43px, calc(100vw * 61 / 1920), 61px) clamp(33px, calc(100vw * 46 / 1920), 46px);
+  padding: 62px 47px 61px 46px;
   background-image: linear-gradient(to bottom, #0282c1, #006fb6);
 }
 
 .tattoo-venn-circle--left {
   left: 0;
-  bottom: clamp(28px, calc(100vw * 43 / 1920), 43px);
-  padding: clamp(44px, calc(100vw * 62 / 1920), 62px) clamp(21px, calc(100vw * 28 / 1920), 28px) clamp(43px, calc(100vw * 61 / 1920), 61px) clamp(23px, calc(100vw * 31 / 1920), 31px);
+  bottom: 43px;
+  padding: 62px 28px 61px 31px;
   background-image: linear-gradient(to bottom, #3d98c7, #2477b3);
 }
 
 .tattoo-venn-circle--right {
   right: 0;
-  bottom: clamp(28px, calc(100vw * 43 / 1920), 43px);
-  padding: clamp(44px, calc(100vw * 62 / 1920), 62px) clamp(43px, calc(100vw * 58 / 1920), 58px) clamp(43px, calc(100vw * 61 / 1920), 61px);
+  bottom: 43px;
+  padding: 62px 58px 61px;
   background-image: linear-gradient(to bottom, #6fafd2, #4e94c3);
 }
 
 .tattoo-venn-circle-title {
   display: block;
-  margin: 0 0 clamp(12px, calc(100vw * 17 / 1920), 17px);
-  font-size: clamp(18px, calc(100vw * 24 / 1920), 24px);
+  margin: 0 0 17px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.6px;
   text-align: center;
@@ -1025,29 +801,29 @@
 }
 
 .tattoo-laser {
-  padding: clamp(110px, 8.8542vw, 170px) 0;
+  padding: 170px 0;
   background: #fff;
 }
 
 .tattoo-laser-layout {
   display: grid;
-  grid-template-columns: minmax(0, calc(100vw * 485 / 1920)) minmax(0, calc(100vw * 550 / 1920));
+  grid-template-columns: 485px 550px;
   align-items: start;
   justify-content: center;
-  gap: clamp(72px, calc(100vw * 120 / 1920), 120px);
-  width: min(100%, calc(100vw * 1155 / 1920));
-  margin: clamp(56px, 4.4271vw, 85px) auto 0;
+  gap: 120px;
+  width: 1155px;
+  margin: 85px auto 0;
 }
 
 .tattoo-laser-copy {
-  width: min(100%, calc(100vw * 485 / 1920));
-  padding-top: clamp(74px, calc(100vw * 107 / 1920), 107px);
+  width: 485px;
+  padding-top: 107px;
 }
 
 .tattoo-laser-media {
-  width: min(100%, calc(100vw * 550 / 1920));
-  height: clamp(248px, calc(100vw * 350 / 1920), 350px);
-  margin: clamp(74px, calc(100vw * 107 / 1920), 107px) 0 0;
+  width: 550px;
+  height: 350px;
+  margin: 107px 0 0;
 }
 
 .tattoo-laser-media .media-placeholder--landscape {
@@ -1059,10 +835,10 @@
 }
 
 .tattoo-laser-title {
-  width: min(100%, calc(100vw * 300 / 1920));
-  margin: 0 clamp(140px, calc(100vw * 238 / 1920), 238px) clamp(34px, calc(100vw * 48 / 1920), 48px) 0;
+  width: 300px;
+  margin: 0 238px 48px 0;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
-  font-size: clamp(28px, calc(100vw * 36 / 1920), 36px);
+  font-size: 36px;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.9px;
@@ -1077,8 +853,8 @@
 }
 
 .tattoo-laser-desc {
-  width: min(100%, calc(100vw * 700 / 1920));
-  margin: 0 0 clamp(42px, calc(100vw * 60 / 1920), 60px) 1px;
+  width: 700px;
+  margin: 0 0 60px 1px;
   color: #555;
   font-size: var(--tattoo-body-small-size);
   font-weight: 300;
@@ -1101,8 +877,8 @@
 .tattoo-quality {
   position: relative;
   overflow: hidden;
-  min-height: clamp(760px, calc(100vw * 1030 / 1920), 1030px);
-  padding: clamp(62px, 4.5313vw, 87px) 0 0;
+  min-height: 1030px;
+  padding: 87px 0 0;
   background-color: #2a3138;
 }
 
@@ -1119,22 +895,22 @@
 .tattoo-quality-inner {
   position: relative;
   z-index: 1;
-  width: var(--tattoo-shell-wide);
+  width: var(--tattoo-shell);
 }
 
 .tattoo-quality-kicker {
   color: rgba(255, 255, 255, 0.72);
-  font-size: clamp(16px, 0.9896vw, 19px);
+  font-size: 19px;
   font-weight: 300;
   line-height: 1.7;
   text-align: center;
 }
 
 .tattoo-quality-title {
-  width: min(100%, calc(100vw * 828 / 1920));
-  margin: clamp(28px, calc(100vw * 39 / 1920), 39px) auto 0;
+  width: 828px;
+  margin: 39px auto 0;
   color: #fff;
-  font-size: clamp(34px, calc(100vw * 52 / 1920), 52px);
+  font-size: 52px;
   font-weight: 300;
   line-height: normal;
   letter-spacing: -1.3px;
@@ -1154,9 +930,9 @@
 .tattoo-quality-points {
   display: flex;
   justify-content: center;
-  gap: clamp(24px, calc(100vw * 42 / 1920), 42px);
-  margin-top: clamp(48px, 3.3854vw, 65px);
-  margin-bottom: clamp(54px, calc(100vw * 96 / 1920), 96px);
+  gap: 42px;
+  margin-top: 65px;
+  margin-bottom: 96px;
   flex-wrap: wrap;
 }
 
@@ -1164,13 +940,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: clamp(148px, calc(100vw * 200 / 1920), 200px);
-  height: clamp(148px, calc(100vw * 200 / 1920), 200px);
-  padding: clamp(54px, calc(100vw * 75 / 1920), 75px) clamp(16px, calc(100vw * 22 / 1920), 22px) clamp(53px, calc(100vw * 74 / 1920), 74px) clamp(15px, calc(100vw * 21 / 1920), 21px);
+  width: 200px;
+  height: 200px;
+  padding: 75px 22px 74px 21px;
   border: 2px solid rgba(92, 127, 244, 0.68);
   border-radius: 50%;
   color: #fff;
-  font-size: clamp(18px, calc(100vw * 24 / 1920), 24px);
+  font-size: 24px;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.6px;
@@ -1179,13 +955,12 @@
 }
 
 .tattoo-quality-stage {
-  --tattoo-quality-stage-width: clamp(860px, 66.3076vw, 980px);
-  --tattoo-quality-stage-height: calc(var(--tattoo-quality-stage-width) * 816 / 980);
+  --tattoo-quality-stage-width: 980px;
   position: absolute;
   left: 50%;
-  top: clamp(214px, calc(100vw * 318 / 1920), 318px);
+  top: 318px;
   width: var(--tattoo-quality-stage-width);
-  height: var(--tattoo-quality-stage-height);
+  height: 816px;
   margin: 0;
   overflow: visible;
   transform: translateX(-50%);
@@ -1210,43 +985,43 @@
 }
 
 .tattoo-quality-machine--left {
-  left: calc(100% * 30 / 980);
+  left: 30px;
   top: 0;
-  width: calc(100% * 359 / 980);
+  width: 359px;
   height: 100%;
   z-index: 3;
 }
 
 .tattoo-quality-machine--center {
-  left: calc(100% * 273 / 980);
-  top: calc(100% * 52 / 816);
-  width: calc(100% * 312 / 980);
-  height: calc(100% * 688 / 816);
+  left: 273px;
+  top: 52px;
+  width: 312px;
+  height: 688px;
   z-index: 4;
 }
 
 .tattoo-quality-machine--right-front {
-  left: calc(100% * 464 / 980);
-  top: calc(100% * 69 / 816);
-  width: calc(100% * 325 / 980);
-  height: calc(100% * 717 / 816);
+  left: 464px;
+  top: 69px;
+  width: 325px;
+  height: 717px;
   z-index: 2;
 }
 
 .tattoo-quality-machine--right-back {
-  left: calc(100% * 618 / 980);
-  top: calc(100% * 66 / 816);
-  width: calc(100% * 336 / 980);
-  height: calc(100% * 741 / 816);
+  left: 618px;
+  top: 66px;
+  width: 336px;
+  height: 741px;
   z-index: 1;
 }
 
 .tattoo-quality-flare {
   position: absolute;
-  left: calc(100% * 744 / 980);
-  top: calc(100% * 186 / 816);
-  width: calc(100% * 424 / 980);
-  height: calc(100% * 211 / 816);
+  left: 744px;
+  top: 186px;
+  width: 424px;
+  height: 211px;
   background: url("../../../assets/images/main/pico-laser-flare.png") no-repeat center / contain;
   mix-blend-mode: screen;
   opacity: 0.95;
@@ -1256,27 +1031,27 @@
 }
 
 .tattoo-sedation {
-  padding: clamp(108px, 8.8542vw, 170px) 0;
+  padding: 170px 0;
   background: #fff;
 }
 
 .tattoo-sedation-intro {
   display: grid;
-  grid-template-columns: minmax(0, calc(100vw * 520 / 1920)) minmax(0, calc(100vw * 550 / 1920));
+  grid-template-columns: 520px 550px;
   align-items: center;
   justify-content: center;
-  gap: clamp(48px, calc(100vw * 88 / 1920), 88px);
-  margin-top: clamp(58px, 4.6875vw, 90px);
+  gap: 88px;
+  margin-top: 90px;
 }
 
 .tattoo-sedation-copy {
-  width: min(100%, calc(100vw * 520 / 1920));
+  width: 520px;
   padding-top: 0;
 }
 
 .tattoo-sedation-media {
-  width: min(100%, calc(100vw * 550 / 1920));
-  height: clamp(248px, calc(100vw * 350 / 1920), 350px);
+  width: 550px;
+  height: 350px;
   margin: 0;
 }
 
@@ -1289,10 +1064,10 @@
 }
 
 .tattoo-sedation-title {
-  width: min(100%, calc(100vw * 300 / 1920));
-  margin: 0 clamp(140px, calc(100vw * 238 / 1920), 238px) clamp(34px, calc(100vw * 48 / 1920), 48px) 0;
+  width: 300px;
+  margin: 0 238px 48px 0;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
-  font-size: clamp(28px, calc(100vw * 36 / 1920), 36px);
+  font-size: 36px;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.9px;
@@ -1308,7 +1083,7 @@
 
 .tattoo-sedation-desc,
 .tattoo-sedation-note {
-  width: min(100%, calc(100vw * 680 / 1920));
+  width: 680px;
   color: #555;
   font-size: var(--tattoo-body-small-size);
   font-weight: 300;
@@ -1323,25 +1098,25 @@
 }
 
 .tattoo-sedation-note {
-  margin-top: clamp(18px, calc(100vw * 24 / 1920), 24px);
+  margin-top: 24px;
 }
 
 .tattoo-sedation-steps {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, calc(100vw * 300 / 1920)));
-  gap: clamp(22px, calc(100vw * 42 / 1920), 42px);
+  grid-template-columns: repeat(3, 300px);
+  gap: 42px;
   justify-content: center;
-  width: min(100%, calc(100vw * 984 / 1920));
-  margin: clamp(44px, calc(100vw * 70 / 1920), 70px) auto 0;
+  width: 984px;
+  margin: 70px auto 0;
 }
 
 .tattoo-sedation-steps::before {
   content: "";
   position: absolute;
-  top: clamp(16px, calc(100vw * 23 / 1920), 23px);
+  top: 23px;
   left: 50%;
-  width: min(calc(100% - clamp(196px, calc(100vw * 280 / 1920), 280px)), calc(100vw * 605 / 1920));
+  width: 605px;
   height: 1px;
   background-color: #176eae;
   transform: translateX(-50%);
@@ -1357,7 +1132,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  margin-bottom: clamp(16px, calc(100vw * 23 / 1920), 23px);
+  margin-bottom: 23px;
 }
 
 .tattoo-sedation-step-badge {
@@ -1365,14 +1140,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: clamp(78px, calc(100vw * 106 / 1920), 106px);
-  height: clamp(34px, calc(100vw * 46 / 1920), 46px);
-  padding: 0 clamp(18px, calc(100vw * 28 / 1920), 28px);
+  min-width: 106px;
+  height: 46px;
+  padding: 0 28px;
   border-radius: 999px;
   background: var(--tattoo-blue);
   color: #fff;
   font-family: "Poppins", sans-serif;
-  font-size: clamp(12px, calc(100vw * 15 / 1920), 15px);
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.04em;
   z-index: 1;
@@ -1382,20 +1157,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: min(100%, calc(100vw * 300 / 1920));
-  min-height: clamp(132px, calc(100vw * 170 / 1920), 170px);
-  padding: clamp(41px, calc(100vw * 59 / 1920), 59px) clamp(14px, calc(100vw * 22 / 1920), 22px) clamp(44px, calc(100vw * 64 / 1920), 64px);
+  width: 300px;
+  min-height: 170px;
+  padding: 59px 22px 64px;
   border-radius: 30px;
   background-color: #f7f7f7;
   color: var(--tattoo-text);
-  font-size: clamp(15px, 0.9375vw, 18px);
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
   text-align: center;
 }
 
 .tattoo-aftercare {
-  padding: clamp(104px, 8.3333vw, 160px) 0;
+  padding: 160px 0;
   background: var(--tattoo-soft-blue);
 }
 
@@ -1404,12 +1179,12 @@
   grid-template-columns: minmax(0, 430px) minmax(0, 760px);
   align-items: start;
   justify-content: space-between;
-  gap: clamp(42px, 6.25vw, 120px);
+  gap: 120px;
 }
 
 .tattoo-aftercare-copy .section-title-common {
-  width: min(100%, calc(100vw * 560 / 1920));
-  margin: clamp(22px, calc(100vw * 33 / 1920), 33px) 0 clamp(38px, calc(100vw * 60 / 1920), 60px);
+  width: 560px;
+  margin: 33px 0 60px;
   text-align: left;
 }
 
@@ -1418,7 +1193,7 @@
 }
 
 .tattoo-aftercare-copy .section-desc-common {
-  width: min(100%, calc(100vw * 720 / 1920));
+  width: 720px;
   margin: 0;
   text-align: left;
   white-space: nowrap;
@@ -1426,16 +1201,16 @@
 
 .tattoo-aftercare-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, calc(100vw * 320 / 1920)));
+  grid-template-columns: repeat(2, 320px);
   gap: 0;
-  width: min(100%, calc(100vw * 641 / 1920));
+  width: 641px;
   background: #fff;
 }
 
 .tattoo-aftercare-card {
-  width: min(100%, calc(100vw * 320 / 1920));
-  height: clamp(300px, calc(100vw * 400 / 1920), 400px);
-  padding: clamp(46px, calc(100vw * 68 / 1920), 68px) clamp(108px, calc(100vw * 155 / 1920), 155px) clamp(120px, calc(100vw * 173 / 1920), 173px) clamp(28px, calc(100vw * 40 / 1920), 40px);
+  width: 320px;
+  height: 400px;
+  padding: 68px 155px 173px 40px;
   border-right: 1px solid rgba(24, 49, 77, 0.08);
   border-bottom: 1px solid rgba(24, 49, 77, 0.08);
   background: #fff;
@@ -1454,7 +1229,7 @@
 
 .tattoo-aftercare-card.is-active {
   background: var(--tattoo-blue);
-  padding: clamp(46px, calc(100vw * 68 / 1920), 68px) clamp(70px, calc(100vw * 98 / 1920), 98px) clamp(46px, calc(100vw * 67 / 1920), 67px) clamp(26px, calc(100vw * 36.8 / 1920), 36.8px);
+  padding: 68px 98px 67px 36.8px;
 }
 
 .tattoo-aftercare-card.is-active .tattoo-aftercare-title,
@@ -1467,16 +1242,16 @@
 }
 
 .tattoo-aftercare-icon {
-  --tattoo-aftercare-icon-shadow-x: clamp(8px, calc(100vw * 11 / 1920), 11px);
-  --tattoo-aftercare-icon-shadow-y: clamp(10px, calc(100vw * 14 / 1920), 14px);
-  --tattoo-aftercare-icon-shadow-size: clamp(30px, calc(100vw * 41 / 1920), 41px);
+  --tattoo-aftercare-icon-shadow-x: 11px;
+  --tattoo-aftercare-icon-shadow-y: 14px;
+  --tattoo-aftercare-icon-shadow-size: 41px;
   --tattoo-aftercare-icon-art-width: 100%;
   --tattoo-aftercare-icon-art-height: 100%;
   position: relative;
   display: block;
-  width: clamp(40px, calc(100vw * 53.5 / 1920), 53.5px);
-  height: clamp(32px, calc(100vw * 47.5 / 1920), 47.5px);
-  margin: clamp(5px, calc(100vw * 7.4 / 1920), 7.4px) clamp(16px, calc(100vw * 22 / 1920), 22px) clamp(24px, calc(100vw * 34 / 1920), 34px) clamp(12px, calc(100vw * 16 / 1920), 16px);
+  width: 53.5px;
+  height: 47.5px;
+  margin: 7.4px 22px 34px 16px;
   z-index: 0;
   isolation: isolate;
 }
@@ -1507,7 +1282,7 @@
 }
 
 .tattoo-aftercare-card.is-active .tattoo-aftercare-icon {
-  margin: clamp(11px, calc(100vw * 15 / 1920), 15px) clamp(90px, calc(100vw * 125 / 1920), 125px) clamp(17px, calc(100vw * 24 / 1920), 24px) clamp(14px, calc(100vw * 19.2 / 1920), 19.2px);
+  margin: 15px 125px 24px 19.2px;
 }
 
 .tattoo-aftercare-card.is-active .tattoo-aftercare-icon::before {
@@ -1515,14 +1290,14 @@
 }
 
 .tattoo-aftercare-icon--1::after {
-  --tattoo-aftercare-icon-art-width: clamp(40px, calc(100vw * 53.5 / 1920), 53.5px);
-  --tattoo-aftercare-icon-art-height: clamp(31px, calc(100vw * 42 / 1920), 42px);
+  --tattoo-aftercare-icon-art-width: 53.5px;
+  --tattoo-aftercare-icon-art-height: 42px;
   background-image: url("../../../assets/images/sub_tatto_removal/icon_1_fill.png");
 }
 
 .tattoo-aftercare-icon--2::after {
-  --tattoo-aftercare-icon-art-width: clamp(30px, calc(100vw * 40.5 / 1920), 40.5px);
-  --tattoo-aftercare-icon-art-height: clamp(31px, calc(100vw * 42.5 / 1920), 42.5px);
+  --tattoo-aftercare-icon-art-width: 40.5px;
+  --tattoo-aftercare-icon-art-height: 42.5px;
   background-image: url("../../../assets/images/sub_tatto_removal/icon_2_fill.png");
 }
 
@@ -1531,8 +1306,8 @@
 }
 
 .tattoo-aftercare-icon--3::after {
-  --tattoo-aftercare-icon-art-width: clamp(34px, calc(100vw * 46.2 / 1920), 46.2px);
-  --tattoo-aftercare-icon-art-height: clamp(34px, calc(100vw * 46.2 / 1920), 46.2px);
+  --tattoo-aftercare-icon-art-width: 46.2px;
+  --tattoo-aftercare-icon-art-height: 46.2px;
   background-image: url("../../../assets/images/sub_tatto_removal/icon_3_fill.png");
 }
 
@@ -1541,8 +1316,8 @@
 }
 
 .tattoo-aftercare-icon--4::after {
-  --tattoo-aftercare-icon-art-width: clamp(35px, calc(100vw * 47.5 / 1920), 47.5px);
-  --tattoo-aftercare-icon-art-height: clamp(35px, calc(100vw * 47.5 / 1920), 47.5px);
+  --tattoo-aftercare-icon-art-width: 47.5px;
+  --tattoo-aftercare-icon-art-height: 47.5px;
   background-image: url("../../../assets/images/sub_tatto_removal/icon_4_fill.png");
 }
 
@@ -1555,9 +1330,9 @@
 }
 
 .tattoo-aftercare-title {
-  width: min(100%, calc(100vw * 150 / 1920));
-  margin: 0 0 clamp(20px, calc(100vw * 29 / 1920), 29px) clamp(3px, calc(100vw * 4.2 / 1920), 4.2px);
-  font-size: clamp(22px, calc(100vw * 30 / 1920), 30px);
+  width: 150px;
+  margin: 0 0 29px 4.2px;
+  font-size: 30px;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.75px;
@@ -1568,8 +1343,8 @@
 
 .tattoo-aftercare-desc {
   display: none;
-  width: min(100%, calc(100vw * 182 / 1920));
-  margin: 0 0 0 clamp(2px, calc(100vw * 3.2 / 1920), 3.2px);
+  width: 182px;
+  margin: 0 0 0 3.2px;
   color: #fff;
   font-size: var(--tattoo-body-small-size);
   font-weight: 400;
@@ -1582,88 +1357,19 @@
   display: block;
 }
 
-.tattoo-summary {
-  min-height: clamp(760px, calc(100vw * 1000 / 1920), 1000px);
-  padding: clamp(72px, calc(100vw * 95 / 1920), 95px) 0 clamp(78px, calc(100vw * 104 / 1920), 104px);
-  background: #fff;
-}
-
-.tattoo-summary-title {
-  color: var(--tattoo-text);
-  font-size: clamp(42px, 2.8125vw, 54px);
-  font-weight: 700;
-  line-height: 1.28;
-  letter-spacing: -0.04em;
-  text-align: center;
-}
-
-.tattoo-summary-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(16px, 1.25vw, 24px);
-  margin-top: clamp(52px, 4.1667vw, 80px);
-}
-
-.tattoo-summary-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.tattoo-summary-card .media-placeholder--card {
-  width: min(100%, calc(100vw * 330 / 1920));
-  height: clamp(190px, calc(100vw * 250 / 1920), 250px);
-  margin: 0 0 clamp(24px, calc(100vw * 35 / 1920), 35px);
-  border: 0;
-  border-radius: 10px;
-  background-color: #f5f5f5;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  aspect-ratio: auto;
-}
-
-.tattoo-summary-card .tattoo-photo--summary-2 {
-  background-image: url("../../../assets/images/sub_tatto_removal/Group 29.png");
-  background-size: 115% auto;
-  background-position: 25% 10%;
-  background-color: #fff;
-}
-
-.tattoo-summary-card-title {
-  margin-top: 0;
-  font-size: clamp(22px, 1.5104vw, 29px);
-  font-weight: 700;
-  line-height: 1.34;
-  letter-spacing: -0.04em;
-  text-align: center;
-}
-
-.tattoo-summary-card-desc {
-  width: min(100%, calc(100vw * 300 / 1920));
-  margin: clamp(4px, calc(100vw * 6 / 1920), 6px) auto 0;
-  padding: 0;
-  color: #333;
-  font-size: var(--tattoo-body-small-size);
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.45px;
-  text-align: center;
-}
-
 .tattoo-faq {
-  min-height: clamp(620px, calc(100vw * 790 / 1920), 790px);
-  padding: clamp(48px, calc(100vw * 67 / 1920), 67px) 0 clamp(78px, calc(100vw * 109 / 1920), 109px);
+  min-height: 790px;
+  padding: 67px 0 109px;
   background: #f4f4f4;
 }
 
 .tattoo-faq-inner {
-  width: min(calc(100% - 40px), 1240px);
+  width: 1240px;
 }
 
 .tattoo-faq-title {
   color: var(--tattoo-text);
-  font-size: clamp(42px, 2.8125vw, 54px);
+  font-size: 54px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.04em;
@@ -1671,7 +1377,7 @@
 }
 
 .tattoo-faq-list {
-  margin-top: clamp(44px, 3.6458vw, 70px);
+  margin-top: 70px;
   border-top: 1px solid #000;
 }
 
@@ -1700,7 +1406,7 @@
 }
 
 .tattoo-faq-question {
-  font-size: clamp(16px, 1.0417vw, 20px);
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: -0.02em;
@@ -1711,6 +1417,7 @@
   width: 22px;
   height: 22px;
   margin-left: auto;
+  transition: transform 0.28s ease;
 }
 
 .tattoo-faq-icon::before,
@@ -1735,6 +1442,10 @@
   transform: translate(-50%, -50%) rotate(90deg) scaleX(0.2);
 }
 
+.tattoo-faq-item.is-open .tattoo-faq-icon {
+  transform: rotate(180deg);
+}
+
 .tattoo-faq-panel {
   padding: 0 48px 28px 52px;
   overflow: hidden;
@@ -1753,7 +1464,7 @@
 
 .tattoo-faq-panel p {
   color: var(--tattoo-muted);
-  font-size: clamp(15px, 0.9896vw, 19px);
+  font-size: 19px;
   font-weight: 300;
   line-height: 1.9;
 }

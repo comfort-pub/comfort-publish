@@ -67,11 +67,12 @@ img {
 }
 
 .header .inner {
+  --header-y-pad: 29px;
   padding:
-    clamp(20px, 1.5104vw, 29px)
-    clamp(24px, 13.9583vw, 268px)
-    clamp(20px, 1.5104vw, 29px)
-    clamp(24px, 13.5417vw, 260px);
+    var(--header-y-pad)
+    268px
+    var(--header-y-pad)
+    260px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -80,7 +81,7 @@ img {
 }
 
 .logo {
-  width: clamp(96px, 10vw, 192px);
+  width: 192px;
   flex-shrink: 0;
 }
 
@@ -124,19 +125,29 @@ img {
 }
 
 .gnb {
-  width: clamp(410px, 40vw, 768px);
-  margin-left: clamp(48px, 22.5vw, 432px);
+  width: 768px;
+  height: 100%;
+  margin-left: 432px;
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
 }
 
 .gnb-list {
   width: 100%;
-  height: 17px;
-  margin: 12px 0 13px;
+  height: 100%;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(12px, 0.8333vw, 16px);
+  gap: 16px;
+}
+
+.gnb-list .gnb-item {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .gnb a {
@@ -144,11 +155,11 @@ img {
   align-items: center;
   justify-content: center;
   height: 17px;
-  padding: clamp(24px, 1.5104vw, 29px) clamp(4px, 0.4167vw, 8px);
+  padding: 29px 8px;
   position: relative;
   line-height: 1;
   white-space: nowrap;
-  font-size: clamp(14px, 0.9375vw, 18px);
+  font-size: 18px;
   font-weight: 500;
   letter-spacing: -0.45px;
   text-align: center;
@@ -156,17 +167,21 @@ img {
 }
 
 .gnb-list .gnb-item.is-active a::after {
+  display: none;
+}
+
+.gnb-list .gnb-item.is-active::after {
   content: "";
   position: absolute;
   left: 0;
   width: 100%;
   height: 3px;
-  bottom: -30px;
+  top: calc(100% + var(--header-y-pad) - 3px);
   background: #176eae;
   display: none;
 }
 
-.header-area:hover .gnb-list .gnb-item.is-active a::after {
+.header-area:hover .gnb-list .gnb-item.is-active::after {
   display: block;
 }
 
@@ -210,9 +225,9 @@ img {
 }
 
 .header-dropdown-links {
-  width: clamp(420px, 42.7083vw, 820px);
+  width: 820px;
   height: auto;
-  margin: clamp(28px, 2.2396vw, 43px) clamp(24px, 12.8646vw, 247px) 0 auto;
+  margin: 43px 247px 0 auto;
 }
 
 .header-quick-menu {
@@ -220,8 +235,8 @@ img {
   height: auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-auto-rows: clamp(44px, 2.8646vw, 55px);
-  gap: clamp(12px, 1.0417vw, 20px);
+  grid-auto-rows: 55px;
+  gap: 20px;
   padding-top: 0;
 }
 
@@ -231,13 +246,13 @@ img {
   justify-content: flex-start;
   position: relative;
   width: 100%;
-  min-height: clamp(44px, 2.8646vw, 55px);
-  padding: 0 clamp(30px, 2.2917vw, 44px) 0 clamp(12px, 1.0417vw, 20px);
+  min-height: 55px;
+  padding: 0 44px 0 20px;
   border-radius: 3px;
   border: 1px solid #ddd;
   background: #fff;
   color: #21283c;
-  font-size: clamp(15px, 0.9375vw, 18px);
+  font-size: 18px;
   font-weight: 500;
   letter-spacing: -0.45px;
   white-space: nowrap;
@@ -254,7 +269,7 @@ img {
   width: 10px;
   height: 17px;
   position: absolute;
-  right: clamp(12px, 1.0417vw, 20px);
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   margin: 0;
@@ -279,7 +294,7 @@ img {
 .floating-quick-actions,
 .tattoo-floating-actions {
   position: fixed;
-  right: clamp(18px, 2.5vw, 48px);
+  right: 48px;
   top: 50%;
   z-index: 60;
   display: flex;
@@ -360,8 +375,8 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: clamp(72px, calc(100vw * 90 / 1920), 90px);
-  min-height: clamp(72px, calc(100vw * 90 / 1920), 90px);
+  width: 90px;
+  min-height: 90px;
   padding: 0;
   border: 1px solid rgba(19, 36, 54, 0.08);
   border-radius: 50%;

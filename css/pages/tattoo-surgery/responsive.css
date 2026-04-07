@@ -11,6 +11,16 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .tattoo-surgery-recommend-inner {
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .tattoo-surgery-recommend-list {
+    width: 100%;
+    justify-self: stretch;
+  }
+
   .tattoo-surgery-advantage-row {
     flex-wrap: wrap;
     gap: 14px;

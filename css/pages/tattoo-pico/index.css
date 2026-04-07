@@ -11,12 +11,28 @@
   animation: none;
 }
 
+.page--tattoo-pico .pico-machine-cards.scroll-reveal {
+  opacity: 0;
+  translate: 0 var(--reveal-distance, 28px);
+  transition:
+    opacity 0.65s ease,
+    translate 0.65s ease;
+  will-change: opacity, translate;
+}
+
+.page--tattoo-pico .pico-machine-cards.scroll-reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+  animation: none;
+  will-change: auto;
+}
+
 .page-tattoo-pico-reference {
   background: #fff;
 }
 
 .tattoo-pico-hero .tattoo-sub-hero-visual {
-  min-height: clamp(420px, calc(100vw * 915 / 1920), 915px);
+  min-height: 915px;
   background:
     linear-gradient(90deg, rgba(15, 22, 31, 0.52) 0%, rgba(15, 22, 31, 0.2) 48%, rgba(15, 22, 31, 0.38) 100%),
     url("../../../assets/images/sub_pico_laser/DUL_2396 (1).png") no-repeat center center / cover;
@@ -24,23 +40,22 @@
 
 .tattoo-pico-hero .tattoo-sub-hero-content {
   justify-content: flex-end;
-  width: var(--tattoo-shell-wide);
-  padding-bottom: clamp(68px, calc(100vw * 130 / 1920), 130px);
+  padding-bottom: 130px;
 }
 
 .tattoo-pico-hero .tattoo-sub-hero-kicker {
-  font-size: clamp(40px, calc(100vw * 52 / 1920), 52px);
+  font-size: 52px;
   letter-spacing: -1.4px;
 }
 
 .tattoo-pico-hero .tattoo-sub-hero-title {
   margin-top: 4px;
-  font-size: clamp(34px, calc(100vw * 42 / 1920), 42px);
+  font-size: 42px;
 }
 
 .tattoo-pico-hero .tattoo-sub-hero-desc {
   margin-top: 18px;
-  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.42;
 }
@@ -50,7 +65,7 @@
 .pico-fractat-section,
 .pico-comfort-section,
 .pico-summary-section {
-  padding: clamp(100px, calc(100vw * 132 / 1920), 132px) 0;
+  padding: 132px 0;
   background: #fff;
 }
 
@@ -60,24 +75,32 @@
 }
 
 .pico-comfort-section {
+  position: relative;
+  padding-bottom: 0;
   background: #f5f5f5;
+  overflow: hidden;
+}
+
+.pico-comfort-section .tattoo-section-inner {
+  position: relative;
+  z-index: 1;
 }
 
 .pico-custom-section {
-  padding: clamp(96px, calc(100vw * 126 / 1920), 126px) 0;
+  padding: 126px 0;
   background: #f5f5f5;
 }
 
 .pico-compare-section {
   padding:
-    clamp(84px, calc(100vw * 118 / 1920), 118px)
+    118px
     0
-    clamp(114px, calc(100vw * 160 / 1920), 160px);
+    160px;
   background: #101920;
 }
 
 .pico-compare-section .tattoo-section-inner {
-  width: min(calc(100% - 40px), clamp(320px, calc(100vw * 1300 / 1920), 1300px));
+  width: 1300px;
 }
 
 .pico-intro-layout,
@@ -90,8 +113,8 @@
 
 .pico-intro-layout {
   grid-template-columns: minmax(0, 650px) minmax(0, 610px);
-  gap: clamp(30px, calc(100vw * 51 / 1920), 51px);
-  width: min(100%, 1311px);
+  gap: 51px;
+  width: 1311px;
   margin: 0 auto;
 }
 
@@ -107,7 +130,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: min(100%, 650px);
+  width: 650px;
   min-height: 430px;
   border-radius: 20px;
   color: #9fa4aa;
@@ -121,7 +144,7 @@
 }
 
 .pico-intro-kicker {
-  width: min(100%, 279px);
+  width: 279px;
   margin: 0;
   font-family: "Philosopher", serif;
   font-size: 22px;
@@ -132,7 +155,7 @@
 }
 
 .pico-intro-title {
-  width: min(100%, 610px);
+  width: 610px;
   margin-top: 49px;
   color: #333;
   font-size: 52px;
@@ -141,7 +164,7 @@
 }
 
 .pico-intro-desc {
-  width: min(100%, 525px);
+  width: 525px;
   margin-top: 62px;
   margin-right: auto;
   font-size: 18px;
@@ -152,7 +175,7 @@
 .pico-eyebrow {
   color: #2c78bf;
   font-family: "Poppins", sans-serif;
-  font-size: clamp(16px, calc(100vw * 18 / 1920), 18px);
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -168,7 +191,7 @@
 .pico-section-title {
   margin-top: 14px;
   color: #2b2b2b;
-  font-size: clamp(36px, calc(100vw * 44 / 1920), 44px);
+  font-size: 44px;
   font-weight: 700;
   line-height: 1.18;
   letter-spacing: -1.3px;
@@ -183,10 +206,10 @@
 }
 
 .pico-section-title--wavelength {
-  width: min(100%, 821px);
+  width: 821px;
   margin: 0 auto 62px;
   color: #333;
-  font-size: clamp(36px, calc(100vw * 52 / 1920), 52px);
+  font-size: 52px;
   line-height: normal;
   text-align: center;
 }
@@ -198,7 +221,7 @@
 .pico-section-text {
   margin-top: 6px;
   color: #777;
-  font-size: clamp(12px, calc(100vw * 14 / 1920), 14px);
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.65;
 }
@@ -216,13 +239,13 @@
   grid-template-columns: repeat(2, minmax(0, 640px));
   justify-content: center;
   gap: 20px;
-  width: min(100%, 1300px);
+  width: 1300px;
   margin: 110px auto 0;
 }
 
 .pico-compare-card {
   overflow: hidden;
-  width: min(100%, 640px);
+  width: 640px;
   aspect-ratio: 640 / 610;
   min-width: 0;
   padding: 0 0 33px;
@@ -240,9 +263,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: clamp(46px, calc(100vw * 55 / 1920), 55px);
+  height: 55px;
   color: #fff;
-  font-size: clamp(20px, calc(100vw * 24 / 1920), 24px);
+  font-size: 24px;
   font-weight: 700;
 }
 
@@ -255,7 +278,7 @@
 }
 
 .pico-compare-card-body {
-  height: calc(100% - clamp(46px, calc(100vw * 55 / 1920), 55px) - 33px);
+  height: calc(100% - 55px - 33px);
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: center center;
@@ -282,19 +305,20 @@
 .pico-compare-title {
   margin-top: 29px;
   color: #fff;
-  font-size: clamp(36px, calc(100vw * 52 / 1920), 52px);
+  font-size: 52px;
   text-align: center;
 }
 
 .section-desc-common.pico-compare-desc,
 .pico-compare-desc {
-  width: min(100%, 999px);
+  width: 1180px;
   margin: 50px auto 0;
   color: #fff;
-  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.67;
   text-align: center;
+  white-space: nowrap;
 }
 
 .pico-compare-desc-normal {
@@ -308,11 +332,11 @@
 .pico-feature-layout {
   display: grid;
   grid-template-columns: 410px 680px;
-  gap: clamp(28px, calc(100vw * 44 / 1920), 44px);
+  gap: 44px;
   align-items: center;
   justify-content: center;
-  width: min(100%, 1134px);
-  margin: clamp(70px, calc(100vw * 92 / 1920), 92px) auto 0;
+  width: 1134px;
+  margin: 92px auto 0;
 }
 
 .pico-feature-title {
@@ -320,7 +344,7 @@
   width: fit-content;
   max-width: 100%;
   color: #fff;
-  font-size: clamp(36px, calc(100vw * 42 / 1920), 42px);
+  font-size: 42px;
   font-weight: 700;
   line-height: 1.24;
 }
@@ -329,7 +353,7 @@
   width: 100%;
   margin-top: 20px;
   color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(13px, calc(100vw * 14 / 1920), 14px);
+  font-size: 18px;
   line-height: 1.65;
 }
 
@@ -371,7 +395,7 @@
   width: 100%;
   max-width: 180px;
   color: #333;
-  font-size: clamp(16px, calc(100vw * 20 / 1920), 20px);
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.5;
   word-break: keep-all;
@@ -397,18 +421,18 @@
 
 .pico-machine-inner {
   position: relative;
-  height: clamp(760px, calc(100vw * 1138 / 1920), 1138px);
-  --pico-machine-card-size: clamp(260px, calc(100vw * 400 / 1920), 400px);
-  --pico-machine-card-gap: clamp(16px, calc(100vw * 29 / 1920), 29px);
+  height: 1138px;
+  --pico-machine-card-size: 400px;
+  --pico-machine-card-gap: 29px;
   overflow: hidden;
 }
 
 .pico-machine-rings {
   position: absolute;
   left: 50%;
-  top: clamp(-118px, calc(100vw * -58 / 1920), -58px);
-  width: clamp(520px, calc(100vw * 784.7 / 1920), 784.7px);
-  height: clamp(520px, calc(100vw * 784.7 / 1920), 784.7px);
+  top: -58px;
+  width: 784.7px;
+  height: 784.7px;
   background: url("../../../assets/images/sub_pico_laser/동그라미.png") no-repeat center center / contain;
   transform: translateX(-50%);
 }
@@ -421,27 +445,29 @@
 .pico-machine-inner .pico-section-head {
   position: relative;
   z-index: 1;
-  width: min(100%, 640px);
+  width: 640px;
   margin: 0 auto;
-  padding-top: clamp(94px, calc(100vw * 116 / 1920), 116px);
+  padding-top: 116px;
 }
 
 .pico-machine-title {
-  width: min(100%, 611px);
+  width: 720px;
   margin: 45px auto 46px;
   color: #333;
-  font-size: clamp(36px, calc(100vw * 52 / 1920), 52px);
+  font-size: 52px;
   line-height: normal;
   text-align: center;
+  white-space: nowrap;
 }
 
 .pico-machine-desc {
-  width: min(100%, 433px);
+  width: 720px;
   margin: 0 auto;
   color: #555;
-  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-size: 18px;
   line-height: 1.67;
   text-align: center;
+  white-space: nowrap;
 }
 
 .pico-machine-cards {
@@ -556,13 +582,13 @@
 }
 
 .pico-machine-card-copy h4 {
-  font-size: clamp(24px, calc(100vw * 28 / 1920), 28px);
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.2;
 }
 
 .pico-machine-card-copy p {
-  font-size: clamp(12px, calc(100vw * 13 / 1920), 13px);
+  font-size: 13px;
   line-height: 1.45;
 }
 
@@ -587,31 +613,30 @@
 
 
 .pico-machine-band {
-  min-height: clamp(320px, calc(100vw * 500 / 1920), 500px);
+  min-height: 500px;
   margin-top: 0;
   padding:
-    clamp(72px, calc(100vw * 113 / 1920), 113px)
+    113px
     0
-    clamp(62px, calc(100vw * 96 / 1920), 96px);
+    96px;
   background: #eef3f9;
 }
 
 .pico-machine-band .tattoo-section-inner {
-  width: min(calc(100% - 40px), clamp(320px, calc(100vw * 1180 / 1920), 1180px));
+  width: 1180px;
 }
 
 .pico-wavelength-section {
-  min-height: clamp(1120px, calc(100vw * 1650 / 1920), 1650px);
   padding:
-    clamp(74px, calc(100vw * 114 / 1920), 114px)
+    114px
     0
-    clamp(80px, calc(100vw * 122 / 1920), 122px);
+    122px;
   background: #f5f5f5;
 }
 
 .pico-band-title {
   color: #333;
-  font-size: clamp(34px, calc(100vw * 42 / 1920), 42px);
+  font-size: 42px;
   font-weight: 400;
   line-height: 1.3;
   text-align: center;
@@ -626,7 +651,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
-  width: min(100%, 1120px);
+  width: 1120px;
   margin: 34px auto 0;
 }
 
@@ -639,7 +664,7 @@
   border: 1px solid rgba(42, 111, 174, 0.12);
   background: #fff;
   color: #333;
-  font-size: clamp(15px, calc(100vw * 16 / 1920), 16px);
+  font-size: 16px;
   text-align: left;
 }
 
@@ -669,7 +694,7 @@
 }
 
 .pico-wavelength-visual {
-  width: min(100%, calc(100vw * 1045 / 1920));
+  width: 1045px;
   min-height: 330px;
   margin: 38px auto 0;
   border: 0;
@@ -678,25 +703,25 @@
 
 .pico-wavelength-bottom {
   grid-template-columns: minmax(0, 522px) minmax(0, 550px);
-  column-gap: clamp(60px, calc(100vw * 107 / 1920), 107px);
-  width: min(100%, 1179px);
+  column-gap: 107px;
+  width: 1179px;
   margin: 54px auto 0;
   align-items: start;
 }
 
 .pico-wavelength-copy {
-  width: min(100%, clamp(320px, calc(100vw * 524 / 1920), 524px));
-  min-height: clamp(120px, calc(100vw * 191 / 1920), 191px);
-  margin: clamp(64px, calc(100vw * 118 / 1920), 118px) 0 0 0;
+  width: 524px;
+  min-height: 191px;
+  margin: 118px 0 0 0;
   align-self: start;
   justify-self: start;
 }
 
 .pico-wavelength-title {
-  width: min(100%, 522px);
+  width: 522px;
   margin: 0 0 30px 2px;
   color: #333;
-  font-size: clamp(36px, calc(100vw * 52 / 1920), 52px);
+  font-size: 52px;
   line-height: normal;
   text-align: left;
 }
@@ -714,16 +739,16 @@
 .pico-care-cards {
   display: grid;
   gap: 20px;
-  width: min(100%, 550px);
+  width: 550px;
 }
 
 .pico-care-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 24px;
+  grid-template-columns: 398px auto;
+  gap: 12px;
   align-items: center;
-  width: min(100%, 550px);
-  height: clamp(110px, calc(100vw * 170 / 1920), 170px);
+  width: 550px;
+  height: 170px;
   padding: 20px 24px;
   border-radius: 20px;
   background: #fff;
@@ -736,7 +761,7 @@
   max-width: 100%;
   margin: 0 0 21px;
   color: #176eae;
-  font-size: clamp(18px, calc(100vw * 24 / 1920), 24px);
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.25;
   text-align: left;
@@ -744,10 +769,10 @@
 
 .pico-care-card p {
   width: auto;
-  max-width: 337px;
+  max-width: 398px;
   margin-top: 0;
   color: #333;
-  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.67;
   text-align: left;
@@ -777,29 +802,30 @@
 }
 
 .pico-fractat-intro {
-  grid-template-columns: minmax(0, 470px) minmax(0, 540px);
-  gap: clamp(24px, calc(100vw * 36 / 1920), 36px);
-  justify-content: space-between;
-  width: min(100%, 1300px);
+  grid-template-columns: 650px 680px;
+  gap: 50px;
+  justify-content: center;
+  width: 1380px;
   margin: 36px auto 0;
-  padding: 0 90px;
+  padding: 0;
   box-sizing: border-box;
 }
 
 .pico-fractat-desc {
-  width: min(100%, 540px);
+  width: 680px;
   margin: 68px 0 0 1px;
   color: #555;
-  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.67;
   text-align: left;
+  white-space: nowrap;
 }
 
 .pico-fractat-media {
-  width: min(100%, 650px);
-  height: clamp(220px, calc(100vw * 430 / 1920), 430px);
-  margin: 100px 50px 50px 0;
+  width: 650px;
+  height: 430px;
+  margin: 100px 0 50px;
   border: 0;
   background: url("../../../assets/images/sub_surgery/fractat.png") no-repeat center center / cover;
 }
@@ -809,8 +835,8 @@
   grid-template-columns: repeat(2, minmax(0, calc((100% - 21px) / 2)));
   column-gap: 21px;
   row-gap: 20px;
-  width: min(100%, clamp(320px, calc(100vw * 1300 / 1920), 1300px));
-  height: clamp(260px, calc(100vw * 420 / 1920), 420px);
+  width: 1300px;
+  height: 420px;
   margin: 50px auto 104px;
   padding: 50px 89px 50px 90px;
   background: #f5f5f5;
@@ -825,12 +851,12 @@
   gap: 18px;
   align-items: center;
   width: 100%;
-  height: clamp(96px, calc(100vw * 150 / 1920), 150px);
+  height: 150px;
   padding: 0 18px;
   border-radius: 15px;
   background: #fff;
   color: #444;
-  font-size: clamp(13px, calc(100vw * 14 / 1920), 14px);
+  font-size: 18px;
   line-height: 1.55;
   box-sizing: border-box;
 }
@@ -873,7 +899,7 @@
   width: 230px;
   margin: 0 0 100px 0;
   color: #28313b;
-  font-size: clamp(36px, calc(100vw * 52 / 1920), 52px);
+  font-size: 52px;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -1.3px;
@@ -898,6 +924,10 @@
   width: 770px;
 }
 
+.pico-fractat-recommend-list > :last-child {
+  grid-column: 1 / -1;
+}
+
 .pico-recommend-pill {
   display: flex;
   align-items: center;
@@ -908,7 +938,7 @@
   border-radius: 5px;
   background: #f2f2f2;
   color: #101920;
-  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-size: 18px;
   font-weight: 300;
   box-sizing: border-box;
 }
@@ -919,7 +949,7 @@
   height: auto;
   margin: 0 0 0 20px;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
-  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-size: 18px;
   font-weight: 400;
   font-stretch: normal;
   font-style: normal;
@@ -938,11 +968,10 @@
 }
 
 .pico-recommend-note {
-  grid-column: 1 / -1;
-  width: 375px;
-  margin: 21px 0 0 auto;
+  width: 100%;
+  margin: 21px 0 0;
   color: #101920;
-  font-size: clamp(15px, calc(100vw * 18 / 1920), 18px);
+  font-size: 18px;
   font-weight: 300;
   letter-spacing: -0.45px;
   text-align: right;
@@ -950,54 +979,58 @@
 
 .pico-comfort-grid {
   display: grid;
-  gap: 56px;
+  grid-template-columns: 600px 522px;
+  column-gap: 101px;
+  row-gap: 56px;
   width: 1223px;
   max-width: 1223px;
   margin: 42px auto 0;
+  align-items: center;
 }
 
 .pico-comfort-item {
-  display: grid;
-  grid-template-columns: 600px 522px;
-  column-gap: 101px;
-  justify-content: start;
-  align-items: center;
-  width: 1223px;
-  max-width: 1223px;
+  display: contents;
 }
 
-.pico-comfort-item--reverse {
-  grid-template-columns: 522px 600px;
+.pico-comfort-media-box {
+  width: 600px;
+  height: 370px;
 }
 
-.pico-comfort-item .pico-media-placeholder {
+.pico-comfort-copy-box {
+  width: 522px;
+}
+
+.pico-comfort-media-box .pico-media-placeholder {
   min-height: 0;
 }
 
 .pico-media-placeholder--comfort-1 {
-  width: 600px;
-  max-width: 600px;
-  height: 370px;
-  max-height: 370px;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
   margin: 0;
   border: 0;
   background: url("../../../assets/images/sub_surgery/pico-laser-4.png") no-repeat center center / contain;
 }
 
 .pico-media-placeholder--comfort-2 {
-  width: 600px;
-  max-width: 600px;
+  width: 100%;
+  max-width: 100%;
   min-height: 0;
-  height: auto;
+  height: 100%;
+  max-height: 100%;
   border: 0;
   background: transparent;
 }
 
 .pico-media-placeholder--comfort-3 {
-  width: 600px;
-  max-width: 600px;
+  width: 100%;
+  max-width: 100%;
   min-height: 0;
-  height: auto;
+  height: 100%;
+  max-height: 100%;
   border: 0;
   background: transparent;
 }
@@ -1005,7 +1038,7 @@
 .pico-comfort-image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   border: 0;
 }
 
@@ -1014,12 +1047,34 @@
   object-fit: contain;
 }
 
-.pico-comfort-item--reverse .pico-media-placeholder {
-  order: 2;
+.pico-comfort-item:nth-child(1) .pico-comfort-media-box {
+  grid-column: 1;
+  grid-row: 1;
 }
 
-.pico-comfort-item--reverse .pico-comfort-copy {
-  order: 1;
+.pico-comfort-item:nth-child(1) .pico-comfort-copy-box {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.pico-comfort-item:nth-child(2) .pico-comfort-copy-box {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.pico-comfort-item:nth-child(2) .pico-comfort-media-box {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.pico-comfort-item:nth-child(3) .pico-comfort-media-box {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.pico-comfort-item:nth-child(3) .pico-comfort-copy-box {
+  grid-column: 2;
+  grid-row: 3;
 }
 
 .pico-comfort-copy {
@@ -1052,91 +1107,39 @@
 }
 
 .pico-comfort-marquee {
+  position: relative;
+  left: 50%;
+  z-index: 0;
+  width: 100vw;
   margin-top: 34px;
   color: rgba(20, 30, 40, 0.05);
   font-family: "Philosopher", serif;
-  font-size: clamp(54px, calc(100vw * 78 / 1920), 78px);
+  font-size: 78px;
+  line-height: 1;
   white-space: nowrap;
   overflow: hidden;
+  pointer-events: none;
+  transform: translateX(-50%);
 }
 
-.tattoo-summary {
-  min-height: clamp(760px, calc(100vw * 1000 / 1920), 1000px);
-  padding: clamp(72px, calc(100vw * 95 / 1920), 95px) 0 clamp(78px, calc(100vw * 104 / 1920), 104px);
-  background: #fff;
-}
-
-.tattoo-summary-title {
-  color: var(--tattoo-text);
-  font-size: clamp(42px, 2.8125vw, 54px);
-  font-weight: 700;
-  line-height: 1.28;
-  letter-spacing: -0.04em;
-  text-align: center;
-}
-
-.tattoo-summary-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(16px, 1.25vw, 24px);
-  margin-top: clamp(52px, 4.1667vw, 80px);
-}
-
-.tattoo-summary-card {
+.pico-comfort-marquee-track {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: max-content;
+  animation: picoComfortMarquee 24s linear infinite;
+  will-change: transform;
 }
 
-.tattoo-summary-card .media-placeholder--card {
-  width: min(100%, calc(100vw * 330 / 1920));
-  height: clamp(190px, calc(100vw * 250 / 1920), 250px);
-  margin: 0 0 clamp(24px, calc(100vw * 35 / 1920), 35px);
-  border: 0;
-  border-radius: 10px;
-  background-color: #f5f5f5;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  aspect-ratio: auto;
+.pico-comfort-marquee-track span {
+  flex: 0 0 auto;
+  padding-right: 64px;
 }
 
-.tattoo-summary-card .tattoo-photo--summary-1 {
-  background-image: url("../../../assets/images/sub_tatto_removal/DUL_2395.png");
-}
+@keyframes picoComfortMarquee {
+  0% {
+    transform: translateX(0);
+  }
 
-.tattoo-summary-card .tattoo-photo--summary-2 {
-  background-image: url("../../../assets/images/sub_tatto_removal/Group 29.png");
-  background-size: 115% auto;
-  background-position: 25% 10%;
-  background-color: #fff;
-}
-
-.tattoo-summary-card .tattoo-photo--summary-3 {
-  background-image: url("../../../assets/images/sub_tatto_removal/DUL_2406.png");
-}
-
-.tattoo-summary-card .tattoo-photo--summary-4 {
-  background-image: url("../../../assets/images/sub_tatto_removal/DUL_2453.png");
-}
-
-.tattoo-summary-card-title {
-  margin-top: 0;
-  font-size: clamp(22px, 1.5104vw, 29px);
-  font-weight: 700;
-  line-height: 1.34;
-  letter-spacing: -0.04em;
-  text-align: center;
-}
-
-.tattoo-summary-card-desc {
-  width: min(100%, calc(100vw * 300 / 1920));
-  margin: clamp(4px, calc(100vw * 6 / 1920), 6px) auto 0;
-  padding: 0;
-  color: #333;
-  font-size: var(--tattoo-body-small-size);
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.45px;
-  text-align: center;
+  100% {
+    transform: translateX(-50%);
+  }
 }

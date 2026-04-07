@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: clamp(420px, 47.6563vw, 915px);
+  height: 915px;
   margin: 0;
   padding: 0;
 }
@@ -15,7 +15,7 @@
 
 .mv-background {
   width: 100vw;
-  height: clamp(420px, 47.6563vw, 915px);
+  height: 915px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -30,10 +30,10 @@
   transform: none;
   margin: 0;
   padding:
-    clamp(260px, 32.5vw, 624px)
-    clamp(280px, 43.0729vw, 827px)
-    clamp(56px, 7.1875vw, 138px)
-    clamp(120px, 16.1979vw, 311px);
+    624px
+    827px
+    138px
+    311px;
   background: url("../../../../assets/images/main/hero-clinic-interior.png") no-repeat 0 0 / cover;
   mix-blend-mode: luminosity;
   z-index: 2;
@@ -41,17 +41,18 @@
 
 .mv-content {
   position: absolute;
-  left: clamp(20px, 16.1979vw, 311px);
-  top: clamp(300px, 35.4167vw, 680px);
+  left: 50%;
+  top: 680px;
+  transform: translateX(-720px);
   z-index: 3;
 }
 
 .comfort-plastic-surgery {
-  width: clamp(300px, 40.625vw, 780px);
+  width: 780px;
   height: auto;
-  margin: 0 0 clamp(8px, 0.8333vw, 16px) clamp(1px, 0.1042vw, 2px);
+  margin: 0 0 16px 2px;
   font-family: "Philosopher", serif;
-  font-size: clamp(32px, 3.125vw, 60px);
+  font-size: 60px;
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.6px;
@@ -61,11 +62,11 @@
 }
 
 .mv-desc {
-  width: clamp(300px, 35.5208vw, 682px);
+  width: 682px;
   height: auto;
-  margin: clamp(8px, 0.8333vw, 16px) clamp(20px, 5.2083vw, 100px) 0 0;
+  margin: 16px 100px 0 0;
   font-family: "Noto Serif KR", serif;
-  font-size: clamp(20px, 1.875vw, 36px);
+  font-size: 36px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.9px;
@@ -77,4 +78,3 @@
 .mv-desc span {
   display: inline;
 }
-

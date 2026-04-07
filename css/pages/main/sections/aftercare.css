@@ -1,32 +1,32 @@
 #sec6 {
-  padding: clamp(136px, 10.625vw, 204px) clamp(24px, 10.1042vw, 194px) clamp(84px, 6.4583vw, 124px) clamp(24px, 9.1146vw, 175px);
+  padding: 204px 194px 124px 175px;
   background: #eef3f9;
 }
 
 #sec6 .sec6-inner {
-  width: min(100%, clamp(320px, 80.7813vw, 1551px));
+  width: 1551px;
   margin: 0 auto;
 }
 
 #sec6 .sec6-head {
-  width: min(100%, clamp(320px, 53.0729vw, 1019px));
-  margin: 0 auto clamp(68px, 5.3646vw, 103px);
+  width: 1019px;
+  margin: 0 auto 103px;
   text-align: center;
 }
 
 #sec6 .sec6-title {
-  margin-top: clamp(34px, 2.9167vw, 56px);
+  margin-top: 56px;
   color: #333;
 }
 
 #sec6 .sec6-card-list {
-  --sec6-card-gap: clamp(24px, 3.6458vw, 70px);
-  --sec6-card-active-slot-width: clamp(324px, 23.75vw, 456px);
-  --sec6-card-active-width: clamp(300px, 21.875vw, 420px);
-  --sec6-card-active-offset: clamp(24px, 1.875vw, 36px);
-  --sec6-card-inactive-width: clamp(220px, 16.6667vw, 320px);
-  --sec6-card-label-height: clamp(26px, 1.5625vw, 30px);
-  --sec6-card-stack-gap: clamp(18px, 1.1979vw, 23px);
+  --sec6-card-gap: 70px;
+  --sec6-card-active-slot-width: 456px;
+  --sec6-card-active-width: 420px;
+  --sec6-card-active-offset: 36px;
+  --sec6-card-inactive-width: 320px;
+  --sec6-card-label-height: 30px;
+  --sec6-card-stack-gap: 23px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -64,7 +64,7 @@
   min-height: var(--sec6-card-label-height);
   max-height: var(--sec6-card-label-height);
   margin: 0 auto;
-  font-size: clamp(18px, 1.1458vw, 22px);
+  font-size: 22px;
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.6px;
@@ -116,7 +116,7 @@
 #sec6 .sec6-card-overlay {
   position: absolute;
   inset: 0;
-  padding: clamp(46px, 3.125vw, 60px) clamp(28px, 3.0208vw, 58px) clamp(40px, 2.0833vw, 40px);
+  padding: 60px 58px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,7 +132,7 @@
 #sec6 .sec6-card-overlay-title {
   display: block;
   width: 100%;
-  font-size: clamp(22px, 1.4583vw, 28px);
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.75px;
@@ -143,8 +143,8 @@
 }
 
 #sec6 .sec6-card-overlay-desc {
-  width: clamp(250px, 18.3854vw, 353px);
-  margin-top: clamp(18px, 1.5104vw, 29px);
+  width: 353px;
+  margin-top: 29px;
   letter-spacing: -0.55px;
   color: rgba(255, 255, 255, 0.92);
   word-break: keep-all;
@@ -159,7 +159,7 @@
 #sec6 .sec6-card.is-active .sec6-card-visual {
   width: var(--sec6-card-active-width);
   margin-left: var(--sec6-card-active-offset);
-  border-radius: clamp(18px, 1.0417vw, 20px);
+  border-radius: 20px;
   background-color: #393f51;
 }
 
@@ -232,7 +232,7 @@
 #sec6 .sec6-card-list:focus-within .sec6-card:focus-visible .sec6-card-visual {
   width: var(--sec6-card-active-width);
   margin-left: var(--sec6-card-active-offset);
-  border-radius: clamp(18px, 1.0417vw, 20px);
+  border-radius: 20px;
   background-color: #393f51;
 }
 
