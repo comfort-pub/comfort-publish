@@ -1,0 +1,432 @@
+@charset "UTF-8";
+
+.page--comfort-special {
+  --comfort-blue: #176eae;
+  --comfort-dark: #111820;
+  --comfort-ink: #202a35;
+  --comfort-muted: #6d7783;
+  --comfort-shell: min(calc(100% - 40px), 1440px);
+  --comfort-shell-narrow: min(calc(100% - 40px), 1180px);
+  color: var(--comfort-ink);
+  background: #fff;
+}
+
+.page--comfort-special .page-section,
+.page--comfort-special #sec7 {
+  scroll-margin-top: 132px;
+}
+
+.page-comfort-special {
+  display: block;
+  background: #fff;
+}
+
+.page--comfort-special .gnb-list .gnb-item.is-active a::after {
+  display: block;
+}
+
+.comfort-section-inner {
+  width: var(--comfort-shell);
+  margin: 0 auto;
+}
+
+.comfort-section-inner--narrow {
+  width: var(--comfort-shell-narrow);
+}
+
+.comfort-hero {
+  min-height: clamp(620px, 48.9583vw, 940px);
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(9, 13, 18, 0.84) 0%, rgba(9, 13, 18, 0.68) 43%, rgba(9, 13, 18, 0.2) 100%),
+    url("../../../assets/images/main/hero-clinic-interior.png") no-repeat center / cover;
+}
+
+.comfort-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 38%;
+  background: linear-gradient(180deg, rgba(9, 13, 18, 0) 0%, rgba(9, 13, 18, 0.72) 100%);
+  pointer-events: none;
+}
+
+.comfort-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  width: var(--comfort-shell);
+  margin: 0 auto;
+  padding: clamp(160px, 13.0208vw, 250px) 0 clamp(90px, 7.2917vw, 140px);
+}
+
+.comfort-hero-copy {
+  max-width: 760px;
+}
+
+.comfort-hero-kicker,
+.comfort-kicker {
+  color: var(--comfort-blue);
+  font-family: "Philosopher", serif;
+  font-size: clamp(18px, 1.25vw, 24px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.comfort-hero-title {
+  margin-top: clamp(24px, 2.0833vw, 40px);
+  color: #fff;
+  font-family: "Noto Serif KR", serif;
+  font-size: clamp(46px, 4.1667vw, 80px);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.06em;
+}
+
+.comfort-hero-desc {
+  margin-top: clamp(24px, 2.0833vw, 40px);
+  color: rgba(255, 255, 255, 0.84);
+  font-size: clamp(18px, 1.25vw, 24px);
+  font-weight: 300;
+  line-height: 1.72;
+  letter-spacing: -0.03em;
+}
+
+.comfort-hero-mark {
+  position: absolute;
+  right: clamp(24px, 5.2083vw, 100px);
+  bottom: clamp(70px, 7.8125vw, 150px);
+  width: clamp(120px, 10.4167vw, 200px);
+  opacity: 0.16;
+}
+
+.comfort-proof {
+  padding: clamp(86px, 7.2917vw, 140px) 0 clamp(94px, 8.3333vw, 160px);
+  background: #fff;
+}
+
+.comfort-proof-head {
+  text-align: center;
+}
+
+.comfort-title {
+  margin-top: clamp(18px, 1.5625vw, 30px);
+  color: #222;
+  font-size: clamp(34px, 2.7083vw, 52px);
+  font-weight: 700;
+  line-height: 1.26;
+  letter-spacing: -0.04em;
+}
+
+.comfort-desc {
+  margin-top: clamp(18px, 1.4583vw, 28px);
+  color: var(--comfort-muted);
+  font-size: clamp(16px, 1.0417vw, 20px);
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: -0.025em;
+  word-break: keep-all;
+}
+
+.comfort-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(20px, 2.0833vw, 40px);
+  margin-top: clamp(58px, 5.2083vw, 100px);
+}
+
+.comfort-proof-card {
+  min-height: clamp(210px, 15.625vw, 300px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(23, 110, 174, 0.22);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fff 0%, #f5f9fd 100%);
+  text-align: center;
+}
+
+.comfort-proof-number {
+  color: var(--comfort-blue);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(42px, 4.1667vw, 80px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.comfort-proof-label {
+  margin-top: clamp(18px, 1.3021vw, 25px);
+  color: #1d2732;
+  font-size: clamp(16px, 1.0417vw, 20px);
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -0.035em;
+}
+
+.comfort-story {
+  overflow: hidden;
+  padding: clamp(120px, 10.4167vw, 200px) 0;
+  background: var(--comfort-dark);
+  color: #fff;
+}
+
+.comfort-story-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: clamp(70px, 6.25vw, 120px);
+}
+
+.comfort-story-media {
+  position: relative;
+  min-height: clamp(480px, 35.4167vw, 680px);
+  border-radius: clamp(28px, 2.0833vw, 40px);
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(7, 12, 18, 0.06), rgba(7, 12, 18, 0.38)),
+    url("../../../assets/images/main/doctor-park-youngsoo.png") no-repeat center bottom / cover;
+}
+
+.comfort-story-media::after {
+  content: "COMFORT";
+  position: absolute;
+  left: clamp(28px, 2.0833vw, 40px);
+  bottom: clamp(24px, 2.0833vw, 40px);
+  color: rgba(255, 255, 255, 0.18);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(42px, 4.1667vw, 80px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.comfort-story .comfort-kicker {
+  color: #68b8f0;
+}
+
+.comfort-story-title {
+  margin-top: clamp(22px, 1.875vw, 36px);
+  color: #fff;
+  font-size: clamp(36px, 3.3333vw, 64px);
+  font-weight: 700;
+  line-height: 1.24;
+  letter-spacing: -0.055em;
+}
+
+.comfort-story-desc {
+  max-width: 650px;
+  margin-top: clamp(28px, 2.5vw, 48px);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(17px, 1.1458vw, 22px);
+  font-weight: 300;
+  line-height: 1.82;
+  letter-spacing: -0.025em;
+  word-break: keep-all;
+}
+
+.comfort-story-list {
+  display: grid;
+  gap: clamp(14px, 1.0417vw, 20px);
+  margin-top: clamp(36px, 3.125vw, 60px);
+}
+
+.comfort-story-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(16px, 1.0417vw, 20px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.comfort-story-item::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #68b8f0;
+  flex: 0 0 auto;
+}
+
+.comfort-difference {
+  padding: clamp(112px, 9.375vw, 180px) 0;
+  background: #f6f8fb;
+}
+
+.comfort-difference-head {
+  text-align: center;
+}
+
+.comfort-difference-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(22px, 1.875vw, 36px);
+  margin-top: clamp(58px, 5.2083vw, 100px);
+}
+
+.comfort-difference-card {
+  min-height: clamp(380px, 28.125vw, 540px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  border-radius: clamp(28px, 2.0833vw, 40px);
+  background: #111820;
+  box-shadow: 0 24px 50px rgba(24, 36, 48, 0.12);
+}
+
+.comfort-difference-card--laser {
+  background: linear-gradient(180deg, rgba(17, 24, 32, 0.12), rgba(17, 24, 32, 0.82)), url("../../../assets/images/main/sec3-pico-laser-card.png") no-repeat center / cover;
+}
+
+.comfort-difference-card--care {
+  background: linear-gradient(180deg, rgba(17, 24, 32, 0.1), rgba(17, 24, 32, 0.84)), url("../../../assets/images/main/sec3-custom-care-card.png") no-repeat center / cover;
+}
+
+.comfort-difference-card--pain {
+  background: linear-gradient(180deg, rgba(17, 24, 32, 0.1), rgba(17, 24, 32, 0.84)), url("../../../assets/images/main/sec3-pain-care-card.png") no-repeat center / cover;
+}
+
+.comfort-difference-copy {
+  padding: clamp(32px, 3.125vw, 60px);
+  color: #fff;
+}
+
+.comfort-difference-index {
+  color: #68b8f0;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(14px, 0.9375vw, 18px);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.comfort-difference-title {
+  margin-top: 18px;
+  color: #fff;
+  font-size: clamp(25px, 1.875vw, 36px);
+  font-weight: 700;
+  line-height: 1.32;
+  letter-spacing: -0.045em;
+}
+
+.comfort-difference-desc {
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: clamp(15px, 0.9375vw, 18px);
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: -0.025em;
+  word-break: keep-all;
+}
+
+.comfort-space {
+  padding: clamp(120px, 10.4167vw, 200px) 0;
+  background: #fff;
+}
+
+.comfort-space-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  align-items: center;
+  gap: clamp(64px, 6.25vw, 120px);
+}
+
+.comfort-space-visual {
+  min-height: clamp(460px, 34.375vw, 660px);
+  border-radius: clamp(32px, 2.6042vw, 50px);
+  background:
+    linear-gradient(180deg, rgba(14, 22, 31, 0), rgba(14, 22, 31, 0.18)),
+    url("../../../assets/images/main/sec4_visual.png") no-repeat center / cover;
+  box-shadow: 0 28px 70px rgba(25, 38, 52, 0.16);
+}
+
+.comfort-space-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 1.5625vw, 30px);
+  margin-top: clamp(42px, 3.6458vw, 70px);
+}
+
+.comfort-space-point {
+  min-height: clamp(150px, 10.4167vw, 200px);
+  padding: clamp(28px, 2.3438vw, 45px);
+  border: 1px solid rgba(23, 110, 174, 0.14);
+  border-radius: clamp(22px, 1.5625vw, 30px);
+  background: #fff;
+}
+
+.comfort-space-point strong {
+  display: block;
+  color: #202a35;
+  font-size: clamp(20px, 1.4063vw, 27px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.comfort-space-point span {
+  display: block;
+  margin-top: 14px;
+  color: var(--comfort-muted);
+  font-size: clamp(15px, 0.9375vw, 18px);
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: -0.025em;
+}
+
+.comfort-cta {
+  padding: clamp(96px, 8.3333vw, 160px) 0;
+  background:
+    linear-gradient(90deg, rgba(11, 16, 23, 0.86), rgba(11, 16, 23, 0.64)),
+    url("../../../assets/images/main/sec5-geometric-pattern.png") no-repeat center / cover;
+  text-align: center;
+}
+
+.comfort-cta-title {
+  color: #fff;
+  font-size: clamp(34px, 3.125vw, 60px);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.055em;
+}
+
+.comfort-cta-desc {
+  margin-top: clamp(20px, 1.6667vw, 32px);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(17px, 1.1458vw, 22px);
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: -0.025em;
+}
+
+.comfort-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: clamp(38px, 3.125vw, 60px);
+}
+
+.comfort-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(150px, 10.4167vw, 200px);
+  height: clamp(50px, 3.6458vw, 70px);
+  padding: 0 clamp(26px, 2.0833vw, 40px);
+  border-radius: 999px;
+  background: #fff;
+  color: #172231;
+  font-size: clamp(15px, 1.0417vw, 20px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+.comfort-cta-button--line {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  color: #fff;
+}

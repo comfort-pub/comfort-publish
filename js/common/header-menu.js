@@ -11,6 +11,24 @@
       .replace(/'/g, "&#39;");
   }
 
+  function resolveSiteHref(href) {
+    var value = String(href || "#");
+    var pathname = window.location.pathname || "/";
+    var basePath = pathname;
+
+    if (!value || value === "#" || /^(?:[a-z]+:|\/\/|#|\/)/i.test(value)) {
+      return value;
+    }
+
+    if (/\/pages\//.test(pathname)) {
+      basePath = pathname.replace(/\/pages\/.*$/, "/");
+    } else {
+      basePath = pathname.replace(/\/[^/]*$/, "/");
+    }
+
+    return basePath + value.replace(/^\.\//, "");
+  }
+
   site.modules.initHeaderMenu = function initHeaderMenu(options) {
     var $headerArea = options.headerArea;
     var $menuButton = options.menuButton;
@@ -60,7 +78,7 @@
 
       $.each(menuItems, function (_, item) {
         var menuItem = $.isPlainObject(item) ? item : { label: item, href: "#" };
-        var href = escapeHtml(menuItem.href || "#");
+        var href = escapeHtml(resolveSiteHref(menuItem.href || "#"));
         var pageKey = escapeHtml(menuItem.pageKey || "");
         var label = escapeHtml(menuItem.label || "");
 
@@ -211,7 +229,7 @@
 
         $.each(menuItems, function (_, item) {
           var menuItem = $.isPlainObject(item) ? item : { label: item, href: "#" };
-          var href = escapeHtml(menuItem.href || "#");
+          var href = escapeHtml(resolveSiteHref(menuItem.href || "#"));
           var pageKey = escapeHtml(menuItem.pageKey || "");
           var label = escapeHtml(menuItem.label || "");
 

@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@media (max-width: 1200px) {
+  .comfort-proof-grid,
+  .comfort-difference-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .comfort-story-inner,
+  .comfort-space-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .comfort-space-copy {
+    order: -1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .page--comfort-special .page-section,
+  .page--comfort-special #sec7 {
+    scroll-margin-top: 84px;
+  }
+
+  .page--comfort-special .tattoo-floating-actions {
+    display: none;
+  }
+
+  .comfort-hero {
+    min-height: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .comfort-hero {
+    min-height: 640px;
+    background-position: 62% center;
+  }
+
+  .comfort-hero-inner {
+    padding: 140px 0 74px;
+  }
+
+  .comfort-hero-mark {
+    right: 20px;
+    bottom: 56px;
+    width: 110px;
+  }
+
+  .comfort-proof-grid,
+  .comfort-difference-grid,
+  .comfort-space-points {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .comfort-proof-card {
+    min-height: 230px;
+  }
+
+  .comfort-story-media,
+  .comfort-space-visual {
+    min-height: 420px;
+  }
+
+  .comfort-cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comfort-cta-button {
+    width: min(100%, 260px);
+  }
+}

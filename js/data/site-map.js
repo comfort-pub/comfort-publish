@@ -51,16 +51,16 @@ window.ComfortSite.siteMap = {
   ],
   navigationMenus: {
     intro: [
-      { label: "컴포트의 특별함", href: "#", pageKey: "comfort-special" },
+      { label: "컴포트의 특별함", href: "pages/comfort-intro/special.html", pageKey: "comfort-special" },
       { label: "전문 의료진", href: "#", pageKey: "comfort-doctors" },
       { label: "첨단 의료장비", href: "#", pageKey: "comfort-equipment" },
       { label: "오시는 길", href: "#", pageKey: "comfort-route" },
       { label: "실시간예약확인", href: "#", pageKey: "comfort-reservation" }
     ],
     tattoo: [
-      { label: "컴포트 문신제거", href: "#", pageKey: "tattoo-overview" },
-      { label: "피코레이저 (+프락셀)", href: "#", pageKey: "tattoo-pico" },
-      { label: "수술적 문신제거", href: "#", pageKey: "tattoo-surgery" },
+      { label: "컴포트 문신제거", href: "pages/tattoo-removal/overview.html", pageKey: "tattoo-overview" },
+      { label: "피코레이저 (+프락셀)", href: "pages/tattoo-removal/pico-laser.html", pageKey: "tattoo-pico" },
+      { label: "수술적 문신제거", href: "pages/tattoo-removal/surgery.html", pageKey: "tattoo-surgery" },
       { label: "문신제거 원리", href: "#", pageKey: "tattoo-principle" },
       { label: "문신제거와 통증", href: "#", pageKey: "tattoo-pain" }
     ],
