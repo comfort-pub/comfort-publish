@@ -1,18 +1,36 @@
 @charset "UTF-8";
 
 @media (max-width: 1200px) {
-  .comfort-proof-grid,
-  .comfort-difference-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .comfort-story-inner,
-  .comfort-space-layout {
+  .comfort-difference-layout,
+  .comfort-feature-row,
+  .comfort-feature-row--reverse {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .comfort-space-copy {
-    order: -1;
+  .comfort-feature-list {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    row-gap: 36px;
+  }
+
+  .comfort-feature-row {
+    display: grid;
+    gap: 20px;
+  }
+
+  .comfort-feature-row:nth-child(n) .comfort-feature-media,
+  .comfort-feature-row:nth-child(n) .comfort-feature-copy {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .comfort-difference-head {
+    padding-top: 0;
+  }
+
+  .comfort-feature-row--reverse .comfort-feature-copy,
+  .comfort-feature-row--reverse .comfort-feature-media {
+    order: initial;
   }
 }
 
@@ -29,6 +47,77 @@
   .comfort-hero {
     min-height: 720px;
   }
+
+  .comfort-hero-inner {
+    width: min(calc(100% - 40px), 900px);
+    padding-bottom: 72px;
+  }
+
+  .comfort-hero-copy .comfort-hero-kicker {
+    font-size: clamp(34px, 5.2vw, 48px);
+  }
+
+  .comfort-hero-title {
+    font-size: clamp(36px, 4.8vw, 44px);
+    white-space: normal;
+  }
+
+  .comfort-hero-desc {
+    font-size: clamp(20px, 2.4vw, 22px);
+    white-space: normal;
+  }
+
+  .comfort-proof-stats,
+  .comfort-story-grid,
+  .comfort-difference-grid,
+  .comfort-cta-grid {
+    width: 100%;
+    max-width: none;
+  }
+
+  .comfort-story-grid,
+  .comfort-difference-grid,
+  .comfort-cta-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .comfort-story .pico-feature-card {
+    width: 100%;
+  }
+
+  .comfort-feature-copy,
+  .comfort-difference-head {
+    text-align: center;
+  }
+
+  .comfort-feature-desc {
+    max-width: none;
+  }
+
+  .comfort-feature-copy .detail-btn-common {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .comfort-proof .comfort-title {
+    width: 100%;
+  }
+
+  .comfort-proof .comfort-desc {
+    width: 100%;
+  }
+
+  .comfort-proof-stat-label {
+    font-size: 24px;
+  }
+
+  .comfort-proof-stat-number {
+    font-size: 72px;
+  }
+
+  .comfort-proof-stat-unit {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -38,36 +127,136 @@
   }
 
   .comfort-hero-inner {
+    width: calc(100% - 40px);
     padding: 140px 0 74px;
+  }
+
+  .comfort-hero-copy .comfort-hero-kicker {
+    font-size: clamp(30px, 7.2vw, 36px);
+    letter-spacing: -0.3px;
+  }
+
+  .comfort-hero-title {
+    margin-top: 14px;
+    font-size: clamp(34px, 8.4vw, 42px);
+    letter-spacing: -1.1px;
+  }
+
+  .comfort-hero-desc {
+    margin-top: 20px;
+    font-size: clamp(18px, 4.4vw, 22px);
+    line-height: 1.45;
+  }
+
+  .comfort-proof {
+    padding: 80px 0 72px;
+  }
+
+  .comfort-proof .comfort-title,
+  .comfort-story-title,
+  .comfort-difference-head .comfort-title,
+  .comfort-space-head .comfort-title,
+  .comfort-cta-title {
+    font-size: clamp(30px, 8vw, 40px);
+  }
+
+  .comfort-proof-stats,
+  .comfort-story-grid,
+  .comfort-difference-grid,
+  .comfort-cta-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .comfort-story .pico-feature-card {
+    padding: 42px 24px 48px;
+  }
+
+  .comfort-proof-stats {
+    margin-top: 42px;
+  }
+
+  .comfort-proof-stat {
+    min-height: 180px;
+  }
+
+  .comfort-proof-stat + .comfort-proof-stat {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  .comfort-proof-stat-label {
+    font-size: 22px;
+  }
+
+  .comfort-proof-stat-number {
+    font-size: 56px;
+  }
+
+  .comfort-proof-stat-unit {
+    font-size: 22px;
+  }
+
+  .comfort-story,
+  .comfort-difference,
+  .comfort-space,
+  .comfort-cta {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .comfort-story-grid {
+    gap: 14px;
+  }
+
+  .comfort-value-card {
+    min-height: 360px;
+    padding: 34px 22px 28px;
+  }
+
+  .comfort-value-title {
+    font-size: 32px;
+  }
+
+  .comfort-value-desc {
+    font-size: 18px;
+  }
+
+  .comfort-feature-list {
+    margin-top: 40px;
+  }
+
+  .comfort-feature-media {
+    width: 100%;
+    min-height: 220px;
+    height: 220px;
+  }
+
+  .comfort-feature-eng {
+    font-size: 34px;
+  }
+
+  .comfort-feature-title {
+    font-size: 26px;
+  }
+
+  .comfort-cta-grid {
+    gap: 22px;
+    margin-top: 40px;
+  }
+
+  .comfort-cta-card,
+  .comfort-cta-card-visual {
+    width: 100%;
+  }
+
+  .comfort-cta-card-visual {
+    height: auto;
+    aspect-ratio: 340 / 480;
   }
 
   .comfort-hero-mark {
     right: 20px;
     bottom: 56px;
     width: 110px;
-  }
-
-  .comfort-proof-grid,
-  .comfort-difference-grid,
-  .comfort-space-points {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .comfort-proof-card {
-    min-height: 230px;
-  }
-
-  .comfort-story-media,
-  .comfort-space-visual {
-    min-height: 420px;
-  }
-
-  .comfort-cta-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .comfort-cta-button {
-    width: min(100%, 260px);
   }
 }
