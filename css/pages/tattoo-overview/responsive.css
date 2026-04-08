@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+@keyframes tattoo-difference-roll-mobile {
+  from {
+    transform: translate3d(100vw, -50%, 0);
+  }
+
+  to {
+    transform: translate3d(-100%, -50%, 0);
+  }
+}
+
 @media (max-width: 1024px) {
   .page--tattoo-overview .page-section,
   .page--tattoo-overview #sec7 {
@@ -215,29 +225,32 @@
 
 @media (max-width: 800px) {
   .page--tattoo-overview {
-    --overview-mobile-kicker-size: calc(100vw * 22 / 800);
-    --overview-mobile-title-size: calc(100vw * 44 / 800);
-    --overview-mobile-desc-size: calc(100vw * 22 / 800);
+    --overview-mobile-kicker-size: calc(100vw * 30 / 800);
+    --overview-mobile-title-size: calc(100vw * 52 / 800);
+    --overview-mobile-desc-size: calc(100vw * 28 / 800);
   }
 
   .page--tattoo-overview .section-kicker-common {
     font-size: var(--overview-mobile-kicker-size);
     line-height: 1;
-    letter-spacing: -0.22px;
+    letter-spacing: -0.3px;
     text-align: center;
   }
 
   .page--tattoo-overview .section-title-common {
     font-size: var(--overview-mobile-title-size);
-    line-height: 1.22;
-    letter-spacing: -1.1px;
+    line-height: 1.15;
+    letter-spacing: -1.3px;
     text-align: center;
   }
 
   .page--tattoo-overview .section-desc-common {
     font-size: var(--overview-mobile-desc-size);
-    line-height: 1.64;
+    font-weight: 300;
+    line-height: 1.45;
+    letter-spacing: -1.4px;
     text-align: center;
+    color: #555;
   }
 
   .page--tattoo-overview .tattoo-hero {
@@ -249,8 +262,9 @@
     width: 100%;
     height: 100%;
     min-height: 0;
-    background-position: 56% center;
-    background-size: cover;
+    background-position: center, 58% center;
+    background-size: 100% 100%, auto 100%;
+    background-repeat: no-repeat, no-repeat;
   }
 
   .page--tattoo-overview .tattoo-hero-overlay {
@@ -260,7 +274,10 @@
   }
 
   .page--tattoo-overview .tattoo-hero-content {
-    width: calc(100% - 160px);
+    left: 41px;
+    right: auto;
+    width: calc(100% - 82px);
+    margin: 0;
     padding-bottom: calc(100vw * 88 / 800);
   }
 
@@ -280,6 +297,7 @@
     width: 100%;
     margin-top: calc(100vw * 21 / 800);
     font-size: calc(100vw * 24 / 800);
+    font-weight: 700;
     letter-spacing: -0.6px;
   }
 
@@ -293,6 +311,9 @@
   }
 
   .page--tattoo-overview .tattoo-intro-copy {
+    width: calc(100vw * 641 / 800);
+    max-width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -300,28 +321,671 @@
   }
 
   .page--tattoo-overview .tattoo-intro-copy .section-kicker-common {
-    width: 100%;
+    width: calc(100vw * 381 / 800);
+    max-width: 100%;
+    margin: 0 auto calc(100vw * 48 / 800);
+    letter-spacing: -0.3px;
+    text-align: left;
   }
 
   .page--tattoo-overview .tattoo-section-title--intro {
-    width: 100%;
-    margin: calc(100vw * 33 / 800) 0 calc(100vw * 34 / 800);
+    width: calc(100vw * 385 / 800);
+    max-width: 100%;
+    margin: 0 auto calc(100vw * 54 / 800);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1.3px;
+    text-align: center;
   }
 
   .page--tattoo-overview .tattoo-intro-copy .section-desc-common {
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.45;
+    letter-spacing: -1.4px;
+    text-align: center;
+    color: #555;
   }
 
   .page--tattoo-overview .tattoo-intro-media {
     width: 100%;
-    margin-top: calc(100vw * 66 / 800);
+    margin-top: calc(100vw * 74 / 800);
   }
 
   .page--tattoo-overview .tattoo-intro-media .media-placeholder--landscape {
     width: 100%;
-    height: calc((100vw - 80px) * 430 / 650);
+    height: calc((100vw - 80px) * 480 / 720);
     border-radius: calc(100vw * 10 / 800);
     aspect-ratio: auto;
+  }
+
+  .page--tattoo-overview .tattoo-difference-inner {
+    width: 100%;
+  }
+
+  .page--tattoo-overview .tattoo-difference {
+    padding: calc(100vw * 163 / 800) 0 calc(100vw * 100 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-difference-title {
+    width: calc(100vw * 642 / 800);
+    margin: 0 auto calc(100vw * 34 / 800);
+    font-family: "Noto Serif KR", serif;
+    font-size: calc(100vw * 60 / 800);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -3px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .page--tattoo-overview .tattoo-difference-marquee {
+    height: calc(100vw * 100 / 800);
+    margin: 0 auto calc(100vw * 38 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-difference-marquee-track {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation: none;
+  }
+
+  .page--tattoo-overview .tattoo-difference-marquee-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: auto;
+    justify-content: flex-start;
+    padding-right: 0;
+    color: #26323b;
+    font-size: calc(100vw * 100 / 800);
+    letter-spacing: -5px;
+    line-height: 1;
+    transform: translate3d(100vw, -50%, 0);
+    animation: tattoo-difference-roll-mobile 12s linear infinite;
+    will-change: transform;
+  }
+
+  .page--tattoo-overview .tattoo-difference-marquee-text:nth-child(2) {
+    animation-delay: -6s;
+  }
+
+  .page--tattoo-overview .tattoo-result-panel {
+    width: calc(100vw * 720 / 800);
+    min-height: calc(100vw * 834 / 800);
+    margin: 0 auto;
+    padding: calc(100vw * 38 / 800) calc(100vw * 30 / 800) calc(100vw * 40 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-panel-title {
+    margin: calc(100vw * 48 / 800) auto 0;
+    font-size: var(--overview-mobile-title-size);
+    line-height: 1.15;
+    letter-spacing: -1.3px;
+    white-space: normal;
+  }
+
+  .page--tattoo-overview .tattoo-result-carousel {
+    width: calc(100vw * 660 / 800);
+    max-width: 100%;
+    margin-top: calc(100vw * 21 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-result-card {
+    flex-basis: calc(100vw * 660 / 800);
+    width: calc(100vw * 660 / 800);
+    min-height: calc(100vw * 470 / 800);
+    padding: calc(100vw * 21 / 800) calc(100vw * 16 / 800);
+    border-radius: calc(100vw * 20 / 800);
+    border: 1px solid #ddd;
+  }
+
+  .page--tattoo-overview .tattoo-result-round {
+    font-size: calc(100vw * 30 / 800);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.75px;
+    text-align: center;
+  }
+
+  .page--tattoo-overview .tattoo-result-grid {
+    grid-template-columns: repeat(2, calc(100vw * 280 / 800));
+    justify-content: center;
+    gap: calc(100vw * 50 / 800);
+    margin-top: calc(100vw * 40 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-result-slot {
+    width: calc(100vw * 280 / 800);
+    max-width: none;
+  }
+
+  .page--tattoo-overview .media-placeholder--result {
+    width: calc(100vw * 280 / 800);
+    height: calc(100vw * 330 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-result-dots {
+    margin-top: calc(100vw * 28 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-commitment {
+    padding: calc(100vw * 111 / 800) 0;
+  }
+
+  .page--tattoo-overview .tattoo-commitment-inner {
+    width: calc(100vw * 562 / 800);
+    max-width: 100%;
+  }
+
+  .page--tattoo-overview .tattoo-commitment-title {
+    width: 100%;
+    margin: 0 auto calc(100vw * 48 / 800);
+    font-size: calc(100vw * 48 / 800);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1.2px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .page--tattoo-overview .tattoo-commitment-desc {
+    width: calc(100vw * 490 / 800);
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: calc(100vw * 28 / 800);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1.4px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .page--tattoo-overview .tattoo-special-pill {
+    width: calc(100vw * 250 / 800);
+    height: calc(100vw * 50 / 800);
+    margin: 0 auto calc(100vw * 33 / 800);
+    padding: calc(100vw * 17 / 800) calc(100vw * 45.5 / 800);
+    border-radius: calc(100vw * 25 / 800);
+    border: 1px solid #176eae;
+    background-color: transparent;
+    font-family: "Sofia Sans", "Poppins", sans-serif;
+    font-size: calc(100vw * 22 / 800);
+    font-weight: 700;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .page--tattoo-overview .tattoo-experience .tattoo-heading-block,
+  .page--tattoo-overview .tattoo-laser .tattoo-heading-block,
+  .page--tattoo-overview .tattoo-sedation .tattoo-heading-block {
+    align-items: center;
+    text-align: center;
+  }
+
+  .page--tattoo-overview .tattoo-heading-block .tattoo-section-title--experience,
+  .page--tattoo-overview .tattoo-heading-block .tattoo-section-title--laser,
+  .page--tattoo-overview .tattoo-heading-block .tattoo-section-title--sedation {
+    width: 100%;
+    max-width: calc(100vw * 560 / 800);
+    margin: 0 auto;
+    text-align: center;
+    white-space: normal;
+    word-break: keep-all;
+  }
+
+  .page--tattoo-overview .tattoo-heading-block .tattoo-section-desc--narrow {
+    width: calc(100vw * 491 / 800);
+    max-width: 100%;
+    margin: calc(100vw * 52 / 800) auto 0;
+    color: #28313b;
+    font-size: calc(100vw * 28 / 800);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1.4px;
+    text-align: center;
+    white-space: normal;
+    word-break: keep-all;
+  }
+
+  .page--tattoo-overview .tattoo-experience {
+    padding: calc(100vw * 120 / 800) 0;
+  }
+
+  .page--tattoo-overview .tattoo-experience-layout {
+    width: 100%;
+    margin-top: calc(100vw * 48 / 800);
+    gap: calc(100vw * 82 / 800);
+    justify-items: center;
+  }
+
+  .page--tattoo-overview .tattoo-experience-media {
+    width: calc(100vw * 720 / 800);
+    max-width: 100%;
+    height: calc(100vw * 450 / 800);
+    margin: 0 auto;
+  }
+
+  .page--tattoo-overview .tattoo-experience-media .media-placeholder--portrait {
+    width: 100%;
+    height: 100%;
+    border-radius: calc(100vw * 20 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-experience-media .tattoo-photo--doctor {
+    background-size: auto 82%;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .page--tattoo-overview .tattoo-experience-copy {
+    width: calc(100vw * 641 / 800);
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .page--tattoo-overview .tattoo-experience-kicker {
+    width: calc(100vw * 490 / 800);
+    max-width: 100%;
+    margin: 0 auto calc(100vw * 25 / 800);
+    font-size: calc(100vw * 48 / 800);
+    letter-spacing: -1.2px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .page--tattoo-overview .tattoo-experience-name {
+    width: calc(100vw * 291 / 800);
+    max-width: 100%;
+    margin: 0 auto calc(100vw * 62 / 800);
+    font-size: calc(100vw * 48 / 800);
+    letter-spacing: -1.2px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .page--tattoo-overview .tattoo-experience-name-rest {
+    margin-left: 0;
+  }
+
+  .page--tattoo-overview .tattoo-venn {
+    width: calc(100vw * 641 / 800);
+    max-width: 100%;
+    height: calc(100vw * 616 / 800);
+    margin: 0 auto;
+    aspect-ratio: auto;
+  }
+
+  .page--tattoo-overview .tattoo-venn-circle {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .page--tattoo-overview .tattoo-venn-circle--top,
+  .page--tattoo-overview .tattoo-venn-circle--left,
+  .page--tattoo-overview .tattoo-venn-circle--right {
+    padding: 0;
+  }
+
+  .page--tattoo-overview .tattoo-laser .tattoo-section-title--laser {
+    width: calc(100vw * 720 / 800);
+    max-width: 100%;
+    white-space: nowrap;
+  }
+
+  .page--tattoo-overview .tattoo-laser .tattoo-section-desc--narrow {
+    width: calc(100vw * 720 / 800);
+    max-width: 100%;
+    white-space: nowrap;
+  }
+
+  .page--tattoo-overview .tattoo-laser-layout {
+    width: 100%;
+    margin-top: 0;
+    gap: 0;
+    justify-items: center;
+  }
+
+  .page--tattoo-overview .tattoo-laser {
+    padding: calc(100vw * 107 / 800) 0 calc(100vw * 105 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-laser-media {
+    order: 1;
+    width: calc(100vw * 720 / 800);
+    max-width: 100%;
+    height: calc(100vw * 450 / 800);
+    margin: calc(100vw * 91 / 800) auto calc(100vw * 101 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-laser-media .media-placeholder--landscape {
+    width: 100%;
+    height: 100%;
+    border-radius: calc(100vw * 20 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-laser-copy {
+    order: 2;
+    width: calc(100vw * 720 / 800);
+    max-width: 100%;
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .page--tattoo-overview .tattoo-laser-title {
+    width: calc(100vw * 330 / 800);
+    max-width: 100%;
+    margin: 0 auto calc(100vw * 42 / 800);
+    font-size: calc(100vw * 48 / 800);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -1.2px;
+    text-align: center;
+  }
+
+  .page--tattoo-overview .tattoo-laser-title-base {
+    font-weight: 700;
+    color: #333;
+  }
+
+  .page--tattoo-overview .tattoo-laser-desc {
+    width: calc(100vw * 720 / 800);
+    max-width: 100%;
+    margin: 0 auto calc(100vw * 60 / 800);
+    font-size: var(--overview-mobile-desc-size);
+    font-weight: 300;
+    line-height: 1.45;
+    letter-spacing: -1.4px;
+    text-align: center;
+    color: #555;
+  }
+
+  .page--tattoo-overview .tattoo-laser-desc-line {
+    white-space: nowrap;
+  }
+
+  .page--tattoo-overview .tattoo-laser-copy .detail-btn-common {
+    width: calc(100vw * 220 / 800);
+    height: calc(100vw * 70 / 800);
+    margin: calc(100vw * 42 / 800) auto 0;
+    padding: calc(100vw * 24 / 800) calc(100vw * 35 / 800);
+    border-radius: calc(100vw * 35 / 800);
+    background-color: #176eae;
+    gap: calc(100vw * 23 / 800);
+    font-size: calc(100vw * 24.5 / 800);
+    font-weight: 400;
+    letter-spacing: -0.61px;
+    color: #fff;
+  }
+
+  .page--tattoo-overview .tattoo-quality {
+    min-height: calc(100vw * 1130 / 800);
+    padding: calc(100vw * 90 / 800) 0 calc(100vw * 96 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-quality-inner {
+    width: calc(100% - 80px);
+  }
+
+  .page--tattoo-overview .tattoo-quality-kicker {
+    width: calc(100vw * 318 / 800);
+    max-width: 100%;
+    margin: 0 auto calc(100vw * 31 / 800);
+    font-size: calc(100vw * 30 / 800);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.75px;
+    text-align: center;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  .page--tattoo-overview .tattoo-quality-title {
+    width: calc(100vw * 457 / 800);
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: calc(100vw * 52 / 800);
+    font-weight: 300;
+    line-height: 1.04;
+    letter-spacing: -1.3px;
+    text-align: center;
+    color: #fff;
+    word-break: keep-all;
+  }
+
+  .page--tattoo-overview .tattoo-quality-kicker,
+  .page--tattoo-overview .tattoo-quality-title,
+  .page--tattoo-overview .tattoo-quality-points {
+    position: relative;
+    z-index: 2;
+  }
+
+  .page--tattoo-overview .tattoo-quality-title-light {
+    font-weight: 300;
+  }
+
+  .page--tattoo-overview .tattoo-quality-title-strong {
+    margin-left: 0;
+    font-weight: 700;
+  }
+
+  .page--tattoo-overview .tattoo-quality-points {
+    width: calc(100vw * 642 / 800);
+    max-width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-top: calc(100vw * 48 / 800);
+    margin-bottom: calc(100vw * 52 / 800);
+    flex-wrap: nowrap;
+  }
+
+  .page--tattoo-overview .tattoo-quality-point {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    width: calc(100vw * 250 / 800);
+    height: calc(100vw * 250 / 800);
+    padding: calc(100vw * 95 / 800) calc(100vw * 28 / 800) calc(100vw * 91 / 800) calc(100vw * 27 / 800);
+    border: 2px solid #758ef8;
+    font-size: calc(100vw * 30 / 800);
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: -0.75px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .page--tattoo-overview .tattoo-quality-point + .tattoo-quality-point {
+    margin-left: calc(100vw * -54 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-quality-point:nth-child(2) {
+    z-index: 3;
+  }
+
+  .page--tattoo-overview .tattoo-quality-point:first-child,
+  .page--tattoo-overview .tattoo-quality-point:last-child {
+    z-index: 2;
+  }
+
+  .page--tattoo-overview .tattoo-quality-stage {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100vw * 132 / 800);
+    width: calc(100vw * 1040 / 800);
+    max-width: none;
+    height: calc((100vw * 1040 / 800) * 816 / 980);
+    margin: 0;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .page--tattoo-overview .tattoo-quality-machine--left {
+    left: 3.061%;
+    top: 0;
+    width: 36.633%;
+    height: 100%;
+  }
+
+  .page--tattoo-overview .tattoo-quality-machine--center {
+    left: 27.857%;
+    top: 6.373%;
+    width: 31.837%;
+    height: 84.314%;
+  }
+
+  .page--tattoo-overview .tattoo-quality-machine--right-front {
+    left: 47.347%;
+    top: 8.456%;
+    width: 33.163%;
+    height: 87.868%;
+  }
+
+  .page--tattoo-overview .tattoo-quality-machine--right-back {
+    left: 63.061%;
+    top: 8.088%;
+    width: 34.286%;
+    height: 90.809%;
+  }
+
+  .page--tattoo-overview .tattoo-quality-flare {
+    left: 75.918%;
+    top: 22.794%;
+    width: 43.265%;
+    height: 25.858%;
+  }
+
+  .page--tattoo-overview .tattoo-venn-circle {
+    width: calc(100vw * 260 / 800);
+    height: calc(100vw * 260 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-venn-circle-title {
+    width: calc(100vw * 139 / 800);
+    max-width: 100%;
+    margin: 0 auto calc(100vw * 16 / 800);
+    font-size: calc(100vw * 36 / 800);
+    letter-spacing: -0.9px;
+    white-space: nowrap;
+  }
+
+  .page--tattoo-overview .tattoo-venn-circle-desc {
+    width: calc(100vw * 179 / 800);
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: calc(100vw * 30 / 800);
+    letter-spacing: -0.75px;
+    white-space: nowrap;
+  }
+
+  .page--tattoo-overview .tattoo-venn-plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vw * 55 / 800);
+    height: calc(100vw * 54 / 800);
+    font-size: calc(100vw * 55 / 800);
+    line-height: 1;
+  }
+
+  .page--tattoo-overview .tattoo-process-heading {
+    align-items: center;
+    text-align: center;
+  }
+
+  .page--tattoo-overview .tattoo-process-heading .section-kicker-common {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .page--tattoo-overview .tattoo-process-heading .section-title-common {
+    margin-top: calc(100vw * 26 / 800);
+    text-align: center;
+  }
+
+  .page--tattoo-overview .tattoo-process-grid {
+    display: grid;
+    gap: calc(100vw * 40 / 800);
+    margin-top: calc(100vw * 80 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-process {
+    padding: calc(100vw * 107 / 800) 0 calc(100vw * 116 / 800);
+  }
+
+  .page--tattoo-overview .tattoo-process-grid::before,
+  .page--tattoo-overview .tattoo-process-row::after {
+    display: none;
+  }
+
+  .page--tattoo-overview .tattoo-process-row,
+  .page--tattoo-overview .tattoo-process-row--reverse {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    width: calc(100vw * 720 / 800);
+    min-height: calc(100vw * 700 / 800);
+    margin: 0 auto;
+    padding: 0 0 calc(100vw * 56 / 800);
+    border-radius: calc(100vw * 20 / 800);
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(17, 32, 46, 0.08);
+    overflow: hidden;
+  }
+
+  .page--tattoo-overview .tattoo-process-media,
+  .page--tattoo-overview .tattoo-process-copy {
+    padding: 0;
+  }
+
+  .page--tattoo-overview .tattoo-process-media .media-placeholder--landscape {
+    width: 100%;
+    height: calc(100vw * 440 / 800);
+    margin: 0 0 calc(100vw * 49 / 800);
+    aspect-ratio: auto;
+    border: 0;
+    border-radius: calc(100vw * 20 / 800) calc(100vw * 20 / 800) 0 0;
+  }
+
+  .page--tattoo-overview .tattoo-process-copy {
+    width: calc(100vw * 660 / 800);
+    margin: 0 auto;
+  }
+
+  .page--tattoo-overview .tattoo-process-step {
+    width: fit-content;
+    margin: 0 0 calc(100vw * 17 / 800);
+    font-size: calc(100vw * 24 / 800);
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    text-align: left;
+  }
+
+  .page--tattoo-overview .tattoo-process-title {
+    width: calc(100vw * 384 / 800);
+    max-width: 100%;
+    margin: 0 0 calc(100vw * 19 / 800);
+    font-size: calc(100vw * 36 / 800);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.9px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .page--tattoo-overview .tattoo-process-desc {
+    width: 100%;
+    margin: 0;
+    color: #333;
+    font-size: calc(100vw * 28 / 800);
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -1.4px;
+    text-align: left;
   }
 }
