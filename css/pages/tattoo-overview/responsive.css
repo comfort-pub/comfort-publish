@@ -10,6 +10,171 @@
   }
 }
 
+@media (max-width: 430px) {
+  .page--tattoo-overview {
+    overflow-x: hidden;
+  }
+
+  .page--tattoo-overview .tattoo-hero-title,
+  .page--tattoo-overview .tattoo-hero-desc,
+  .page--tattoo-overview .tattoo-intro-copy .section-kicker-common,
+  .page--tattoo-overview .tattoo-section-title--intro,
+  .page--tattoo-overview .tattoo-intro-copy .section-desc-common,
+  .page--tattoo-overview .tattoo-panel-title,
+  .page--tattoo-overview .tattoo-commitment-title,
+  .page--tattoo-overview .tattoo-commitment-desc,
+  .page--tattoo-overview .tattoo-heading-block .tattoo-section-title--experience,
+  .page--tattoo-overview .tattoo-heading-block .tattoo-section-title--laser,
+  .page--tattoo-overview .tattoo-heading-block .tattoo-section-title--sedation,
+  .page--tattoo-overview .tattoo-heading-block .tattoo-section-desc--narrow,
+  .page--tattoo-overview .tattoo-experience-kicker,
+  .page--tattoo-overview .tattoo-experience-name,
+  .page--tattoo-overview .tattoo-laser .tattoo-section-title--laser,
+  .page--tattoo-overview .tattoo-laser .tattoo-section-desc--narrow,
+  .page--tattoo-overview .tattoo-laser-title,
+  .page--tattoo-overview .tattoo-laser-desc,
+  .page--tattoo-overview .tattoo-quality-title,
+  .page--tattoo-overview .tattoo-process-title,
+  .page--tattoo-overview .tattoo-process-desc,
+  .page--tattoo-overview .tattoo-sedation-desc,
+  .page--tattoo-overview .tattoo-sedation-note,
+  .page--tattoo-overview .tattoo-aftercare-copy .section-desc-common,
+  .page--tattoo-overview .tattoo-aftercare-desc,
+  .page--tattoo-overview .tattoo-summary-card-title,
+  .page--tattoo-overview .tattoo-summary-card-desc,
+  .page--tattoo-overview #sec7 .sec7-route-title,
+  .page--tattoo-overview #sec7 .sec7-route-address,
+  .page--tattoo-overview #sec7 .sec7-route-note,
+  .page--tattoo-overview #sec7 .sec7-bottom-summary,
+  .page--tattoo-overview #sec7 .sec7-bottom-summary-line {
+    width: auto;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .page--tattoo-overview .tattoo-result-panel,
+  .page--tattoo-overview .tattoo-experience-media,
+  .page--tattoo-overview .tattoo-laser-media,
+  .page--tattoo-overview .tattoo-process-row,
+  .page--tattoo-overview .tattoo-process-row--reverse,
+  .page--tattoo-overview .tattoo-sedation-media,
+  .page--tattoo-overview .tattoo-aftercare-grid,
+  .page--tattoo-overview .tattoo-summary-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .page--tattoo-overview .tattoo-result-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page--tattoo-overview .tattoo-result-slot,
+  .page--tattoo-overview .media-placeholder--result,
+  .page--tattoo-overview .tattoo-summary-card,
+  .page--tattoo-overview .tattoo-summary-card .media-placeholder--card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .page--tattoo-overview .tattoo-aftercare-grid,
+  .page--tattoo-overview .tattoo-summary-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .page--tattoo-overview .tattoo-aftercare-card {
+    width: 100%;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-step {
+    grid-template-columns: 120px minmax(0, 1fr);
+    column-gap: 16px;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-step-badge {
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+    font-size: 20px;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-steps::before {
+    left: 60px;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-step-text {
+    width: auto;
+    margin-left: 0;
+    min-height: 120px;
+    padding: 32px 20px 32px 24px;
+  }
+
+  .page--tattoo-overview .tattoo-quality-points {
+    width: 100%;
+    justify-content: center;
+    transform: scale(0.72);
+    transform-origin: center top;
+    margin-top: 48px;
+    margin-bottom: -10px;
+  }
+
+  .page--tattoo-overview .tattoo-quality-stage {
+    width: 100%;
+    max-width: 100%;
+    left: 50%;
+    top: 360px;
+    background-size: 100% auto;
+  }
+
+  .page--tattoo-overview #sec7 .sec7-route-inner {
+    width: calc(100% - 80px);
+  }
+
+  .page--tattoo-overview #sec7 .sec7-route-table-row {
+    grid-template-columns: 118px minmax(0, 1fr);
+    column-gap: 18px;
+  }
+
+  .page--tattoo-overview #sec7 .sec7-route-table-label {
+    width: 118px;
+  }
+
+  .page--tattoo-overview #sec7 .sec7-route-channel {
+    width: auto;
+    min-width: 0;
+    margin-right: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .page--tattoo-overview #sec7 .sec7-route-hours-content,
+  .page--tattoo-overview #sec7 .sec7-route-hours-row-line {
+    width: 100%;
+  }
+
+  .page--tattoo-overview #sec7 .sec7-route-hours-row-line {
+    grid-template-columns: 88px minmax(0, 1fr);
+    column-gap: 14px;
+  }
+
+  .page--tattoo-overview #sec7 .sec7-route-hours-day,
+  .page--tattoo-overview #sec7 .sec7-route-hours-time {
+    width: auto;
+  }
+
+  .page--tattoo-overview #sec7 .sec7-route-note {
+    margin-left: 136px;
+  }
+
+  .page--tattoo-overview #sec7 .sec7-bottom {
+    padding-right: 40px;
+  }
+
+  .page--tattoo-overview #sec7 .sec7-bottom-summary-chunk {
+    margin-right: 16px;
+  }
+}
+
 @media (max-width: 1024px) {
   .page--tattoo-overview .page-section,
   .page--tattoo-overview #sec7 {
