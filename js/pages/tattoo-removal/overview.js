@@ -12,6 +12,27 @@
     var currentResultIndex = 0;
     var resultScrollSyncTimerId = null;
 
+    function getResultCardOffsetLeft(card) {
+      return card ? card.offsetLeft : 0;
+    }
+
+    function syncResultCardWidths($carousel, $cards) {
+      var carousel = $carousel.get(0);
+      var carouselWidth;
+
+      if (!carousel || !$cards.length) {
+        return;
+      }
+
+      carouselWidth = carousel.clientWidth;
+
+      if (!carouselWidth) {
+        return;
+      }
+
+      carousel.style.setProperty("--tattoo-result-card-width", carouselWidth + "px");
+    }
+
     function setActiveResultDot(index) {
       $resultDots.removeClass("is-active");
       $resultDots.eq(index).addClass("is-active");
@@ -19,15 +40,13 @@
 
     function scrollResultTo($carousel, $cards, index, behavior) {
       var card = $cards.get(index);
-      var cardWidth;
       var targetLeft;
 
       if (!card) {
         return;
       }
 
-      cardWidth = $cards.first().outerWidth(true);
-      targetLeft = cardWidth * index;
+      targetLeft = getResultCardOffsetLeft(card);
 
       $carousel.get(0).scrollTo({
         left: targetLeft,
@@ -39,12 +58,17 @@
 
     function syncResultIndexFromScroll($carousel, $cards) {
       var scrollLeft = $carousel.scrollLeft();
-      var cardWidth = $cards.first().outerWidth(true);
       var nearestIndex = 0;
+      var smallestDistance = Infinity;
 
-      if (cardWidth) {
-        nearestIndex = Math.round(scrollLeft / cardWidth);
-      }
+      $cards.each(function (index) {
+        var distance = Math.abs(scrollLeft - getResultCardOffsetLeft(this));
+
+        if (distance < smallestDistance) {
+          smallestDistance = distance;
+          nearestIndex = index;
+        }
+      });
 
       nearestIndex = Math.max(0, Math.min(nearestIndex, $cards.length - 1));
 
@@ -84,6 +108,13 @@
 
       if (skipAnimation) {
         $panel.prop("hidden", !isOpen);
+        if (isOpen) {
+          panel.style.removeProperty("padding-top");
+          panel.style.removeProperty("padding-bottom");
+        } else {
+          panel.style.paddingTop = "0px";
+          panel.style.paddingBottom = "0px";
+        }
         panel.style.height = isOpen ? "auto" : "0px";
         panel.style.opacity = isOpen ? "1" : "0";
         return;
@@ -91,6 +122,8 @@
 
       if (isOpen) {
         $panel.prop("hidden", false);
+        panel.style.removeProperty("padding-top");
+        panel.style.removeProperty("padding-bottom");
         panel.style.height = "0px";
         panel.style.opacity = "0";
         panel.offsetHeight;
@@ -109,10 +142,14 @@
         panel.offsetHeight;
         panel.style.height = "0px";
         panel.style.opacity = "0";
+        panel.style.paddingTop = "0px";
+        panel.style.paddingBottom = "0px";
         panel._faqTransitionEndHandler = function (event) {
           if (event.propertyName !== "height") {
             return;
           }
+          panel.style.height = "0px";
+          panel.style.opacity = "0";
           $panel.prop("hidden", true);
         };
         panel.addEventListener("transitionend", panel._faqTransitionEndHandler, { once: true });
@@ -122,7 +159,7 @@
     if ($faqItems.length) {
       $faqItems.each(function (index) {
         var $item = $(this);
-        var isOpen = $item.hasClass("is-open") || index === 0;
+        var isOpen = $item.hasClass("is-open");
         setFaqItemState($item, isOpen, true);
       });
 
@@ -167,9 +204,16 @@
     if ($resultCarousel.length) {
       var $resultCards = $resultCarousel.find(".tattoo-result-card");
 
+      syncResultCardWidths($resultCarousel, $resultCards);
+
       scrollResultTo($resultCarousel, $resultCards, 0, "auto");
       setActiveResultDot(0);
       startResultAutoplay($resultCarousel, $resultCards);
+
+      $(window).on("resize", function () {
+        syncResultCardWidths($resultCarousel, $resultCards);
+        scrollResultTo($resultCarousel, $resultCards, currentResultIndex, "auto");
+      });
 
       $resultDots.on("click", function () {
         var index = Number($(this).data("resultDot"));

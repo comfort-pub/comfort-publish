@@ -174,22 +174,25 @@
 }
 
 .page--tattoo .tattoo-summary-card .tattoo-photo--summary-1 {
-  background-image: url("../../../assets/images/sub_tatto_removal/DUL_2395.png");
+  background-image: url("../../../assets/images/sub_tatto_removal/pico-1-mo.png");
 }
 
 .page--tattoo .tattoo-summary-card .tattoo-photo--summary-2 {
-  background-image: url("../../../assets/images/sub_tatto_removal/Group 29.png");
-  background-size: 115% auto;
-  background-position: 25% 10%;
+  background-image:
+    url("../../../assets/images/sub_tatto_removal/Group 29.png"),
+    url("../../../assets/images/sub_tatto_removal/pico-back.png");
+  background-size: 115% auto, cover;
+  background-position: 25% 10%, center;
+  background-repeat: no-repeat, no-repeat;
   background-color: #fff;
 }
 
 .page--tattoo .tattoo-summary-card .tattoo-photo--summary-3 {
-  background-image: url("../../../assets/images/sub_tatto_removal/DUL_2406.png");
+  background-image: url("../../../assets/images/sub_tatto_removal/pico-3-mo.png");
 }
 
 .page--tattoo .tattoo-summary-card .tattoo-photo--summary-4 {
-  background-image: url("../../../assets/images/sub_tatto_removal/DUL_2453.png");
+  background-image: url("../../../assets/images/sub_tatto_removal/pico-4-mo.png");
 }
 
 .page--tattoo .tattoo-summary-card-title {
