@@ -31,8 +31,8 @@
           <nav class="gnb" aria-label="주 메뉴">
             <ul class="gnb-list">
               <li class="gnb-item gnb-tattoo is-active" data-menu="tattoo"><a href="pico-laser.html">컴포트 피코문신제거</a></li>
-              <li class="gnb-item gnb-anesthesia" data-menu="anesthesia"><a href="#sec7">컴포트 수면(진정)마취의 특별함</a></li>
-              <li class="gnb-item gnb-injection" data-menu="injection"><a href="#sec7">컴포트 주사시술</a></li>
+              <li class="gnb-item gnb-anesthesia" data-menu="anesthesia"><a href="overview.html#tattooSedation">컴포트 수면(진정)마취의 특별함</a></li>
+              <li class="gnb-item gnb-injection" data-menu="injection"><a href="overview.html#tattooAftercare">컴포트 주사시술</a></li>
               <li class="gnb-item gnb-intro" data-menu="intro"><a href="../../index.html">컴포트 소개</a></li>
             </ul>
           </nav>
@@ -53,15 +53,15 @@
 
     <div class="tattoo-floating-actions" aria-label="빠른 메뉴">
       <div class="tattoo-floating-menu">
-        <a href="#sec7" class="tattoo-floating-action">
+        <a href="#sec7" class="tattoo-floating-action tattoo-floating-action--kakao">
           <span class="tattoo-floating-action-icon-wrap" aria-hidden="true"><img src="../../assets/images/common/kakao_icon.png" alt="" class="tattoo-floating-action-icon" /></span>
           <span class="tattoo-floating-action-label">카카오톡상담</span>
         </a>
-        <a href="#sec7" class="tattoo-floating-action">
+        <a href="#sec7" class="tattoo-floating-action tattoo-floating-action--calendar">
           <span class="tattoo-floating-action-icon-wrap" aria-hidden="true"><img src="../../assets/images/common/callendar_icon.png" alt="" class="tattoo-floating-action-icon" /></span>
           <span class="tattoo-floating-action-label">온라인예약</span>
         </a>
-        <a href="#sec7" class="tattoo-floating-action">
+        <a href="#sec7" class="tattoo-floating-action tattoo-floating-action--line">
           <span class="tattoo-floating-action-icon-wrap" aria-hidden="true"><img src="../../assets/images/common/line_icon.png" alt="" class="tattoo-floating-action-icon" /></span>
           <span class="tattoo-floating-action-label">라인상담</span>
           <span class="tattoo-floating-action-sub">日本語相談可能</span>
@@ -261,24 +261,59 @@
     <footer id="sec7" class="page-section section--main-contact">
       <section class="sec7-route">
         <div class="sec7-route-inner">
-          <div class="sec7-route-copy">
+          <div class="sec7-route-copy" data-reveal data-reveal-delay="0ms">
             <h3 class="sec7-route-title">오시는 길</h3>
-            <p class="sec7-route-address">서울시 강남구 테헤란로 105 (역삼동, 822-1) A타워 2층 (강남역 12번 출구)</p>
-            <div class="sec7-route-contact">
-              <span class="sec7-route-contact-label">상담 및 예약</span>
-              <strong class="sec7-route-contact-value">02.557.0775</strong>
+            <p class="sec7-route-address">서울시 강남구 테헤란로 105 (역삼동, 822-1) A타워 2층<br />(강남역 12번 출구)</p>
+            <div class="sec7-route-table" role="table" aria-label="오시는 길 안내">
+              <div class="sec7-route-table-row sec7-route-table-row--contact" role="row">
+                <div class="sec7-route-table-label" role="cell">상담 및 예약</div>
+                <div class="sec7-route-table-cell" role="cell">
+                  <strong class="sec7-route-contact-value">02.557.0775</strong>
+                  <div class="sec7-route-channels">
+                    <a href="#" class="sec7-route-channel sec7-route-channel--kakao"><span class="sec7-route-channel-badge sec7-route-channel-badge--kakao" aria-hidden="true"><img src="../../assets/images/main/kakao.png" alt="" class="sec7-route-channel-icon" /><span class="sec7-route-channel-icon-label">TALK</span></span><span class="sec7-route-channel-text">카카오톡</span></a>
+                    <a href="#" class="sec7-route-channel sec7-route-channel--line"><span class="sec7-route-channel-badge sec7-route-channel-badge--line" aria-hidden="true"><img src="../../assets/images/main/line.png" alt="" class="sec7-route-channel-icon" /><span class="sec7-route-channel-icon-label">LINE</span></span><span class="sec7-route-channel-text">라인상담</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="sec7-route-table-row sec7-route-table-row--hours" role="row">
+                <div class="sec7-route-table-label" role="cell">진료 시간</div>
+                <div class="sec7-route-table-cell" role="cell">
+                  <div class="sec7-route-hours-content">
+                    <span class="sec7-route-hours-row-line">
+                      <span class="sec7-route-hours-day sec7-route-hours-day--spaced">
+                        <span>월</span>
+                        <span>~</span>
+                        <span>금</span>
+                      </span>
+                      <span class="sec7-route-hours-time sec7-route-hours-time--spaced">
+                        <span>오전</span>
+                        <span>10시</span>
+                        <span>~</span>
+                        <span>오후</span>
+                        <span>7시</span>
+                      </span>
+                    </span>
+                    <span class="sec7-route-hours-row-line">
+                      <span class="sec7-route-hours-day sec7-route-hours-day--spaced">
+                        <span>토</span>
+                        <span>요</span>
+                        <span>일</span>
+                      </span>
+                      <span class="sec7-route-hours-time sec7-route-hours-time--spaced">
+                        <span>오전</span>
+                        <span>10시</span>
+                        <span>~</span>
+                        <span>오후</span>
+                        <span>5시</span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="sec7-route-channels">
-              <a href="#" class="sec7-route-channel sec7-route-channel--kakao"><span class="sec7-route-channel-badge sec7-route-channel-badge--kakao" aria-hidden="true"><img src="../../assets/images/main/kakao.png" alt="" class="sec7-route-channel-icon" /><span class="sec7-route-channel-icon-label">TALK</span></span><span class="sec7-route-channel-text">카카오톡</span></a>
-              <a href="#" class="sec7-route-channel sec7-route-channel--line"><span class="sec7-route-channel-badge sec7-route-channel-badge--line" aria-hidden="true"><img src="../../assets/images/main/line.png" alt="" class="sec7-route-channel-icon" /><span class="sec7-route-channel-icon-label">LINE</span></span><span class="sec7-route-channel-text">라인상담</span></a>
-            </div>
-            <dl class="sec7-route-hours">
-              <div class="sec7-route-hours-row"><dt>진료 시간</dt><dd><span class="sec7-route-hours-content"><span class="sec7-route-hours-day">월 - 금</span><span class="sec7-route-hours-time">오전 10시 ~ 오후 7시</span></span></dd></div>
-              <div class="sec7-route-hours-row"><dt></dt><dd><span class="sec7-route-hours-content"><span class="sec7-route-hours-day">토 요 일</span><span class="sec7-route-hours-time">오전 10시 ~ 오후 5시</span></span></dd></div>
-            </dl>
             <p class="sec7-route-note">* 점심시간 없이 진료 / 일요일, 공휴일 휴무</p>
           </div>
-          <div class="sec7-route-map">
+          <div class="sec7-route-map" data-reveal data-reveal-delay="140ms">
             <iframe title="컴포트 성형외과 위치" src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%ED%85%8C%ED%97%A4%EB%9E%80%EB%A1%9C%20105&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
@@ -287,10 +322,23 @@
         <div class="sec7-bottom-inner">
           <a href="../../index.html" class="sec7-bottom-logo" aria-label="컴포트 성형외과 홈"><img src="../../assets/images/main/footer-comfort-logo.png" alt="Comfort Plastic Surgery" /></a>
           <div class="sec7-bottom-info">
-            <p class="sec7-bottom-heading">컴포트성형외과의원</p>
-            <p class="sec7-bottom-meta"><span class="sec7-bottom-item"><span class="sec7-bottom-label">대표</span><span class="sec7-bottom-value">박영수</span></span><span class="sec7-bottom-item"><span class="sec7-bottom-label">주소</span><span class="sec7-bottom-value">서울특별시 강남구 테헤란로 105 (역삼동, 822-1) A타워 2층</span></span><span class="sec7-bottom-item"><span class="sec7-bottom-label">사업자등록번호</span><span class="sec7-bottom-value">763-02-02501</span></span></p>
-            <p class="sec7-bottom-meta"><span class="sec7-bottom-item"><span class="sec7-bottom-label">전화</span><span class="sec7-bottom-value">02-557-0775</span></span><span class="sec7-bottom-item"><span class="sec7-bottom-label">팩스</span><span class="sec7-bottom-value">02-557-0776</span></span><span class="sec7-bottom-item"><span class="sec7-bottom-label">이메일</span><span class="sec7-bottom-value">comfortps@naver.com</span></span><span class="sec7-bottom-item"><span class="sec7-bottom-label">계좌</span><span class="sec7-bottom-value">기업 048-151175-04-028 [비급여수가표]</span></span></p>
-            <p class="sec7-bottom-copy">&copy; 2022 Comfort Plastic Surgery. All rights reserved.</p>
+            <p class="sec7-bottom-summary">
+              <span class="sec7-bottom-summary-line sec7-bottom-summary-line--heading">컴포트성형외과의원</span>
+              <span class="sec7-bottom-summary-line">
+                <span class="sec7-bottom-summary-chunk"><span class="sec7-bottom-summary-label">대표</span> 박영수</span>
+                <span class="sec7-bottom-summary-chunk"><span class="sec7-bottom-summary-label">주소</span> 서울특별시 강남구 테헤란로 105 (역삼동, 822-1) A타워 2층</span>
+              </span>
+              <span class="sec7-bottom-summary-line">
+                <span class="sec7-bottom-summary-chunk"><span class="sec7-bottom-summary-label">사업자등록번호</span> 763-02-02501</span>
+                <span class="sec7-bottom-summary-chunk"><span class="sec7-bottom-summary-label">전화</span> 02-557-0775</span>
+                <span class="sec7-bottom-summary-chunk"><span class="sec7-bottom-summary-label">팩스</span> 02-557-0776</span>
+              </span>
+              <span class="sec7-bottom-summary-line">
+                <span class="sec7-bottom-summary-chunk"><span class="sec7-bottom-summary-label">이메일</span> comfortps@naver.com</span>
+                <span class="sec7-bottom-summary-chunk"><span class="sec7-bottom-summary-label">계좌</span> 기업 048-151175-04-028 <span class="sec7-bottom-summary-link">[비급여수가표]</span></span>
+              </span>
+              <span class="sec7-bottom-summary-line sec7-bottom-summary-copy">&copy; 2022 Comfort Plastic Surgery. All rights reserved.</span>
+            </p>
           </div>
         </div>
       </div>

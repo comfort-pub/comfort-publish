@@ -427,6 +427,10 @@
   overflow: hidden;
 }
 
+.pico-machine-head-stage {
+  position: relative;
+}
+
 .pico-machine-rings {
   position: absolute;
   left: 50%;

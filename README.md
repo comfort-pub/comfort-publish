@@ -88,6 +88,17 @@ http://localhost:8000
 - `컴포트 마취`
 - `주사시술`
 
+## 상세 모바일 규칙
+
+- `pages/tattoo-removal/overview.html` 모바일 기준은 현재 `css/pages/tattoo-overview/responsive.css`에서 관리합니다.
+- 첫 번째 hero 섹션은 모바일에서 시안 고정 높이가 아니라 viewport 높이를 기본값으로 사용합니다.
+- 구현 기준은 `100svh` 우선, `100vh` fallback 입니다.
+- 공통 모바일 헤더는 높이 `60px` 고정, 로고와 메뉴 아이콘은 양끝 정렬로 두고 `210px` 이하 화면에서만 크기를 줄입니다.
+- `overview`의 나머지 모바일 값은 현재 `800px` 시안 비율 축소 방식을 유지합니다.
+- `pages/tattoo-removal/overview.html`의 header / `sec7 오시는 길` / footer summary 마크업을 현재 공통 기준으로 사용합니다.
+- `sec7 오시는 길`과 footer는 모바일에서도 `overview`의 `800px` 시안 비율 축소 값을 공통 기준으로 사용합니다.
+- 의도한 줄바꿈이 필요한 카피는 자연 줄바꿈 대신 마크업의 `<br />` 기준을 우선합니다.
+
 상세 분류는 [`pages/README.md`](/Users/kang-gwanghun/IdeaProjects/comfort-publish/pages/README.md)와 [`js/data/site-map.js`](/Users/kang-gwanghun/IdeaProjects/comfort-publish/js/data/site-map.js)에 함께 정리합니다.
 
 ## 메인 페이지 데이터 분리
