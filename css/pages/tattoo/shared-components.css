@@ -196,17 +196,21 @@
 }
 
 .page--tattoo .tattoo-summary-card-title {
+  width: auto;
+  max-width: none;
   margin-top: 0;
   font-size: 29px;
   font-weight: 700;
   line-height: 1.34;
   letter-spacing: -0.04em;
   text-align: center;
+  white-space: nowrap;
 }
 
 .page--tattoo .tattoo-summary-card-desc {
-  width: 300px;
-  margin: 6px auto 0;
+  width: auto;
+  max-width: none;
+  margin: 6px 0 0;
   padding: 0;
   color: #333;
   font-size: 18px;
@@ -214,6 +218,7 @@
   line-height: normal;
   letter-spacing: -0.45px;
   text-align: center;
+  white-space: nowrap;
 }
 
 .page--tattoo-surgery .tattoo-result-panel {

@@ -1,6 +1,7 @@
 @media (max-width: 1024px) {
   :root {
-    --mobile-header-height: 60px;
+    --mobile-header-base-width: clamp(500px, 100vw, 800px);
+    --mobile-header-height: calc(var(--mobile-header-base-width) * 110 / 800);
   }
 
   .header {
@@ -9,24 +10,25 @@
 
   .header .inner {
     position: relative;
-    padding: 0 20px;
+    padding: calc(var(--mobile-header-base-width) * 34 / 800) calc(var(--mobile-header-base-width) * 41 / 800);
     justify-content: space-between;
-    gap: 16px;
+    gap: calc(var(--mobile-header-base-width) * 16 / 800);
   }
 
   .logo {
-    width: auto;
+    width: calc(var(--mobile-header-base-width) * 192 / 800);
     margin-right: auto;
   }
 
   .logo img {
-    height: 32px;
+    width: calc(var(--mobile-header-base-width) * 192 / 800);
+    height: calc(var(--mobile-header-base-width) * 42 / 800);
   }
 
   .header-mobile-home {
     display: none;
-    width: 32px;
-    height: 32px;
+    width: calc(var(--mobile-header-base-width) * 50 / 800);
+    height: calc(var(--mobile-header-base-width) * 50 / 800);
     align-items: center;
     justify-content: center;
     color: #31353d;
@@ -46,8 +48,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: calc(var(--mobile-header-base-width) * 58 / 800);
+    height: calc(var(--mobile-header-base-width) * 44 / 800);
     margin-left: 0;
     padding: 0;
     border-radius: 0;
@@ -64,8 +66,8 @@
     content: "";
     position: absolute;
     left: 50%;
-    width: 28px;
-    height: 2px;
+    width: calc(var(--mobile-header-base-width) * 38 / 800);
+    height: calc(var(--mobile-header-base-width) * 3 / 800);
     border-radius: 999px;
     background: #176eae;
     transform-origin: center;
@@ -76,7 +78,7 @@
   }
 
   .btn-menu::before {
-    transform: translate(-50%, -8px);
+    transform: translate(-50%, calc(var(--mobile-header-base-width) * -11 / 800));
   }
 
   .btn-menu-line {
@@ -85,7 +87,7 @@
   }
 
   .btn-menu::after {
-    transform: translate(-50%, 8px);
+    transform: translate(-50%, calc(var(--mobile-header-base-width) * 11 / 800));
   }
 
   .header-area.is-mobile-menu-open .btn-menu::before,
@@ -541,10 +543,9 @@
 
 @media (max-width: 800px) {
   :root {
-    --mobile-header-side-padding: clamp(8px, calc(100vw * 20 / 210), 20px);
-    --mobile-header-icon-size: clamp(0px, calc(100vw * 32 / 210), 32px);
-    --mobile-header-line-width: clamp(0px, calc(100vw * 28 / 210), 28px);
-    --mobile-header-line-offset: clamp(0px, calc(100vw * 8 / 210), 8px);
+    --mobile-header-base-width: clamp(600px, 100vw, 800px);
+    --mobile-header-unit: calc(var(--mobile-header-base-width) / 800);
+    --mobile-header-height: calc(var(--mobile-header-unit) * 110);
     --sec7-mobile-base-width: max(100vw, 320px);
     --sec7-mobile-unit: calc(var(--sec7-mobile-base-width) / 800);
     --sec7-mobile-shell: calc(var(--sec7-mobile-unit) * 720);
@@ -556,46 +557,50 @@
 
   .header .inner {
     max-width: none;
-    padding: 0 var(--mobile-header-side-padding);
+    padding: calc(var(--mobile-header-base-width) * 34 / 800) calc(var(--mobile-header-base-width) * 41 / 800);
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: calc(var(--mobile-header-base-width) * 16 / 800);
   }
 
   .header-mobile-home {
-    width: var(--mobile-header-icon-size);
-    height: var(--mobile-header-icon-size);
+    width: calc(var(--mobile-header-base-width) * 50 / 800);
+    height: calc(var(--mobile-header-base-width) * 50 / 800);
   }
 
   .logo {
-    width: auto;
+    width: calc(var(--mobile-header-base-width) * 192 / 800);
     min-width: 0;
     margin-right: auto;
   }
 
   .logo img {
-    width: auto;
-    height: var(--mobile-header-icon-size);
+    width: calc(var(--mobile-header-base-width) * 192 / 800);
+    height: calc(var(--mobile-header-base-width) * 42 / 800);
   }
 
   .btn-menu {
-    width: var(--mobile-header-icon-size);
-    height: var(--mobile-header-icon-size);
+    width: calc(var(--mobile-header-base-width) * 58 / 800);
+    height: calc(var(--mobile-header-base-width) * 44 / 800);
     flex: 0 0 auto;
+    border-radius: 0;
+    background: transparent;
   }
 
   .btn-menu::before,
   .btn-menu::after,
   .btn-menu-line {
-    width: var(--mobile-header-line-width);
+    width: calc(var(--mobile-header-base-width) * 38 / 800);
+    height: calc(var(--mobile-header-base-width) * 3 / 800);
+    background: #176eae;
   }
 
   .btn-menu::before {
-    transform: translate(-50%, calc(var(--mobile-header-line-offset) * -1));
+    transform: translate(-50%, calc(var(--mobile-header-base-width) * -11 / 800));
   }
 
   .btn-menu::after {
-    transform: translate(-50%, var(--mobile-header-line-offset));
+    transform: translate(-50%, calc(var(--mobile-header-base-width) * 11 / 800));
   }
 
   .mobile-menu-backdrop,
@@ -625,9 +630,18 @@
   }
 }
 
+@media (max-width: 430px) {
+  :root {
+    --mobile-header-base-width: 500px;
+    --mobile-header-unit: calc(var(--mobile-header-base-width) / 800);
+    --mobile-header-height: calc(var(--mobile-header-unit) * 110);
+  }
+}
+
 @media (max-width: 800px) {
   :root {
-    --mobile-header-height: 60px;
+    --mobile-header-base-width: clamp(500px, 100vw, 800px);
+    --mobile-header-height: calc(var(--mobile-header-base-width) * 110 / 800);
     --mobile-side-padding: calc(100vw * 40 / 800);
     --sec3-card-mobile-width: calc(100vw * 684 / 800);
     --mobile-section-title-size: clamp(24px, 6vw, 48px);

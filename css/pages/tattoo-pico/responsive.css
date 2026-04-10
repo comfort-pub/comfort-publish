@@ -238,6 +238,77 @@
     width: 100%;
   }
 
+  .page--tattoo-pico .pico-summary-section {
+    padding: calc(var(--pico-mobile-unit) * 129) 0 calc(var(--pico-mobile-unit) * 108);
+    background: #fff;
+  }
+
+  .page--tattoo-pico .pico-summary-title {
+    text-align: center;
+  }
+
+  .page--tattoo-pico .pico-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, calc(var(--pico-mobile-unit) * 350));
+    justify-content: center;
+    column-gap: calc(var(--pico-mobile-unit) * 20);
+    row-gap: calc(var(--pico-mobile-unit) * 69);
+    margin-top: calc(var(--pico-mobile-unit) * 80);
+  }
+
+  .page--tattoo-pico .pico-summary-card {
+    width: calc(var(--pico-mobile-unit) * 350);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page--tattoo-pico .pico-summary-card .media-placeholder--card {
+    width: 100%;
+    height: calc(var(--pico-mobile-unit) * 250);
+    margin: 0 0 calc(var(--pico-mobile-unit) * 30);
+    aspect-ratio: auto;
+  }
+
+  .page--tattoo-pico .pico-summary-card .tattoo-photo--summary-1 {
+    background-image: url("../../../assets/images/sub_tatto_removal/pico-1-mo.png");
+  }
+
+  .page--tattoo-pico .pico-summary-card .tattoo-photo--summary-2 {
+    background-image:
+      url("../../../assets/images/sub_tatto_removal/Group 29.png"),
+      url("../../../assets/images/sub_tatto_removal/pico-back.png");
+    background-size: 115% auto, cover;
+    background-position: 25% 10%, center;
+    background-repeat: no-repeat, no-repeat;
+    background-color: #fff;
+  }
+
+  .page--tattoo-pico .pico-summary-card .tattoo-photo--summary-3 {
+    background-image: url("../../../assets/images/sub_tatto_removal/pico-3-mo.png");
+  }
+
+  .page--tattoo-pico .pico-summary-card .tattoo-photo--summary-4 {
+    background-image: url("../../../assets/images/sub_tatto_removal/pico-4-mo.png");
+  }
+
+  .page--tattoo-pico .pico-summary-card-title {
+    margin-top: 0;
+    margin-bottom: calc(var(--pico-mobile-unit) * 20);
+    font-size: calc(var(--pico-mobile-unit) * 29);
+    line-height: 1.25;
+    letter-spacing: -0.04em;
+    text-align: center;
+  }
+
+  .page--tattoo-pico .pico-summary-card-desc {
+    width: calc(var(--pico-mobile-unit) * 297);
+    height: auto;
+    font-size: calc(var(--pico-mobile-unit) * 24);
+    line-height: 1.35;
+    text-align: center;
+  }
+
   .pico-compare-card {
     aspect-ratio: auto;
     height: auto;
@@ -281,10 +352,6 @@
     --pico-mobile-kicker-size: calc(var(--pico-mobile-unit) * 30);
     --pico-mobile-title-size: calc(var(--pico-mobile-unit) * 52);
     --pico-mobile-desc-size: calc(var(--pico-mobile-unit) * 28);
-  }
-
-  .page--tattoo-pico .page-section {
-    overflow: hidden;
   }
 
   .page--tattoo-pico .pico-machine-inner,
@@ -443,6 +510,8 @@
     width: 100%;
     height: calc(var(--pico-mobile-unit) * 55);
     margin: 0 auto;
+    padding: 0 calc(var(--pico-mobile-unit) * 21);
+    box-sizing: border-box;
     font-size: calc(var(--pico-mobile-unit) * 30);
     font-weight: 800;
     letter-spacing: -0.05em;
@@ -450,6 +519,16 @@
 
   .page--tattoo-pico .pico-compare-card-body {
     height: calc(100% - calc(var(--pico-mobile-unit) * 55) - calc(var(--pico-mobile-unit) * 33));
+  }
+
+  .page--tattoo-pico .pico-compare-card-body--legacy {
+    margin-top: calc(var(--pico-mobile-unit) * 36);
+    height: calc(100% - calc(var(--pico-mobile-unit) * 55) - calc(var(--pico-mobile-unit) * 33) - calc(var(--pico-mobile-unit) * 36));
+  }
+
+  .page--tattoo-pico .pico-compare-card-body--pico {
+    margin-top: calc(var(--pico-mobile-unit) * 40);
+    height: calc(100% - calc(var(--pico-mobile-unit) * 55) - calc(var(--pico-mobile-unit) * 33) - calc(var(--pico-mobile-unit) * 40));
   }
 
   .page--tattoo-pico .pico-feature-layout {
@@ -470,7 +549,7 @@
   }
 
   .page--tattoo-pico .pico-feature-title {
-    width: calc(var(--pico-mobile-unit) * 367);
+    width: auto;
     max-width: none;
     margin-top: calc(var(--pico-mobile-unit) * 124);
     margin-right: 0;
@@ -481,7 +560,15 @@
     line-height: 1;
     letter-spacing: -0.025em;
     text-align: center;
+    white-space: nowrap;
     color: #fff;
+  }
+
+  .page--tattoo-pico .pico-band-title {
+    width: 100%;
+    margin: 0 auto;
+    font-size: calc(var(--pico-mobile-unit) * 42);
+    line-height: 1.25;
   }
 
   .page--tattoo-pico .pico-feature-desc {
@@ -506,6 +593,151 @@
     gap: calc(var(--pico-mobile-unit) * 20);
     width: var(--pico-mobile-shell);
     margin-top: calc(var(--pico-mobile-unit) * 75);
+  }
+
+  .page--tattoo-pico .pico-comfort-grid {
+    width: var(--pico-mobile-shell);
+    grid-template-columns: minmax(0, 1fr);
+    gap: calc(var(--pico-mobile-unit) * 40);
+    margin: calc(var(--pico-mobile-unit) * 103) auto calc(var(--pico-mobile-unit) * 83);
+  }
+
+  .page--tattoo-pico .pico-comfort-marquee {
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    font-size: calc(var(--pico-mobile-unit) * 100);
+    line-height: 1;
+    letter-spacing: calc(var(--pico-mobile-unit) * -5);
+    text-align: center;
+    white-space: nowrap;
+    transform: translateX(-50%);
+  }
+
+  .page--tattoo-pico .pico-comfort-section {
+    padding-bottom: 0;
+  }
+
+  .page--tattoo-pico .pico-comfort-item,
+  .page--tattoo-pico .pico-comfort-item--reverse {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    row-gap: 0;
+    width: var(--pico-mobile-shell);
+    max-width: 100%;
+    min-height: calc(var(--pico-mobile-unit) * 700);
+    margin: 0 auto;
+    padding: 0 0 calc(var(--pico-mobile-unit) * 47);
+    border-radius: calc(var(--pico-mobile-unit) * 20);
+    background: #fff;
+    box-shadow: 0 0 0 calc(var(--pico-mobile-unit) * 2) rgba(17, 32, 46, 0.16);
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .page--tattoo-pico .pico-comfort-media-box,
+  .page--tattoo-pico .pico-comfort-copy-box {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .page--tattoo-pico .pico-comfort-media-box {
+    width: var(--pico-mobile-shell);
+    height: calc(var(--pico-mobile-unit) * 440);
+    margin: 0 0 calc(var(--pico-mobile-unit) * 55);
+    padding: calc(var(--pico-mobile-unit) * 78) calc(var(--pico-mobile-unit) * 61) calc(var(--pico-mobile-unit) * 36.5) calc(var(--pico-mobile-unit) * 59);
+    border-top-left-radius: calc(var(--pico-mobile-unit) * 20);
+    border-top-right-radius: calc(var(--pico-mobile-unit) * 20);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .page--tattoo-pico .pico-comfort-item .pico-comfort-media-box,
+  .page--tattoo-pico .pico-comfort-item .pico-comfort-copy-box,
+  .page--tattoo-pico .pico-comfort-item--reverse .pico-comfort-media-box,
+  .page--tattoo-pico .pico-comfort-item--reverse .pico-comfort-copy-box {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .page--tattoo-pico .pico-comfort-item .pico-media-placeholder {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    min-height: 0;
+    aspect-ratio: auto;
+    border: 0;
+    overflow: hidden;
+  }
+
+  .page--tattoo-pico .pico-comfort-item:nth-child(1) .pico-comfort-media-box {
+    position: relative;
+    background-color: #f4f4f4;
+  }
+
+  .page--tattoo-pico .pico-comfort-item:nth-child(1) .pico-comfort-media-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    background: url("../../../assets/images/sub_pico_laser/pico-laser_mo.png") no-repeat center center / cover;
+  }
+
+  .page--tattoo-pico .pico-comfort-item:nth-child(1) .pico-media-placeholder--comfort-1 {
+    display: none;
+  }
+
+  .page--tattoo-pico .pico-comfort-item .pico-media-placeholder--comfort-2 {
+    border-radius: 0 !important;
+  }
+
+  .page--tattoo-pico .pico-comfort-copy-box {
+    width: calc(var(--pico-mobile-unit) * 660);
+    max-width: calc(100% - calc(var(--pico-mobile-unit) * 60));
+    margin: 0 auto;
+  }
+
+  .page--tattoo-pico .pico-comfort-copy {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+  }
+
+  .page--tattoo-pico .pico-comfort-copy h4 {
+    width: auto;
+    max-width: none;
+    margin: 0 0 calc(var(--pico-mobile-unit) * 30);
+    font-size: calc(var(--pico-mobile-unit) * 36);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: calc(var(--pico-mobile-unit) * -0.9);
+    text-align: center;
+    white-space: nowrap;
+    color: #333;
+  }
+
+  .page--tattoo-pico .pico-comfort-copy p {
+    width: 100%;
+    margin: 0;
+    font-size: calc(var(--pico-mobile-unit) * 28);
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: calc(var(--pico-mobile-unit) * -1.4);
+    text-align: center;
+    white-space: nowrap;
+    color: #333;
   }
 
   .page--tattoo-pico .pico-feature-card {
@@ -536,6 +768,8 @@
   .page--tattoo-pico .pico-section-title--wavelength {
     width: 100%;
     margin: 0 auto calc(var(--pico-mobile-unit) * 55);
+    font-size: calc(var(--pico-mobile-unit) * 52);
+    line-height: 1.15;
     text-align: center;
     white-space: nowrap;
   }
@@ -550,7 +784,7 @@
     margin: calc(var(--pico-mobile-unit) * 55) auto calc(var(--pico-mobile-unit) * 70);
     font-size: calc(var(--pico-mobile-unit) * 28);
     font-weight: 300;
-    line-height: 1;
+    line-height: 1.15;
     letter-spacing: normal;
     text-align: center;
     color: #555;
@@ -559,7 +793,8 @@
 
   .page--tattoo-pico .pico-wavelength-visual {
     width: 100vw;
-    height: calc(var(--pico-mobile-base-width) * 534 / 1045);
+    aspect-ratio: 1045 / 534;
+    height: auto;
     min-height: 0;
     margin: calc(var(--pico-mobile-unit) * 38) calc(50% - 50vw) 0;
     background-position: center center;
@@ -589,12 +824,15 @@
   }
 
   .page--tattoo-pico .pico-wavelength-copy .pico-section-text--left {
-    width: calc(var(--pico-mobile-unit) * 651);
-    height: calc(var(--pico-mobile-unit) * 93);
-    margin: calc(var(--pico-mobile-unit) * 66) auto 0;
+    width: auto;
+    max-width: none;
+    height: calc(var(--pico-mobile-unit) * 127);
+    margin: calc(var(--pico-mobile-unit) * 55) auto 0;
+    padding-left: 0;
+    padding-right: 0;
     font-size: calc(var(--pico-mobile-unit) * 28);
     font-weight: 300;
-    line-height: 1;
+    line-height: 1.15;
     letter-spacing: normal;
     text-align: center;
     white-space: nowrap;
@@ -633,13 +871,13 @@
   }
 
   .page--tattoo-pico .pico-care-card p {
-    width: calc(var(--pico-mobile-unit) * 488);
-    height: calc(var(--pico-mobile-unit) * 60);
-    margin: 0;
+    width: calc(var(--pico-mobile-unit) * 455);
+    height: calc(var(--pico-mobile-unit) * 93);
+    margin: calc(var(--pico-mobile-unit) * 19) 0 0;
     font-family: "Pretendard", sans-serif;
     font-size: calc(var(--pico-mobile-unit) * 28);
     font-weight: 300;
-    line-height: 1;
+    line-height: 1.12;
     letter-spacing: calc(var(--pico-mobile-unit) * -1.4);
     text-align: left;
     color: #333;
@@ -664,6 +902,8 @@
 
   .page--tattoo-pico .pico-fractat-media {
     width: var(--pico-mobile-shell);
+    aspect-ratio: 650 / 430;
+    height: auto;
     margin: 0 0 calc(var(--pico-mobile-unit) * 97);
   }
 
@@ -691,7 +931,7 @@
     margin: calc(var(--pico-mobile-unit) * 60) auto 0;
     font-size: calc(var(--pico-mobile-unit) * 28);
     font-weight: 300;
-    line-height: 1;
+    line-height: 1.18;
     letter-spacing: calc(var(--pico-mobile-unit) * -1.4);
     text-align: center;
     color: #555;
@@ -722,7 +962,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 0;
     background-color: #fff;
   }
@@ -752,12 +992,15 @@
   }
 
   .page--tattoo-pico .pico-fractat-benefit p {
-    width: calc(var(--pico-mobile-unit) * 193);
-    height: calc(var(--pico-mobile-unit) * 93);
+    width: auto;
+    max-width: none;
+    height: auto;
     margin: calc(var(--pico-mobile-unit) * 29) 0 0;
+    padding-left: 0;
+    padding-right: 0;
     font-size: calc(var(--pico-mobile-unit) * 28);
     font-weight: 300;
-    line-height: 1;
+    line-height: 1.18;
     letter-spacing: calc(var(--pico-mobile-unit) * -1.4);
     text-align: center;
     color: #333;
@@ -896,7 +1139,7 @@
   .page--tattoo-pico .pico-machine-card-copy p {
     margin: 0;
     font-size: calc(var(--pico-mobile-unit) * 28);
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.08;
     letter-spacing: -0.025em;
     text-align: center;
@@ -917,7 +1160,77 @@
   }
 
   .page--tattoo-pico .pico-machine-band {
-    padding-top: calc(var(--pico-mobile-unit) * 119);
+    padding: calc(var(--pico-mobile-unit) * 113) 0 calc(var(--pico-mobile-unit) * 96);
+  }
+
+  .page--tattoo-pico .pico-fractat-recommend {
+    display: grid;
+    grid-template-columns: calc(var(--pico-mobile-unit) * 230) calc(var(--pico-mobile-unit) * 410);
+    column-gap: calc(var(--pico-mobile-unit) * 80);
+    width: var(--pico-mobile-shell);
+    max-width: var(--pico-mobile-shell);
+    margin: calc(var(--pico-mobile-unit) * 42) auto 0;
+    align-items: start;
+  }
+
+  .page--tattoo-pico .pico-fractat-recommend-copy h3 {
+    width: calc(var(--pico-mobile-unit) * 230);
+    margin: 0 0 calc(var(--pico-mobile-unit) * 100);
+    font-size: calc(var(--pico-mobile-unit) * 52);
+    line-height: normal;
+    letter-spacing: calc(var(--pico-mobile-unit) * -1.3);
+  }
+
+  .page--tattoo-pico .pico-fractat-recommend-list {
+    display: grid;
+    grid-template-columns: calc(var(--pico-mobile-unit) * 410);
+    gap: calc(var(--pico-mobile-unit) * 10);
+    width: calc(var(--pico-mobile-unit) * 410);
+  }
+
+  .page--tattoo-pico .pico-recommend-pill {
+    width: calc(var(--pico-mobile-unit) * 410);
+    height: calc(var(--pico-mobile-unit) * 80);
+    min-height: 0;
+    margin: 0;
+    padding: calc(var(--pico-mobile-unit) * 24) calc(var(--pico-mobile-unit) * 118) calc(var(--pico-mobile-unit) * 24) calc(var(--pico-mobile-unit) * 25);
+    gap: 0;
+    box-sizing: border-box;
+  }
+
+  .page--tattoo-pico .pico-recommend-pill span:last-child {
+    width: calc(var(--pico-mobile-unit) * 219);
+    height: calc(var(--pico-mobile-unit) * 26);
+    margin: 0 0 0 calc(var(--pico-mobile-unit) * 16);
+    display: inline-flex;
+    align-items: center;
+    font-size: calc(var(--pico-mobile-unit) * 28);
+    font-weight: 300;
+    letter-spacing: calc(var(--pico-mobile-unit) * -1.4);
+  }
+
+  .page--tattoo-pico .pico-recommend-pill-icon {
+    width: calc(var(--pico-mobile-unit) * 31.2);
+    height: calc(var(--pico-mobile-unit) * 31.2);
+    align-self: center;
+  }
+
+  .page--tattoo-pico .pico-recommend-note {
+    width: calc(var(--pico-mobile-unit) * 317);
+    height: calc(var(--pico-mobile-unit) * 50);
+    margin: calc(var(--pico-mobile-unit) * 16) 0 0;
+    justify-self: end;
+    font-family: "Pretendard", sans-serif;
+    font-size: calc(var(--pico-mobile-unit) * 24);
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: calc(var(--pico-mobile-unit) * -0.6);
+    text-align: right;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
   }
 
   .page--tattoo-pico .pico-band-points {
@@ -979,217 +1292,12 @@
   }
 }
 
-@media (max-width: 800px) {
-  .page--tattoo-pico #sec7 .sec7-route-inner {
-    width: var(--pico-mobile-shell);
-    gap: calc(var(--pico-mobile-unit) * 68);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route {
-    min-height: calc(var(--pico-mobile-unit) * 1200);
-    padding: calc(var(--pico-mobile-unit) * 119) 0 calc(var(--pico-mobile-unit) * 111);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-map {
-    border-radius: calc(var(--pico-mobile-unit) * 20);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-map iframe {
-    height: calc(var(--pico-mobile-unit) * 500);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-copy {
-    --sec7-route-label-width: calc(var(--pico-mobile-unit) * 143);
-    --sec7-route-column-gap: calc(var(--pico-mobile-unit) * 45);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-title {
-    width: calc(var(--pico-mobile-unit) * 144);
-    height: auto;
-    margin-bottom: calc(var(--pico-mobile-unit) * 23);
-    font-size: calc(var(--pico-mobile-unit) * 40);
-    white-space: nowrap;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-address {
-    width: calc(var(--pico-mobile-unit) * 572);
-    height: auto;
-    margin-top: calc(var(--pico-mobile-unit) * 23);
-    font-size: calc(var(--pico-mobile-unit) * 26);
-    line-height: 1.2;
-    white-space: nowrap;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-table {
-    row-gap: calc(var(--pico-mobile-unit) * 60);
-    margin-top: calc(var(--pico-mobile-unit) * 56);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-table-row {
-    grid-template-columns: calc(var(--pico-mobile-unit) * 143) minmax(0, 1fr);
-    column-gap: calc(var(--pico-mobile-unit) * 45);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-table-label {
-    width: calc(var(--pico-mobile-unit) * 143);
-    height: auto;
-    font-size: calc(var(--pico-mobile-unit) * 30);
-    white-space: nowrap;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-contact-value {
-    width: calc(var(--pico-mobile-unit) * 240);
-    height: auto;
-    font-size: calc(var(--pico-mobile-unit) * 48);
-    color: #fff;
-    white-space: nowrap;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-channels {
-    gap: calc(var(--pico-mobile-unit) * 20);
-    margin-top: calc(var(--pico-mobile-unit) * 24);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-channel {
-    min-width: 0;
-    width: calc(var(--pico-mobile-unit) * 200);
-    height: calc(var(--pico-mobile-unit) * 60);
-    margin-right: calc(var(--pico-mobile-unit) * 11);
-    padding: calc(var(--pico-mobile-unit) * 18) calc(var(--pico-mobile-unit) * 39) calc(var(--pico-mobile-unit) * 15.5) calc(var(--pico-mobile-unit) * 37.3);
-    border-radius: calc(var(--pico-mobile-unit) * 30);
-    gap: calc(var(--pico-mobile-unit) * 14);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-channel-badge {
-    width: calc(var(--pico-mobile-unit) * 34);
-    height: calc(var(--pico-mobile-unit) * 34);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-channel-icon-label {
-    font-size: calc(var(--pico-mobile-unit) * 7);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-channel-text {
-    width: calc(var(--pico-mobile-unit) * 81);
-    height: auto;
-    font-size: calc(var(--pico-mobile-unit) * 24);
-    white-space: nowrap;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-hours-content {
-    gap: calc(var(--pico-mobile-unit) * 6);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-hours-row-line {
-    grid-template-columns: calc(var(--pico-mobile-unit) * 105) calc(var(--pico-mobile-unit) * 274);
-    column-gap: calc(var(--pico-mobile-unit) * 26);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-hours-day,
-  .page--tattoo-pico #sec7 .sec7-route-hours-time {
-    height: auto;
-    font-size: calc(var(--pico-mobile-unit) * 28);
-    white-space: nowrap;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-hours-day {
-    width: calc(var(--pico-mobile-unit) * 105);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-hours-time {
-    width: calc(var(--pico-mobile-unit) * 274);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-hours-time--spaced {
-    gap: calc(var(--pico-mobile-unit) * 10);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-note {
-    width: calc(var(--pico-mobile-unit) * 392);
-    height: auto;
-    margin: calc(var(--pico-mobile-unit) * 21) 0 0 calc(var(--pico-mobile-unit) * 188);
-    font-size: calc(var(--pico-mobile-unit) * 24);
-    white-space: nowrap;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-bottom {
-    padding: calc(var(--pico-mobile-unit) * 42) calc(var(--pico-mobile-unit) * 60) calc(var(--pico-mobile-unit) * 41) calc(var(--pico-mobile-unit) * 41);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-bottom-summary {
-    width: calc(var(--pico-mobile-unit) * 699);
-    font-size: calc(var(--pico-mobile-unit) * 22);
-    line-height: 1.64;
-    letter-spacing: -0.05em;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-bottom-summary-line {
-    white-space: nowrap;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-bottom-summary-line + .sec7-bottom-summary-line {
-    margin-top: calc(var(--pico-mobile-unit) * 2);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-bottom-summary-line--heading {
-    margin-bottom: calc(var(--pico-mobile-unit) * 6);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-bottom-summary-label {
-    margin-right: calc(var(--pico-mobile-unit) * 10);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-bottom-summary-chunk {
-    margin-right: calc(var(--pico-mobile-unit) * 24);
-  }
-}
-
-@media (max-width: 430px) {
-  .page--tattoo-pico #sec7 .sec7-route-inner {
-    width: calc(100% - 80px);
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-table-row {
-    grid-template-columns: 118px minmax(0, 1fr);
-    column-gap: 18px;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-table-label {
-    width: 118px;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-channel {
-    width: auto;
-    min-width: 0;
-    margin-right: 8px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-hours-content,
-  .page--tattoo-pico #sec7 .sec7-route-hours-row-line {
-    width: 100%;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-hours-row-line {
-    grid-template-columns: 88px minmax(0, 1fr);
-    column-gap: 14px;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-hours-day,
-  .page--tattoo-pico #sec7 .sec7-route-hours-time {
-    width: auto;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-route-note {
-    margin-left: 136px;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-bottom {
-    padding-right: 40px;
-  }
-
-  .page--tattoo-pico #sec7 .sec7-bottom-summary-chunk {
-    margin-right: 16px;
+@media (max-width: 320px) {
+  .page--tattoo-pico .page-tattoo-pico-reference,
+  .page--tattoo-pico #sec7 {
+    width: 320px;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: 0;
   }
 }
