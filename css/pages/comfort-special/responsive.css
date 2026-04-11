@@ -34,7 +34,16 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
+  .page--comfort-special {
+    --comfort-mobile-base-width: max(100vw, 320px);
+    --comfort-mobile-unit: calc(var(--comfort-mobile-base-width) / 800);
+    --comfort-mobile-gutter: 40px;
+    --comfort-mobile-shell: calc(var(--comfort-mobile-unit) * 720);
+    --comfort-mobile-side-padding: 40px;
+    overflow-x: hidden;
+  }
+
   .page--comfort-special .page-section,
   .page--comfort-special #sec7 {
     scroll-margin-top: 84px;
@@ -44,219 +53,420 @@
     display: none;
   }
 
-  .comfort-hero {
-    min-height: 720px;
+  .page--comfort-special #wrap,
+  .page--comfort-special .page-comfort-special {
+    min-width: 320px;
+    overflow-x: hidden;
   }
 
-  .comfort-hero-inner {
-    width: min(calc(100% - 40px), 900px);
-    padding-bottom: 72px;
+  .page--comfort-special .comfort-section-inner,
+  .page--comfort-special .comfort-section-inner--narrow {
+    width: calc(100% - (var(--comfort-mobile-side-padding) * 2));
   }
 
-  .comfort-hero-copy .comfort-hero-kicker {
-    font-size: clamp(34px, 5.2vw, 48px);
+  .page--comfort-special .comfort-kicker,
+  .page--comfort-special .comfort-hero-copy .comfort-hero-kicker,
+  .page--comfort-special .comfort-hero-kicker,
+  .page--comfort-special .tattoo-sub-hero-kicker,
+  .page--comfort-special .section-kicker-common {
+    width: 100%;
+    max-width: none;
+    margin: 0 0 calc(var(--comfort-mobile-unit) * 28);
+    font-size: calc(var(--comfort-mobile-unit) * 30);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
   }
 
-  .comfort-hero-title {
-    font-size: clamp(36px, 4.8vw, 44px);
+  .page--comfort-special .comfort-hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    background:
+      linear-gradient(90deg, rgba(15, 20, 29, 0.18) 0%, rgba(15, 20, 29, 0.08) 42%, rgba(15, 20, 29, 0.04) 100%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(15, 26, 39, 0.08) 100%),
+      url("../../../assets/images/sub_special/hero_mo.png") no-repeat center center / cover;
+  }
+
+  .page--comfort-special .comfort-hero-inner {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0 var(--comfort-mobile-side-padding) calc(var(--comfort-mobile-unit) * 151);
+    box-sizing: border-box;
+  }
+
+  .page--comfort-special .comfort-hero-copy {
+    display: contents;
+  }
+
+  .page--comfort-special .comfort-hero .section-title-common,
+  .page--comfort-special .tattoo-sub-hero-title {
+    width: calc(var(--comfort-mobile-unit) * 409);
+    margin: 0 0 calc(var(--comfort-mobile-unit) * 28);
+    font-size: calc(var(--comfort-mobile-unit) * 48);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.025em;
     white-space: normal;
   }
 
-  .comfort-hero-desc {
-    font-size: clamp(20px, 2.4vw, 22px);
-    white-space: normal;
+  .page--comfort-special .comfort-hero .section-desc-common,
+  .page--comfort-special .tattoo-sub-hero-desc {
+    width: calc(var(--comfort-mobile-unit) * 559);
+    margin: 0;
+    font-size: calc(var(--comfort-mobile-unit) * 30);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    text-align: left;
   }
 
-  .comfort-proof-stats,
-  .comfort-story-grid,
-  .comfort-difference-grid,
-  .comfort-cta-grid {
+  .page--comfort-special .comfort-hero-mark {
+    display: none;
+  }
+
+  .page--comfort-special .page-section.comfort-proof {
+    padding: 135px 0 130px;
+  }
+
+  .page--comfort-special .page-section.comfort-proof .comfort-title {
     width: 100%;
-    max-width: none;
-  }
-
-  .comfort-story-grid,
-  .comfort-difference-grid,
-  .comfort-cta-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .comfort-story .pico-feature-card {
-    width: 100%;
-  }
-
-  .comfort-feature-copy,
-  .comfort-difference-head {
-    text-align: center;
-  }
-
-  .comfort-feature-desc {
-    max-width: none;
-  }
-
-  .comfort-feature-copy .detail-btn-common {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .comfort-proof .comfort-title {
-    width: 100%;
-  }
-
-  .comfort-proof .comfort-desc {
-    width: 100%;
-  }
-
-  .comfort-proof-stat-label {
-    font-size: 24px;
-  }
-
-  .comfort-proof-stat-number {
-    font-size: 72px;
-  }
-
-  .comfort-proof-stat-unit {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 767px) {
-  .comfort-hero {
-    min-height: 640px;
-    background-position: 62% center;
-  }
-
-  .comfort-hero-inner {
-    width: calc(100% - 40px);
-    padding: 140px 0 74px;
-  }
-
-  .comfort-hero-copy .comfort-hero-kicker {
-    font-size: clamp(30px, 7.2vw, 36px);
-    letter-spacing: -0.3px;
-  }
-
-  .comfort-hero-title {
-    margin-top: 14px;
-    font-size: clamp(34px, 8.4vw, 42px);
-    letter-spacing: -1.1px;
-  }
-
-  .comfort-hero-desc {
-    margin-top: 20px;
-    font-size: clamp(18px, 4.4vw, 22px);
-    line-height: 1.45;
-  }
-
-  .comfort-proof {
-    padding: 80px 0 72px;
-  }
-
-  .comfort-proof .comfort-title,
-  .comfort-story-title,
-  .comfort-difference-head .comfort-title,
-  .comfort-space-head .comfort-title,
-  .comfort-cta-title {
+    margin-top: 49px;
     font-size: clamp(30px, 8vw, 40px);
   }
 
-  .comfort-proof-stats,
-  .comfort-story-grid,
-  .comfort-difference-grid,
-  .comfort-cta-grid {
-    grid-template-columns: minmax(0, 1fr);
+  .page--comfort-special .comfort-proof-desc {
+    width: 100%;
+    margin-top: 55px;
+    font-size: 28px;
   }
 
-  .comfort-story .pico-feature-card {
-    padding: 42px 24px 48px;
+  .page--comfort-special .comfort-proof-stats {
+    width: 100%;
+    max-width: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+    margin-top: 102px;
   }
 
-  .comfort-proof-stats {
-    margin-top: 42px;
+  .page--comfort-special .comfort-proof-stat {
+    min-height: 220px;
+    width: 360px;
   }
 
-  .comfort-proof-stat {
-    min-height: 180px;
+  .page--comfort-special .comfort-proof-stat-label {
+    font-size: 30px;
   }
 
-  .comfort-proof-stat + .comfort-proof-stat {
-    border-left: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.8);
+  .page--comfort-special .comfort-proof-stat-number {
+    font-size: 90px;
   }
 
-  .comfort-proof-stat-label {
+  .page--comfort-special .comfort-proof-stat-unit {
     font-size: 22px;
   }
 
-  .comfort-proof-stat-number {
-    font-size: 56px;
+  .page--comfort-special .comfort-proof-note {
+    font-size: 24px;
+    text-align: right;
   }
 
-  .comfort-proof-stat-unit {
-    font-size: 22px;
+  .page--comfort-special .comfort-story {
+    padding: 127px 0 124px;
   }
 
-  .comfort-story,
-  .comfort-difference,
-  .comfort-space,
-  .comfort-cta {
-    padding-top: 72px;
-    padding-bottom: 72px;
+  .page--comfort-special .comfort-story-inner {
+    align-items: center;
   }
 
-  .comfort-story-grid {
-    gap: 14px;
+  .page--comfort-special .comfort-story .comfort-kicker {
+    font-size: 30px;
   }
 
-  .comfort-value-card {
+  .page--comfort-special .comfort-story-title {
+    margin-top: 43px;
+    font-size: clamp(30px, 8vw, 50px);
+  }
+
+  .page--comfort-special .comfort-story-grid,
+  .page--comfort-special .comfort-story .pico-feature-cards {
+    width: 100%;
+    max-width: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    margin-top: 89px;
+    margin-bottom: 96px;
+  }
+
+  .page--comfort-special .comfort-story-card,
+  .page--comfort-special .comfort-story .pico-feature-card {
+    width: 240px;
+    min-height: 0;
+    height: 240px;
+    padding: 42px 0px 48px;
+  }
+
+  .page--comfort-special .comfort-story-card-eng {
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  .page--comfort-special .comfort-story-card-title {
+    font-size: 36px;
+    white-space: normal;
+  }
+
+  .page--comfort-special .comfort-story-desc {
+    max-width: none;
+    font-size: 28px;
+    white-space: normal;
+    letter-spacing: -0.06em;
+    line-height: normal;
+  }
+
+  .page--comfort-special .comfort-difference {
+    padding: 135px 0 148px;
+  }
+
+  .page--comfort-special .comfort-difference-layout {
+    display: block;
+  }
+
+  .page--comfort-special .comfort-difference-head {
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .page--comfort-special .comfort-difference-head .comfort-title {
+    margin-top: 45px;
+    font-size: clamp(30px, 8vw, 52px);
+  }
+
+  .page--comfort-special .comfort-difference-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 20px;
+    margin-top: 112px;
+  }
+
+  .page--comfort-special .comfort-value-card {
+    width: 100%;
+    max-width: none;
+    height: auto;
     min-height: 360px;
     padding: 34px 22px 28px;
+    border-radius: 160px;
   }
 
-  .comfort-value-title {
-    font-size: 32px;
+  .page--comfort-special .comfort-value-card--care {
+    width: 380px;
+    max-width: 100%;
+    height: 530px;
+    min-height: 530px;
+    padding: 66px 0 0;
+    border-radius: 190px;
   }
 
-  .comfort-value-desc {
+  .page--comfort-special .comfort-value-card--endtoend {
+    width: 380px;
+    max-width: 100%;
+    height: 530px;
+    min-height: 530px;
+    padding: 66px 0 0;
+    border-radius: 190px;
+  }
+
+  .page--comfort-special .comfort-value-title {
+    margin: 19px auto 22px;
+    font-size: 36px;
+    white-space: normal;
+  }
+
+  .page--comfort-special .comfort-value-desc {
+    margin: 22px auto 0;
+    font-size: 28px;
+    line-height: 1.1;
+    white-space: normal;
+  }
+
+  .page--comfort-special .comfort-space {
+    padding: 119px 0;
+  }
+
+  .page--comfort-special .comfort-space-head {
+    text-align: center;
+  }
+
+  .page--comfort-special .comfort-space-head .comfort-title {
+    margin-top: 45px;
+    font-size: clamp(30px, 8vw, 52px);
+  }
+
+  .page--comfort-special .comfort-feature-list {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 125px;
+    column-gap: 0;
+    width: 100%;
+    margin: 91px auto 0;
+    align-items: start;
+  }
+
+  .page--comfort-special .comfort-feature-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0px;
+  }
+
+  .page--comfort-special .comfort-feature-row:nth-child(n) .comfort-feature-media,
+  .page--comfort-special .comfort-feature-row:nth-child(n) .comfort-feature-copy {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .page--comfort-special .comfort-feature-media {
+    width: 720px;
+    max-width: 100%;
+    min-height: 450px;
+    height: 450px;
+    border-radius: 0px;
+
+  }
+
+  .page--comfort-special .comfort-feature-row:nth-child(1) .comfort-feature-media {
+    width: 553px;
+    height: 370px;
+    min-height: 370px;
+    justify-self: center;
+  }
+
+  .page--comfort-special .comfort-feature-copy {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .page--comfort-special .comfort-feature-eng {
+    margin: 83px 0 12px;
+    font-size: 50px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .page--comfort-special .comfort-feature-title {
+    margin: 0 0 22px;
+    font-size: 36px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .page--comfort-special .comfort-feature-desc {
+    margin: 0 0 28px;
+    font-size: 28px;
+    line-height: 1.35;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .page--comfort-special .comfort-feature-desc-break {
+    display: block;
+  }
+
+  .page--comfort-special .comfort-feature-copy .detail-btn-common {
+    margin: 0px auto 0;
+    border-radius: 50px;
+  }
+
+  .page--comfort-special .detail-btn-common {
+    width: 220px;
+    height: 70px;
+    font-size: 24px;
+  }
+
+  .page--comfort-special .comfort-cta {
+    padding: 72px 0 176px;
+    text-align: center;
+  }
+
+  .page--comfort-special .comfort-cta-title {
+    margin-top: 16px;
+    font-size: clamp(30px, 8vw, 52px);
+  }
+
+  .page--comfort-special .comfort-cta-desc {
     font-size: 18px;
+    line-height: 1.6;
   }
 
-  .comfort-feature-list {
+  .page--comfort-special .comfort-cta-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
     margin-top: 40px;
   }
 
-  .comfort-feature-media {
+  .page--comfort-special .comfort-cta-button {
     width: 100%;
-    min-height: 220px;
-    height: 220px;
+    max-width: 340px;
+    min-width: 0;
+    height: 56px;
   }
 
-  .comfort-feature-eng {
-    font-size: 34px;
+  .page--comfort-special .comfort-cta-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 108px;
+    margin-top: 89px;
   }
 
-  .comfort-feature-title {
-    font-size: 26px;
+  .page--comfort-special .comfort-cta-card {
+    width: 720px;
+    max-width: 100%;
   }
 
-  .comfort-cta-grid {
-    gap: 22px;
-    margin-top: 40px;
+  .page--comfort-special .comfort-cta-card-visual {
+    width: 720px;
+    max-width: 100%;
+    height: 280px;
+    margin: 0 0 0px;
   }
 
-  .comfort-cta-card,
-  .comfort-cta-card-visual {
-    width: 100%;
+  .page--comfort-special .comfort-cta-card-visual {
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
   }
 
-  .comfort-cta-card-visual {
-    height: auto;
-    aspect-ratio: 340 / 480;
+  .page--comfort-special .comfort-cta-card--personal .comfort-cta-card-visual {
+    background-image: url("../../../assets/images/sub_special/one_on_one_mo.png");
   }
 
-  .comfort-hero-mark {
-    right: 20px;
-    bottom: 56px;
-    width: 110px;
+  .page--comfort-special .comfort-cta-card--career .comfort-cta-card-visual {
+    background-image: url("../../../assets/images/sub_special/double_mo.png");
   }
+
+  .page--comfort-special .comfort-cta-card--system .comfort-cta-card-visual {
+    background-image: url("../../../assets/images/sub_special/care_mo.png");
+  }
+
+  .page--comfort-special .comfort-cta-card-copy {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .page--comfort-special .comfort-cta-card-title br {
+    display: none;
+  }
+
+  .page--comfort-special .comfort-cta-card-badge {
+    margin-top: 45px;
+  }
+
 }

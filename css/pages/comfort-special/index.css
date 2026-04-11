@@ -5,8 +5,8 @@
   --comfort-dark: #111820;
   --comfort-ink: #202a35;
   --comfort-muted: #6d7783;
-  --comfort-shell: min(calc(100% - 40px), 1440px);
-  --comfort-shell-narrow: min(calc(100% - 40px), 1180px);
+  --comfort-shell: min(calc(100% - 40px), 1920px);
+  --comfort-shell-narrow: min(calc(100% - 40px), 1600px);
   --comfort-hero-kicker-size: 60px;
   --comfort-hero-title-size: 48px;
   --comfort-hero-desc-size: 24px;
@@ -73,7 +73,8 @@
   line-height: 1.2;
 }
 
-.comfort-hero-title {
+.comfort-hero-title.section-title-common,
+.tattoo-sub-hero-title {
   width: 100%;
   margin-top: 16px;
   color: #fff;
@@ -88,7 +89,12 @@
   text-rendering: optimizeLegibility;
 }
 
-.comfort-hero-desc {
+.page--comfort-special .tattoo-sub-hero-title {
+  font-family: "Noto Serif KR", serif;
+}
+
+.comfort-hero-desc.section-desc-common,
+.tattoo-sub-hero-desc {
   width: 100%;
   margin-top: 26px;
   color: #fff;
@@ -118,11 +124,6 @@
   text-align: left;
 }
 
-.comfort-proof {
-  padding: clamp(86px, 7.2917vw, 140px) 0 clamp(94px, 8.3333vw, 160px);
-  background: #fff;
-}
-
 .comfort-proof-head {
   text-align: center;
 }
@@ -134,16 +135,6 @@
   font-weight: 700;
   line-height: 1.26;
   letter-spacing: -0.04em;
-}
-
-.comfort-desc {
-  margin-top: clamp(18px, 1.4583vw, 28px);
-  color: var(--comfort-muted);
-  font-size: clamp(16px, 1.0417vw, 20px);
-  font-weight: 300;
-  line-height: 1.7;
-  letter-spacing: -0.025em;
-  word-break: keep-all;
 }
 
 .comfort-proof-grid {
@@ -230,17 +221,6 @@
   font-weight: 700;
   line-height: 1.24;
   letter-spacing: -0.055em;
-}
-
-.comfort-story-desc {
-  max-width: 650px;
-  margin-top: clamp(28px, 2.5vw, 48px);
-  color: rgba(255, 255, 255, 0.72);
-  font-size: clamp(17px, 1.1458vw, 22px);
-  font-weight: 300;
-  line-height: 1.82;
-  letter-spacing: -0.025em;
-  word-break: keep-all;
 }
 
 .comfort-story-list {
@@ -450,7 +430,8 @@
   display: none;
 }
 
-.comfort-hero-title {
+.comfort-hero-title.section-title-common,
+.tattoo-sub-hero-title {
   white-space: nowrap;
 }
 
@@ -486,15 +467,18 @@
   color: #333;
 }
 
-.comfort-proof .comfort-desc {
+.comfort-proof-desc {
   width: 378px;
   max-width: 100%;
   margin: 62px auto 0;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
   font-size: 18px;
+  font-weight: 300;
   line-height: 1.67;
+  letter-spacing: -0.025em;
   text-align: center;
   color: #555;
+  word-break: keep-all;
 }
 
 .comfort-proof-stats {
@@ -1036,6 +1020,10 @@
   letter-spacing: -0.45px;
   text-align: left;
   white-space: nowrap;
+}
+
+.comfort-feature-desc-break {
+  display: none;
 }
 
 .comfort-feature-copy .detail-btn-common {
