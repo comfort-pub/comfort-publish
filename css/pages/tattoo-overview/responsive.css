@@ -1133,7 +1133,12 @@
 
   .page--tattoo-overview .tattoo-sedation-title-base {
     display: inline;
+    font-size: calc(var(--overview-mobile-unit) * 48);
     text-align: center;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-title-accent {
+    font-size: calc(var(--overview-mobile-unit) * 48);
   }
 
   .page--tattoo-overview .tattoo-sedation-title {
@@ -2380,7 +2385,7 @@
 
   .page--tattoo-overview .tattoo-aftercare-inner {
     width: var(--overview-mobile-shell);
-    gap: calc(var(--overview-mobile-unit) * 120);
+    gap: 0;
     justify-items: center;
   }
 
@@ -2493,7 +2498,7 @@
   }
 
   .page--tattoo-overview .tattoo-aftercare-copy .section-desc-common {
-    margin: 0 auto;
+    margin: 0 auto calc(var(--overview-mobile-unit) * 87);
   }
 
   .page--tattoo-overview .tattoo-summary {
