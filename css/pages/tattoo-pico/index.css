@@ -873,17 +873,6 @@
   box-sizing: border-box;
 }
 
-.pico-fractat-benefit p {
-  width: auto;
-  max-width: none;
-  margin: 0;
-  padding-left: 0;
-  padding-right: 0;
-  line-height: 1.7;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .pico-benefit-icon {
   width: 36px;
   height: 36px;
@@ -916,7 +905,6 @@
   width: 1130px;
   max-width: 1130px;
   margin: 42px auto 0;
-  align-items: start;
 }
 
 .pico-fractat-recommend-copy h3 {
@@ -943,20 +931,22 @@
 
 .pico-fractat-recommend-list {
   display: grid;
-  grid-template-columns: 410px;
+  grid-template-columns: repeat(2, 380px);
   gap: 10px;
-  width: 410px;
+  width: 770px;
+}
+
+.pico-fractat-recommend-list > :last-child {
+  grid-column: 1 / -1;
 }
 
 .pico-recommend-pill {
   display: flex;
   align-items: center;
-  gap: 0;
-  width: 410px;
-  height: 80px;
+  gap: 18px;
+  width: 380px;
   min-height: 80px;
-  margin: 0 0 10px;
-  padding: 24px 118px 24px 25px;
+  padding: 0 29px;
   border-radius: 5px;
   background: #f2f2f2;
   color: #101920;
@@ -966,18 +956,17 @@
 }
 
 .pico-recommend-pill span:last-child {
-  width: 219px;
-  height: 26px;
-  margin: 0 0 0 16px;
-  display: inline-flex;
-  align-items: center;
+  width: auto;
+  max-width: none;
+  height: auto;
+  margin: 0 0 0 20px;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
-  font-size: 28px;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 400;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  letter-spacing: -1.4px;
+  letter-spacing: -0.45px;
   text-align: left;
   color: #101920;
   white-space: nowrap;
@@ -985,22 +974,19 @@
 
 .pico-recommend-pill-icon {
   flex: 0 0 auto;
-  width: 31.2px;
-  height: 31.2px;
-  align-self: center;
+  width: 22px;
+  height: 22px;
   background: url("../../../assets/images/sub_pico_laser/check.png") no-repeat center center / contain;
 }
 
 .pico-recommend-note {
-  width: 410px;
+  width: 100%;
   margin: 21px 0 0;
   color: #101920;
   font-size: 18px;
   font-weight: 300;
   letter-spacing: -0.45px;
   text-align: right;
-  justify-self: end;
-  white-space: nowrap;
 }
 
 .pico-comfort-grid {

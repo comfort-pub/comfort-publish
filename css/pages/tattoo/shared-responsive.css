@@ -1,33 +1,46 @@
 @charset "UTF-8";
 
 @media (max-width: 1024px) {
-  .page--tattoo .page-section,
-  .page--tattoo #sec7 {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .page-section,
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 {
     scroll-margin-top: 84px;
   }
 
-  .page--tattoo .tattoo-floating-actions {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-floating-actions {
     display: none;
   }
 
-  .page--tattoo .tattoo-section-inner {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-section-inner {
     width: min(calc(100% - 40px), 900px);
   }
 
-  .page--tattoo .tattoo-sub-hero-content {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-sub-hero-content {
     width: min(calc(100% - 40px), 900px);
     padding-bottom: 72px;
   }
 
-  .page--tattoo .tattoo-sub-split,
-  .page--tattoo .tattoo-info-grid--three,
-  .page--tattoo .tattoo-info-grid--four {
+  .page--tattoo-pico .tattoo-pico-hero,
+  .page--tattoo-pico .tattoo-pico-hero .tattoo-sub-hero-visual {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  .page--tattoo-pico .tattoo-pico-hero .tattoo-sub-hero-visual {
+    background-image: url("../../../assets/images/sub_pico_laser/hero_mo.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-sub-split,
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-info-grid--three,
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-info-grid--four {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 800px) {
-  .page--tattoo {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) {
     --tattoo-mobile-base-width: max(100vw, 320px);
     --tattoo-mobile-unit: calc(var(--tattoo-mobile-base-width) / 800);
     --tattoo-mobile-shell: calc(var(--tattoo-mobile-unit) * 720);
@@ -36,25 +49,32 @@
     overflow-x: hidden;
   }
 
-  .page--tattoo #wrap,
-  .page--tattoo .page-tattoo-overview,
-  .page--tattoo .page-tattoo-pico-reference,
-  .page--tattoo #sec7 {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #wrap,
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .page-tattoo-overview,
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .page-tattoo-pico-reference,
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 {
     min-width: 320px;
     overflow-x: hidden;
   }
 
-  .page--tattoo .tattoo-summary {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-summary {
     padding: calc(var(--tattoo-mobile-unit) * 129) 0 calc(var(--tattoo-mobile-unit) * 108);
   }
 
-  .page--tattoo .tattoo-summary-title {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-summary-title {
+    width: auto;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
     font-size: var(--tattoo-mobile-title-size);
     line-height: 1.15;
     letter-spacing: -0.025em;
+    white-space: nowrap;
   }
 
-  .page--tattoo .tattoo-summary-grid {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-summary-grid {
     display: grid;
     grid-template-columns: repeat(2, calc(var(--tattoo-mobile-unit) * 350));
     justify-content: center;
@@ -63,21 +83,21 @@
     margin-top: calc(var(--tattoo-mobile-unit) * 80);
   }
 
-  .page--tattoo .tattoo-summary-card {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-summary-card {
     width: calc(var(--tattoo-mobile-unit) * 350);
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .page--tattoo .tattoo-summary-card .media-placeholder--card {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-summary-card .media-placeholder--card {
     width: 100%;
     height: calc(var(--tattoo-mobile-unit) * 250);
     margin: 0 0 calc(var(--tattoo-mobile-unit) * 30);
     aspect-ratio: auto;
   }
 
-  .page--tattoo .tattoo-summary-card-title {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-summary-card-title {
     width: auto;
     max-width: none;
     margin-bottom: calc(var(--tattoo-mobile-unit) * 20);
@@ -88,7 +108,7 @@
     white-space: nowrap;
   }
 
-  .page--tattoo .tattoo-summary-card-desc {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-summary-card-desc {
     width: auto;
     max-width: none;
     height: calc(var(--tattoo-mobile-unit) * 51);
@@ -106,30 +126,30 @@
     white-space: nowrap;
   }
 
-  .page--tattoo #sec7 .sec7-route {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route {
     min-height: calc(var(--tattoo-mobile-unit) * 1200);
     padding: calc(var(--tattoo-mobile-unit) * 119) 0 calc(var(--tattoo-mobile-unit) * 111);
   }
 
-  .page--tattoo #sec7 .sec7-route-inner {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-inner {
     width: calc(var(--tattoo-mobile-unit) * 720);
     gap: calc(var(--tattoo-mobile-unit) * 68);
   }
 
-  .page--tattoo #sec7 .sec7-route-map {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-map {
     border-radius: calc(var(--tattoo-mobile-unit) * 20);
   }
 
-  .page--tattoo #sec7 .sec7-route-map iframe {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-map iframe {
     height: calc(var(--tattoo-mobile-unit) * 500);
   }
 
-  .page--tattoo #sec7 .sec7-route-copy {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-copy {
     --sec7-route-label-width: calc(var(--tattoo-mobile-unit) * 143);
     --sec7-route-column-gap: calc(var(--tattoo-mobile-unit) * 45);
   }
 
-  .page--tattoo #sec7 .sec7-route-title {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-title {
     width: calc(var(--tattoo-mobile-unit) * 144);
     height: auto;
     margin-bottom: calc(var(--tattoo-mobile-unit) * 23);
@@ -137,7 +157,7 @@
     white-space: nowrap;
   }
 
-  .page--tattoo #sec7 .sec7-route-address {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-address {
     width: calc(var(--tattoo-mobile-unit) * 572);
     height: auto;
     margin-top: calc(var(--tattoo-mobile-unit) * 23);
@@ -146,17 +166,17 @@
     white-space: nowrap;
   }
 
-  .page--tattoo #sec7 .sec7-route-table {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-table {
     row-gap: calc(var(--tattoo-mobile-unit) * 60);
     margin-top: calc(var(--tattoo-mobile-unit) * 56);
   }
 
-  .page--tattoo #sec7 .sec7-route-table-row {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-table-row {
     grid-template-columns: calc(var(--tattoo-mobile-unit) * 143) minmax(0, 1fr);
     column-gap: calc(var(--tattoo-mobile-unit) * 45);
   }
 
-  .page--tattoo #sec7 .sec7-route-table-label {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-table-label {
     width: calc(var(--tattoo-mobile-unit) * 143);
     height: auto;
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
@@ -167,7 +187,7 @@
     white-space: nowrap;
   }
 
-  .page--tattoo #sec7 .sec7-route-contact-value {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-contact-value {
     width: calc(var(--tattoo-mobile-unit) * 240);
     height: auto;
     font-family: "Philosopher", serif;
@@ -178,12 +198,12 @@
     white-space: nowrap;
   }
 
-  .page--tattoo #sec7 .sec7-route-channels {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-channels {
     gap: calc(var(--tattoo-mobile-unit) * 20);
     margin-top: calc(var(--tattoo-mobile-unit) * 24);
   }
 
-  .page--tattoo #sec7 .sec7-route-channel {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-channel {
     min-width: 0;
     width: calc(var(--tattoo-mobile-unit) * 200);
     height: calc(var(--tattoo-mobile-unit) * 60);
@@ -195,16 +215,16 @@
     font-weight: 700;
   }
 
-  .page--tattoo #sec7 .sec7-route-channel-badge {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-channel-badge {
     width: calc(var(--tattoo-mobile-unit) * 34);
     height: calc(var(--tattoo-mobile-unit) * 34);
   }
 
-  .page--tattoo #sec7 .sec7-route-channel-icon-label {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-channel-icon-label {
     font-size: calc(var(--tattoo-mobile-unit) * 7);
   }
 
-  .page--tattoo #sec7 .sec7-route-channel-text {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-channel-text {
     width: calc(var(--tattoo-mobile-unit) * 81);
     height: auto;
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
@@ -215,49 +235,49 @@
     white-space: nowrap;
   }
 
-  .page--tattoo #sec7 .sec7-route-hours-content {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-hours-content {
     gap: calc(var(--tattoo-mobile-unit) * 6);
   }
 
-  .page--tattoo #sec7 .sec7-route-hours-row-line {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-hours-row-line {
     grid-template-columns: calc(var(--tattoo-mobile-unit) * 105) calc(var(--tattoo-mobile-unit) * 274);
     column-gap: calc(var(--tattoo-mobile-unit) * 26);
   }
 
-  .page--tattoo #sec7 .sec7-route-hours-day,
-  .page--tattoo #sec7 .sec7-route-hours-time {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-hours-day,
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-hours-time {
     height: auto;
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
     font-size: calc(var(--tattoo-mobile-unit) * 28);
     white-space: nowrap;
   }
 
-  .page--tattoo #sec7 .sec7-route-hours-day {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-hours-day {
     width: calc(var(--tattoo-mobile-unit) * 105);
     font-weight: 700;
     line-height: 1.43;
     color: #fff;
   }
 
-  .page--tattoo #sec7 .sec7-route-hours-day--spaced {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-hours-day--spaced {
     display: inline-grid;
     grid-template-columns: repeat(3, max-content);
     align-items: center;
     justify-content: space-between;
   }
 
-  .page--tattoo #sec7 .sec7-route-hours-time {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-hours-time {
     width: calc(var(--tattoo-mobile-unit) * 274);
     font-weight: 300;
     line-height: 1.43;
     color: #fff;
   }
 
-  .page--tattoo #sec7 .sec7-route-hours-time--spaced {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-hours-time--spaced {
     gap: calc(var(--tattoo-mobile-unit) * 10);
   }
 
-  .page--tattoo #sec7 .sec7-route-note {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-route-note {
     width: calc(var(--tattoo-mobile-unit) * 392);
     height: auto;
     margin: calc(var(--tattoo-mobile-unit) * 21) 0 0 calc(var(--tattoo-mobile-unit) * 188);
@@ -269,11 +289,11 @@
     white-space: nowrap;
   }
 
-  .page--tattoo #sec7 .sec7-bottom {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-bottom {
     padding: calc(var(--tattoo-mobile-unit) * 42) calc(var(--tattoo-mobile-unit) * 60) calc(var(--tattoo-mobile-unit) * 41) calc(var(--tattoo-mobile-unit) * 41);
   }
 
-  .page--tattoo #sec7 .sec7-bottom-summary {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-bottom-summary {
     width: calc(var(--tattoo-mobile-unit) * 699);
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
     font-size: calc(var(--tattoo-mobile-unit) * 22);
@@ -284,70 +304,70 @@
     text-align: left;
   }
 
-  .page--tattoo #sec7 .sec7-bottom-summary-line {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-bottom-summary-line {
     white-space: nowrap;
   }
 
-  .page--tattoo #sec7 .sec7-bottom-summary-line + .sec7-bottom-summary-line {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-bottom-summary-line + .sec7-bottom-summary-line {
     margin-top: 2px;
   }
 
-  .page--tattoo #sec7 .sec7-bottom-summary-line--heading {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-bottom-summary-line--heading {
     margin-bottom: 6px;
   }
 
-  .page--tattoo #sec7 .sec7-bottom-summary-label {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-bottom-summary-label {
     color: #666;
     font-weight: 700;
   }
 
-  .page--tattoo #sec7 .sec7-bottom-summary-chunk {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-bottom-summary-chunk {
     margin-right: calc(var(--tattoo-mobile-unit) * 24);
   }
 
-  .page--tattoo #sec7 .sec7-bottom-summary-link {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-bottom-summary-link {
     color: #aaa;
   }
 
-  .page--tattoo #sec7 .sec7-bottom-summary-copy {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) #sec7 .sec7-bottom-summary-copy {
     color: #aaa;
   }
 }
 
 @media (max-width: 767px) {
-  .page--tattoo .tattoo-section-inner,
-  .page--tattoo .tattoo-sub-hero-content {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-section-inner,
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-sub-hero-content {
     width: calc(100% - 40px);
   }
 
-  .page--tattoo .section-title-common {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .section-title-common {
     font-size: clamp(30px, 8.5vw, 40px);
   }
 
-  .page--tattoo .section-desc-common,
-  .page--tattoo .tattoo-sub-desc {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .section-desc-common,
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-sub-desc {
     font-size: clamp(15px, 4vw, 18px);
   }
 
-  .page--tattoo .tattoo-sub-hero-title {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-sub-hero-title {
     font-size: clamp(32px, 9vw, 42px);
   }
 
-  .page--tattoo .tattoo-sub-hero-kicker {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-sub-hero-kicker {
     font-size: clamp(28px, 8.2vw, 38px);
   }
 
-  .page--tattoo .tattoo-sub-split,
-  .page--tattoo .tattoo-info-grid--three,
-  .page--tattoo .tattoo-info-grid--four {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-sub-split,
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-info-grid--three,
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-info-grid--four {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .page--tattoo .tattoo-summary-grid {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-summary-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .page--tattoo .tattoo-section-desc--narrow {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-section-desc--narrow {
     width: 100%;
     max-width: 100%;
     white-space: normal;
