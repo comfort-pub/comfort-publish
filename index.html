@@ -14,6 +14,7 @@
   <div id="wrap">
     <div class="floating-quick-actions" aria-label="빠른 메뉴">
       <div class="floating-quick-menu">
+        <button type="button" class="floating-quick-toggle" aria-label="빠른 메뉴 열기" aria-expanded="false"></button>
         <a href="#sec7" class="floating-quick-action floating-quick-action--kakao">
           <span class="floating-quick-action-icon-wrap" aria-hidden="true">
             <img src="./assets/images/common/kakao_icon.png" alt="" class="floating-quick-action-icon" />
@@ -45,7 +46,7 @@
     <div class="header-area">
       <header class="header">
         <div class="inner">
-          <a href="#mv" class="header-mobile-home" aria-label="메인으로 이동">
+          <a href="#mainHero" class="header-mobile-home" aria-label="메인으로 이동">
             <svg class="header-mobile-home-icon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M4.25 10.75 12 4.5l7.75 6.25V19a1.25 1.25 0 0 1-1.25 1.25h-4.2v-5.7h-4.6v5.7H5.5A1.25 1.25 0 0 1 4.25 19z" />
             </svg>
@@ -82,15 +83,15 @@
     </div>
 
     <main class="container page-main">
-      <section id="mv" class="page-section section--main-hero">
-        <div class="mv-background"></div>
-        <div class="mv-background-image"></div>
-        <div class="mv-content">
-          <h2 class="comfort-plastic-surgery">COMFORT PLASTIC SURGERY</h2>
-          <p class="mv-desc">
+      <section id="mainHero" class="page-section section--main-hero main-hero">
+        <div class="main-hero-visual" aria-hidden="true"></div>
+        <div class="main-hero-overlay"></div>
+        <div class="main-hero-content">
+          <p class="main-hero-kicker">COMFORT PLASTIC SURGERY</p>
+          <h2 class="main-hero-title">
             <span>컴포트는 환자분의</span>
             <span>만족과 안전을 생각합니다.</span>
-          </p>
+          </h2>
         </div>
       </section>
 
@@ -131,10 +132,7 @@
             <strong class="sec2-service-title" id="sec2ServiceTitle" data-reveal data-reveal-delay="180ms">피코 문신제거</strong>
             <p class="sec2-service-desc" id="sec2ServiceDesc" data-reveal data-reveal-delay="240ms">피코레이저로 문신에 맞춰 효과적이고 세밀한 시술이 가능합니다.</p>
             <a href="#" class="sec2-detail-btn" data-reveal data-reveal-delay="300ms">자세히 보기
-              <svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M5 12H19" />
-                <path d="M13 6L19 12L13 18" />
-              </svg>
+              <img src="./assets/images/common/arrow.png" alt="" aria-hidden="true" class="detail-btn-arrow" />
             </a>
 
             <ul class="sec2-tabs" id="sec2Tabs" data-reveal data-reveal-delay="360ms">
@@ -152,7 +150,7 @@
           <div class="sec3-head" data-reveal data-reveal-delay="0ms">
             <p class="sec3-kicker">COMFORT PS: Tattoo Removal</p>
             <h3 class="sec3-title">컴포트만의 특별한 문신제거</h3>
-            <p class="sec3-desc">독보적인 경력과 수많은 시술 케이스, 최신 첨단 의료기기로 만족도 높은 결과를 제공합니다.</p>
+            <p class="sec3-desc">독보적인 경력과 수많은 시술 케이스, 최신 첨단 의료기기로 <br class="sec3-desc-break" />만족도 높은 결과를 제공합니다.</p>
           </div>
 
           <div class="sec3-card-list">
@@ -212,10 +210,7 @@
             <p class="sec4-doctor"><strong>박영수</strong> 대표원장</p>
             <p class="sec4-desc">더블보드 전문의의 안전한 문신 제거</p>
             <a href="#" class="sec4-detail-btn">자세히 보기
-              <svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M5 12H19" />
-                <path d="M13 6L19 12L13 18" />
-              </svg>
+              <img src="./assets/images/common/arrow.png" alt="" aria-hidden="true" class="detail-btn-arrow" />
             </a>
           </div>
         </div>
@@ -226,12 +221,9 @@
           <div class="sec5-head" data-reveal data-reveal-delay="0ms">
             <p class="sec5-kicker">Tattoo Removal: Pico Laser</p>
             <h3 class="sec5-title">피코 레이저</h3>
-            <p class="sec5-desc">다양한 파장의 최신 피코레이저를 통해 빠르고 정밀한 시술을 제공하여 보다 효과적인 문신 제거가 가능합니다.</p>
+            <p class="sec5-desc"><span class="sec5-desc-line">다양한 파장의 최신 피코레이저를 통해</span><span class="sec5-desc-line">빠르고 정밀한 시술을 제공하여 보다 효과적인 문신 제거가 가능합니다.</span></p>
             <a href="#" class="sec5-detail-btn">자세히 보기
-              <svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M5 12H19" />
-                <path d="M13 6L19 12L13 18" />
-              </svg>
+              <img src="./assets/images/common/arrow.png" alt="" aria-hidden="true" class="detail-btn-arrow" />
             </a>
           </div>
 
@@ -276,7 +268,7 @@
               <div class="sec6-card-visual">
                 <div class="sec6-card-overlay">
                   <strong class="sec6-card-overlay-title">시술 문의 상시 상담</strong>
-                  <p class="sec6-card-overlay-desc">시술 전후 궁금한 점을 빠르게 확인할 수 있도록 상담을 상시로 도와드립니다.</p>
+                  <p class="sec6-card-overlay-desc">시술 후 발생하는 다양한 <br class="sec6-card-overlay-break" />증상에 대해 빠른 상담이 <br class="sec6-card-overlay-break" />가능합니다.</p>
                 </div>
               </div>
             </article>
@@ -286,7 +278,7 @@
               <div class="sec6-card-visual">
                 <div class="sec6-card-overlay">
                   <strong class="sec6-card-overlay-title">내원 시 추가 관리</strong>
-                  <p class="sec6-card-overlay-desc">회복 상태를 세심하게 확인하고 피부 반응에 맞는 추가 케어를 진행합니다.</p>
+                  <p class="sec6-card-overlay-desc">자가관리가 어려울 경우 <br class="sec6-card-overlay-break" />내원 시 별도의 비용이나 예약 <br class="sec6-card-overlay-break" />없이 드레싱 해드립니다.</p>
                 </div>
               </div>
             </article>
@@ -319,10 +311,7 @@
                 </button>
               </div>
               <a href="#" class="sec7-results-more"><span class="sec7-results-more-label">더 보기</span>
-                <svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 12H19" />
-                  <path d="M13 6L19 12L13 18" />
-                </svg>
+                <img src="./assets/images/common/arrow.png" alt="" aria-hidden="true" class="detail-btn-arrow" />
               </a>
             </div>
           </div>

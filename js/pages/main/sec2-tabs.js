@@ -11,6 +11,24 @@
     var $serviceTitle = options.serviceTitle;
     var $serviceDesc = options.serviceDesc;
     var tabsData = options.tabsData || {};
+    var mobileImage = "./assets/images/main/remove_mo.png";
+
+    function getTabImage(currentTab) {
+      if (window.matchMedia("(max-width: 800px)").matches) {
+        return mobileImage;
+      }
+
+      return currentTab.image;
+    }
+
+    function renderServiceDesc(currentTab) {
+      if (currentTab.serviceDescHtml) {
+        $serviceDesc.html(currentTab.serviceDescHtml);
+        return;
+      }
+
+      $serviceDesc.text(currentTab.serviceDesc);
+    }
 
     function renderMainTitle(parts) {
       var html = "";
@@ -29,11 +47,13 @@
         return;
       }
 
+      $tabs.closest("#sec2").toggleClass("is-scallp-desc", tabKey === "scalp");
+
       $mainTitle.html(renderMainTitle(currentTab.mainTitleParts));
       $mainTitleClone.html(renderMainTitle(currentTab.mainTitleParts));
       $serviceTitle.text(currentTab.serviceTitle);
-      $serviceDesc.text(currentTab.serviceDesc);
-      $image.css("background-image", 'url("' + currentTab.image + '")');
+      renderServiceDesc(currentTab);
+      $image.css("background-image", 'url("' + getTabImage(currentTab) + '")');
       $marquee.css("animation", "none");
 
       if ($marquee[0]) {

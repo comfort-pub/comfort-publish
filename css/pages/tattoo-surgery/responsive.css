@@ -45,10 +45,6 @@
     scroll-margin-top: 84px;
   }
 
-  .page--tattoo-surgery .tattoo-floating-actions {
-    display: none;
-  }
-
   .tattoo-surgery-recommend-list,
   .tattoo-surgery-candidates-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

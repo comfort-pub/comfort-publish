@@ -16,10 +16,6 @@
     scroll-margin-top: 84px;
   }
 
-  .tattoo-floating-actions {
-    display: none;
-  }
-
   .tattoo-hero-content {
     width: min(calc(100% - 40px), 900px);
     padding-bottom: 72px;
@@ -756,7 +752,6 @@
     background-color: #176eae;
     gap: 23px;
     font-size: 24.5px;
-    font-weight: 400;
     letter-spacing: -0.61px;
     color: #fff;
   }

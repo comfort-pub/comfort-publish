@@ -1,55 +1,39 @@
-#mv {
+.main-hero {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 915px;
+  min-height: 915px;
   margin: 0;
   padding: 0;
 }
 
-.mv-background,
-.mv-background-image {
-  position: absolute;
-  left: 0;
-}
-
-.mv-background {
-  width: 100vw;
-  height: 915px;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #e0e0e0;
-  z-index: 1;
-}
-
-.mv-background-image {
-  width: 100vw;
+.main-hero-visual {
+  min-height: 915px;
   height: 100%;
-  top: 0;
-  transform: none;
-  margin: 0;
-  padding:
-    624px
-    827px
-    138px
-    311px;
   background: url("../../../../assets/images/main/hero-clinic-interior.png") no-repeat 0 0 / cover;
   mix-blend-mode: luminosity;
+}
+
+.main-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+.main-hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: min(calc(100% - 40px), 1440px);
+  margin: 0 auto;
+  padding-bottom: 138px;
   z-index: 2;
 }
 
-.mv-content {
-  position: absolute;
-  left: 50%;
-  top: 680px;
-  transform: translateX(-720px);
-  z-index: 3;
-}
-
-.comfort-plastic-surgery {
-  width: 780px;
-  height: auto;
+.main-hero-kicker {
   margin: 0 0 16px 2px;
   font-family: "Philosopher", serif;
   font-size: 60px;
@@ -61,7 +45,7 @@
   white-space: nowrap;
 }
 
-.mv-desc {
+.main-hero-title {
   width: 682px;
   height: auto;
   margin: 16px 100px 0 0;
@@ -75,6 +59,6 @@
   white-space: nowrap;
 }
 
-.mv-desc span {
+.main-hero-title span {
   display: inline;
 }

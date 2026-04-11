@@ -209,6 +209,14 @@
   line-height: 1.55;
 }
 
+.detail-btn-arrow {
+  width: 22px;
+  height: 15px;
+  flex-shrink: 0;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
 .tattoo-sub-split {
   display: grid;
   grid-template-columns: 500px 520px;

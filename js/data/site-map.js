@@ -6,9 +6,9 @@ window.ComfortSite.siteMap = {
       key: "main",
       label: "메인",
       items: [
-        { key: "main-hero", label: "메인이미지", plannedPath: "index.html#mv" },
+        { key: "main-hero", label: "메인이미지", plannedPath: "index.html#mainHero" },
         { key: "main-navigation", label: "사이트맵 / GNB", plannedPath: "index.html#wrap" },
-        { key: "main-brand-intro", label: "브랜드 인트로", plannedPath: "index.html#mv" }
+        { key: "main-brand-intro", label: "브랜드 인트로", plannedPath: "index.html#mainHero" }
       ]
     },
     {
