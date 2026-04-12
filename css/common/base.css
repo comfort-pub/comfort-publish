@@ -52,6 +52,10 @@ img {
   z-index: 100;
 }
 
+.mobile-top-banner {
+  display: none;
+}
+
 .header {
   height: 100px;
   background: #fff;
@@ -311,7 +315,7 @@ img {
   align-items: center;
   gap: 32px;
   width: 88px;
-  padding: 44px 12px 42px;
+  padding: 46px 4px 40px 3px;
   border-radius: 54px;
   background: #176eae;
   box-shadow: 0 14px 28px rgba(15, 33, 53, 0.14);
@@ -356,7 +360,7 @@ img {
 
 .floating-quick-action-label,
 .tattoo-floating-action-label {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.03em;
 }
@@ -364,7 +368,7 @@ img {
 .floating-quick-action-sub,
 .tattoo-floating-action-sub {
   margin-top: -4px;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -376,11 +380,12 @@ img {
   align-items: center;
   justify-content: center;
   width: 90px;
+  height: 90px;
   min-height: 90px;
   padding: 0;
   border: 1px solid rgba(19, 36, 54, 0.08);
   border-radius: 50%;
-  background: #fff;
+  background: #fff url("../../assets/images/main/arrow_top.png") no-repeat center / cover;
   box-shadow: 0 16px 30px rgba(15, 33, 53, 0.12);
   color: #333;
   cursor: pointer;
@@ -388,13 +393,7 @@ img {
 
 .floating-quick-top svg,
 .tattoo-floating-top svg {
-  width: 24px;
-  height: 24px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  display: none;
 }
 
 .tattoo-floating-toggle {

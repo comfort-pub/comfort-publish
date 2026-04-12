@@ -1,5 +1,5 @@
 #sec5 {
-  --sec5-height: 840px;
+  --sec5-height: 750px;
   position: relative;
   isolation: isolate;
   height: var(--sec5-height);
@@ -75,8 +75,8 @@
   --sec5-stage-width: 980px;
   --sec5-stage-height: 816px;
   position: absolute;
-  left: 50%;
-  top: 190px;
+  left: 58%;
+  top: 100px;
   width: var(--sec5-stage-width);
   height: var(--sec5-stage-height);
   margin: 0;
@@ -85,63 +85,9 @@
   transform: translateX(-50%);
 }
 
-#sec5 .sec5-machine {
-  position: absolute;
-}
-
-#sec5 .sec5-machine img {
+#sec5 .sec5-stage > img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-#sec5 .sec5-machine--left {
-  left: 30px;
-  top: 0;
-  width: 359px;
-  height: 100%;
-  z-index: 3;
-}
-
-#sec5 .sec5-machine--center {
-  left: 273px;
-  top: 52px;
-  width: 312px;
-  height: 688px;
-  z-index: 4;
-}
-
-#sec5 .sec5-machine--right-front {
-  left: 464px;
-  top: 69px;
-  width: 325px;
-  height: 717px;
-  z-index: 2;
-}
-
-#sec5 .sec5-machine--right-back {
-  left: 618px;
-  top: 66px;
-  width: 336px;
-  height: 741px;
-  z-index: 1;
-}
-
-#sec5 .sec5-flare {
-  position: absolute;
-  left: 744px;
-  top: 186px;
-  width: 424px;
-  height: 211px;
-  background: url("../../../../assets/images/main/pico-laser-flare.png") no-repeat center / contain;
-  mix-blend-mode: screen;
-  opacity: 0.95;
-  filter: saturate(1.2) brightness(1.08);
-  pointer-events: none;
-  z-index: 5;
-}
-
-#sec5 .sec5-machine--right-back::before {
-  content: none;
 }

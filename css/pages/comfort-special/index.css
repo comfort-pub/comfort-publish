@@ -336,7 +336,7 @@
   border-radius: clamp(32px, 2.6042vw, 50px);
   background:
     linear-gradient(180deg, rgba(14, 22, 31, 0), rgba(14, 22, 31, 0.18)),
-    url("../../../assets/images/main/sec4_visual.png") no-repeat center / cover;
+    url("../../../assets/images/main/doctor_pc.png") no-repeat center / cover;
   box-shadow: 0 28px 70px rgba(25, 38, 52, 0.16);
 }
 

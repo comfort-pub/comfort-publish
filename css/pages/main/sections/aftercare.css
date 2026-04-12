@@ -1,5 +1,5 @@
 #sec6 {
-  padding: 204px 194px 124px 175px;
+  padding: 140px 194px 124px 175px;
   background: #eef3f9;
 }
 
@@ -132,8 +132,8 @@
 #sec6 .sec6-card-overlay-title {
   display: block;
   width: 100%;
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.75px;
   color: #fff;
@@ -148,6 +148,7 @@
   letter-spacing: -0.55px;
   color: rgba(255, 255, 255, 0.92);
   word-break: keep-all;
+  font-size: 22px;
 }
 
 #sec6 .sec6-card.is-active .sec6-card-label {

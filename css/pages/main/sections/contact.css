@@ -3,7 +3,7 @@
 }
 
 #sec7 .sec7-results {
-  padding: 160px 0 170px;
+  padding: 133px 0 157px;
   background: #fff;
 }
 
@@ -72,8 +72,8 @@
 }
 
 #sec7 .sec7-results-arrow-icon {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.8;
@@ -86,7 +86,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 32px;
   min-width: 167px;
   height: 62px;
   padding: 0 34px;
@@ -210,7 +210,7 @@
   color: #fff;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.37;
   letter-spacing: -0.15px;
   text-align: center;
@@ -288,13 +288,13 @@
 }
 
 #sec7 .sec7-route-copy {
-  --sec7-route-label-width: 115px;
-  --sec7-route-column-gap: 33px;
+  --sec7-route-label-width: 143px;
+  --sec7-route-column-gap: 45px;
   min-width: 0;
 }
 
 #sec7 .sec7-route-title {
-  width: 129px;
+  width: 144px;
   max-width: 100%;
   font-size: var(--main-subtitle-font-size);
   font-weight: 700;
@@ -305,12 +305,13 @@
 }
 
 #sec7 .sec7-route-address {
-  width: 593px;
-  margin-top: 28px;
+  width: 572px;
+  margin-top: 23px;
   font-size: var(--main-route-body-font-size);
-  line-height: normal;
+  line-height: 1.2;
   color: #fff;
   word-break: keep-all;
+  white-space: nowrap;
 }
 
 #sec7 .sec7-route-contact {
@@ -324,16 +325,16 @@
 
 #sec7 .sec7-route-contact-label {
   width: var(--sec7-route-label-width);
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   line-height: normal;
   white-space: nowrap;
 }
 
 #sec7 .sec7-route-contact-value {
-  width: 200px;
+  width: 240px;
   font-family: "Philosopher", serif;
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 400;
   line-height: normal;
   letter-spacing: normal;
@@ -344,8 +345,8 @@
 #sec7 .sec7-route-table {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  row-gap: 64px;
-  margin-top: 53px;
+  row-gap: 60px;
+  margin-top: 56px;
 }
 
 #sec7 .sec7-route-table-row {
@@ -358,7 +359,7 @@
 #sec7 .sec7-route-table-label {
   width: var(--sec7-route-label-width);
   min-width: 0;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   line-height: normal;
   color: #fff;
@@ -378,8 +379,8 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-top: 30px;
-  padding-left: 148px;
+  margin-top: 24px;
+  padding-left: 0;
 }
 
 #sec7 .sec7-route-table-row--contact .sec7-route-channels {
@@ -390,15 +391,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 16px;
-  min-width: 164px;
-  height: 57px;
-  padding: 0 20px;
+  gap: 14px;
+  min-width: 0;
+  width: 200px;
+  height: 60px;
+  padding: 18px 39px 15px 37px;
   border-radius: 999px;
   background: #fff;
   color: #1a1f28;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 400;
   white-space: nowrap;
 }
 
@@ -442,11 +444,12 @@
 
 #sec7 .sec7-route-channel-text {
   display: block;
-  line-height: 1;
+  width: 81px;
+  line-height: normal;
 }
 
 #sec7 .sec7-route-hours {
-  margin-top: 64px;
+  margin-top: 60px;
 }
 
 #sec7 .sec7-route-hours-row {
@@ -458,7 +461,7 @@
 }
 
 #sec7 .sec7-route-hours-row + .sec7-route-hours-row {
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 #sec7 .sec7-route-hours dt,
@@ -469,7 +472,7 @@
 #sec7 .sec7-route-hours dt {
   width: var(--sec7-route-label-width);
   min-width: 0;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -480,26 +483,26 @@
 }
 
 #sec7 .sec7-route-hours-content {
-  display: grid;
-  grid-template-columns: 65px 190px;
-  column-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   align-items: start;
-  width: 275px;
+  width: auto;
   margin-left: 0;
 }
 
 #sec7 .sec7-route-table-row--hours .sec7-route-hours-content {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
   width: auto;
   align-items: start;
 }
 
 #sec7 .sec7-route-hours-row-line {
   display: grid;
-  grid-template-columns: 65px 190px;
-  column-gap: 20px;
+  grid-template-columns: 105px 274px;
+  column-gap: 26px;
   align-items: start;
 }
 
@@ -511,38 +514,40 @@
 }
 
 #sec7 .sec7-route-hours-day {
-  font-size: 18px;
+  width: 105px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.44;
+  line-height: 1.43;
   text-align: justify;
   color: #fff;
   white-space: nowrap;
 }
 
 #sec7 .sec7-route-hours-time {
-  font-size: 18px;
+  width: 274px;
+  font-size: 28px;
   font-weight: 300;
-  line-height: 1.44;
+  line-height: 1.43;
   text-align: justify;
   color: #fff;
   white-space: nowrap;
 }
 
 #sec7 .sec7-route-note {
-  margin-top: 30px;
-  width: max-content;
-  max-width: 445px;
-  padding-left: 148px;
-  font-size: 18px;
+  margin-top: 21px;
+  width: 392px;
+  max-width: 392px;
+  padding-left: 0;
+  font-size: 24px;
   line-height: normal;
-  color: rgba(255, 255, 255, 0.58);
+  color: rgba(255, 255, 255, 0.5);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 #sec7 .sec7-route-table ~ .sec7-route-note {
-  margin-left: calc(var(--sec7-route-label-width) + var(--sec7-route-column-gap));
+  margin-left: 188px;
   padding-left: 0;
 }
 
@@ -585,7 +590,7 @@
 
 #sec7 .sec7-bottom-logo img {
   display: block;
-  width: 100%;
+  width: 143px;
   height: auto;
   filter: none;
 }

@@ -1,5 +1,5 @@
 #sec4 {
-  padding: 155px 0 200px;
+  padding: 155px 0 160px;
   background: #fff;
 }
 
@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: space-between;
   column-gap: 123px;
-  row-gap: 79px;
+  row-gap: 0px;
 }
 
 #sec4 .sec4-copy {
@@ -24,11 +24,13 @@
 
 #sec4 .sec4-copy--top {
   grid-area: top;
+  align-self: start;
   padding-top: 58px;
 }
 
 #sec4 .sec4-copy--bottom {
   grid-area: bottom;
+  align-self: start;
 }
 
 #sec4 .sec4-quote {
@@ -81,7 +83,7 @@
 
 #sec4 .sec4-doctor {
   width: 219px;
-  margin-top: 18px;
+  margin-top: 9px;
   font-size: var(--main-subtitle-font-size);
   font-weight: 300;
   line-height: normal;
@@ -97,10 +99,11 @@
 
 #sec4 .sec4-desc {
   width: 320px;
-  margin-top: 17px;
+  margin-top: 9px;
   letter-spacing: -0.6px;
   color: #333;
   white-space: nowrap;
+  font-size: 24px;
 }
 
 #sec4 .sec4-detail-btn {
@@ -110,7 +113,7 @@
   gap: 12px;
   width: 170px;
   height: 55px;
-  margin-top: 67px;
+  margin-top: 32px;
   padding: 19px 29px;
   border-radius: 27.5px;
   background: #176eae;
@@ -133,6 +136,5 @@
   width: 650px;
   height: 550px;
   border-radius: 30px;
-  background: url("../../../../assets/images/main/sec4_visual.png") no-repeat center / auto 100%;
-  box-shadow: 0 30px 70px rgba(16, 32, 45, 0.08);
+  background: url("../../../../assets/images/main/doctor_pc.png") no-repeat center / auto 100%;
 }

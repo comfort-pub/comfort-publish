@@ -3,6 +3,14 @@
     --main-mobile-base-width: max(100vw, 320px);
     --mobile-header-base-width: var(--main-mobile-base-width);
     --mobile-header-height: calc(var(--mobile-header-base-width) * 110 / 800);
+    --mobile-header-safe-top: env(safe-area-inset-top, 0px);
+    --mobile-header-offset: calc(var(--mobile-header-height) + var(--mobile-header-safe-top));
+  }
+
+  .mobile-top-banner {
+    display: block;
+    height: var(--mobile-header-safe-top);
+    background: #fff;
   }
 
   .header {
@@ -121,11 +129,11 @@
   .mobile-menu-backdrop {
     display: none;
     position: fixed;
-    top: var(--mobile-header-height);
+    top: var(--mobile-header-offset);
     left: 0;
     width: 100%;
-    height: calc(100vh - var(--mobile-header-height));
-    height: calc(100dvh - var(--mobile-header-height));
+    height: calc(100vh - var(--mobile-header-offset));
+    height: calc(100dvh - var(--mobile-header-offset));
     border: 0;
     background: transparent;
     z-index: 18;
@@ -134,13 +142,13 @@
   .mobile-menu-panel {
     display: none;
     position: fixed;
-    top: var(--mobile-header-height);
+    top: var(--mobile-header-offset);
     left: 0;
     width: 100%;
-    height: calc(100vh - var(--mobile-header-height));
-    height: calc(100dvh - var(--mobile-header-height));
-    max-height: calc(100vh - var(--mobile-header-height));
-    max-height: calc(100dvh - var(--mobile-header-height));
+    height: calc(100vh - var(--mobile-header-offset));
+    height: calc(100dvh - var(--mobile-header-offset));
+    max-height: calc(100vh - var(--mobile-header-offset));
+    max-height: calc(100dvh - var(--mobile-header-offset));
     overflow-y: auto;
     overscroll-behavior: contain;
     scrollbar-width: none;
@@ -525,9 +533,17 @@
     --mobile-header-base-width: var(--main-mobile-base-width);
     --mobile-header-unit: calc(var(--mobile-header-base-width) / 800);
     --mobile-header-height: calc(var(--mobile-header-unit) * 110);
+    --mobile-header-safe-top: env(safe-area-inset-top, 0px);
+    --mobile-header-offset: calc(var(--mobile-header-height) + var(--mobile-header-safe-top));
     --sec7-mobile-base-width: var(--main-mobile-base-width);
     --sec7-mobile-unit: calc(var(--sec7-mobile-base-width) / 800);
     --sec7-mobile-shell: calc(var(--sec7-mobile-unit) * 720);
+  }
+
+  .mobile-top-banner {
+    display: block;
+    height: var(--mobile-header-safe-top);
+    background: #fff;
   }
 
   .header {
@@ -584,11 +600,11 @@
 
   .mobile-menu-backdrop,
   .mobile-menu-panel {
-    top: var(--mobile-header-height);
+    top: var(--mobile-header-offset);
   }
 
   .mobile-menu-panel {
-    max-height: calc(100vh - var(--mobile-header-height));
+    max-height: calc(100vh - var(--mobile-header-offset));
   }
 
   .mobile-menu-toggle {
@@ -608,11 +624,15 @@
     font-size: calc(var(--main-mobile-base-width) * 28 / 800);
   }
 
+  .page--main {
+    --main-quick-menu-base-width: max(100vw, 500px);
+  }
+
   .page--main .floating-quick-actions {
     top: auto;
-    right: calc(var(--main-mobile-base-width) * 30 / 800);
-    bottom: calc(var(--main-mobile-base-width) * 114 / 800);
-    gap: calc(var(--main-mobile-base-width) * 10 / 800);
+    right: calc(var(--main-quick-menu-base-width) * 30 / 800);
+    bottom: calc(var(--main-quick-menu-base-width) * 114 / 800);
+    gap: calc(var(--main-quick-menu-base-width) * 10 / 800);
     transform: none;
     align-items: flex-end;
     z-index: 120;
@@ -636,8 +656,8 @@
   .page--main .floating-quick-menu {
     position: relative;
     z-index: 3;
-    width: calc(var(--main-mobile-base-width) * 90 / 800);
-    height: calc(var(--main-mobile-base-width) * 90 / 800);
+    width: calc(var(--main-quick-menu-base-width) * 90 / 800);
+    height: calc(var(--main-quick-menu-base-width) * 90 / 800);
     padding: 0;
     border-radius: 0;
     background: transparent;
@@ -666,8 +686,8 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    width: calc(var(--main-mobile-base-width) * 90 / 800);
-    height: calc(var(--main-mobile-base-width) * 90 / 800);
+    width: calc(var(--main-quick-menu-base-width) * 90 / 800);
+    height: calc(var(--main-quick-menu-base-width) * 90 / 800);
     display: block;
     border-radius: 50%;
     background-repeat: no-repeat;
@@ -707,15 +727,15 @@
   }
 
   .page--main.quick-menu-open .floating-quick-menu .floating-quick-action--line {
-    transform: translateY(calc(var(--main-mobile-base-width) * -100 / 800)) scale(1);
+    transform: translateY(calc(var(--main-quick-menu-base-width) * -100 / 800)) scale(1);
   }
 
   .page--main.quick-menu-open .floating-quick-menu .floating-quick-action--calendar {
-    transform: translateY(calc(var(--main-mobile-base-width) * -200 / 800)) scale(1);
+    transform: translateY(calc(var(--main-quick-menu-base-width) * -200 / 800)) scale(1);
   }
 
   .page--main.quick-menu-open .floating-quick-menu .floating-quick-action--kakao {
-    transform: translateY(calc(var(--main-mobile-base-width) * -300 / 800)) scale(1);
+    transform: translateY(calc(var(--main-quick-menu-base-width) * -300 / 800)) scale(1);
   }
 
   .page--main .floating-quick-menu .floating-quick-action-icon-wrap,
@@ -726,14 +746,14 @@
   .page--main .floating-quick-menu .floating-quick-action-label,
   .page--main .floating-quick-menu .floating-quick-action-sub {
     position: absolute;
-    right: calc(100% + (var(--main-mobile-base-width) * 29 / 800));
+    right: calc(100% + (var(--main-quick-menu-base-width) * 29 / 800));
     display: block;
     width: max-content;
     color: #fff;
     text-align: right;
     white-space: nowrap;
     opacity: 0;
-    transform: translateX(calc(var(--main-mobile-base-width) * 10 / 800));
+    transform: translateX(calc(var(--main-quick-menu-base-width) * 10 / 800));
     transition:
       opacity 0.22s ease,
       transform 0.28s ease;
@@ -742,7 +762,7 @@
 
   .page--main .floating-quick-menu .floating-quick-action-label {
     top: 50%;
-    margin-top: calc(var(--main-mobile-base-width) * -13 / 800);
+    margin-top: calc(var(--main-quick-menu-base-width) * -13 / 800);
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
     font-size: 0;
     font-weight: 400;
@@ -752,26 +772,26 @@
 
   .page--main .floating-quick-menu .floating-quick-action-sub {
     top: 50%;
-    margin-top: calc(var(--main-mobile-base-width) * 13 / 800);
+    margin-top: calc(var(--main-quick-menu-base-width) * 13 / 800);
     font-family: "MS PGothic", "MS PGothic", sans-serif;
-    font-size: calc(var(--main-mobile-base-width) * 26 / 800);
+    font-size: calc(var(--main-quick-menu-base-width) * 26 / 800);
     font-weight: 400;
     line-height: 1;
     letter-spacing: normal;
   }
 
   .page--main .floating-quick-menu .floating-quick-action--line .floating-quick-action-label {
-    margin-top: calc(var(--main-mobile-base-width) * -27 / 800);
+    margin-top: calc(var(--main-quick-menu-base-width) * -27 / 800);
   }
 
   .page--main .floating-quick-menu .floating-quick-action--line .floating-quick-action-sub {
-    margin-top: calc(var(--main-mobile-base-width) * 4 / 800);
+    margin-top: calc(var(--main-quick-menu-base-width) * 4 / 800);
   }
 
   .page--main .floating-quick-menu .floating-quick-action--kakao .floating-quick-action-label::before {
     content: "카카오톡 상담";
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
-    font-size: calc(var(--main-mobile-base-width) * 26 / 800);
+    font-size: calc(var(--main-quick-menu-base-width) * 26 / 800);
     font-weight: 400;
     line-height: 1;
   }
@@ -779,7 +799,7 @@
   .page--main .floating-quick-menu .floating-quick-action--calendar .floating-quick-action-label::before {
     content: "온라인 예약";
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
-    font-size: calc(var(--main-mobile-base-width) * 26 / 800);
+    font-size: calc(var(--main-quick-menu-base-width) * 26 / 800);
     font-weight: 400;
     line-height: 1;
   }
@@ -787,7 +807,7 @@
   .page--main .floating-quick-menu .floating-quick-action--line .floating-quick-action-label::before {
     content: "라인 상담";
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
-    font-size: calc(var(--main-mobile-base-width) * 26 / 800);
+    font-size: calc(var(--main-quick-menu-base-width) * 26 / 800);
     font-weight: 400;
     line-height: 1;
   }
@@ -801,8 +821,8 @@
   .page--main .floating-quick-top {
     position: relative;
     z-index: 0;
-    width: calc(var(--main-mobile-base-width) * 90 / 800);
-    min-height: calc(var(--main-mobile-base-width) * 90 / 800);
+    width: calc(var(--main-quick-menu-base-width) * 90 / 800);
+    min-height: calc(var(--main-quick-menu-base-width) * 90 / 800);
     border: 0;
     background: url("../../../assets/images/main/arrow_mo.png") no-repeat center / cover;
     box-shadow: none;
@@ -1140,7 +1160,9 @@
   }
 
   #sec3::before {
+    content: none;
     display: none;
+    background: none;
   }
 
   #sec3 .sec3-inner {
@@ -1184,6 +1206,30 @@
     min-height: 0;
     aspect-ratio: var(--sec3-card-aspect-ratio);
     padding: calc(var(--main-mobile-base-width) * 16 / 800) calc(var(--main-mobile-base-width) * 40 / 800) calc(var(--main-mobile-base-width) * 40 / 800);
+  }
+
+  #sec3 .sec3-card::before,
+  #sec3 .sec3-card--experience::before,
+  #sec3 .sec3-card--pain-care::before,
+  #sec3 .sec3-card--pico-laser::before,
+  #sec3 .sec3-card--custom-care::before,
+  #sec3 .sec3-card.is-active::before,
+  #sec3 .sec3-card--experience.is-active::before,
+  #sec3 .sec3-card--pain-care.is-active::before,
+  #sec3 .sec3-card--pico-laser.is-active::before,
+  #sec3 .sec3-card--custom-care.is-active::before,
+  #sec3 .sec3-card-list:hover .sec3-card:hover::before,
+  #sec3 .sec3-card-list:focus-within .sec3-card:focus-visible::before,
+  #sec3 .sec3-card-list:hover .sec3-card--experience:hover::before,
+  #sec3 .sec3-card-list:focus-within .sec3-card--experience:focus-visible::before,
+  #sec3 .sec3-card-list:hover .sec3-card--pain-care:hover::before,
+  #sec3 .sec3-card-list:focus-within .sec3-card--pain-care:focus-visible::before,
+  #sec3 .sec3-card-list:hover .sec3-card--pico-laser:hover::before,
+  #sec3 .sec3-card-list:focus-within .sec3-card--pico-laser:focus-visible::before,
+  #sec3 .sec3-card-list:hover .sec3-card--custom-care:hover::before,
+  #sec3 .sec3-card-list:focus-within .sec3-card--custom-care:focus-visible::before {
+    content: none;
+    background: none;
   }
 
   #sec3 .sec3-card.is-active,
@@ -1465,44 +1511,8 @@
     background: url("../../../assets/images/main/group_mo.png") no-repeat center center / contain;
   }
 
-  #sec5 .sec5-machine,
-  #sec5 .sec5-flare {
+  #sec5 .sec5-stage > img {
     display: none;
-  }
-
-  #sec5 .sec5-machine--left {
-    left: calc(100% * 30 / 980);
-    top: 0;
-    width: calc(100% * 359 / 980);
-    height: 100%;
-  }
-
-  #sec5 .sec5-machine--center {
-    left: calc(100% * 273 / 980);
-    top: calc(100% * 52 / 816);
-    width: calc(100% * 312 / 980);
-    height: calc(100% * 688 / 816);
-  }
-
-  #sec5 .sec5-machine--right-front {
-    left: calc(100% * 464 / 980);
-    top: calc(100% * 69 / 816);
-    width: calc(100% * 325 / 980);
-    height: calc(100% * 717 / 816);
-  }
-
-  #sec5 .sec5-machine--right-back {
-    left: calc(100% * 618 / 980);
-    top: calc(100% * 66 / 816);
-    width: calc(100% * 336 / 980);
-    height: calc(100% * 741 / 816);
-  }
-
-  #sec5 .sec5-flare {
-    left: calc(100% * 744 / 980);
-    top: calc(100% * 186 / 816);
-    width: calc(100% * 424 / 980);
-    height: calc(100% * 211 / 816);
   }
 
   #sec6 {
@@ -1652,6 +1662,14 @@
 
   .sec6-card-overlay-break {
     display: block;
+  }
+
+  .sec6-card-overlay-text-pc {
+    display: none;
+  }
+
+  .sec6-card-overlay-text-mo {
+    display: inline;
   }
 
   #sec7 .sec7-results {

@@ -1,7 +1,7 @@
 #sec3 {
   position: relative;
-  margin-top: 160px;
-  padding: 150px 0 155px;
+  margin-top: 0px;
+  padding: 116px 0 125px;
   background: url("../../../../assets/images/main/sec3-feature-background.png") no-repeat center / cover;
   overflow: hidden;
 }
@@ -10,9 +10,6 @@
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 50% 28%, rgba(24, 110, 174, 0.22), transparent 32%),
-    linear-gradient(180deg, rgba(0, 14, 27, 0.18) 0%, rgba(0, 14, 27, 0.34) 100%);
 }
 
 #sec3 .sec3-inner {
@@ -268,4 +265,15 @@
 #sec3 .sec3-card-list:hover .sec3-card--custom-care:hover::before,
 #sec3 .sec3-card-list:focus-within .sec3-card--custom-care:focus-visible::before {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.12) 100%);
+}
+
+@media (min-width: 801px) {
+  #sec3 .sec3-card-list:hover .sec3-card:hover .sec3-card-en,
+  #sec3 .sec3-card-list:hover .sec3-card:hover .sec3-card-title,
+  #sec3 .sec3-card-list:hover .sec3-card:hover .sec3-card-desc,
+  #sec3 .sec3-card-list:focus-within .sec3-card:focus-visible .sec3-card-en,
+  #sec3 .sec3-card-list:focus-within .sec3-card:focus-visible .sec3-card-title,
+  #sec3 .sec3-card-list:focus-within .sec3-card:focus-visible .sec3-card-desc {
+    color: #2f2f2f;
+  }
 }

@@ -179,7 +179,7 @@
   flex-direction: column;
   justify-content: flex-end;
   width: var(--tattoo-shell);
-  margin: 0 auto;
+  margin: 0 326px;
   padding-bottom: 108px;
   z-index: 2;
 }

@@ -3,10 +3,10 @@
 }
 
 .page--main {
-  --main-kicker-font-size: 24px;
+  --main-kicker-font-size: 22px;
   --main-title-font-size: 52px;
-  --main-emphasis-font-size: 48px;
-  --main-body-font-size: 26px;
+  --main-emphasis-font-size: 40px;
+  --main-body-font-size: 18px;
   --main-subtitle-font-size: 36px;
   --main-display-font-size: 60px;
   --main-route-body-font-size: 20px;
@@ -96,6 +96,14 @@
 }
 
 .sec6-card-overlay-break {
+  display: none;
+}
+
+.sec6-card-overlay-text-pc {
+  display: inline;
+}
+
+.sec6-card-overlay-text-mo {
   display: none;
 }
 

@@ -152,14 +152,16 @@
         var beforePosition = escapeHtml(item.beforePosition || "center");
         var afterImageUrl = escapeHtml(item.afterImageUrl);
         var afterPosition = escapeHtml(item.afterPosition || "center");
+        var beforeStyle = beforeImageUrl ? ' style="background-image:url(\'' + beforeImageUrl + '\'); background-position:' + beforePosition + ';"' : "";
+        var afterStyle = afterImageUrl ? ' style="background-image:url(\'' + afterImageUrl + '\'); background-position:' + afterPosition + ';"' : "";
 
         html += '<article class="sec7-result-card">';
         html += '<strong class="sec7-result-round">' + round + "</strong>";
         html += '<div class="sec7-result-images">';
-        html += '<div class="sec7-result-photo sec7-result-photo--before" style="background-image:url(\'' + beforeImageUrl + '\'); background-position:' + beforePosition + ';">';
+        html += '<div class="sec7-result-photo sec7-result-photo--before"' + beforeStyle + ">";
         html += '<span class="sec7-result-badge">BEFORE</span>';
         html += "</div>";
-        html += '<div class="sec7-result-photo sec7-result-photo--after" style="background-image:url(\'' + afterImageUrl + '\'); background-position:' + afterPosition + ';">';
+        html += '<div class="sec7-result-photo sec7-result-photo--after"' + afterStyle + ">";
         html += '<span class="sec7-result-badge">AFTER</span>';
         html += "</div>";
         html += "</div>";
