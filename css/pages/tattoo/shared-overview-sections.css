@@ -239,11 +239,11 @@
     white-space: nowrap;
   }
 
-  :is(.page--main, .page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom {
     padding: calc(var(--tattoo-mobile-unit) * 42) calc(var(--tattoo-mobile-unit) * 60) calc(var(--tattoo-mobile-unit) * 41) calc(var(--tattoo-mobile-unit) * 41);
   }
 
-  :is(.page--main, .page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary {
     width: calc(var(--tattoo-mobile-unit) * 699);
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
     font-size: calc(var(--tattoo-mobile-unit) * 22);
@@ -254,24 +254,24 @@
     text-align: left;
   }
 
-  :is(.page--main, .page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary-line {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary-line {
     white-space: nowrap;
   }
 
-  :is(.page--main, .page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary-line + .sec7-bottom-summary-line {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary-line + .sec7-bottom-summary-line {
     margin-top: 2px;
   }
 
-  :is(.page--main, .page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary-line--heading {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary-line--heading {
     margin-bottom: 6px;
   }
 
-  :is(.page--main, .page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary-label {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary-label {
     color: #666;
     font-weight: 700;
   }
 
-  :is(.page--main, .page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary-chunk {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary-chunk {
     margin-right: calc(var(--tattoo-mobile-unit) * 24);
   }
 }
