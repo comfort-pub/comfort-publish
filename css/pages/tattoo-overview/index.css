@@ -964,9 +964,9 @@
 }
 
 .tattoo-quality-stage {
-  --tattoo-quality-stage-width: 980px;
+  --tattoo-quality-stage-width: 1920px;
   position: absolute;
-  left: 55%;
+  left: 60%;
   top: 318px;
   width: var(--tattoo-quality-stage-width);
   height: 816px;
