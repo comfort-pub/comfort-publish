@@ -250,8 +250,10 @@
   }
 
   .page--tattoo-overview .tattoo-hero {
-    height: 1260px;
-    min-height: 630px;
+    height: 100vh;
+    min-height: 100vh;
+    height: 100svh;
+    min-height: 100svh;
   }
 
   .page--tattoo-overview .tattoo-hero-visual,

@@ -859,6 +859,7 @@
   .main-hero-picture,
   .main-hero-image {
     min-height: 100vh;
+    min-height: 100svh;
   }
 
   .main-hero-image {
