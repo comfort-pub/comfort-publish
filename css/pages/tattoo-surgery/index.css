@@ -19,6 +19,14 @@
   animation: none;
 }
 
+.page--tattoo-surgery .surgery-text-desktop {
+  display: inline;
+}
+
+.page--tattoo-surgery .surgery-text-mobile {
+  display: none;
+}
+
 .tattoo-surgery-hero .tattoo-sub-hero-visual {
   min-height: 915px;
   mix-blend-mode: multiply;
@@ -448,15 +456,15 @@
 }
 
 .tattoo-surgery-candidate-media--coin {
-  background-image: url("../../../assets/images/sub_tatto_removal/DUL_2395.png");
+  background-image: url("../../../assets/images/sub_surgery/coin_pc.png");
 }
 
 .tattoo-surgery-candidate-media--scar {
-  background-image: url("../../../assets/images/sub_tatto_removal/DUL_2453.png");
+  background-image: url("../../../assets/images/sub_surgery/long_pc.png");
 }
 
 .tattoo-surgery-candidate-media--care {
-  background-image: url("../../../assets/images/sub_tatto_removal/DUL_2406.png");
+  background-image: url("../../../assets/images/sub_surgery/judge_pc.png");
 }
 
 .tattoo-surgery-candidate-copy {

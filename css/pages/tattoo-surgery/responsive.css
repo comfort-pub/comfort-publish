@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
   .page--tattoo-surgery .pico-intro-layout {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -39,7 +39,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
   .page--tattoo-surgery .page-section,
   .page--tattoo-surgery #sec7 {
     scroll-margin-top: 84px;
@@ -57,6 +57,15 @@
     --surgery-mobile-unit: calc(var(--surgery-mobile-base-width) / 800);
     --surgery-mobile-gutter: calc(var(--surgery-mobile-unit) * 40);
     overflow-x: hidden;
+  }
+
+  .page--tattoo-surgery .surgery-text-desktop {
+    display: none;
+  }
+
+  .page--tattoo-surgery .surgery-text-mobile {
+    display: inline;
+    letter-spacing: -0.05em;
   }
 
   .page--tattoo-surgery #wrap,
@@ -266,6 +275,18 @@
     border-radius: 12px;
   }
 
+  .page--tattoo-surgery .tattoo-surgery-candidate-media--coin {
+    background-image: url("../../../assets/images/sub_surgery/coin_co.png");
+  }
+
+  .page--tattoo-surgery .tattoo-surgery-candidate-media--scar {
+    background-image: url("../../../assets/images/sub_surgery/long_mo.png");
+  }
+
+  .page--tattoo-surgery .tattoo-surgery-candidate-media--care {
+    background-image: url("../../../assets/images/sub_surgery/judge_mo.png");
+  }
+
   .page--tattoo-surgery .tattoo-surgery-candidate-copy {
     margin-top: calc((max(100vw, 320px) / 800) * 34);
     padding: 0;
@@ -333,6 +354,10 @@
   .page--tattoo-surgery .pico-feature-icon {
     width: calc((max(100vw, 320px) / 800) * 31.2);
     height: calc((max(100vw, 320px) / 800) * 31.2);
+  }
+
+  .tattoo-surgery-recommend {
+    padding: calc((max(100vw, 320px) / 800) * 72) 0;
   }
 
   .tattoo-surgery-recommend-copy {
@@ -422,6 +447,14 @@
   .page--tattoo-surgery .tattoo-result-dot {
     width: calc((max(100vw, 320px) / 800) * 15);
     height: calc((max(100vw, 320px) / 800) * 15);
+  }
+
+  .page--tattoo-surgery .tattoo-result-badge {
+    width: calc((max(100vw, 320px) / 800) * 100);
+    min-width: calc((max(100vw, 320px) / 800) * 100);
+    height: calc((max(100vw, 320px) / 800) * 26);
+    padding: 0 calc((max(100vw, 320px) / 800) * 15);
+    font-size: calc((max(100vw, 320px) / 800) * 15);
   }
 
   .page--tattoo-surgery .tattoo-result-slot,

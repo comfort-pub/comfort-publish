@@ -5,8 +5,10 @@
   --comfort-dark: #111820;
   --comfort-ink: #202a35;
   --comfort-muted: #6d7783;
-  --comfort-shell: min(calc(100% - 40px), 1920px);
-  --comfort-shell-narrow: min(calc(100% - 40px), 1600px);
+  --comfort-shell: 1920px;
+  --comfort-shell-narrow: 1600px;
+  --comfort-hero-shell: 1440px;
+  --comfort-story-icon-scale: min(1, calc(100vw / 1920px));
   --comfort-hero-kicker-size: 60px;
   --comfort-hero-title-size: 48px;
   --comfort-hero-desc-size: 24px;
@@ -55,9 +57,9 @@
   z-index: 1;
   display: flex;
   align-items: flex-end;
-  width: var(--comfort-shell);
+  width: var(--comfort-hero-shell);
   margin: 0 auto;
-  padding: clamp(160px, 13.0208vw, 250px) 0 clamp(90px, 7.2917vw, 140px);
+  padding-bottom: 130px;
 }
 
 .comfort-hero-copy {
@@ -562,7 +564,26 @@
   background: #06172b;
 }
 
+.comfort-story .comfort-section-inner {
+  width: auto;
+  max-width: var(--comfort-shell);
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.comfort-difference .comfort-section-inner {
+  width: auto;
+  max-width: var(--comfort-shell);
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .comfort-story-inner {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -648,7 +669,7 @@
 .comfort-story-card-eng {
   width: auto;
   max-width: none;
-  margin: 11px 0 3px;
+  margin: calc(11px * var(--comfort-story-icon-scale)) 0 calc(3px * var(--comfort-story-icon-scale));
   font-family: "Philosopher", serif;
   font-size: 18px;
   font-weight: 400;
@@ -674,11 +695,11 @@
 .comfort-story-icon,
 .comfort-story .pico-feature-icon {
   display: inline-flex;
-  width: 91px;
-  height: 77px;
+  width: calc(91px * var(--comfort-story-icon-scale));
+  height: calc(77px * var(--comfort-story-icon-scale));
   margin: 0;
   border-radius: 0;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   flex: 0 0 auto;
@@ -689,14 +710,14 @@
 }
 
 .comfort-story-icon--research {
-  width: 76px;
-  height: 67px;
+  width: calc(76px * var(--comfort-story-icon-scale));
+  height: calc(67px * var(--comfort-story-icon-scale));
   background-image: url("../../../assets/images/sub_special/vector2.png");
 }
 
 .comfort-story-icon--patient {
-  width: 95px;
-  height: 88px;
+  width: calc(95px * var(--comfort-story-icon-scale));
+  height: calc(88px * var(--comfort-story-icon-scale));
   background-image: url("../../../assets/images/sub_special/vector3.png");
 }
 
@@ -716,10 +737,14 @@
 }
 
 .comfort-difference-layout {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(280px, 0.56fr) minmax(0, 0.94fr);
+  grid-template-columns: max-content max-content;
+  justify-content: start;
   align-items: start;
-  gap: 54px;
+  gap: 179px;
 }
 
 .comfort-difference-head {
@@ -740,8 +765,9 @@
 
 .comfort-difference-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(2, max-content);
+  width: max-content;
+  gap: 50px;
   margin-top: 0;
   justify-content: start;
 }

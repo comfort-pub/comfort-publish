@@ -35,14 +35,14 @@
 #sec7 .sec7-results-actions {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   flex-shrink: 0;
 }
 
 #sec7 .sec7-results-nav {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
 }
 
 #sec7 .sec7-results-arrow {
@@ -319,7 +319,7 @@
   grid-template-columns: var(--sec7-route-label-width) 200px;
   align-items: center;
   column-gap: var(--sec7-route-column-gap);
-  margin-top: 53px;
+  margin-top: 58px;
   color: #fff;
 }
 
@@ -337,7 +337,7 @@
   font-size: 48px;
   font-weight: 400;
   line-height: normal;
-  letter-spacing: normal;
+  letter-spacing: -0.01em;
   color: #fff;
   white-space: nowrap;
 }
@@ -409,14 +409,27 @@
   width: 34px;
   height: 34px;
   flex-shrink: 0;
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #sec7 .sec7-route-channel-icon {
-  width: 100%;
-  height: 100%;
+  width: 22px;
+  height: 22px;
   display: block;
   object-fit: contain;
+  object-position: center;
+}
+
+#sec7 .sec7-route-channel-badge--kakao .sec7-route-channel-icon {
+  width: 22px;
+  height: 20px;
+}
+
+#sec7 .sec7-route-channel-badge--line .sec7-route-channel-icon {
+  width: 22px;
+  height: 22px;
 }
 
 #sec7 .sec7-route-channel-icon-label {
@@ -425,7 +438,7 @@
   top: 50%;
   transform: translate(-50%, -58%);
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
-  font-size: 7px;
+  font-size: 6.5px;
   font-weight: 700;
   line-height: normal;
   letter-spacing: normal;
@@ -677,4 +690,132 @@
   font-size: 17px;
   line-height: 1.7;
   color: #adadad;
+}
+
+#sec7 .sec7-only-mobile {
+  display: none;
+}
+
+#sec7 .sec7-route-copy--desktop {
+  --sec7-route-label-width: 115px;
+  --sec7-route-column-gap: 33px;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-title {
+  width: 129px;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-address {
+  width: max-content;
+  max-width: none;
+  margin-top: 28px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-contact-label,
+#sec7 .sec7-route-copy--desktop .sec7-route-hours dt {
+  font-size: 24px;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-contact-value {
+  width: 200px;
+  font-size: 40px;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-channels {
+  margin-top: 22px;
+  padding-left: 148px;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-channel {
+  width: 140px;
+  height: 42px;
+  justify-content: center;
+  padding-left: 20px;
+  gap: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-channel-text {
+  flex: 0 0 auto;
+  width: auto;
+  line-height: 1;
+  margin-left: 14px;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-hours {
+  margin-top: 58px;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-hours-row {
+  grid-template-columns: var(--sec7-route-label-width) 445px;
+  column-gap: var(--sec7-route-column-gap);
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-hours-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: auto;
+  align-items: start;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-hours-row-line {
+  display: grid;
+  grid-template-columns: auto 190px;
+  column-gap: 20px;
+  align-items: start;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-hours-day--spaced {
+  display: inline-grid;
+  grid-template-columns: repeat(3, max-content);
+  align-items: center;
+  justify-content: space-between;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-hours-time--spaced {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-hours-day {
+  width: auto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.44;
+  text-align: left;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-hours-day--weekday {
+  gap: 12px;
+}
+
+
+#sec7 .sec7-route-copy--desktop .sec7-route-hours-time {
+  width: 190px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.44;
+  text-align: left;
+}
+
+#sec7 .sec7-route-copy--desktop .sec7-route-note {
+  width: max-content;
+  max-width: none;
+  margin-top: 18px;
+  margin-left: 0;
+  padding-left: 148px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.58);
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+#sec7 .sec7-bottom-logo img {
+  width: 100%;
 }

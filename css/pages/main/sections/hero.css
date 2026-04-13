@@ -27,8 +27,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: min(calc(100% - 40px), 1440px);
-  margin: 0 326px;
+  width: 1440px;
+  margin: 0 auto;
   padding-bottom: 138px;
   z-index: 2;
 }

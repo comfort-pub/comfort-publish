@@ -7,6 +7,14 @@
     overflow-x: hidden;
   }
 
+  .page--tattoo-pico .pico-text-desktop {
+    display: none;
+  }
+
+  .page--tattoo-pico .pico-text-mobile {
+    display: block;
+  }
+
   .page--tattoo-pico #wrap,
   .page--tattoo-pico .page-tattoo-pico-reference,
   .page--tattoo-pico #sec7 {
@@ -71,7 +79,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
   .page--tattoo-pico .page-section,
   .page--tattoo-pico #sec7 {
     scroll-margin-top: 84px;
@@ -165,7 +173,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .pico-feature-layout {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -178,166 +186,6 @@
   .pico-feature-card {
     width: 100%;
     padding: 42px 24px 48px;
-  }
-}
-
-@media (max-width: 767px) {
-  .page--tattoo-pico .tattoo-section-inner,
-  .page--tattoo-pico .tattoo-sub-hero-content {
-    width: calc(100% - 40px);
-  }
-
-  .pico-intro-section,
-  .pico-wavelength-section,
-  .pico-fractat-section,
-  .pico-comfort-section,
-  .pico-summary-section,
-  .pico-compare-section {
-    padding: 84px 0;
-  }
-
-  .pico-machine-section {
-    padding: 84px 0 0;
-  }
-
-  .pico-compare-grid,
-  .pico-machine-cards,
-  .pico-band-points,
-  .pico-feature-cards,
-  .pico-wavelength-grid,
-  .pico-fractat-benefits,
-  .pico-fractat-recommend-list,
-  .pico-summary-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .pico-section-title,
-  .pico-feature-title,
-  .pico-summary-title {
-    font-size: clamp(30px, 8.5vw, 40px);
-  }
-
-  .pico-video-placeholder,
-  .pico-wavelength-visual,
-  .pico-fractat-media,
-  .pico-comfort-item .pico-media-placeholder,
-  .pico-summary-card .pico-media-placeholder {
-    min-height: 220px;
-  }
-
-  .pico-video-placeholder,
-  .pico-intro-kicker,
-  .pico-intro-title,
-  .pico-intro-desc,
-  .pico-feature-title,
-  .pico-feature-desc {
-    width: 100%;
-  }
-
-  .page--tattoo-pico .pico-summary-section {
-    padding: calc(var(--pico-mobile-unit) * 129) 0 calc(var(--pico-mobile-unit) * 108);
-    background: #fff;
-  }
-
-  .page--tattoo-pico .pico-summary-title {
-    text-align: center;
-  }
-
-  .page--tattoo-pico .pico-summary-grid {
-    display: grid;
-    grid-template-columns: repeat(2, calc(var(--pico-mobile-unit) * 350));
-    justify-content: center;
-    column-gap: calc(var(--pico-mobile-unit) * 20);
-    row-gap: calc(var(--pico-mobile-unit) * 69);
-    margin-top: calc(var(--pico-mobile-unit) * 80);
-  }
-
-  .page--tattoo-pico .pico-summary-card {
-    width: calc(var(--pico-mobile-unit) * 350);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .page--tattoo-pico .pico-summary-card .media-placeholder--card {
-    width: 100%;
-    height: calc(var(--pico-mobile-unit) * 250);
-    margin: 0 0 calc(var(--pico-mobile-unit) * 30);
-    aspect-ratio: auto;
-  }
-
-  .page--tattoo-pico .pico-summary-card .tattoo-photo--summary-1 {
-    background-image: url("../../../assets/images/sub_tatto_removal/pico-1-mo.png");
-  }
-
-  .page--tattoo-pico .pico-summary-card .tattoo-photo--summary-2 {
-    background-image:
-      url("../../../assets/images/sub_tatto_removal/Group 29.png"),
-      url("../../../assets/images/sub_tatto_removal/pico-back.png");
-    background-size: 115% auto, cover;
-    background-position: 25% 10%, center;
-    background-repeat: no-repeat, no-repeat;
-    background-color: #fff;
-  }
-
-  .page--tattoo-pico .pico-summary-card .tattoo-photo--summary-3 {
-    background-image: url("../../../assets/images/sub_tatto_removal/pico-3-mo.png");
-  }
-
-  .page--tattoo-pico .pico-summary-card .tattoo-photo--summary-4 {
-    background-image: url("../../../assets/images/sub_tatto_removal/pico-4-mo.png");
-  }
-
-  .page--tattoo-pico .pico-summary-card-title {
-    margin-top: 0;
-    margin-bottom: calc(var(--pico-mobile-unit) * 20);
-    font-size: calc(var(--pico-mobile-unit) * 29);
-    line-height: 1.25;
-    letter-spacing: -0.04em;
-    text-align: center;
-  }
-
-  .page--tattoo-pico .pico-summary-card-desc {
-    width: calc(var(--pico-mobile-unit) * 297);
-    height: auto;
-    font-size: calc(var(--pico-mobile-unit) * 24);
-    line-height: 1.35;
-    text-align: center;
-  }
-
-  .pico-compare-card {
-    aspect-ratio: auto;
-    height: auto;
-    min-height: 420px;
-  }
-
-  .pico-compare-card-body {
-    height: 320px;
-  }
-
-  .pico-machine-card,
-  .pico-machine-card .pico-media-placeholder {
-    min-height: 240px;
-  }
-
-  .pico-machine-rings {
-    width: min(100%, 520px);
-    height: min(100vw, 520px);
-    top: -20px;
-  }
-
-  .pico-feature-card {
-    aspect-ratio: auto;
-    min-height: 220px;
-    padding: 40px 24px;
-  }
-
-  .pico-fractat-benefits {
-    padding: 20px;
-  }
-
-  .pico-fractat-recommend-copy h3 {
-    font-size: clamp(38px, 10vw, 48px);
   }
 }
 
@@ -366,6 +214,12 @@
   }
 
   .page--tattoo-pico .section-title-common {
+    font-size: var(--pico-mobile-title-size);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .page--tattoo-pico .pico-section-title {
     font-size: var(--pico-mobile-title-size);
     line-height: 1.15;
     letter-spacing: -0.025em;
@@ -599,10 +453,11 @@
   }
 
   .page--tattoo-pico .pico-comfort-marquee {
+    --pico-comfort-marquee-gap: calc(var(--pico-mobile-unit) * 76);
     position: relative;
     left: 50%;
     width: 100vw;
-    height: auto;
+    height: calc(var(--pico-mobile-unit) * 118);
     margin: 0;
     overflow: hidden;
     font-size: calc(var(--pico-mobile-unit) * 100);
@@ -614,6 +469,7 @@
   }
 
   .page--tattoo-pico .pico-comfort-section {
+    padding-top: calc(var(--pico-mobile-unit) * 132);
     padding-bottom: 0;
   }
 
@@ -772,6 +628,11 @@
 
   .page--tattoo-pico .pico-wavelength-section {
     padding-top: calc(var(--pico-mobile-unit) * 115);
+    padding-bottom:  calc(var(--pico-mobile-unit) * 122);
+  }
+
+  .page--tattoo-pico .pico-fractat-section {
+    padding: calc(var(--pico-mobile-unit) * 132) 0;
   }
 
   .page--tattoo-pico .pico-wavelength-section .pico-section-head > .pico-section-text {
@@ -1285,15 +1146,5 @@
 
   .page--tattoo-pico .pico-band-point-icon--3 {
     background-image: url("../../../assets/images/sub_pico_laser/shape_mo_3.png");
-  }
-}
-
-@media (max-width: 320px) {
-  .page--tattoo-pico .page-tattoo-pico-reference,
-  .page--tattoo-pico #sec7 {
-    width: 320px;
-    min-width: 320px;
-    margin-left: auto;
-    margin-right: 0;
   }
 }

@@ -33,12 +33,6 @@ $(function () {
     });
   }
 
-  if (typeof modules.initMainSec3Cards === "function") {
-    modules.initMainSec3Cards({
-      cards: $("#sec3 .sec3-card")
-    });
-  }
-
   if (typeof modules.initMainSec7Results === "function") {
     modules.initMainSec7Results({
       carousel: $("#sec7Carousel"),

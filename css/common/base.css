@@ -8,6 +8,8 @@
 
 html,
 body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   overflow-x: hidden;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
@@ -72,11 +74,7 @@ img {
 
 .header .inner {
   --header-y-pad: 29px;
-  padding:
-    var(--header-y-pad)
-    268px
-    var(--header-y-pad)
-    260px;
+  padding: var(--header-y-pad) clamp(20px, calc((100vw - 1392px) / 2), 264px);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -138,13 +136,13 @@ img {
 }
 
 .gnb-list {
-  width: 100%;
+  /*width: 100%;*/
   height: 100%;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 160px;
 }
 
 .gnb-list .gnb-item {
@@ -266,20 +264,18 @@ img {
 }
 
 .header-quick-menu .quick-menu-link::after {
-  content: ">";
+  content: "";
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 10px;
-  height: 17px;
+  width: 9.44px;
+  height: 16.44px;
   position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
   margin: 0;
-  font-size: 17px;
-  line-height: 1;
-  color: currentColor;
+  background: url("../../assets/images/common/arrow_right_b.png") no-repeat center / contain;
   flex-shrink: 0;
 }
 
@@ -292,7 +288,7 @@ img {
 
 .header-quick-menu .quick-menu-link:hover::after,
 .header-quick-menu .quick-menu-link:focus-visible::after {
-  color: #fff;
+  background-image: url("../../assets/images/common/arrow_right_w.png");
 }
 
 .floating-quick-actions,

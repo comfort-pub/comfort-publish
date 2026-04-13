@@ -58,35 +58,29 @@
   background-position: center;
   transition:
     flex-grow 0.35s ease,
-    opacity 0.25s ease,
-    filter 0.25s ease,
     transform 0.25s ease,
     aspect-ratio 0.35s ease;
 }
 
 #sec3 .sec3-card.is-active {
   flex-grow: 510;
-  opacity: 1;
-  filter: none;
 }
 
 #sec3 .sec3-card:not(.is-active) {
-  opacity: 0.9;
-  filter: saturate(0.82);
+  opacity: 1;
+  filter: none;
 }
 
 #sec3 .sec3-card-list:hover .sec3-card,
 #sec3 .sec3-card-list:focus-within .sec3-card {
   flex-grow: 266;
-  opacity: 0.9;
-  filter: saturate(0.82);
+  opacity: 1;
+  filter: none;
 }
 
 #sec3 .sec3-card-list:hover .sec3-card:hover,
 #sec3 .sec3-card-list:focus-within .sec3-card:focus-visible {
   flex-grow: 510;
-  opacity: 1;
-  filter: none;
 }
 
 #sec3 .sec3-card:hover {
@@ -102,7 +96,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(8, 10, 14, 0.04) 0%, rgba(8, 10, 14, 0.72) 100%);
+  background: rgba(8, 10, 14, 0.72);
   transition: background 0.3s ease;
 }
 
@@ -186,11 +180,11 @@
 
 #sec3 .sec3-card-list:hover .sec3-card--experience::before,
 #sec3 .sec3-card-list:focus-within .sec3-card--experience::before {
-  background: linear-gradient(180deg, rgba(8, 10, 14, 0.04) 0%, rgba(8, 10, 14, 0.72) 100%);
+  background: rgba(8, 10, 14, 0.72);
 }
 
 #sec3 .sec3-card--experience.is-active::before {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.62) 100%);
+  background: rgba(255, 255, 255, 0);
 }
 
 #sec3 .sec3-card-list:hover .sec3-card--experience .sec3-card-en,
@@ -204,7 +198,7 @@
 
 #sec3 .sec3-card-list:hover .sec3-card--experience:hover::before,
 #sec3 .sec3-card-list:focus-within .sec3-card--experience:focus-visible::before {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.62) 100%);
+  background: rgba(255, 255, 255, 0);
 }
 
 #sec3 .sec3-card-list:hover .sec3-card--experience:hover .sec3-card-en,
@@ -228,13 +222,13 @@
 }
 
 #sec3 .sec3-card--pain-care::before {
-  background: linear-gradient(180deg, rgba(0, 18, 33, 0.14) 0%, rgba(0, 18, 33, 0.8) 100%);
+  background: rgba(8, 10, 14, 0.72);
 }
 
 #sec3 .sec3-card--pain-care.is-active::before,
 #sec3 .sec3-card-list:hover .sec3-card--pain-care:hover::before,
 #sec3 .sec3-card-list:focus-within .sec3-card--pain-care:focus-visible::before {
-  background: linear-gradient(180deg, rgba(0, 18, 33, 0.02) 0%, rgba(0, 18, 33, 0.12) 100%);
+  background: rgba(255, 255, 255, 0);
 }
 
 #sec3 .sec3-card--pico-laser {
@@ -243,13 +237,13 @@
 }
 
 #sec3 .sec3-card--pico-laser::before {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: rgba(8, 10, 14, 0.72);
 }
 
 #sec3 .sec3-card--pico-laser.is-active::before,
 #sec3 .sec3-card-list:hover .sec3-card--pico-laser:hover::before,
 #sec3 .sec3-card-list:focus-within .sec3-card--pico-laser:focus-visible::before {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.12) 100%);
+  background: rgba(255, 255, 255, 0);
 }
 
 #sec3 .sec3-card--custom-care {
@@ -258,22 +252,20 @@
 }
 
 #sec3 .sec3-card--custom-care::before {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.68) 100%);
+  background: rgba(8, 10, 14, 0.72);
 }
 
 #sec3 .sec3-card--custom-care.is-active::before,
 #sec3 .sec3-card-list:hover .sec3-card--custom-care:hover::before,
 #sec3 .sec3-card-list:focus-within .sec3-card--custom-care:focus-visible::before {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.12) 100%);
+  background: rgba(255, 255, 255, 0);
 }
 
-@media (min-width: 801px) {
-  #sec3 .sec3-card-list:hover .sec3-card:hover .sec3-card-en,
-  #sec3 .sec3-card-list:hover .sec3-card:hover .sec3-card-title,
-  #sec3 .sec3-card-list:hover .sec3-card:hover .sec3-card-desc,
-  #sec3 .sec3-card-list:focus-within .sec3-card:focus-visible .sec3-card-en,
-  #sec3 .sec3-card-list:focus-within .sec3-card:focus-visible .sec3-card-title,
-  #sec3 .sec3-card-list:focus-within .sec3-card:focus-visible .sec3-card-desc {
-    color: #2f2f2f;
-  }
+#sec3 .sec3-card-list:hover .sec3-card:hover .sec3-card-en,
+#sec3 .sec3-card-list:hover .sec3-card:hover .sec3-card-title,
+#sec3 .sec3-card-list:hover .sec3-card:hover .sec3-card-desc,
+#sec3 .sec3-card-list:focus-within .sec3-card:focus-visible .sec3-card-en,
+#sec3 .sec3-card-list:focus-within .sec3-card:focus-visible .sec3-card-title,
+#sec3 .sec3-card-list:focus-within .sec3-card:focus-visible .sec3-card-desc {
+  color: #2f2f2f;
 }

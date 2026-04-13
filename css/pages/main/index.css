@@ -108,7 +108,11 @@
 }
 
 .sec5-desc-line {
-  display: block;
+  display: inline;
+}
+
+.sec5-desc-line + .sec5-desc-line::before {
+  content: " ";
 }
 
 .page--main .detail-btn-common {

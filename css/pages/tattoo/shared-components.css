@@ -229,24 +229,24 @@
   padding-bottom: 160px;
 }
 
-@media (max-width: 1024px) {
-  .page--tattoo .tattoo-result-panel {
+@media (max-width: 800px) {
+  .page--tattoo:not(.page--tattoo-overview) .tattoo-result-panel {
     width: 100%;
     padding: 64px 24px;
   }
 
-  .page--tattoo .tattoo-summary {
+  .page--tattoo:not(.page--tattoo-overview) .tattoo-summary {
     min-height: 0;
     padding: 72px 0 96px;
   }
 
-  .page--tattoo .tattoo-summary-grid {
+  .page--tattoo:not(.page--tattoo-overview) .tattoo-summary-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-items: center;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   .page--tattoo .tattoo-panel-title,
   .page--tattoo .tattoo-summary-title {
     font-size: clamp(30px, 8.5vw, 40px);

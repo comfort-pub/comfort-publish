@@ -122,6 +122,14 @@
   white-space: nowrap;
 }
 
+.page--tattoo-overview .overview-text-desktop {
+  display: inline;
+}
+
+.page--tattoo-overview .overview-text-mobile {
+  display: none;
+}
+
 .tattoo-section-title--experience {
   width: 560px;
   margin: 33px auto 60px;
@@ -166,8 +174,7 @@
   min-height: 880px;
   border: 0;
   background:
-    linear-gradient(90deg, rgba(24, 31, 41, 0.62) 0%, rgba(24, 31, 41, 0.48) 36%, rgba(24, 31, 41, 0.3) 60%, rgba(24, 31, 41, 0.58) 100%),
-    url("../../../assets/images/sub_tatto_removal/DUL_2377.png") no-repeat 76% center / cover;
+    url("../../../assets/images/sub_tatto_removal/hero_pc.png") no-repeat center center / cover;
   color: transparent;
   font-size: 0;
 }
@@ -517,15 +524,7 @@
 }
 
 .tattoo-process::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 1px;
-  transform: translateX(-50%);
-  background: var(--tattoo-line);
-  pointer-events: none;
+  display: none;
 }
 
 .tattoo-process-heading {
@@ -544,6 +543,7 @@
 
 .tattoo-process-grid {
   position: relative;
+  width: 100%;
   margin-top: 80px;
 }
 
@@ -551,9 +551,20 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 50%;
-  width: 100vw;
+  left: 0;
+  width: 100%;
   height: 1px;
+  background: var(--tattoo-line);
+  pointer-events: none;
+}
+
+.tattoo-process-grid::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
   transform: translateX(-50%);
   background: var(--tattoo-line);
   pointer-events: none;
@@ -571,10 +582,9 @@
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
-  width: 100vw;
+  left: 0;
+  width: 100%;
   height: 1px;
-  transform: translateX(-50%);
   background: var(--tattoo-line);
   pointer-events: none;
 }
@@ -626,7 +636,6 @@
 }
 
 .tattoo-process-desc {
-  width: 442px;
   margin: 0;
   color: #555;
   font-size: var(--tattoo-body-small-size);
@@ -967,21 +976,15 @@
   z-index: 1;
 }
 
-.tattoo-quality-machine {
-  position: absolute;
-}
-
-.tattoo-quality-machine img {
+.tattoo-quality-stage-image {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.14) 10%, rgba(0, 0, 0, 0.62) 24%, #000 38%, #000 100%);
-  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.14) 10%, rgba(0, 0, 0, 0.62) 24%, #000 38%, #000 100%);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
+}
+
+.tattoo-quality-machine {
+  display: none;
 }
 
 .tattoo-quality-machine--left {
@@ -1017,17 +1020,7 @@
 }
 
 .tattoo-quality-flare {
-  position: absolute;
-  left: 744px;
-  top: 186px;
-  width: 424px;
-  height: 211px;
-  background: url("../../../assets/images/main/pico-laser-flare.png") no-repeat center / contain;
-  mix-blend-mode: screen;
-  opacity: 0.95;
-  filter: saturate(1.2) brightness(1.08);
-  pointer-events: none;
-  z-index: 6;
+  display: none;
 }
 
 .tattoo-sedation {
@@ -1210,7 +1203,7 @@
 .tattoo-aftercare-card {
   width: 320px;
   height: 400px;
-  padding: 68px 155px 173px 40px;
+  padding: 68px 0 0 40px;
   border-right: 1px solid rgba(24, 49, 77, 0.08);
   border-bottom: 1px solid rgba(24, 49, 77, 0.08);
   background: #fff;
@@ -1229,7 +1222,7 @@
 
 .tattoo-aftercare-card.is-active {
   background: var(--tattoo-blue);
-  padding: 68px 98px 67px 36.8px;
+  padding: 68px 0 0 36.8px;
 }
 
 .tattoo-aftercare-card.is-active .tattoo-aftercare-title,
@@ -1330,7 +1323,8 @@
 }
 
 .tattoo-aftercare-title {
-  width: 150px;
+  width: auto;
+  max-width: none;
   margin: 0 0 29px 4.2px;
   font-size: 30px;
   font-weight: 400;
@@ -1339,11 +1333,13 @@
   text-align: left;
   color: #101920;
   word-break: keep-all;
+  white-space: nowrap;
 }
 
 .tattoo-aftercare-desc {
   display: none;
-  width: 182px;
+  width: auto;
+  max-width: none;
   margin: 0 0 0 3.2px;
   color: #fff;
   font-size: var(--tattoo-body-small-size);
@@ -1351,6 +1347,7 @@
   line-height: 1.67;
   letter-spacing: -0.45px;
   text-align: left;
+  white-space: nowrap;
 }
 
 .tattoo-aftercare-card.is-active .tattoo-aftercare-desc {

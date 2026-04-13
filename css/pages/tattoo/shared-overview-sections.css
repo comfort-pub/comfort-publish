@@ -177,6 +177,16 @@
     height: calc(var(--tattoo-mobile-unit) * 34);
   }
 
+  :is(.page--main, .page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-route-channel-badge--kakao .sec7-route-channel-icon {
+    width: calc(var(--tattoo-mobile-unit) * 22);
+    height: calc(var(--tattoo-mobile-unit) * 20);
+  }
+
+  :is(.page--main, .page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-route-channel-badge--line .sec7-route-channel-icon {
+    width: calc(var(--tattoo-mobile-unit) * 22);
+    height: calc(var(--tattoo-mobile-unit) * 22);
+  }
+
   :is(.page--main, .page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-route-channel-icon-label {
     font-size: calc(var(--tattoo-mobile-unit) * 7);
   }
@@ -273,5 +283,13 @@
 
   :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary-chunk {
     margin-right: calc(var(--tattoo-mobile-unit) * 24);
+  }
+
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-only-desktop {
+    display: none;
+  }
+
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-only-mobile {
+    display: block;
   }
 }

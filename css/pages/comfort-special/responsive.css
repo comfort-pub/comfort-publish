@@ -1,39 +1,5 @@
 @charset "UTF-8";
 
-@media (max-width: 1200px) {
-  .comfort-difference-layout,
-  .comfort-feature-row,
-  .comfort-feature-row--reverse {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .comfort-feature-list {
-    grid-template-columns: minmax(0, 1fr);
-    width: 100%;
-    row-gap: 36px;
-  }
-
-  .comfort-feature-row {
-    display: grid;
-    gap: 20px;
-  }
-
-  .comfort-feature-row:nth-child(n) .comfort-feature-media,
-  .comfort-feature-row:nth-child(n) .comfort-feature-copy {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .comfort-difference-head {
-    padding-top: 0;
-  }
-
-  .comfort-feature-row--reverse .comfort-feature-copy,
-  .comfort-feature-row--reverse .comfort-feature-media {
-    order: initial;
-  }
-}
-
 @media (max-width: 800px) {
   .page--comfort-special {
     --comfort-mobile-base-width: max(100vw, 320px);
@@ -58,6 +24,7 @@
   .page--comfort-special .comfort-section-inner,
   .page--comfort-special .comfort-section-inner--narrow {
     width: var(--comfort-mobile-shell);
+    padding: 0;
   }
 
   .page--comfort-special .comfort-kicker,
@@ -180,6 +147,7 @@
 
   .page--comfort-special .comfort-story-inner {
     align-items: center;
+    padding: 0
   }
 
   .page--comfort-special .comfort-story .comfort-kicker {
@@ -226,6 +194,7 @@
   }
 
   .page--comfort-special .comfort-story-card-eng {
+    margin: calc(var(--comfort-mobile-unit) * 11) 0 calc(var(--comfort-mobile-unit) * 3);
     font-size: calc(var(--comfort-mobile-unit) * 24);
     line-height: normal;
   }
@@ -494,7 +463,14 @@
   }
 
   .page--comfort-special .comfort-cta-card-badge {
+    width: calc(var(--comfort-mobile-unit) * 120);
+    min-width: calc(var(--comfort-mobile-unit) * 120);
+    height: calc(var(--comfort-mobile-unit) * 37);
     margin-top: calc(var(--comfort-mobile-unit) * 45);
+    padding: calc(var(--comfort-mobile-unit) * 12) calc(var(--comfort-mobile-unit) * 20);
+    border-radius: calc(var(--comfort-mobile-unit) * 18.5);
+    font-size: calc(var(--comfort-mobile-unit) * 18);
+    letter-spacing: calc(var(--comfort-mobile-unit) * -0.45);
   }
 
 }
