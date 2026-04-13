@@ -130,6 +130,10 @@
   display: none;
 }
 
+.page--tattoo-overview .tattoo-quality-title .overview-text-desktop {
+  white-space: nowrap;
+}
+
 .tattoo-section-title--experience {
   width: 560px;
   margin: 33px auto 60px;
@@ -967,7 +971,7 @@
   --tattoo-quality-stage-width: 1920px;
   position: absolute;
   left: 60%;
-  top: 318px;
+  top: 350px;
   width: var(--tattoo-quality-stage-width);
   height: 816px;
   margin: 0;
