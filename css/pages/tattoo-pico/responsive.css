@@ -1125,6 +1125,10 @@
     color: #333;
   }
 
+  .page--tattoo-pico .pico-mobile-nowrap {
+    white-space: nowrap;
+  }
+
   .page--tattoo-pico .pico-band-point-icon {
     order: 1;
     width: calc(var(--pico-mobile-unit) * 73);
