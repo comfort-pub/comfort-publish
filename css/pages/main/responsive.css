@@ -855,13 +855,15 @@
   }
 
   .main-hero,
-  .main-hero-visual {
+  .main-hero-visual,
+  .main-hero-picture,
+  .main-hero-image {
     min-height: 100vh;
   }
 
-  .main-hero-visual {
-    background: url("../../../../assets/images/main/hero_mo.png") no-repeat center top / cover;
+  .main-hero-image {
     mix-blend-mode: normal;
+    object-position: center top;
   }
 
   .main-hero-overlay {

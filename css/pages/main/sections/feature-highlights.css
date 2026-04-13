@@ -6,6 +6,20 @@
   overflow: hidden;
 }
 
+#sec3 .sec3-bg-media {
+  position: absolute;
+  inset: 0;
+  display: block;
+  z-index: 0;
+}
+
+#sec3 .sec3-bg-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 #sec3::before {
   content: "";
   position: absolute;
@@ -97,12 +111,28 @@
   position: absolute;
   inset: 0;
   background: rgba(8, 10, 14, 0.72);
+  z-index: 1;
   transition: background 0.3s ease;
+}
+
+#sec3 .sec3-card-media {
+  position: absolute;
+  inset: 0;
+  display: block;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#sec3 .sec3-card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #sec3 .sec3-card-copy {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   flex: 0 0 auto;
   width: 330px;
 }
