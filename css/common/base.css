@@ -129,7 +129,7 @@ img {
 .gnb {
   width: 768px;
   height: 100%;
-  margin-left: 432px;
+  margin-left: clamp(40px, 22.5vw, 432px);
   display: flex;
   align-items: center;
   flex-shrink: 0;
@@ -295,13 +295,12 @@ img {
 .tattoo-floating-actions {
   position: fixed;
   right: 48px;
-  top: 50%;
+  bottom: 48px;
   z-index: 60;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 14px;
-  transform: translateY(-50%);
 }
 
 .floating-quick-menu,
@@ -341,6 +340,12 @@ img {
   width: 24px;
   height: 24px;
   object-fit: contain;
+}
+
+.floating-quick-action--calendar .floating-quick-action-icon,
+.tattoo-floating-action--calendar .tattoo-floating-action-icon {
+  width: 26px;
+  height: 26px;
 }
 
 .floating-quick-action-label,
@@ -392,8 +397,120 @@ img {
   display: none;
 }
 
+.floating-quick-toggle,
 .tattoo-floating-toggle {
   display: none;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+@media (min-width: 801px) {
+  .floating-quick-menu,
+  .tattoo-floating-menu {
+    position: relative;
+    justify-content: flex-end;
+    width: 106px;
+    min-height: 106px;
+    max-height: 106px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    overflow: hidden;
+    transition:
+      max-height 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+      padding 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+      border-radius 0.24s ease,
+      background-color 0.24s ease,
+      box-shadow 0.24s ease;
+  }
+
+  body.quick-menu-open .floating-quick-menu,
+  body.quick-menu-open .tattoo-floating-menu {
+    justify-content: flex-start;
+    max-height: 560px;
+    padding: 46px 4px 40px 3px;
+    border-radius: 54px;
+    background: #176eae;
+    box-shadow: 0 14px 28px rgba(15, 33, 53, 0.14);
+    overflow: visible;
+  }
+
+  .floating-quick-action,
+  .tattoo-floating-action {
+    order: 1;
+    opacity: 0;
+    transform: translateY(16px);
+    pointer-events: none;
+    transition:
+      opacity 0.22s ease,
+      transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  body.quick-menu-open .floating-quick-action,
+  body.quick-menu-open .tattoo-floating-action {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .floating-quick-action--line,
+  .tattoo-floating-action--line {
+    transition-delay: 0s;
+  }
+
+  .floating-quick-action--calendar,
+  .tattoo-floating-action--calendar {
+    transition-delay: 0.03s;
+  }
+
+  .floating-quick-action--live-reserve,
+  .tattoo-floating-action--live-reserve {
+    transition-delay: 0.06s;
+  }
+
+  .floating-quick-action--kakao,
+  .tattoo-floating-action--kakao {
+    transition-delay: 0.09s;
+  }
+
+  .floating-quick-toggle,
+  .tattoo-floating-toggle {
+    order: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 106px;
+    height: 106px;
+    min-width: 106px;
+    min-height: 106px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: url("../../assets/images/main/quick_mo.png") no-repeat center / cover;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .floating-quick-toggle:focus,
+  .floating-quick-toggle:focus-visible,
+  .tattoo-floating-toggle:focus,
+  .tattoo-floating-toggle:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+
+  body.quick-menu-open .floating-quick-toggle,
+  body.quick-menu-open .tattoo-floating-toggle {
+    background-image: url("../../assets/images/main/close_btn_mo.png");
+  }
 }
 
 body.is-mobile-menu-open {

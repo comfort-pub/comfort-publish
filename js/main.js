@@ -74,18 +74,10 @@ $(function () {
   }
 
   $quickToggle.on("click", function () {
-    if (!isMobileQuickMenu()) {
-      return;
-    }
-
     setQuickMenuOpen($body, $quickToggle, !$body.hasClass("quick-menu-open"));
   });
 
   $quickActions.on("click", function () {
-    if (!isMobileQuickMenu()) {
-      return;
-    }
-
     setQuickMenuOpen($body, $quickToggle, false);
   });
 
@@ -93,20 +85,12 @@ $(function () {
     var $currentToggle = $(this);
     var $currentBody = $currentToggle.closest("body");
 
-    if (!isMobileQuickMenu()) {
-      return;
-    }
-
     setQuickMenuOpen($currentBody, $currentToggle, !$currentBody.hasClass("quick-menu-open"));
   });
 
   $tattooQuickActions.on("click", function () {
     var $currentBody = $(this).closest("body");
     var $currentToggle = $currentBody.find(".tattoo-floating-toggle");
-
-    if (!isMobileQuickMenu()) {
-      return;
-    }
 
     setQuickMenuOpen($currentBody, $currentToggle, false);
   });

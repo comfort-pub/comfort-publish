@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=auto" />
+  <link rel="icon" type="image/png" href="./assets/images/common/cf_favicon.png" />
   <title>Comfort Publish</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,9 +22,15 @@
           </span>
           <span class="floating-quick-action-label">카카오톡상담</span>
         </a>
+        <a href="#sec7" class="floating-quick-action floating-quick-action--live-reserve">
+          <span class="floating-quick-action-icon-wrap" aria-hidden="true">
+            <img src="./assets/images/common/live-reserve.png" alt="" class="floating-quick-action-icon" />
+          </span>
+          <span class="floating-quick-action-label">실시간예약확인</span>
+        </a>
         <a href="#sec7" class="floating-quick-action floating-quick-action--calendar">
           <span class="floating-quick-action-icon-wrap" aria-hidden="true">
-            <img src="./assets/images/common/callendar_icon.png" alt="" class="floating-quick-action-icon" />
+            <img src="./assets/images/common/online-reserve.png" alt="" class="floating-quick-action-icon" />
           </span>
           <span class="floating-quick-action-label">온라인예약</span>
         </a>
@@ -102,51 +109,53 @@
       </section>
 
       <section id="sec2" class="page-section section--main-tattoo-overview">
-        <div class="sec2-layer">
-          <div class="sec2-image-wrap" data-reveal data-reveal-delay="0ms">
-            <div class="sec2-treatment-image"></div>
-          </div>
+        <div class="sec2-inner">
+          <div class="sec2-layer">
+            <div class="sec2-image-wrap" data-reveal data-reveal-delay="0ms">
+              <div class="sec2-treatment-image"></div>
+            </div>
 
-          <div class="sec2-logo-badge" data-reveal data-reveal-delay="120ms">
-            <img src="./assets/images/main/comfort-symbol-mark.png" alt="컴포트 심볼 로고" class="sec2-logo-mark" />
-            <svg class="sec2-logo-ring" viewBox="0 0 144 150" aria-hidden="true">
-              <defs>
-                <path id="logo-circle-text-path" d="M 72,75 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" />
-              </defs>
-              <text class="logo-ring-text">
-                <textPath href="#logo-circle-text-path" startOffset="0%">
-                  Comfort Plastic Surgery Comfort Plastic Surgery Comfort Plastic Surgery Comfort Plastic Surgery Comfort Plastic Surgery
-                </textPath>
-              </text>
-            </svg>
-          </div>
+            <div class="sec2-logo-badge" data-reveal data-reveal-delay="120ms">
+              <img src="./assets/images/main/comfort-symbol-mark.png" alt="컴포트 심볼 로고" class="sec2-logo-mark" />
+              <svg class="sec2-logo-ring" viewBox="0 0 144 150" aria-hidden="true">
+                <defs>
+                  <path id="logo-circle-text-path" d="M 72,75 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" />
+                </defs>
+                <text class="logo-ring-text">
+                  <textPath href="#logo-circle-text-path" startOffset="0%">
+                    Comfort Plastic Surgery Comfort Plastic Surgery Comfort Plastic Surgery Comfort Plastic Surgery Comfort Plastic Surgery
+                  </textPath>
+                </text>
+              </svg>
+            </div>
 
-          <div class="sec2-title-block">
-            <p class="sec2-title-kicker" id="sec2Kicker" data-reveal data-reveal-delay="0ms">COMFORT PS: Tattoo Removal</p>
-            <h3 class="sec2-title-main" data-reveal data-reveal-delay="90ms">
-              <span class="sec2-title-main-marquee" id="sec2MainTitleMarquee">
-                <span class="sec2-title-main-track" id="sec2MainTitle">
-                  <span class="sec2-title-main-piece">통증은 줄이고</span>
-                  <span class="sec2-title-main-piece">효과는 높이고</span>
+            <div class="sec2-title-block">
+              <p class="sec2-title-kicker" id="sec2Kicker" data-reveal data-reveal-delay="0ms">COMFORT PS: Tattoo Removal</p>
+              <h3 class="sec2-title-main" data-reveal data-reveal-delay="90ms">
+                <span class="sec2-title-main-marquee" id="sec2MainTitleMarquee">
+                  <span class="sec2-title-main-track" id="sec2MainTitle">
+                    <span class="sec2-title-main-piece">통증은 줄이고</span>
+                    <span class="sec2-title-main-piece">효과는 높이고</span>
+                  </span>
+                  <span class="sec2-title-main-track" id="sec2MainTitleClone" aria-hidden="true">
+                    <span class="sec2-title-main-piece">통증은 줄이고</span>
+                    <span class="sec2-title-main-piece">효과는 높이고</span>
+                  </span>
                 </span>
-                <span class="sec2-title-main-track" id="sec2MainTitleClone" aria-hidden="true">
-                  <span class="sec2-title-main-piece">통증은 줄이고</span>
-                  <span class="sec2-title-main-piece">효과는 높이고</span>
-                </span>
-              </span>
-            </h3>
-            <strong class="sec2-service-title" id="sec2ServiceTitle" data-reveal data-reveal-delay="180ms">피코 문신제거</strong>
-            <p class="sec2-service-desc" id="sec2ServiceDesc" data-reveal data-reveal-delay="240ms">피코레이저로 문신에 맞춰 효과적이고 세밀한 시술이 가능합니다.</p>
-            <a href="#" class="sec2-detail-btn" data-reveal data-reveal-delay="300ms">자세히 보기
-              <img src="./assets/images/common/arrow.png" alt="" aria-hidden="true" class="detail-btn-arrow" />
-            </a>
+              </h3>
+              <strong class="sec2-service-title" id="sec2ServiceTitle" data-reveal data-reveal-delay="180ms">피코 문신제거</strong>
+              <p class="sec2-service-desc" id="sec2ServiceDesc" data-reveal data-reveal-delay="240ms">피코레이저로 문신에 맞춰 효과적이고 세밀한 시술이 가능합니다.</p>
+              <a href="#" class="sec2-detail-btn" data-reveal data-reveal-delay="300ms">자세히 보기
+                <img src="./assets/images/common/arrow.png" alt="" aria-hidden="true" class="detail-btn-arrow" />
+              </a>
 
-            <ul class="sec2-tabs" id="sec2Tabs" data-reveal data-reveal-delay="360ms">
-              <li class="is-active"><button type="button" data-tab="pico"><span class="sec2-tab-label">피코<br>문신제거</span></button></li>
-              <li><button type="button" data-tab="semi"><span class="sec2-tab-label">반영구<br>문신제거</span></button></li>
-              <li><button type="button" data-tab="scalp"><span class="sec2-tab-label">두피<br>문신제거</span></button></li>
-              <li><button type="button" data-tab="surgical"><span class="sec2-tab-label">수술적<br>문신제거</span></button></li>
-            </ul>
+              <ul class="sec2-tabs" id="sec2Tabs" data-reveal data-reveal-delay="360ms">
+                <li class="is-active"><button type="button" data-tab="pico"><span class="sec2-tab-label">피코<br>문신제거</span></button></li>
+                <li><button type="button" data-tab="semi"><span class="sec2-tab-label">반영구<br>문신제거</span></button></li>
+                <li><button type="button" data-tab="scalp"><span class="sec2-tab-label">두피<br>문신제거</span></button></li>
+                <li><button type="button" data-tab="surgical"><span class="sec2-tab-label">수술적<br>문신제거</span></button></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -172,7 +181,7 @@
               <div class="sec3-card-copy">
                 <p class="sec3-card-en">Unparalleled Experience</p>
                 <strong class="sec3-card-title">독보적인 경력</strong>
-                <p class="sec3-card-desc">문신제거 경력 20년<br />시술 경험 15,000건</p>
+                <p class="sec3-card-desc">문신제거 경력 21년<br />시술 경험 47,000건<br />(26.04. 기준)</p>
               </div>
             </article>
 
@@ -535,6 +544,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="./js/data/site-map.js"></script>
   <script src="./js/data/pages/main.js"></script>
+  <script src="./js/common/desktop-scale.js"></script>
   <script src="./js/common/header-menu.js"></script>
   <script src="./js/common/scroll-reveal.js"></script>
   <script src="./js/pages/main/sec2-tabs.js"></script>

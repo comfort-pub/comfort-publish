@@ -139,10 +139,6 @@
   content: none;
 }
 
-.page--main .floating-quick-toggle {
-  display: none;
-}
-
 .page--main .detail-btn-arrow {
   width: 22px;
   height: 15px;

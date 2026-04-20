@@ -44,18 +44,10 @@ $(function () {
   }
 
   $tattooQuickToggle.on("click", function () {
-    if (!isMobileQuickMenu()) {
-      return;
-    }
-
     setQuickMenuOpen(!$body.hasClass("quick-menu-open"));
   });
 
   $tattooQuickActions.on("click", function () {
-    if (!isMobileQuickMenu()) {
-      return;
-    }
-
     setQuickMenuOpen(false);
   });
 

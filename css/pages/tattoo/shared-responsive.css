@@ -137,14 +137,19 @@
     transition-delay: 0s;
   }
 
-  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) .tattoo-floating-menu .tattoo-floating-action--calendar {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) .tattoo-floating-menu .tattoo-floating-action--live-reserve {
     background-image: url("../../../assets/images/main/online_btn_mo.png");
     transition-delay: 0.03s;
   }
 
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) .tattoo-floating-menu .tattoo-floating-action--calendar {
+    background-image: url("../../../assets/images/common/online-reserve_mo.png");
+    transition-delay: 0.06s;
+  }
+
   :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) .tattoo-floating-menu .tattoo-floating-action--line {
     background-image: url("../../../assets/images/main/line_btn_mo.png");
-    transition-delay: 0.06s;
+    transition-delay: 0.09s;
   }
 
   :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special).quick-menu-open .tattoo-floating-menu .tattoo-floating-action {
@@ -162,8 +167,12 @@
     transform: translateY(calc(var(--tattoo-quick-menu-base-width) * -200 / 800)) scale(1);
   }
 
-  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special).quick-menu-open .tattoo-floating-menu .tattoo-floating-action--kakao {
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special).quick-menu-open .tattoo-floating-menu .tattoo-floating-action--live-reserve {
     transform: translateY(calc(var(--tattoo-quick-menu-base-width) * -300 / 800)) scale(1);
+  }
+
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special).quick-menu-open .tattoo-floating-menu .tattoo-floating-action--kakao {
+    transform: translateY(calc(var(--tattoo-quick-menu-base-width) * -400 / 800)) scale(1);
   }
 
   :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) .tattoo-floating-menu .tattoo-floating-action-icon-wrap,
@@ -220,6 +229,14 @@
     content: "카카오톡 상담";
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
     font-size: calc(var(--tattoo-quick-menu-base-width) * 26 / 800);
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) .tattoo-floating-menu .tattoo-floating-action--live-reserve .tattoo-floating-action-label::before {
+    content: "실시간예약확인";
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    font-size: calc(var(--tattoo-quick-menu-base-width) * 24 / 800);
     font-weight: 400;
     line-height: 1;
   }

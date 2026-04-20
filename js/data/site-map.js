@@ -27,7 +27,7 @@ window.ComfortSite.siteMap = {
       label: "문신제거",
       items: [
         { key: "tattoo-overview", label: "컴포트 문신제거", plannedPath: "pages/tattoo-removal/overview.html" },
-        { key: "tattoo-pico", label: "피코레이저(+프락셀)", plannedPath: "pages/tattoo-removal/pico-laser.html" },
+        { key: "tattoo-pico", label: "피코레이저", plannedPath: "pages/tattoo-removal/pico-laser.html" },
         { key: "tattoo-surgery", label: "수술적 문신제거", plannedPath: "pages/tattoo-removal/surgery.html" },
         { key: "tattoo-principle", label: "문신제거 원리", plannedPath: "pages/tattoo-removal/principle.html" },
         { key: "tattoo-pain", label: "문신제거와 통증", plannedPath: "pages/tattoo-removal/pain.html" }
@@ -59,7 +59,7 @@ window.ComfortSite.siteMap = {
     ],
     tattoo: [
       { label: "컴포트 문신제거", href: "pages/tattoo-removal/overview.html", pageKey: "tattoo-overview" },
-      { label: "피코레이저 (+프락셀)", href: "pages/tattoo-removal/pico-laser.html", pageKey: "tattoo-pico" },
+      { label: "피코레이저", href: "pages/tattoo-removal/pico-laser.html", pageKey: "tattoo-pico" },
       { label: "수술적 문신제거", href: "pages/tattoo-removal/surgery.html", pageKey: "tattoo-surgery" },
       { label: "문신제거 원리", href: "#", pageKey: "tattoo-principle" },
       { label: "문신제거와 통증", href: "#", pageKey: "tattoo-pain" }

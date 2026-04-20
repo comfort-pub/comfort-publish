@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=auto" />
+  <link rel="icon" type="image/png" href="../../assets/images/common/cf_favicon.png" />
   <title>컴포트 문신제거 | Comfort Publish</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,10 +32,10 @@
           </button>
           <nav class="gnb" aria-label="주 메뉴">
             <ul class="gnb-list">
-              <li class="gnb-item gnb-tattoo is-active" data-menu="tattoo"><a href="pico-laser.html">컴포트 피코문신제거</a></li>
-              <li class="gnb-item gnb-anesthesia" data-menu="anesthesia"><a href="#tattooSedation">컴포트 수면(진정)마취의 특별함</a></li>
-              <li class="gnb-item gnb-injection" data-menu="injection"><a href="#tattooAftercare">컴포트 주사시술</a></li>
               <li class="gnb-item gnb-intro" data-menu="intro"><a href="../../index.html">컴포트 소개</a></li>
+              <li class="gnb-item gnb-tattoo is-active" data-menu="tattoo"><a href="overview.html">문신제거</a></li>
+              <li class="gnb-item gnb-anesthesia" data-menu="anesthesia"><a href="overview.html#tattooSedation">컴포트 마취</a></li>
+              <li class="gnb-item gnb-injection" data-menu="injection"><a href="overview.html#tattooAftercare">주사시술</a></li>
             </ul>
           </nav>
         </div>
@@ -54,15 +55,22 @@
 
     <div class="tattoo-floating-actions" aria-label="빠른 메뉴">
       <div class="tattoo-floating-menu">
+        <button type="button" class="tattoo-floating-toggle" aria-label="빠른 메뉴 열기" aria-expanded="false"></button>
         <a href="#sec7" class="tattoo-floating-action tattoo-floating-action--kakao">
           <span class="tattoo-floating-action-icon-wrap" aria-hidden="true">
             <img src="../../assets/images/common/kakao_icon.png" alt="" class="tattoo-floating-action-icon" />
           </span>
           <span class="tattoo-floating-action-label">카카오톡상담</span>
         </a>
+        <a href="#sec7" class="tattoo-floating-action tattoo-floating-action--live-reserve">
+          <span class="tattoo-floating-action-icon-wrap" aria-hidden="true">
+            <img src="../../assets/images/common/live-reserve.png" alt="" class="tattoo-floating-action-icon" />
+          </span>
+          <span class="tattoo-floating-action-label">실시간예약확인</span>
+        </a>
         <a href="#sec7" class="tattoo-floating-action tattoo-floating-action--calendar">
           <span class="tattoo-floating-action-icon-wrap" aria-hidden="true">
-            <img src="../../assets/images/common/callendar_icon.png" alt="" class="tattoo-floating-action-icon" />
+            <img src="../../assets/images/common/online-reserve.png" alt="" class="tattoo-floating-action-icon" />
           </span>
           <span class="tattoo-floating-action-label">온라인예약</span>
         </a>
@@ -645,6 +653,7 @@
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="../../js/data/site-map.js"></script>
+  <script src="../../js/common/desktop-scale.js"></script>
   <script src="../../js/common/header-menu.js"></script>
   <script src="../../js/common/scroll-reveal.js"></script>
   <script src="../../js/pages/tattoo-removal/overview.js"></script>

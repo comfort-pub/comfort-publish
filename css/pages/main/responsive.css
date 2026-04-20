@@ -709,14 +709,19 @@
     transition-delay: 0s;
   }
 
-  .page--main .floating-quick-menu .floating-quick-action--calendar {
+  .page--main .floating-quick-menu .floating-quick-action--live-reserve {
     background-image: url("../../../assets/images/main/online_btn_mo.png");
     transition-delay: 0.03s;
   }
 
+  .page--main .floating-quick-menu .floating-quick-action--calendar {
+    background-image: url("../../../assets/images/common/online-reserve_mo.png");
+    transition-delay: 0.06s;
+  }
+
   .page--main .floating-quick-menu .floating-quick-action--line {
     background-image: url("../../../assets/images/main/line_btn_mo.png");
-    transition-delay: 0.06s;
+    transition-delay: 0.09s;
   }
 
   .page--main.quick-menu-open .floating-quick-menu .floating-quick-action {
@@ -734,8 +739,12 @@
     transform: translateY(calc(var(--main-quick-menu-base-width) * -200 / 800)) scale(1);
   }
 
-  .page--main.quick-menu-open .floating-quick-menu .floating-quick-action--kakao {
+  .page--main.quick-menu-open .floating-quick-menu .floating-quick-action--live-reserve {
     transform: translateY(calc(var(--main-quick-menu-base-width) * -300 / 800)) scale(1);
+  }
+
+  .page--main.quick-menu-open .floating-quick-menu .floating-quick-action--kakao {
+    transform: translateY(calc(var(--main-quick-menu-base-width) * -400 / 800)) scale(1);
   }
 
   .page--main .floating-quick-menu .floating-quick-action-icon-wrap,
@@ -792,6 +801,14 @@
     content: "카카오톡 상담";
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
     font-size: calc(var(--main-quick-menu-base-width) * 26 / 800);
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .page--main .floating-quick-menu .floating-quick-action--live-reserve .floating-quick-action-label::before {
+    content: "실시간예약확인";
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    font-size: calc(var(--main-quick-menu-base-width) * 24 / 800);
     font-weight: 400;
     line-height: 1;
   }
@@ -911,6 +928,10 @@
   #sec2 {
     margin-top: 0;
     padding: calc(var(--main-mobile-base-width) * 80 / 800) 0 calc(var(--main-mobile-base-width) * 106 / 800);
+  }
+
+  #sec2 .sec2-inner {
+    width: 100%;
   }
 
   #sec2 .sec2-layer {

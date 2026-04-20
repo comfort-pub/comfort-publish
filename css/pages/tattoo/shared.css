@@ -24,11 +24,6 @@
   scroll-margin-top: 132px;
 }
 
-:is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .gnb-list {
-  justify-content: flex-start;
-  gap: 89px;
-}
-
 .page-tattoo-subpage {
   display: block;
   background: #fff;

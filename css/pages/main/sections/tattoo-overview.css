@@ -1,22 +1,26 @@
-#sec2 .sec2-layer {
-  --sec2-image-left: 254px;
-  --sec2-image-top: 7px;
-  --sec2-image-width: 650px;
-  --sec2-image-height: 750px;
-  --sec2-title-left: 955px;
-  --sec2-title-top: 117px;
-  --sec2-title-right-gap: 50px;
-  position: relative;
-  width: 1808px;
-  height: 882px;
-  margin: 0 0 25px;
-}
-
 #sec2 {
-  display: flex;
-  justify-content: center;
   margin-top: 150px;
   background: #fff;
+}
+
+#sec2 .sec2-inner {
+  --sec2-shell-scale: calc(1440 / 1808);
+  width: 1440px;
+  margin: 0 auto;
+}
+
+#sec2 .sec2-layer {
+  --sec2-image-left: calc(254px * var(--sec2-shell-scale));
+  --sec2-image-top: calc(7px * var(--sec2-shell-scale));
+  --sec2-image-width: calc(650px * var(--sec2-shell-scale));
+  --sec2-image-height: calc(750px * var(--sec2-shell-scale));
+  --sec2-title-left: calc(955px * var(--sec2-shell-scale));
+  --sec2-title-top: calc(117px * var(--sec2-shell-scale));
+  --sec2-title-right-gap: calc(50px * var(--sec2-shell-scale));
+  position: relative;
+  width: 100%;
+  height: calc(882px * var(--sec2-shell-scale));
+  margin: 0 0 25px;
 }
 
 #sec2 .sec2-image-wrap {
@@ -32,23 +36,23 @@
   width: 100%;
   height: 100%;
   margin: 0;
-  border-top-left-radius: 350px;
-  border-top-right-radius: 350px;
+  border-top-left-radius: calc(350px * var(--sec2-shell-scale));
+  border-top-right-radius: calc(350px * var(--sec2-shell-scale));
   background: url("../../../../assets/images/main/tattoo-removal-treatment.png") no-repeat center / cover;
 }
 
 #sec2 .sec2-logo-badge {
   position: absolute;
-  width: 144px;
-  height: 150px;
+  width: calc(144px * var(--sec2-shell-scale));
+  height: calc(150px * var(--sec2-shell-scale));
   margin: 0;
   left: var(--sec2-image-left);
   top: var(--sec2-image-top);
   padding:
-    53.1px
-    50px
-    52.6px
-    49.1px;
+    calc(53.1px * var(--sec2-shell-scale))
+    calc(50px * var(--sec2-shell-scale))
+    calc(52.6px * var(--sec2-shell-scale))
+    calc(49.1px * var(--sec2-shell-scale));
   z-index: 4;
 }
 
@@ -58,8 +62,8 @@
   top: 50%;
   transform: translate(-50%, -50%);
   display: block;
-  width: 44.9px;
-  height: 44.3px;
+  width: calc(44.9px * var(--sec2-shell-scale));
+  height: calc(44.3px * var(--sec2-shell-scale));
 }
 
 #sec2 .sec2-logo-ring {
@@ -74,7 +78,7 @@
 
 #sec2 .sec2-logo-ring .logo-ring-text {
   font-family: "Philosopher", serif;
-  font-size: 18px;
+  font-size: calc(18px * var(--sec2-shell-scale));
   font-weight: 700;
   letter-spacing: 0;
   color: #176eae;
@@ -82,13 +86,13 @@
 }
 
 #sec2 .sec2-title-block {
-  --sec2-tab-size: 140px;
-  --sec2-tab-gap: 14px;
-  --sec2-tabs-total-width: 602px;
+  --sec2-tab-size: calc(140px * var(--sec2-shell-scale));
+  --sec2-tab-gap: calc(14px * var(--sec2-shell-scale));
+  --sec2-tabs-total-width: calc(602px * var(--sec2-shell-scale));
   position: absolute;
-  width: 803px;
-  max-width: 599px;
-  height: 640px;
+  width: calc(803px * var(--sec2-shell-scale));
+  max-width: calc(599px * var(--sec2-shell-scale));
+  height: calc(640px * var(--sec2-shell-scale));
   margin: 0;
   left: var(--sec2-title-left);
   top: var(--sec2-title-top);
@@ -100,8 +104,9 @@
 #sec2 .sec2-title-kicker {
   width: 100%;
   height: auto;
-  margin: 0 0 21px;
-  letter-spacing: -0.22px;
+  margin: 0 0 calc(21px * var(--sec2-shell-scale));
+  font-size: calc(var(--main-kicker-font-size) * var(--sec2-shell-scale));
+  letter-spacing: calc(-0.22px * var(--sec2-shell-scale));
   text-align: left;
   white-space: nowrap;
 }
@@ -110,13 +115,13 @@
   width: var(--sec2-tabs-total-width);
   height: auto;
   margin: 0;
-  padding: 32px 0;
+  padding: calc(32px * var(--sec2-shell-scale)) 0;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
   font-family: "Noto Serif KR", serif;
-  font-size: var(--main-display-font-size);
+  font-size: calc(var(--main-display-font-size) * var(--sec2-shell-scale));
   font-weight: 400;
-  letter-spacing: -3px;
+  letter-spacing: calc(-3px * var(--sec2-shell-scale));
   text-align: left;
   color: #333;
   white-space: nowrap;
@@ -138,9 +143,9 @@
 #sec2 .sec2-title-main-track {
   display: inline-flex;
   align-items: center;
-  gap: 26px;
+  gap: calc(26px * var(--sec2-shell-scale));
   flex: 0 0 auto;
-  padding-right: 48px;
+  padding-right: calc(48px * var(--sec2-shell-scale));
   white-space: nowrap;
 }
 
@@ -152,11 +157,11 @@
   display: block;
   width: auto;
   height: auto;
-  margin: 32px 0 16px;
-  font-size: var(--main-emphasis-font-size);
+  margin: calc(32px * var(--sec2-shell-scale)) 0 calc(16px * var(--sec2-shell-scale));
+  font-size: calc(var(--main-emphasis-font-size) * var(--sec2-shell-scale));
   font-weight: 700;
   line-height: normal;
-  letter-spacing: -1px;
+  letter-spacing: calc(-1px * var(--sec2-shell-scale));
   color: #176eae;
   text-align: left;
   white-space: nowrap;
@@ -164,30 +169,31 @@
 
 #sec2 .sec2-service-desc {
   width: 100%;
-  max-width: 450px;
+  max-width: calc(450px * var(--sec2-shell-scale));
   height: auto;
-  margin: 0 0 30px;
+  margin: 0 0 calc(30px * var(--sec2-shell-scale));
+  font-size: calc(var(--main-body-font-size) * var(--sec2-shell-scale));
   color: #555;
   text-align: left;
   white-space: nowrap;
 }
 
 #sec2 .sec2-detail-btn {
-  width: 170px;
-  height: 55px;
+  width: calc(170px * var(--sec2-shell-scale));
+  height: calc(55px * var(--sec2-shell-scale));
   margin: 0;
-  padding: 19px 29px;
+  padding: calc(19px * var(--sec2-shell-scale)) calc(29px * var(--sec2-shell-scale));
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  border-radius: 27.5px;
+  gap: calc(12px * var(--sec2-shell-scale));
+  border-radius: calc(27.5px * var(--sec2-shell-scale));
   background: #176eae;
   color: #fff;
-  font-size: 18px;
+  font-size: calc(18px * var(--sec2-shell-scale));
   font-weight: 400;
   line-height: normal;
-  letter-spacing: -0.45px;
+  letter-spacing: calc(-0.45px * var(--sec2-shell-scale));
   text-align: left;
   white-space: nowrap;
 }
@@ -222,16 +228,16 @@
   height: auto;
   padding: 0;
   border: 0;
-  border-radius: 20px;
+  border-radius: calc(20px * var(--sec2-shell-scale));
   background: #efefef;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #333;
-  font-size: 24px;
+  font-size: calc(24px * var(--sec2-shell-scale));
   font-weight: 700;
   line-height: normal;
-  letter-spacing: -0.6px;
+  letter-spacing: calc(-0.6px * var(--sec2-shell-scale));
   text-align: center;
   cursor: pointer;
 }
