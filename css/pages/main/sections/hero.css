@@ -59,6 +59,13 @@
   text-align: left;
   color: #21283c;
   white-space: nowrap;
+  opacity: 0;
+  transform: translate3d(-72px, 0, 0);
+  will-change: transform, opacity;
+  transition:
+    opacity 3.7s cubic-bezier(0.12, 0.82, 0.18, 1),
+    transform 2.5s cubic-bezier(0.12, 0.82, 0.18, 1);
+  transition-delay: 120ms;
 }
 
 .main-hero-title {
@@ -73,8 +80,31 @@
   text-align: left;
   color: #21283c;
   white-space: nowrap;
+  opacity: 0;
+  transform: translate3d(-72px, 0, 0);
+  will-change: transform, opacity;
+  transition:
+    opacity 3.7s cubic-bezier(0.12, 0.82, 0.18, 1),
+    transform 2.5s cubic-bezier(0.12, 0.82, 0.18, 1);
+  transition-delay: 120ms;
 }
 
 .main-hero-title span {
   display: inline;
+}
+
+.page--main.main-hero-intro-ready .main-hero-kicker,
+.page--main.main-hero-intro-ready .main-hero-title {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-hero-kicker,
+  .main-hero-title {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    will-change: auto;
+  }
 }

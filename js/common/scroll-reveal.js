@@ -53,7 +53,7 @@
       });
     }, {
       threshold: settings.threshold || 0.16,
-      rootMargin: settings.rootMargin || "0px 0px -12% 0px"
+      rootMargin: settings.rootMargin || "0px 0px -20% 0px"
     });
 
     nodes.forEach(function (node) {

@@ -308,7 +308,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
   width: 88px;
   padding: 46px 4px 40px 3px;
   border-radius: 54px;
@@ -411,44 +411,81 @@ img {
 @media (min-width: 801px) {
   .floating-quick-menu,
   .tattoo-floating-menu {
+    --quick-menu-open-height: 450px;
+    --quick-menu-closed-height: 91px;
     position: relative;
     justify-content: flex-end;
-    width: 106px;
-    min-height: 106px;
-    max-height: 106px;
+    width: 91px;
+    min-height: 91px;
+    max-height: 91px;
+    height: var(--quick-menu-closed-height);
     padding: 0;
     border-radius: 0;
     background: transparent;
     box-shadow: none;
     overflow: hidden;
     transition:
-      max-height 0.34s cubic-bezier(0.22, 1, 0.36, 1),
-      padding 0.34s cubic-bezier(0.22, 1, 0.36, 1),
-      border-radius 0.24s ease,
-      background-color 0.24s ease,
-      box-shadow 0.24s ease;
+      height 0.48s cubic-bezier(0.16, 1, 0.3, 1),
+      max-height 0.48s cubic-bezier(0.16, 1, 0.3, 1),
+      padding 0.48s cubic-bezier(0.16, 1, 0.3, 1),
+      border-radius 0.32s ease,
+      background-color 0.28s ease,
+      box-shadow 0.28s ease;
+  }
+
+  .floating-quick-menu::before,
+  .tattoo-floating-menu::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 91px;
+    height: var(--quick-menu-closed-height);
+    border-radius: 54px;
+    background: #176eae;
+    box-shadow: 0 14px 28px rgba(15, 33, 53, 0.14);
+    transition:
+      height 0.48s cubic-bezier(0.16, 1, 0.3, 1),
+      border-radius 0.32s ease,
+      box-shadow 0.28s ease;
+    z-index: 0;
   }
 
   body.quick-menu-open .floating-quick-menu,
   body.quick-menu-open .tattoo-floating-menu {
-    justify-content: flex-start;
-    max-height: 560px;
-    padding: 46px 4px 40px 3px;
+    justify-content: space-evenly;
+    height: var(--quick-menu-open-height);
+    max-height: 450px;
+    gap: 0;
+    padding: 24px 4px 22px 3px;
     border-radius: 54px;
-    background: #176eae;
-    box-shadow: 0 14px 28px rgba(15, 33, 53, 0.14);
+    background: transparent;
+    box-shadow: none;
     overflow: visible;
+  }
+
+  body.quick-menu-open .floating-quick-menu::before,
+  body.quick-menu-open .tattoo-floating-menu::before {
+    height: var(--quick-menu-open-height);
+    border-radius: 54px;
   }
 
   .floating-quick-action,
   .tattoo-floating-action {
     order: 1;
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(20px);
     pointer-events: none;
+    will-change: opacity, transform;
     transition:
-      opacity 0.22s ease,
-      transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+      opacity 0.3s ease,
+      transform 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .floating-quick-menu > *,
+  .tattoo-floating-menu > * {
+    position: relative;
+    z-index: 1;
   }
 
   body.quick-menu-open .floating-quick-action,
@@ -465,17 +502,17 @@ img {
 
   .floating-quick-action--calendar,
   .tattoo-floating-action--calendar {
-    transition-delay: 0.03s;
+    transition-delay: 0.05s;
   }
 
   .floating-quick-action--live-reserve,
   .tattoo-floating-action--live-reserve {
-    transition-delay: 0.06s;
+    transition-delay: 0.1s;
   }
 
   .floating-quick-action--kakao,
   .tattoo-floating-action--kakao {
-    transition-delay: 0.09s;
+    transition-delay: 0.15s;
   }
 
   .floating-quick-toggle,
@@ -484,10 +521,10 @@ img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 106px;
-    height: 106px;
-    min-width: 106px;
-    min-height: 106px;
+    width: 91px;
+    height: 91px;
+    min-width: 91px;
+    min-height: 91px;
     padding: 0;
     border: 0;
     border-radius: 50%;
@@ -509,7 +546,7 @@ img {
 
   body.quick-menu-open .floating-quick-toggle,
   body.quick-menu-open .tattoo-floating-toggle {
-    background-image: url("../../assets/images/main/close_btn_mo.png");
+    display: none;
   }
 }
 

@@ -36,6 +36,10 @@ $(function () {
     return window.matchMedia("(max-width: 800px)").matches;
   }
 
+  function isDesktopQuickMenu() {
+    return window.matchMedia("(min-width: 801px)").matches;
+  }
+
   function setQuickMenuOpen(isOpen) {
     $body.toggleClass("quick-menu-open", isOpen);
     $tattooQuickToggle.attr("aria-expanded", isOpen ? "true" : "false");
@@ -48,6 +52,18 @@ $(function () {
   });
 
   $tattooQuickActions.on("click", function () {
+    setQuickMenuOpen(false);
+  });
+
+  $(document).on("click", function (event) {
+    if (!isDesktopQuickMenu() || !$body.hasClass("quick-menu-open")) {
+      return;
+    }
+
+    if ($(event.target).closest(".tattoo-floating-actions").length) {
+      return;
+    }
+
     setQuickMenuOpen(false);
   });
 
@@ -139,7 +155,7 @@ $(function () {
     });
   }, {
     threshold: 0.18,
-    rootMargin: "0px 0px -10% 0px"
+    rootMargin: "0px 0px -20% 0px"
   });
 
   animatedTargets.forEach(function (node) {

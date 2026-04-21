@@ -63,6 +63,10 @@ $(function () {
     return window.matchMedia("(max-width: 800px)").matches;
   }
 
+  function isDesktopQuickMenu() {
+    return window.matchMedia("(min-width: 801px)").matches;
+  }
+
   function setQuickMenuOpen($targetBody, $targetToggle, isOpen) {
     $targetBody.toggleClass("quick-menu-open", isOpen);
     $targetToggle.attr("aria-expanded", isOpen ? "true" : "false");
@@ -78,6 +82,18 @@ $(function () {
   });
 
   $quickActions.on("click", function () {
+    setQuickMenuOpen($body, $quickToggle, false);
+  });
+
+  $(document).on("click", function (event) {
+    if (!isDesktopQuickMenu() || !$body.hasClass("quick-menu-open")) {
+      return;
+    }
+
+    if ($(event.target).closest(".floating-quick-actions").length) {
+      return;
+    }
+
     setQuickMenuOpen($body, $quickToggle, false);
   });
 
@@ -108,6 +124,12 @@ $(function () {
         });
       }
     }
+  });
+
+  window.requestAnimationFrame(function () {
+    window.requestAnimationFrame(function () {
+      $body.addClass("main-hero-intro-ready");
+    });
   });
 
   $("[data-scroll-top]").on("click", function () {
