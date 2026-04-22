@@ -46,6 +46,7 @@
     var lockedScrollTop = 0;
     var defaultHeaderLogoMenuGap = 432;
     var defaultHeaderMenuGap = 167;
+    var safeAreaRefreshTimerId = 0;
 
     function isMobileViewport() {
       return mobileQuery ? mobileQuery.matches : window.innerWidth <= 1024;
@@ -53,6 +54,41 @@
 
     function isDesktopHeaderViewport() {
       return (window.innerWidth || document.documentElement.clientWidth || 0) > desktopHeaderBreakpoint;
+    }
+
+    function forceMobileSafeAreaRefresh() {
+      if (!isMobileViewport() || $headerArea.hasClass("is-mobile-menu-open")) {
+        return;
+      }
+
+      var currentScrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop || 0;
+
+      document.body.style.setProperty("--mobile-scroll-lock-offset", (-currentScrollTop) + "px");
+      $("body").addClass("is-mobile-safe-area-refresh");
+      document.body.offsetHeight;
+
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () {
+          $("body").removeClass("is-mobile-safe-area-refresh");
+          document.body.style.removeProperty("--mobile-scroll-lock-offset");
+          window.scrollTo(0, currentScrollTop);
+        });
+      });
+    }
+
+    function scheduleMobileSafeAreaRefresh() {
+      if (safeAreaRefreshTimerId) {
+        window.clearTimeout(safeAreaRefreshTimerId);
+      }
+
+      if (!isMobileViewport()) {
+        return;
+      }
+
+      safeAreaRefreshTimerId = window.setTimeout(function () {
+        safeAreaRefreshTimerId = 0;
+        forceMobileSafeAreaRefresh();
+      }, 80);
     }
 
     function syncDesktopHeaderLayout() {
@@ -443,5 +479,11 @@
 
     $(window).on("resize", syncDesktopHeaderLayout);
     syncDesktopHeaderLayout();
+
+    if (document.readyState === "complete") {
+      scheduleMobileSafeAreaRefresh();
+    } else {
+      $(window).on("load", scheduleMobileSafeAreaRefresh);
+    }
   };
 })(window);

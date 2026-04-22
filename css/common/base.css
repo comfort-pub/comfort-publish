@@ -55,29 +55,20 @@ img {
 }
 
 @media (max-width: 800px) {
-  html::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: var(--mobile-header-safe-top, 0px);
-    background: #fff;
-    pointer-events: none;
-    z-index: 101;
-  }
-
   #wrap {
+    padding-top: env(safe-area-inset-top, 0px);
     padding-top: var(--mobile-header-safe-top, 0px);
+    background: #fff;
   }
 
   .header-area {
     box-sizing: border-box;
     padding-top: 0;
-    background: transparent;
+    background: #fff;
   }
 
   .header {
+    margin-top: env(safe-area-inset-top, 0px);
     margin-top: var(--mobile-header-safe-top, 0px);
   }
 }
@@ -1027,7 +1018,8 @@ body.reservation-modal-open {
   }
 }
 
-body.is-mobile-menu-open {
+body.is-mobile-menu-open,
+body.is-mobile-safe-area-refresh {
   position: fixed;
   inset: 0;
   top: var(--mobile-scroll-lock-offset, 0px);
