@@ -143,6 +143,8 @@
 }
 
 .pico-video-placeholder {
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,6 +154,17 @@
   color: #9fa4aa;
   font-size: 54px;
   font-weight: 700;
+}
+
+.pico-video-placeholder-media {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  pointer-events: none;
 }
 
 .pico-intro-copy {
@@ -205,7 +218,7 @@
 }
 
 .pico-section-title {
-  margin-top: 14px;
+  margin-top: 49px;
   color: #2b2b2b;
   font-size: 44px;
   font-weight: 700;
@@ -317,7 +330,7 @@
 
 .section-title-common.pico-compare-title,
 .pico-compare-title {
-  margin-top: 29px;
+  margin-top: 49px;
   color: #fff;
   font-size: 52px;
   text-align: center;
@@ -405,6 +418,57 @@
   flex-shrink: 0;
 }
 
+.page--tattoo-pico .pico-feature-card.scroll-reveal {
+  opacity: 0;
+  translate: 0 var(--reveal-distance, 40px);
+  transition:
+    opacity 3s cubic-bezier(0.22, 1, 0.36, 1),
+    translate 3s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, translate;
+}
+
+.page--tattoo-pico .pico-feature-card.scroll-reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+  animation: none;
+  will-change: auto;
+}
+
+.page--tattoo-pico .pico-care-reveal.scroll-reveal {
+  opacity: 0;
+  translate: 0 calc(var(--reveal-distance, 34px) * -1);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    translate 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, translate;
+}
+
+.page--tattoo-pico .pico-care-reveal.scroll-reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+  animation: none;
+  will-change: auto;
+}
+
+.page--tattoo-pico .pico-fractat-benefit-text.scroll-reveal {
+  opacity: 0;
+  translate: 0 var(--reveal-distance, 30px);
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    translate 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, translate;
+}
+
+.page--tattoo-pico .pico-fractat-benefit-text.scroll-reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+  animation: none;
+  will-change: auto;
+}
+
 .pico-feature-card p {
   width: 100%;
   max-width: 180px;
@@ -469,7 +533,7 @@
 }
 
 .pico-machine-title {
-  margin: 45px auto 46px;
+  margin: 49px auto 46px;
   color: #333;
   font-size: 52px;
   line-height: normal;
@@ -713,8 +777,8 @@
 
 .pico-wavelength-visual {
   width: 1045px;
-  min-height: 330px;
-  margin: 38px auto 0;
+  min-height: 450px;
+  margin: 63px auto 0;
   border: 0;
   background: url("../../../assets/images/sub_pico_laser/skin.png") no-repeat center center / contain;
 }
@@ -862,7 +926,7 @@
   row-gap: 20px;
   width: 1300px;
   height: 420px;
-  margin: 50px auto 104px;
+  margin: 0 auto 154px;
   padding: 50px 89px 50px 90px;
   background: #f5f5f5;
   box-sizing: border-box;
@@ -1043,7 +1107,7 @@
   max-width: 100%;
   height: 100%;
   max-height: 100%;
-  margin: 0;
+  margin-top: 100px;
   border: 0;
   background: url("../../../assets/images/sub_surgery/pico-laser-4.png") no-repeat center center / contain;
 }
@@ -1117,7 +1181,7 @@
 
 .pico-comfort-copy h4 {
   width: 522px;
-  margin: 0;
+  margin-bottom: 30px;
   color: #333;
   font-family: "Noto Serif KR", serif;
   font-size: 36px;
@@ -1129,7 +1193,6 @@
 }
 
 .pico-comfort-copy p {
-  width: 454px;
   margin: 0;
   color: #333;
   font-size: 18px;
@@ -1142,8 +1205,8 @@
 .pico-comfort-marquee {
   --pico-comfort-marquee-gap: 76px;
   position: relative;
-  left: 50%;
-  width: 100vw;
+  left: 0;
+  width: 250vw;
   max-width: none;
   height: 118px;
   margin: 45px 0 0;
@@ -1160,21 +1223,14 @@
   transform: translateX(-50%);
 }
 
-.pico-comfort-marquee-run {
-  position: absolute;
-  top: 0;
-  left: 0;
+.pico-comfort-marquee-track {
   display: inline-flex;
   align-items: center;
   gap: var(--pico-comfort-marquee-gap);
   width: max-content;
   white-space: nowrap;
   will-change: transform;
-  animation: pico-comfort-marquee-scroll 22s linear infinite;
-}
-
-.pico-comfort-marquee-run--alt {
-  animation-name: pico-comfort-marquee-scroll-alt;
+  animation: pico-comfort-marquee-scroll 60s linear infinite;
 }
 
 .pico-comfort-marquee-text {
@@ -1188,16 +1244,6 @@
   }
 
   to {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes pico-comfort-marquee-scroll-alt {
-  from {
-    transform: translateX(100%);
-  }
-
-  to {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
 }

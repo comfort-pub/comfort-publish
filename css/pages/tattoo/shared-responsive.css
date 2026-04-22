@@ -3,7 +3,7 @@
 @media (max-width: 800px) {
   :is(.page--main, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) .page-section,
   :is(.page--main, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 {
-    scroll-margin-top: 84px;
+    scroll-margin-top: calc(84px + var(--mobile-header-safe-top, 0px));
   }
 
   :is(.page--main, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) .tattoo-floating-actions {

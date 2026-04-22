@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=auto" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <link rel="icon" type="image/png" href="../../assets/images/common/cf_favicon.png" />
   <title>피코레이저 | Comfort Publish</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +14,6 @@
 <body class="page page--main page--tattoo page--tattoo-pico" data-page="tattoo-pico">
   <div id="wrap">
     <div class="header-area">
-      <div class="mobile-top-banner" aria-hidden="true"></div>
       <header class="header">
         <div class="inner">
           <a href="#picoHero" class="header-mobile-home" aria-label="페이지 상단으로 이동">
@@ -94,7 +93,12 @@
 
       <section class="page-section pico-intro-section">
         <div class="tattoo-section-inner pico-intro-layout">
-          <div class="pico-video-placeholder" aria-hidden="true">영상</div>
+          <div class="pico-video-placeholder" aria-hidden="true">
+            <video class="pico-video-placeholder-media" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+              <source src="../../assets/video/pc%E1%84%8B%E1%85%AD%E1%86%BC%201300x860.mp4" media="(min-width: 801px)" type="video/mp4" />
+              <source src="../../assets/video/%E1%84%86%E1%85%A9%E1%84%87%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC%201440x960.mp4" media="(max-width: 800px)" type="video/mp4" />
+            </video>
+          </div>
           <div class="pico-intro-copy">
             <p class="section-kicker-common pico-intro-kicker">COMFORT PS: Tattoo Removal</p>
             <h3 class="section-title-common pico-intro-title"><span class="tattoo-section-title-light">문신제거,</span><br />단순한 레이저 시술이 아닙니다.</h3>
@@ -139,9 +143,9 @@
               </p>
             </div>
             <div class="pico-feature-cards">
-              <article class="pico-feature-card"><span class="pico-feature-icon" aria-hidden="true"></span><p><span class="pico-text-desktop">피부 손상 없는<br />시술</span><span class="pico-text-mobile">피부 손상 없는 시술</span></p></article>
-              <article class="pico-feature-card"><span class="pico-feature-icon" aria-hidden="true"></span><p>균일한 에너지로 효율적인 치료</p></article>
-              <article class="pico-feature-card"><span class="pico-feature-icon" aria-hidden="true"></span><p>듀얼모드의 파장으로 다양한 색소 제거</p></article>
+              <article class="pico-feature-card" data-reveal data-reveal-delay="0ms" data-reveal-distance="80px"><span class="pico-feature-icon" aria-hidden="true"></span><p><span class="pico-text-desktop">피부 손상 없는<br />시술</span><span class="pico-text-mobile">피부 손상 없는 시술</span></p></article>
+              <article class="pico-feature-card" data-reveal data-reveal-delay="120ms" data-reveal-distance="80px"><span class="pico-feature-icon" aria-hidden="true"></span><p>균일한 에너지로 효율적인 치료</p></article>
+              <article class="pico-feature-card" data-reveal data-reveal-delay="240ms" data-reveal-distance="80px"><span class="pico-feature-icon" aria-hidden="true"></span><p>듀얼모드의 파장으로 다양한 색소 제거</p></article>
             </div>
           </div>
         </div>
@@ -218,9 +222,9 @@
               </p>
             </div>
             <div class="pico-care-cards">
-              <article class="pico-care-card"><div><h4>문신 맞춤 시술</h4><p>잉크의 색상, 깊이, 양 그리고 문신 크기에 따라<br />사용하는 레이저 기기와 치료 방법을 결정합니다.</p></div><span class="pico-care-icon pico-care-icon--arrow" aria-hidden="true"></span></article>
-              <article class="pico-care-card"><div><h4>피부 맞춤 시술</h4><p>피부의 살성, 비후성흉터의 유무 등에 맞는<br />치료 방법을 통해 피부의 손상을 최소화합니다.</p></div><span class="pico-care-icon pico-care-icon--band" aria-hidden="true"></span></article>
-              <article class="pico-care-card"><div><h4>경과 맞춤 시술</h4><p><span class="pico-text-desktop">시술 후 증상과 환자의 환경을 고려하여 불편을<br />최소화하고 효율적인 방법으로 시술을 진행합니다.</span><span class="pico-text-mobile">시술 후 증상과 환자의 환경을 고려하여<br />불편을 최소화하고 효율적인 방법으로 시술을<br />진행합니다.</span></p></div><span class="pico-care-icon pico-care-icon--computer" aria-hidden="true"></span></article>
+              <article class="pico-care-card"><div class="pico-care-copy scroll-reveal pico-care-reveal" data-reveal data-reveal-delay="0ms" data-reveal-distance="34px"><h4>문신 맞춤 시술</h4><p>잉크의 색상, 깊이, 양 그리고 문신 크기에 따라<br />사용하는 레이저 기기와 치료 방법을 결정합니다.</p></div><span class="pico-care-icon pico-care-icon--arrow scroll-reveal pico-care-reveal" aria-hidden="true" data-reveal data-reveal-delay="0ms" data-reveal-distance="34px"></span></article>
+              <article class="pico-care-card"><div class="pico-care-copy scroll-reveal pico-care-reveal" data-reveal data-reveal-delay="160ms" data-reveal-distance="34px"><h4>피부 맞춤 시술</h4><p>피부의 살성, 비후성흉터의 유무 등에 맞는<br />치료 방법을 통해 피부의 손상을 최소화합니다.</p></div><span class="pico-care-icon pico-care-icon--band scroll-reveal pico-care-reveal" aria-hidden="true" data-reveal data-reveal-delay="160ms" data-reveal-distance="34px"></span></article>
+              <article class="pico-care-card"><div class="pico-care-copy scroll-reveal pico-care-reveal" data-reveal data-reveal-delay="320ms" data-reveal-distance="34px"><h4>경과 맞춤 시술</h4><p><span class="pico-text-desktop">시술 후 증상과 환자의 환경을 고려하여 불편을<br />최소화하고 효율적인 방법으로 시술을 진행합니다.</span><span class="pico-text-mobile">시술 후 증상과 환자의 환경을 고려하여<br />불편을 최소화하고 효율적인 방법으로 시술을<br />진행합니다.</span></p></div><span class="pico-care-icon pico-care-icon--computer scroll-reveal pico-care-reveal" aria-hidden="true" data-reveal data-reveal-delay="320ms" data-reveal-distance="34px"></span></article>
             </div>
           </div>
         </div>
@@ -244,10 +248,10 @@
             </div>
           </div>
           <div class="pico-fractat-benefits">
-            <article class="pico-fractat-benefit"><span class="pico-benefit-icon pico-benefit-icon--1" aria-hidden="true"></span><p><span class="pico-text-desktop">시술 시 발생하는 기포나 가스 배출로 <span class="pico-fractat-benefit-emphasis">제거 효과 증대</span></span><span class="pico-text-mobile">시술 시 발생하는<br />기포나 가스 배출로<br /><span class="pico-fractat-benefit-emphasis">제거 효과 증대</span></span></p></article>
-            <article class="pico-fractat-benefit"><span class="pico-benefit-icon pico-benefit-icon--2" aria-hidden="true"></span><p><span class="pico-text-desktop">입자를 더 잘게 부수어 <span class="pico-fractat-benefit-emphasis">레이저 효과 극대화</span></span><span class="pico-text-mobile">입자를 더 잘게 부수어<br /><span class="pico-fractat-benefit-emphasis">레이저 효과 극대화</span></span></p></article>
-            <article class="pico-fractat-benefit"><span class="pico-benefit-icon pico-benefit-icon--3" aria-hidden="true"></span><p><span class="pico-text-desktop">치유과정에서 생기는 삼출액이나 체액의 배출로<br /><span class="pico-fractat-benefit-emphasis">빠른 회복 가능</span></span><span class="pico-text-mobile">치유과정에서 생기는<br />삼출액이나 체액의 배출로<br /><span class="pico-fractat-benefit-emphasis">빠른 회복 가능</span></span></p></article>
-            <article class="pico-fractat-benefit"><span class="pico-benefit-icon pico-benefit-icon--4" aria-hidden="true"></span><p><span class="pico-text-desktop">주변 혈관의 활성도 증가로 <span class="pico-fractat-benefit-emphasis">면역세포 활성 증진</span></span><span class="pico-text-mobile">주변 혈관의<br />활성도 증가로<br /><span class="pico-fractat-benefit-emphasis">면역세포 활성 증진</span></span></p></article>
+            <article class="pico-fractat-benefit"><span class="pico-benefit-icon pico-benefit-icon--1" aria-hidden="true"></span><p class="pico-fractat-benefit-text scroll-reveal" data-reveal data-reveal-distance="30px"><span class="pico-text-desktop">시술 시 발생하는 기포나 가스 배출로 <span class="pico-fractat-benefit-emphasis">제거 효과 증대</span></span><span class="pico-text-mobile">시술 시 발생하는<br />기포나 가스 배출로<br /><span class="pico-fractat-benefit-emphasis">제거 효과 증대</span></span></p></article>
+            <article class="pico-fractat-benefit"><span class="pico-benefit-icon pico-benefit-icon--2" aria-hidden="true"></span><p class="pico-fractat-benefit-text scroll-reveal" data-reveal data-reveal-distance="30px"><span class="pico-text-desktop">입자를 더 잘게 부수어 <span class="pico-fractat-benefit-emphasis">레이저 효과 극대화</span></span><span class="pico-text-mobile">입자를 더 잘게 부수어<br /><span class="pico-fractat-benefit-emphasis">레이저 효과 극대화</span></span></p></article>
+            <article class="pico-fractat-benefit"><span class="pico-benefit-icon pico-benefit-icon--3" aria-hidden="true"></span><p class="pico-fractat-benefit-text scroll-reveal" data-reveal data-reveal-distance="30px"><span class="pico-text-desktop">치유과정에서 생기는 삼출액이나 체액의 배출로<br /><span class="pico-fractat-benefit-emphasis">빠른 회복 가능</span></span><span class="pico-text-mobile">치유과정에서 생기는<br />삼출액이나 체액의 배출로<br /><span class="pico-fractat-benefit-emphasis">빠른 회복 가능</span></span></p></article>
+            <article class="pico-fractat-benefit"><span class="pico-benefit-icon pico-benefit-icon--4" aria-hidden="true"></span><p class="pico-fractat-benefit-text scroll-reveal" data-reveal data-reveal-distance="30px"><span class="pico-text-desktop">주변 혈관의 활성도 증가로 <span class="pico-fractat-benefit-emphasis">면역세포 활성 증진</span></span><span class="pico-text-mobile">주변 혈관의<br />활성도 증가로<br /><span class="pico-fractat-benefit-emphasis">면역세포 활성 증진</span></span></p></article>
           </div>
           <div class="pico-fractat-recommend">
             <div class="pico-fractat-recommend-copy">
@@ -276,9 +280,12 @@
                 <div class="pico-media-placeholder pico-media-placeholder--comfort-1" aria-hidden="true"></div>
               </div>
               <div class="pico-comfort-copy-box">
-                <div class="pico-comfort-copy">
+              <div class="pico-comfort-copy">
                 <h4>4대의 피코 레이저로 효율적인 운영</h4>
-                <p>어디서도 보기 힘든 4대의 피코레이저 운영으로 시술 효율을<br />높이고, 532-1064nm 파장을 활용해 다양한 색소 제거<br />치료가 가능합니다.</p>
+                <p>
+                  <span class="pico-text-desktop">어디서도 보기 힘든 4대의 피코레이저 운영으로 시술 효율을 높이고,<br />532-1064nm 파장을 활용해 다양한 색소 제거 치료가 가능합니다.</span>
+                  <span class="pico-text-mobile">어디서도 보기 힘든 4대의 피코레이저 운영으로 시술 효율을<br />높이고, 532-1064nm 파장을 활용해 다양한 색소 제거<br />치료가 가능합니다.</span>
+                </p>
                 </div>
               </div>
             </article>
@@ -289,9 +296,12 @@
                 </div>
               </div>
               <div class="pico-comfort-copy-box">
-                <div class="pico-comfort-copy">
+              <div class="pico-comfort-copy">
                 <h4>맞춤형 레이저 사용으로 정확한 시술</h4>
-                <p>단일 레이저가 아닌, 프렉셔널 레이저와 피코 레이저를<br />병행한 개인 맞춤형 시술을 진행해 보다 효과적으로 문신을<br />제거합니다.</p>
+                <p>
+                  <span class="pico-text-desktop">단일 레이저가 아닌, 프렉셔널 레이저와 피코 레이저를 병행한<br />개인 맞춤형 시술을 진행해 보다 효과적으로 문신을 제거합니다.</span>
+                  <span class="pico-text-mobile">단일 레이저가 아닌, 프렉셔널 레이저와 피코 레이저를<br />병행한 개인 맞춤형 시술을 진행해 보다 효과적으로 문신을<br />제거합니다.</span>
+                </p>
                 </div>
               </div>
             </article>
@@ -302,23 +312,19 @@
                 </div>
               </div>
               <div class="pico-comfort-copy-box">
-                <div class="pico-comfort-copy">
+              <div class="pico-comfort-copy">
                 <h4>프렉타트 기법으로 더욱 뛰어난 효과</h4>
-                <p>프렉셔널 레이저 조사로 주변 혈관과 면역세포의 활성화를<br />유도해 시술 효과를 높이며, 흉터 예방과 빠른 회복을 기대할<br />수 있습니다.</p>
+                <p>
+                  <span class="pico-text-desktop">프렉셔널 레이저 조사로 주변 혈관과 면역세포의 활성화를 유도해<br />시술 효과를 높이며, 흉터 예방과 빠른 회복을 기대할 수 있습니다.</span>
+                  <span class="pico-text-mobile">프렉셔널 레이저 조사로 주변 혈관과 면역세포의 활성화를<br />유도해 시술 효과를 높이며, 흉터 예방과 빠른 회복을 기대할<br />수 있습니다.</span>
+                </p>
                 </div>
               </div>
             </article>
           </div>
           <div class="pico-comfort-marquee" aria-hidden="true">
-            <div class="pico-comfort-marquee-run">
-              <span class="pico-comfort-marquee-text"> COMFORT PLASTIC </span>
-              <span class="pico-comfort-marquee-text"> COMFORT PLASTIC </span>
-              <span class="pico-comfort-marquee-text"> COMFORT PLASTIC </span>
-            </div>
-            <div class="pico-comfort-marquee-run pico-comfort-marquee-run--alt">
-              <span class="pico-comfort-marquee-text"> COMFORT PLASTIC </span>
-              <span class="pico-comfort-marquee-text"> COMFORT PLASTIC </span>
-              <span class="pico-comfort-marquee-text"> COMFORT PLASTIC </span>
+            <div class="pico-comfort-marquee-track">
+              <span class="pico-comfort-marquee-text">COMFORT PLASTIC</span>
             </div>
           </div>
         </div>
@@ -551,6 +557,7 @@
   <script src="../../js/common/desktop-scale.js"></script>
   <script src="../../js/common/header-menu.js"></script>
   <script src="../../js/common/scroll-reveal.js"></script>
+  <script src="../../js/common/reservation-modal.js"></script>
   <script src="../../js/tattoo-subpage.js"></script>
 </body>
 </html>

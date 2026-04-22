@@ -11,6 +11,7 @@
     var resultTimerId = null;
     var currentResultIndex = 0;
     var resultScrollSyncTimerId = null;
+    var differenceMarqueeResizeTimerId = null;
 
     function getResultCardOffsetLeft(card) {
       return card ? card.offsetLeft : 0;
@@ -156,6 +157,45 @@
       }
     }
 
+    function initDifferenceMarquee() {
+      var $marquee = $(".tattoo-difference-marquee");
+      var $track = $marquee.find(".tattoo-difference-marquee-track");
+      var $source = $track.find(".tattoo-difference-marquee-text").first();
+      var sourceText;
+
+      if (!$marquee.length || !$track.length || !$source.length) {
+        return;
+      }
+
+      sourceText = $.trim($source.text());
+
+      function renderDifferenceMarquee() {
+        var marqueeWidth = ($marquee.get(0) && $marquee.get(0).clientWidth) || window.innerWidth || 0;
+        var textNode = $track.find(".tattoo-difference-marquee-text").first().get(0);
+        var textWidth = textNode ? textNode.getBoundingClientRect().width || textNode.scrollWidth || 1 : 1;
+        var repeatCount = Math.max(2, Math.ceil((marqueeWidth * 1.25) / Math.max(textWidth, 1)));
+        var items = [];
+        var i;
+
+        for (i = 0; i < repeatCount; i += 1) {
+          items.push('<span class="tattoo-difference-marquee-text">' + sourceText + "</span>");
+        }
+
+        $track.html(items.join("") + items.join(""));
+        $track.get(0).style.setProperty("--tattoo-marquee-duration", (repeatCount * 18) + "s");
+      }
+
+      renderDifferenceMarquee();
+
+      $(window).on("resize", function () {
+        if (differenceMarqueeResizeTimerId) {
+          window.clearTimeout(differenceMarqueeResizeTimerId);
+        }
+
+        differenceMarqueeResizeTimerId = window.setTimeout(renderDifferenceMarquee, 120);
+      });
+    }
+
     if ($faqItems.length) {
       $faqItems.each(function (index) {
         var $item = $(this);
@@ -186,18 +226,37 @@
       });
     }
 
+    initDifferenceMarquee();
+
     if ($aftercareCards.length) {
-      $aftercareCards.on("click keydown", function (event) {
-        if (event.type === "keydown" && event.key !== "Enter" && event.key !== " ") {
+      var $aftercareGrid = $(".tattoo-aftercare-grid");
+      var $aftercareDefaultCard = $aftercareCards.filter(".is-active").first();
+
+      if (!$aftercareDefaultCard.length) {
+        $aftercareDefaultCard = $aftercareCards.first();
+      }
+
+      function setAftercareActive($card) {
+        if (!$card || !$card.length) {
           return;
         }
 
-        if (event.type === "keydown") {
-          event.preventDefault();
-        }
-
         $aftercareCards.removeClass("is-active");
-        $(this).addClass("is-active");
+        $card.addClass("is-active");
+      }
+
+      $aftercareCards.on("mouseenter focusin", function () {
+        setAftercareActive($(this));
+      });
+
+      $aftercareGrid.on("mouseleave focusout", function () {
+        window.setTimeout(function () {
+          if ($aftercareGrid.find(":focus").length) {
+            return;
+          }
+
+          setAftercareActive($aftercareDefaultCard);
+        }, 0);
       });
     }
 

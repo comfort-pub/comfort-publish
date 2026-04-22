@@ -10,10 +10,44 @@
   }
 }
 
+@keyframes tattoo-sedation-progress-fill-vertical {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scaleY(0);
+  }
+
+  12% {
+    opacity: 0.85;
+  }
+
+  100% {
+    opacity: 0.85;
+    transform: translateX(-50%) scaleY(1);
+  }
+}
+
+@keyframes tattoo-sedation-progress-dot-vertical {
+  0% {
+    top: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.45);
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 100%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 @media (max-width: 800px) {
   .page--tattoo-overview .page-section,
   .page--tattoo-overview #sec7 {
-    scroll-margin-top: 84px;
+    scroll-margin-top: calc(84px + var(--mobile-header-safe-top, 0px));
   }
 
   .tattoo-hero-content {
@@ -87,6 +121,39 @@
 
   .tattoo-sedation-steps::before {
     display: none;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-progress {
+    display: none;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-steps.scroll-reveal,
+  .page--tattoo-overview .tattoo-sedation-steps.scroll-reveal.is-visible {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+    animation: none;
+    transition: none;
+    will-change: auto;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-step {
+    opacity: 1;
+    animation: none;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-step:nth-of-type(2),
+  .page--tattoo-overview .tattoo-sedation-step:nth-of-type(3) {
+    opacity: 1;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-step-text {
+    opacity: 1;
+    transform: none;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-steps.is-visible .tattoo-sedation-step-text {
+    animation: none;
   }
 
   .tattoo-summary {
@@ -403,30 +470,36 @@
 
   .page--tattoo-overview .tattoo-difference-marquee-track {
     position: relative;
-    display: block;
-    width: 100vw;
+    display: flex;
+    align-items: center;
+    width: max-content;
     height: 100%;
-    animation: none;
+    animation: tattoo-difference-roll var(--tattoo-marquee-duration, 18s) linear infinite;
+    will-change: transform;
   }
 
   .page--tattoo-overview .tattoo-difference-marquee-text {
-    position: absolute;
-    top: 50%;
-    left: 0;
+    position: static;
+    top: auto;
+    left: auto;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
     width: auto;
     justify-content: flex-start;
-    padding-right: 0;
+    padding-right: calc(var(--overview-mobile-unit) * 48);
     color: #26323b;
     font-size: 100px;
     letter-spacing: -5px;
     line-height: 1;
-    transform: translate3d(100vw, -50%, 0);
-    animation: tattoo-difference-roll-mobile 12s linear infinite;
-    will-change: transform;
+    transform: none;
+    animation: none;
+    will-change: auto;
+    white-space: nowrap;
   }
 
   .page--tattoo-overview .tattoo-difference-marquee-text:nth-child(2) {
-    animation-delay: -6s;
+    animation-delay: 0s;
   }
 
   .page--tattoo-overview .tattoo-result-panel {
@@ -1131,6 +1204,17 @@
   .page--tattoo-overview .tattoo-sedation {
     padding-top: 132px;
     padding-bottom: 130px;
+  }
+
+  .page--tattoo-overview .tattoo-sedation .detail-btn-common {
+    width: calc(var(--overview-mobile-unit) * 220);
+    height: calc(var(--overview-mobile-unit) * 70);
+    margin-top: calc(var(--overview-mobile-unit) * 0);
+    margin-bottom: calc(var(--overview-mobile-unit) * 130);
+    padding: calc(var(--overview-mobile-unit) * 24) calc(var(--overview-mobile-unit) * 35);
+    border-radius: calc(var(--overview-mobile-unit) * 35);
+    gap: calc(var(--overview-mobile-unit) * 23);
+    font-size: calc(var(--overview-mobile-unit) * 24.5);
   }
 
   .page--tattoo-overview .tattoo-sedation-title,
@@ -1920,12 +2004,11 @@
   }
 
   .page--tattoo-overview .tattoo-difference-marquee-track {
-    position: relative;
     display: flex;
     align-items: center;
     width: max-content;
     height: 100%;
-    animation: tattoo-difference-roll 12s linear infinite;
+    animation: tattoo-difference-roll var(--tattoo-marquee-duration, 18s) linear infinite;
     will-change: transform;
   }
 
@@ -2061,7 +2144,7 @@
   }
 
   .page--tattoo-overview .tattoo-aftercare-copy .section-desc-common {
-    width: calc(var(--overview-mobile-unit) * 491);
+    /*width: calc(var(--overview-mobile-unit) * 491);*/
     margin: calc(var(--overview-mobile-unit) * 52) auto 0;
     font-size: var(--overview-mobile-desc-size);
     line-height: 1.45;

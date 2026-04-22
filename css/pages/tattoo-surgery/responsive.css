@@ -42,7 +42,7 @@
 @media (max-width: 800px) {
   .page--tattoo-surgery .page-section,
   .page--tattoo-surgery #sec7 {
-    scroll-margin-top: 84px;
+    scroll-margin-top: calc(84px + var(--mobile-header-safe-top, 0px));
   }
 
   .tattoo-surgery-recommend-list,

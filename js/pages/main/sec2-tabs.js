@@ -4,6 +4,7 @@
 
   site.modules.initMainSec2Tabs = function initMainSec2Tabs(options) {
     var $tabs = options.tabs;
+    var $detailBtn = options.detailBtn;
     var $image = options.image;
     var $marquee = options.marquee;
     var $mainTitle = options.mainTitle;
@@ -12,6 +13,7 @@
     var $serviceDesc = options.serviceDesc;
     var tabsData = options.tabsData || {};
     var mobileImage = "./assets/images/main/remove_mo.png";
+    var activeTabKey = options.defaultTabKey || "pico";
 
     function getTabImage(currentTab) {
       if (window.matchMedia("(max-width: 800px)").matches) {
@@ -22,6 +24,14 @@
     }
 
     function renderServiceDesc(currentTab) {
+      var isMobile = window.matchMedia("(max-width: 800px)").matches;
+      var serviceDescHtml = isMobile ? currentTab.serviceDescHtmlMobile : currentTab.serviceDescHtmlDesktop;
+
+      if (serviceDescHtml) {
+        $serviceDesc.html(serviceDescHtml);
+        return;
+      }
+
       if (currentTab.serviceDescHtml) {
         $serviceDesc.html(currentTab.serviceDescHtml);
         return;
@@ -42,12 +52,17 @@
 
     function renderTab(tabKey) {
       var currentTab = tabsData[tabKey];
+      var hideDetailBtn = tabKey === "semi" || tabKey === "scalp";
 
       if (!currentTab) {
         return;
       }
 
-      $tabs.closest("#sec2").toggleClass("is-scallp-desc", tabKey === "scalp");
+      activeTabKey = tabKey;
+
+      $tabs.closest("#sec2")
+        .toggleClass("is-scallp-desc", tabKey === "scalp")
+        .toggleClass("is-sec2-detail-hidden", hideDetailBtn);
 
       $mainTitle.html(renderMainTitle(currentTab.mainTitleParts));
       $mainTitleClone.html(renderMainTitle(currentTab.mainTitleParts));
@@ -72,6 +87,10 @@
 
     $tabs.on("click", "button", function () {
       renderTab($(this).data("tab"));
+    });
+
+    $(window).on("resize", function () {
+      renderTab(activeTabKey);
     });
 
     renderTab(options.defaultTabKey || "pico");

@@ -82,7 +82,7 @@
 @media (max-width: 800px) {
   .page--tattoo-pico .page-section,
   .page--tattoo-pico #sec7 {
-    scroll-margin-top: 84px;
+    scroll-margin-top: calc(84px + var(--mobile-header-safe-top, 0px));
   }
 
   .pico-intro-layout,
@@ -261,6 +261,8 @@
   }
 
   .page--tattoo-pico .pico-video-placeholder {
+    position: relative;
+    overflow: hidden;
     order: 2;
     width: var(--pico-mobile-shell);
     min-height: 0;
@@ -269,6 +271,17 @@
     aspect-ratio: 720 / 480;
     border-radius: calc(var(--pico-mobile-unit) * 20);
     font-size: calc(var(--pico-mobile-unit) * 54);
+  }
+
+  .page--tattoo-pico .pico-video-placeholder-media {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    pointer-events: none;
   }
 
   .page--tattoo-pico .pico-intro-kicker {
@@ -466,6 +479,21 @@
     text-align: center;
     white-space: nowrap;
     transform: translateX(-50%);
+  }
+
+  .page--tattoo-pico .pico-comfort-marquee-track {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--pico-comfort-marquee-gap);
+    width: max-content;
+    white-space: nowrap;
+    will-change: transform;
+    animation: pico-comfort-marquee-scroll 22s linear infinite;
+  }
+
+  .page--tattoo-pico .pico-comfort-marquee-text {
+    display: block;
+    flex: 0 0 auto;
   }
 
   .page--tattoo-pico .pico-comfort-section {

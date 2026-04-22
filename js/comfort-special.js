@@ -18,6 +18,13 @@ $(function () {
     });
   }
 
+  if (typeof modules.initScrollReveal === "function") {
+    modules.initScrollReveal({
+      root: document,
+      selector: ".comfort-feature-copy[data-reveal]"
+    });
+  }
+
   var $body = $("body");
   var $tattooFloatingActions = $(".tattoo-floating-actions");
 
@@ -116,7 +123,8 @@ $(function () {
   var animatedTargets = [
     document.querySelector(".comfort-proof-stats"),
     document.querySelector(".comfort-story-grid"),
-    document.querySelector(".comfort-cta-grid")
+    document.querySelector(".comfort-cta-grid"),
+    document.querySelector(".comfort-difference-grid")
   ].filter(Boolean);
 
   var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;

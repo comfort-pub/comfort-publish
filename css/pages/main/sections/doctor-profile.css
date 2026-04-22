@@ -37,6 +37,7 @@
   width: 568px;
   margin-top: 55px;
   margin-left: -1px;
+  overflow: hidden;
   font-family: "Noto Serif KR", serif;
   font-size: var(--main-subtitle-font-size);
   font-weight: 400;
@@ -45,6 +46,21 @@
   color: #333;
   word-break: keep-all;
   white-space: nowrap;
+}
+
+#sec4 .sec4-quote-text {
+  display: inline-block;
+  clip-path: inset(0 100% 0 0);
+  opacity: 0.15;
+  will-change: clip-path, opacity;
+  transition:
+    clip-path 2s cubic-bezier(0.22, 1, 0.36, 1) 0.1s,
+    opacity 0.05s ease 0.08s;
+}
+
+#sec4 .sec4-copy--top.is-visible .sec4-quote-text {
+  clip-path: inset(0);
+  opacity: 1;
 }
 
 #sec4 .sec4-highlight {

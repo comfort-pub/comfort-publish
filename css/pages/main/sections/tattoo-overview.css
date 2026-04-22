@@ -208,6 +208,10 @@
   content: none;
 }
 
+#sec2.is-sec2-detail-hidden .sec2-detail-btn {
+  display: none;
+}
+
 #sec2 .sec2-tabs {
   position: static;
   width: var(--sec2-tabs-total-width);

@@ -313,7 +313,7 @@
 }
 
 .tattoo-surgery-recommend {
-  padding: 72px 0;
+  padding: 150px 0;
   background: #fff;
   border-bottom: 1px solid rgba(17, 25, 34, 0.06);
 }
@@ -368,6 +368,23 @@
   border-radius: 10px;
   background: #f5f5f5;
   text-align: center;
+}
+
+.page--tattoo-surgery .tattoo-surgery-recommend-card.scroll-reveal {
+  opacity: 0;
+  translate: 0 var(--reveal-distance, 34px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    translate 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, translate;
+}
+
+.page--tattoo-surgery .tattoo-surgery-recommend-card.scroll-reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+  animation: none;
+  will-change: auto;
 }
 
 .page--tattoo-surgery .pico-feature-icon {

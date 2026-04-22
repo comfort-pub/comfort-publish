@@ -19,7 +19,8 @@ window.ComfortSite.pages.main = {
       image: "./assets/images/main/removal_pc.png",
       mainTitleParts: ["두피 상태에 맞춰", "안전하게 진행하는 문신제거"],
       serviceTitle: "두피 문신제거",
-      serviceDescHtml: "잘못되었거나 번진 두피 문신도<br>두피와 머리카락의 손상을 최소화하여 시술합니다."
+      serviceDescHtmlDesktop: "잘못되었거나 번진 두피 문신도 두피와 머리카락의 손상을 최소화하여 시술합니다.",
+      serviceDescHtmlMobile: "잘못되었거나 번진 두피 문신도<br />두피와 머리카락의 손상을 최소화하여 시술합니다."
     },
     surgical: {
       image: "./assets/images/main/removal_pc.png",

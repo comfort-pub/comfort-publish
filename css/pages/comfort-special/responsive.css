@@ -12,7 +12,7 @@
 
   .page--comfort-special .page-section,
   .page--comfort-special #sec7 {
-    scroll-margin-top: 84px;
+    scroll-margin-top: calc(84px + var(--mobile-header-safe-top, 0px));
   }
 
   .page--comfort-special #wrap,

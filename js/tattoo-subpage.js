@@ -20,6 +20,7 @@ $(function () {
 
   var $body = $("body");
   var $tattooFloatingActions = $(".tattoo-floating-actions");
+  var picoComfortMarqueeResizeTimerId = null;
 
   $tattooFloatingActions.each(function () {
     var $menu = $(this).find(".tattoo-floating-menu");
@@ -38,6 +39,55 @@ $(function () {
 
   function isDesktopQuickMenu() {
     return window.matchMedia("(min-width: 801px)").matches;
+  }
+
+  function initPicoComfortMarquee() {
+    var $marquee = $(".pico-comfort-marquee");
+    var $track = $marquee.find(".pico-comfort-marquee-track");
+    var $source = $track.find(".pico-comfort-marquee-text").first();
+    var sourceText;
+
+    if (!$marquee.length || !$track.length || !$source.length) {
+      return;
+    }
+
+    sourceText = $.trim($source.text());
+
+    function renderMarquee() {
+      var marqueeNode = $marquee.get(0);
+      var sourceNode = $track.find(".pico-comfort-marquee-text").first().get(0);
+      var marqueeWidth;
+      var sourceWidth;
+      var repeatCount;
+      var items = [];
+      var textHtml;
+      var i;
+
+      if (!marqueeNode || !sourceNode) {
+        return;
+      }
+
+      marqueeWidth = marqueeNode.clientWidth || window.innerWidth || 0;
+      sourceWidth = sourceNode.getBoundingClientRect().width || sourceNode.scrollWidth || 1;
+      repeatCount = Math.max(4, Math.ceil((marqueeWidth * 1.35) / Math.max(sourceWidth, 1)));
+      textHtml = $("<div>").text(sourceText).html();
+
+      for (i = 0; i < repeatCount; i += 1) {
+        items.push('<span class="pico-comfort-marquee-text">' + textHtml + "</span>");
+      }
+
+      $track.html(items.join("") + items.join(""));
+    }
+
+    renderMarquee();
+
+    $(window).on("resize", function () {
+      if (picoComfortMarqueeResizeTimerId) {
+        window.clearTimeout(picoComfortMarqueeResizeTimerId);
+      }
+
+      picoComfortMarqueeResizeTimerId = window.setTimeout(renderMarquee, 120);
+    });
   }
 
   function setQuickMenuOpen(isOpen) {
@@ -93,4 +143,6 @@ $(function () {
       selector: "[data-reveal]"
     });
   }
+
+  initPicoComfortMarquee();
 });

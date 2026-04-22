@@ -28,6 +28,7 @@ $(function () {
       mainTitleClone: $("#sec2MainTitleClone"),
       serviceTitle: $("#sec2ServiceTitle"),
       serviceDesc: $("#sec2ServiceDesc"),
+      detailBtn: $("#sec2 .sec2-detail-btn"),
       tabsData: mainPage.sec2Tabs,
       defaultTabKey: "pico"
     });
@@ -131,6 +132,33 @@ $(function () {
       $body.addClass("main-hero-intro-ready");
     });
   });
+
+  (function initSec5Highlight() {
+    var sec5 = document.getElementById("sec5");
+
+    if (!sec5) {
+      return;
+    }
+
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    if (typeof window.IntersectionObserver !== "function") {
+      sec5.classList.add("is-highlight-active");
+      return;
+    }
+
+    var observer = new window.IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        sec5.classList.toggle("is-highlight-active", entry.isIntersecting);
+      });
+    }, {
+      threshold: 0.28
+    });
+
+    observer.observe(sec5);
+  })();
 
   $("[data-scroll-top]").on("click", function () {
     window.scrollTo({

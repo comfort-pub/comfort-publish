@@ -57,6 +57,7 @@
 }
 
 #sec3 .sec3-card {
+  --sec3-card-radius: 28px;
   position: relative;
   flex: 266 1 0;
   min-width: 0;
@@ -64,12 +65,10 @@
   padding: 34px;
   display: flex;
   align-items: flex-end;
-  border-radius: 25px;
+  border-radius: var(--sec3-card-radius);
+  clip-path: inset(0 round var(--sec3-card-radius));
   overflow: hidden;
   cursor: pointer;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   transition:
     flex-grow 0.35s ease,
     transform 0.25s ease,
@@ -113,6 +112,7 @@
   background: rgba(8, 10, 14, 0.72);
   z-index: 1;
   transition: background 0.3s ease;
+  clip-path: inset(0 round var(--sec3-card-radius));
 }
 
 #sec3 .sec3-card-media {
@@ -121,6 +121,8 @@
   display: block;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
+  clip-path: inset(0 round var(--sec3-card-radius));
 }
 
 #sec3 .sec3-card-image {
@@ -128,6 +130,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  clip-path: inset(0 round var(--sec3-card-radius));
 }
 
 #sec3 .sec3-card-copy {
@@ -174,6 +177,13 @@
     max-height 0.35s ease;
 }
 
+#sec3 .sec3-card-desc-note {
+  display: inline-block;
+  font-size: 0.78em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
 #sec3 .sec3-card--experience .sec3-card-copy {
   width: 350px;
 }
@@ -201,11 +211,6 @@
 #sec3 .sec3-card.is-active .sec3-card-title,
 #sec3 .sec3-card.is-active .sec3-card-desc {
   color: #2f2f2f;
-}
-
-#sec3 .sec3-card--experience {
-  background-image: url("../../../../assets/images/main/sec3-experience-card.png");
-  background-position: center;
 }
 
 #sec3 .sec3-card-list:hover .sec3-card--experience::before,
@@ -246,11 +251,6 @@
   color: #2f2f2f;
 }
 
-#sec3 .sec3-card--pain-care {
-  background-image: url("../../../../assets/images/main/sec3-pain-care-card.png");
-  background-position: center;
-}
-
 #sec3 .sec3-card--pain-care::before {
   background: rgba(8, 10, 14, 0.72);
 }
@@ -261,11 +261,6 @@
   background: rgba(255, 255, 255, 0);
 }
 
-#sec3 .sec3-card--pico-laser {
-  background-image: url("../../../../assets/images/main/sec3-pico-laser-card.png");
-  background-position: center;
-}
-
 #sec3 .sec3-card--pico-laser::before {
   background: rgba(8, 10, 14, 0.72);
 }
@@ -274,11 +269,6 @@
 #sec3 .sec3-card-list:hover .sec3-card--pico-laser:hover::before,
 #sec3 .sec3-card-list:focus-within .sec3-card--pico-laser:focus-visible::before {
   background: rgba(255, 255, 255, 0);
-}
-
-#sec3 .sec3-card--custom-care {
-  background-image: url("../../../../assets/images/main/sec3-custom-care-card.png");
-  background-position: center;
 }
 
 #sec3 .sec3-card--custom-care::before {

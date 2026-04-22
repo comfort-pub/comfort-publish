@@ -1,20 +1,15 @@
 @media (max-width: 800px) {
   :root {
     --main-mobile-base-width: max(100vw, 320px);
-    --mobile-header-base-width: var(--main-mobile-base-width);
-    --mobile-header-height: calc(var(--mobile-header-base-width) * 110 / 800);
     --mobile-header-safe-top: env(safe-area-inset-top, 0px);
-    --mobile-header-offset: calc(var(--mobile-header-height) + var(--mobile-header-safe-top));
-  }
-
-  .mobile-top-banner {
-    display: block;
-    height: var(--mobile-header-safe-top);
-    background: #fff;
+    --mobile-header-base-width: var(--main-mobile-base-width);
+    --mobile-header-visual-height: calc(var(--mobile-header-base-width) * 110 / 800);
+    --mobile-header-height: calc(var(--mobile-header-visual-height) + var(--mobile-header-safe-top));
+    --mobile-header-offset: var(--mobile-header-height);
   }
 
   .header {
-    height: var(--mobile-header-height);
+    height: var(--mobile-header-visual-height);
   }
 
   .header .inner {
@@ -530,24 +525,19 @@
 @media (max-width: 800px) {
   :root {
     --main-mobile-base-width: max(100vw, 320px);
+    --mobile-header-safe-top: env(safe-area-inset-top, 0px);
     --mobile-header-base-width: var(--main-mobile-base-width);
     --mobile-header-unit: calc(var(--mobile-header-base-width) / 800);
-    --mobile-header-height: calc(var(--mobile-header-unit) * 110);
-    --mobile-header-safe-top: env(safe-area-inset-top, 0px);
-    --mobile-header-offset: calc(var(--mobile-header-height) + var(--mobile-header-safe-top));
+    --mobile-header-visual-height: calc(var(--mobile-header-unit) * 110);
+    --mobile-header-height: calc(var(--mobile-header-visual-height) + var(--mobile-header-safe-top));
+    --mobile-header-offset: var(--mobile-header-height);
     --sec7-mobile-base-width: var(--main-mobile-base-width);
     --sec7-mobile-unit: calc(var(--sec7-mobile-base-width) / 800);
     --sec7-mobile-shell: calc(var(--sec7-mobile-unit) * 720);
   }
 
-  .mobile-top-banner {
-    display: block;
-    height: var(--mobile-header-safe-top);
-    background: #fff;
-  }
-
   .header {
-    height: var(--mobile-header-height);
+    height: var(--mobile-header-visual-height);
   }
 
   .header .inner {
@@ -1130,6 +1120,13 @@
     justify-self: center;
   }
 
+  #sec2.is-sec2-detail-hidden .sec2-detail-btn {
+    display: inline-flex;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
   #sec2 .sec2-tabs {
     grid-row: 7;
     position: static;
@@ -1275,22 +1272,6 @@
     padding: calc(var(--main-mobile-base-width) * 16 / 800) calc(var(--main-mobile-base-width) * 40 / 800) calc(var(--main-mobile-base-width) * 40 / 800);
   }
 
-  #sec3 .sec3-card--experience {
-    background-image: url("../../../assets/images/main/experience_mo.png");
-  }
-
-  #sec3 .sec3-card--pain-care {
-    background-image: url("../../../assets/images/main/care_system_mo.png");
-  }
-
-  #sec3 .sec3-card--pico-laser {
-    background-image: url("../../../assets/images/main/pico_mo.png");
-  }
-
-  #sec3 .sec3-card--custom-care {
-    background-image: url("../../../assets/images/main/custom_mo.png");
-  }
-
   #sec3 .sec3-card::before {
     content: "";
     background: rgba(8, 10, 14, 0.72);
@@ -1391,6 +1372,10 @@
     letter-spacing: normal;
     text-align: left;
     color: #fff;
+  }
+
+  #sec3 .sec3-card-desc-note {
+    font-size: 0.78em;
   }
 
   #sec3 .sec3-card.is-active .sec3-card-desc,

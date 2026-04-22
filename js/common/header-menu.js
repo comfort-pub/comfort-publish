@@ -41,11 +41,59 @@
     var navigationMenus = options.navigationMenus || {};
     var defaultMenuKey = options.defaultMenuKey || "intro";
     var mobileQuery = window.matchMedia ? window.matchMedia("(max-width: 1024px)") : null;
+    var desktopHeaderBreakpoint = 800;
     var lastOpenMenuKey = defaultMenuKey;
     var lockedScrollTop = 0;
+    var defaultHeaderLogoMenuGap = 432;
+    var defaultHeaderMenuGap = 167;
 
     function isMobileViewport() {
       return mobileQuery ? mobileQuery.matches : window.innerWidth <= 1024;
+    }
+
+    function isDesktopHeaderViewport() {
+      return (window.innerWidth || document.documentElement.clientWidth || 0) > desktopHeaderBreakpoint;
+    }
+
+    function syncDesktopHeaderLayout() {
+      var $headerInner = $headerArea.find(".header .inner");
+      var $logo = $headerInner.find(".logo").first();
+      var $desktopGnb = $headerInner.find(".gnb").first();
+      var $desktopMenuItems = $desktopGnb.find(".gnb-list > .gnb-item");
+
+      if (
+        !$headerInner.length ||
+        !$logo.length ||
+        !$desktopGnb.length ||
+        !$desktopMenuItems.length ||
+        !isDesktopHeaderViewport()
+      ) {
+        $headerInner.css({
+          "--header-logo-menu-gap": "",
+          "--header-menu-gap": ""
+        });
+        return;
+      }
+
+      var headerInnerNode = $headerInner.get(0);
+      var logoWidth = $logo.outerWidth() || 0;
+      var menuItemWidthTotal = 0;
+      var gapCount = Math.max($desktopMenuItems.length - 1, 0);
+
+      $desktopMenuItems.each(function () {
+        menuItemWidthTotal += $(this).outerWidth() || 0;
+      });
+
+      var availableGapSpace = headerInnerNode.clientWidth - logoWidth - menuItemWidthTotal;
+      var defaultGapSpace = defaultHeaderLogoMenuGap + (defaultHeaderMenuGap * gapCount);
+      var shrinkRatio = defaultGapSpace > 0 ? Math.min(1, Math.max(0, availableGapSpace / defaultGapSpace)) : 1;
+      var resolvedLogoMenuGap = Math.max(0, defaultHeaderLogoMenuGap * shrinkRatio);
+      var resolvedMenuGap = Math.max(0, defaultHeaderMenuGap * shrinkRatio);
+
+      $headerInner.css({
+        "--header-logo-menu-gap": resolvedLogoMenuGap.toFixed(2) + "px",
+        "--header-menu-gap": resolvedMenuGap.toFixed(2) + "px"
+      });
     }
 
     function getTopLevelMenus() {
@@ -318,6 +366,8 @@
       if (!isMobileViewport()) {
         closeMobileMenu();
       }
+
+      syncDesktopHeaderLayout();
     }
 
     if ($menuButton.length) {
@@ -390,5 +440,8 @@
     } else {
       $(window).on("resize", handleBreakpointChange);
     }
+
+    $(window).on("resize", syncDesktopHeaderLayout);
+    syncDesktopHeaderLayout();
   };
 })(window);
