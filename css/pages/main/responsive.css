@@ -8,6 +8,12 @@
     --mobile-header-offset: var(--mobile-header-height);
   }
 
+  @supports (padding-top: constant(safe-area-inset-top)) {
+    :root {
+      --mobile-header-safe-top: constant(safe-area-inset-top);
+    }
+  }
+
   .header {
     height: var(--mobile-header-visual-height);
   }
@@ -534,6 +540,12 @@
     --sec7-mobile-base-width: var(--main-mobile-base-width);
     --sec7-mobile-unit: calc(var(--sec7-mobile-base-width) / 800);
     --sec7-mobile-shell: calc(var(--sec7-mobile-unit) * 720);
+  }
+
+  @supports (padding-top: constant(safe-area-inset-top)) {
+    :root {
+      --mobile-header-safe-top: constant(safe-area-inset-top);
+    }
   }
 
   .header {
@@ -1692,7 +1704,6 @@
   }
 
   #sec6 .sec6-card-overlay-title {
-    width: calc(var(--main-mobile-base-width) * 300 / 800);
     min-height: 0;
     margin: 0 auto calc(var(--main-mobile-base-width) * 28 / 800);
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
@@ -1708,7 +1719,6 @@
   }
 
   #sec6 .sec6-card-overlay-desc {
-    width: calc(var(--main-mobile-base-width) * 302 / 800);
     min-height: 0;
     margin: 0;
     font-family: "Pretendard", "Noto Sans KR", sans-serif;

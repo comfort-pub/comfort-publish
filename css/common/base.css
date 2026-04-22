@@ -55,10 +55,30 @@ img {
 }
 
 @media (max-width: 800px) {
+  html::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--mobile-header-safe-top, 0px);
+    background: #fff;
+    pointer-events: none;
+    z-index: 101;
+  }
+
+  #wrap {
+    padding-top: var(--mobile-header-safe-top, 0px);
+  }
+
   .header-area {
     box-sizing: border-box;
-    padding-top: var(--mobile-header-safe-top, 0px);
-    background: #fff;
+    padding-top: 0;
+    background: transparent;
+  }
+
+  .header {
+    margin-top: var(--mobile-header-safe-top, 0px);
   }
 }
 
