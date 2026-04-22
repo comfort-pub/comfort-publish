@@ -2855,4 +2855,48 @@
   .page--tattoo-overview #sec7 .sec7-bottom-summary-chunk {
     margin-right: calc(var(--overview-mobile-unit) * 24);
   }
+
+  .page--tattoo-overview .tattoo-sedation-steps,
+  .page--tattoo-overview .tattoo-sedation-steps.scroll-reveal,
+  .page--tattoo-overview .tattoo-sedation-steps.scroll-reveal.is-visible {
+    opacity: 1 !important;
+    translate: 0 0 !important;
+    scale: 1 !important;
+    animation: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-steps::before {
+    display: block !important;
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-progress,
+  .page--tattoo-overview .tattoo-sedation-progress::before,
+  .page--tattoo-overview .tattoo-sedation-progress::after {
+    display: none !important;
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-step,
+  .page--tattoo-overview .tattoo-sedation-step:nth-of-type(2),
+  .page--tattoo-overview .tattoo-sedation-step:nth-of-type(3) {
+    opacity: 1 !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .page--tattoo-overview .tattoo-sedation-step-text,
+  .page--tattoo-overview .tattoo-sedation-steps.is-visible .tattoo-sedation-step-text,
+  .page--tattoo-overview .tattoo-sedation-step:nth-of-type(1) .tattoo-sedation-step-text,
+  .page--tattoo-overview .tattoo-sedation-step:nth-of-type(2) .tattoo-sedation-step-text,
+  .page--tattoo-overview .tattoo-sedation-step:nth-of-type(3) .tattoo-sedation-step-text {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
 }

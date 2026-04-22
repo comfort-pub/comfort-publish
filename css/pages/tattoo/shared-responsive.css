@@ -280,6 +280,10 @@
     display: none;
   }
 
+  :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special).quick-menu-open .tattoo-floating-top {
+    pointer-events: none;
+  }
+
   :is(.page--main, .page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #wrap,
   :is(.page--main, .page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) .page-tattoo-overview,
   :is(.page--main, .page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) .page-tattoo-pico-reference,

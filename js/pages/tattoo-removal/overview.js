@@ -230,18 +230,18 @@
 
     if ($aftercareCards.length) {
       var $aftercareGrid = $(".tattoo-aftercare-grid");
-      var $aftercareDefaultCard = $aftercareCards.filter(".is-active").first();
 
-      if (!$aftercareDefaultCard.length) {
-        $aftercareDefaultCard = $aftercareCards.first();
+      function clearAftercareActive() {
+        $aftercareCards.removeClass("is-active");
       }
 
       function setAftercareActive($card) {
         if (!$card || !$card.length) {
+          clearAftercareActive();
           return;
         }
 
-        $aftercareCards.removeClass("is-active");
+        clearAftercareActive();
         $card.addClass("is-active");
       }
 
@@ -255,7 +255,7 @@
             return;
           }
 
-          setAftercareActive($aftercareDefaultCard);
+          clearAftercareActive();
         }, 0);
       });
     }

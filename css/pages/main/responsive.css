@@ -853,6 +853,10 @@
   .page--main .floating-quick-top svg {
     display: none;
   }
+
+  .page--main.quick-menu-open .floating-quick-top {
+    pointer-events: none;
+  }
 }
 
 @media (max-width: 800px) {
