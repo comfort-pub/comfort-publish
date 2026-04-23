@@ -167,6 +167,10 @@
   pointer-events: none;
 }
 
+.pico-video-placeholder-media--mobile {
+  display: none;
+}
+
 .pico-intro-copy {
   padding-right: 0;
   white-space: nowrap;

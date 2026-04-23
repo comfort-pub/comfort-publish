@@ -284,6 +284,14 @@
     pointer-events: none;
   }
 
+  .page--tattoo-pico .pico-video-placeholder-media--desktop {
+    display: none;
+  }
+
+  .page--tattoo-pico .pico-video-placeholder-media--mobile {
+    display: block;
+  }
+
   .page--tattoo-pico .pico-intro-kicker {
     width: auto;
     max-width: none;
