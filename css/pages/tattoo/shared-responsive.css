@@ -569,7 +569,8 @@
   }
 
   :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary-link {
-    color: #aaa;
+    color: #5F86C1;
+    text-decoration: none;
   }
 
   :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery, .page--comfort-special) #sec7 .sec7-bottom-summary-copy {

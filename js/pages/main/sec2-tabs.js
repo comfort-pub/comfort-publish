@@ -12,15 +12,14 @@
     var $serviceTitle = options.serviceTitle;
     var $serviceDesc = options.serviceDesc;
     var tabsData = options.tabsData || {};
-    var mobileImage = "./assets/images/main/remove_mo.png";
     var activeTabKey = options.defaultTabKey || "pico";
 
     function getTabImage(currentTab) {
       if (window.matchMedia("(max-width: 800px)").matches) {
-        return mobileImage;
+        return currentTab.imageMo || currentTab.imageMobile || currentTab.imagePc || currentTab.image;
       }
 
-      return currentTab.image;
+      return currentTab.imagePc || currentTab.image;
     }
 
     function renderServiceDesc(currentTab) {

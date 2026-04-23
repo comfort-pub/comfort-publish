@@ -172,7 +172,7 @@
   max-width: calc(450px * var(--sec2-shell-scale));
   height: auto;
   margin: 0 0 calc(30px * var(--sec2-shell-scale));
-  font-size: calc(var(--main-body-font-size) * var(--sec2-shell-scale));
+  font-size: var(--main-body-font-size);
   color: #555;
   text-align: left;
   white-space: nowrap;

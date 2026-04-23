@@ -162,7 +162,7 @@
   min-height: 915px;
   background:
     linear-gradient(90deg, rgba(15, 22, 31, 0.52) 0%, rgba(15, 22, 31, 0.2) 48%, rgba(15, 22, 31, 0.38) 100%),
-    url("../../../assets/images/sub_pico_laser/DUL_2396 (1).png") no-repeat center center / cover;
+    url("../../../assets/images/sub_pico_laser/pico-detail.png") no-repeat center center / cover;
 }
 
 .tattoo-sub-hero-overlay {

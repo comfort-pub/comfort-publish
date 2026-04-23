@@ -962,7 +962,7 @@
     height: 866px;
     margin: 0;
     overflow: hidden;
-    background: url("../../../assets/images/sub_tatto_removal/Group 29_mo.png") no-repeat center bottom / 85% auto;
+    background: url("../../../assets/images/sub_tatto_removal/group-29-mo.png") no-repeat center bottom / 85% auto;
     transform: translateX(-50%);
     pointer-events: none;
     z-index: 1;
@@ -2658,7 +2658,7 @@
     align-items: start;
     column-gap: calc(var(--overview-mobile-unit) * 6);
     min-height: calc(var(--overview-mobile-unit) * 88);
-    padding: calc(var(--overview-mobile-unit) * 24) 0;
+    padding:  calc(var(--overview-mobile-unit) * 28)  calc(var(--overview-mobile-unit) * 25);
   }
 
   .page--tattoo-overview .tattoo-faq-prefix,
@@ -2686,10 +2686,21 @@
   }
 
   .page--tattoo-overview .tattoo-faq-panel {
-    padding: 0 calc(var(--overview-mobile-unit) * 48) calc(var(--overview-mobile-unit) * 28) calc(var(--overview-mobile-unit) * 52);
+    padding: 0;
   }
 
-  .page--tattoo-overview .tattoo-faq-panel p {
+  .page--tattoo-overview .tattoo-faq-answer {
+    grid-template-columns: calc(var(--overview-mobile-unit) * 52) minmax(0, 1fr);
+    align-items: center;
+    padding: calc(var(--overview-mobile-unit) * 28)  calc(var(--overview-mobile-unit) * 25);
+  }
+
+  .page--tattoo-overview .tattoo-faq-answer-prefix {
+    font-size: max(14px, calc(var(--overview-mobile-unit) * 24));
+    line-height: 1.9;
+  }
+
+  .page--tattoo-overview .tattoo-faq-answer-text {
     font-size: max(14px, calc(var(--overview-mobile-unit) * 19));
     line-height: 1.9;
   }

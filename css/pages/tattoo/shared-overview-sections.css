@@ -39,7 +39,7 @@
 
   :is(.page--tattoo-overview, .page--tattoo-pico, .page--tattoo-surgery) .tattoo-summary-card .tattoo-photo--summary-2 {
     background-image:
-      url("../../../assets/images/sub_tatto_removal/Group 29.png"),
+      url("../../../assets/images/sub_tatto_removal/group-29.png"),
       url("../../../assets/images/sub_tatto_removal/pico-back.png");
     background-size: 115% auto, cover;
     background-position: 25% 10%, center;

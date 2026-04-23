@@ -6,7 +6,7 @@
   --tattoo-navy: #101820;
   --tattoo-dark: #141d26;
   --tattoo-text: #222b38;
-  --tattoo-muted: #677589;
+  --tattoo-muted: #000000;
   --tattoo-line: rgba(27, 43, 62, 0.1);
   --tattoo-soft: #f5f7fa;
   --tattoo-soft-blue: #edf4fb;
@@ -70,13 +70,13 @@
 }
 
 .page--tattoo-overview .tattoo-difference-title.scroll-reveal.is-visible {
-  animation: tattoo-fade-in-down 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: tattoo-fade-in-down 2s cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: var(--reveal-delay, 0ms);
 }
 
 .page--tattoo-overview .tattoo-commitment-title.scroll-reveal.is-visible,
 .page--tattoo-overview .tattoo-process-row.scroll-reveal.is-visible {
-  animation: tattoo-fade-in-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: tattoo-fade-in-up 2s cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: var(--reveal-delay, 0ms);
 }
 
@@ -364,7 +364,7 @@
 }
 
 .tattoo-photo--equipment {
-  background-image: url("../../../assets/images/sub_tatto_removal/Group 29.png");
+  background-image: url("../../../assets/images/sub_tatto_removal/group-29.png");
   background-size: contain;
   background-color: #fff;
 }
@@ -1163,7 +1163,7 @@
   gap: 42px;
   justify-content: center;
   width: 984px;
-  margin: 70px auto 0;
+  margin: 90px auto 0;
   --tattoo-sedation-progress-duration: 4800ms;
   --tattoo-sedation-step-2-delay: 500ms;
   --tattoo-sedation-step-3-delay: 2100ms;
@@ -1590,7 +1590,7 @@
   align-items: center;
   width: 100%;
   min-height: 88px;
-  padding: 0;
+  padding-left: 25px;
   border: 0;
   background: transparent;
   color: var(--tattoo-text);
@@ -1646,11 +1646,12 @@
 }
 
 .tattoo-faq-panel {
-  padding: 0 48px 28px 52px;
+  padding: 0;
   overflow: hidden;
   opacity: 1;
   transition: height 320ms ease, opacity 240ms ease;
   will-change: height, opacity;
+  background-color: #ffffff;
 }
 
 .tattoo-faq-panel[hidden] {
@@ -1661,7 +1662,23 @@
   padding-bottom: 0;
 }
 
-.tattoo-faq-panel p {
+.tattoo-faq-answer {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  column-gap: 0;
+  align-items: center;
+  padding: 28px 25px;
+}
+
+.tattoo-faq-answer-prefix {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.9;
+}
+
+.tattoo-faq-answer-text {
+  margin: 0;
   color: var(--tattoo-muted);
   font-size: 19px;
   font-weight: 300;

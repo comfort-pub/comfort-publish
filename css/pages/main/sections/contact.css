@@ -640,7 +640,8 @@
 }
 
 #sec7 .sec7-bottom-summary-link {
-  color: inherit;
+  color: #5F86C1;
+  text-decoration: none;
 }
 
 #sec7 .sec7-bottom-summary-copy {
