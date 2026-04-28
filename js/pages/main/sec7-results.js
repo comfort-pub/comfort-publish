@@ -91,6 +91,7 @@
       var perView;
       var maxIndex;
       var cardWidth;
+      var trackGap;
       var translateX;
       var carouselWidth;
       var maxScrollLeft;
@@ -115,7 +116,8 @@
       carouselIndex = Math.min(carouselIndex, maxIndex);
       isMobile = window.matchMedia("(max-width: 800px)").matches;
       cardWidth = $cards.first().outerWidth(true);
-      translateX = -(carouselIndex * cardWidth);
+      trackGap = parseFloat(window.getComputedStyle($track[0]).columnGap || "0") || 0;
+      translateX = -(carouselIndex * (cardWidth + trackGap));
 
       if (isMobile) {
         $targetCard = $cards.eq(carouselIndex);

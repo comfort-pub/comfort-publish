@@ -120,6 +120,7 @@
 
 #sec7 .sec7-results-track {
   --sec7-gap: 32px;
+  --sec7-edge-buffer: 2px;
   display: flex;
   gap: var(--sec7-gap);
   transition: transform 0.45s ease;
@@ -127,8 +128,8 @@
 }
 
 #sec7 .sec7-result-card {
-  flex: 0 0 699px;
-  width: 699px;
+  flex: 0 0 calc((100% - var(--sec7-gap) - var(--sec7-edge-buffer)) / 2);
+  width: calc((100% - var(--sec7-gap) - var(--sec7-edge-buffer)) / 2);
   min-width: 0;
   display: flex;
   flex-direction: column;
