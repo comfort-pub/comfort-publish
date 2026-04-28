@@ -148,11 +148,41 @@
     }
   }
 
+  function getReturnFocusTarget(trigger) {
+    var $trigger = trigger && trigger.length ? trigger : $(trigger || []);
+    var $floatingActions;
+    var $floatingToggle;
+
+    if (!$trigger.length) {
+      return null;
+    }
+
+    $floatingActions = $trigger.closest(".floating-quick-actions, .tattoo-floating-actions");
+
+    if ($floatingActions.length) {
+      $floatingToggle = $floatingActions.find(".floating-quick-toggle, .tattoo-floating-toggle").first();
+
+      if ($floatingToggle.length) {
+        return $floatingToggle.get(0);
+      }
+    }
+
+    return $trigger.get(0);
+  }
+
   function focusFirstField($modal) {
     var $focusTarget = $modal.find(".reservation-modal__field").first();
 
     if ($focusTarget.length) {
       $focusTarget.trigger("focus");
+    }
+  }
+
+  function resetReservationForm($modal) {
+    var form = $modal.find(".reservation-modal__form").get(0);
+
+    if (form && typeof form.reset === "function") {
+      form.reset();
     }
   }
 
@@ -204,10 +234,11 @@
       closeTimer = null;
     }
 
-    lastTrigger = trigger && trigger.length ? trigger.get(0) : trigger || null;
+    lastTrigger = getReturnFocusTarget(trigger);
     lastPolicyTrigger = null;
     closeQuickMenus();
     closeMobileHeaderMenu();
+    resetReservationForm($modal);
     setReservationView($modal, "form");
     $modal.prop("hidden", false).attr("aria-hidden", "false");
     $("body").addClass("reservation-modal-open");
