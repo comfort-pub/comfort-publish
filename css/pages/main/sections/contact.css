@@ -115,6 +115,7 @@
 
 #sec7 .sec7-results-carousel {
   overflow: hidden;
+  padding-bottom: 2px;
   scroll-behavior: smooth;
 }
 
@@ -161,7 +162,7 @@
   margin: 0 auto 37px;
   font-size: 24px;
   font-weight: 500;
-  line-height: 1.05;
+  line-height: 1.25;
   text-align: center;
   letter-spacing: -0.6px;
   color: #1b2531;
@@ -224,7 +225,7 @@
   margin: 28px auto 0;
   font-size: 24px;
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.25;
   text-align: center;
   letter-spacing: -0.6px;
   color: #1b2531;

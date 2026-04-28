@@ -1857,7 +1857,7 @@
 
   #sec7 .sec7-result-card {
     flex: 0 0 calc(var(--main-mobile-base-width) * 719 / 800);
-    height: calc(var(--main-mobile-base-width) * 530 / 800);
+    min-height: calc(var(--main-mobile-base-width) * 530 / 800);
     margin: calc(var(--main-mobile-base-width) * 79 / 800) 0 calc(var(--main-mobile-base-width) * 43 / 800);
     padding: calc(var(--main-mobile-base-width) * 35 / 800) calc(var(--main-mobile-base-width) * 50 / 800) calc(var(--main-mobile-base-width) * 29 / 800);
     border-radius: calc(var(--main-mobile-base-width) * 20 / 800);
@@ -1884,7 +1884,7 @@
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.2;
+    line-height: 1.25;
     letter-spacing: calc(var(--main-mobile-base-width) * -0.75 / 800);
     text-align: center;
     color: #1b2531;
@@ -1908,7 +1908,7 @@
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.2;
+    line-height: 1.25;
     letter-spacing: calc(var(--main-mobile-base-width) * -0.75 / 800);
     text-align: center;
     color: #1b2531;
