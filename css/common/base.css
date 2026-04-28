@@ -55,6 +55,29 @@ img {
 }
 
 @media (max-width: 800px) {
+  :root {
+    --mobile-header-safe-top: env(safe-area-inset-top, 0px);
+  }
+
+  @supports (padding-top: constant(safe-area-inset-top)) {
+    :root {
+      --mobile-header-safe-top: constant(safe-area-inset-top);
+    }
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2147483647;
+    height: var(--mobile-header-safe-top, 0px);
+    background: #fff;
+    pointer-events: none;
+    transform: translateZ(0);
+  }
+
   #wrap {
     padding-top: env(safe-area-inset-top, 0px);
     padding-top: var(--mobile-header-safe-top, 0px);

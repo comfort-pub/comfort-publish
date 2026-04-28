@@ -46,7 +46,6 @@
     var lockedScrollTop = 0;
     var defaultHeaderLogoMenuGap = 432;
     var defaultHeaderMenuGap = 167;
-    var safeAreaRefreshTimerId = 0;
 
     function isMobileViewport() {
       return mobileQuery ? mobileQuery.matches : window.innerWidth <= 1024;
@@ -74,21 +73,6 @@
           window.scrollTo(0, currentScrollTop);
         });
       });
-    }
-
-    function scheduleMobileSafeAreaRefresh() {
-      if (safeAreaRefreshTimerId) {
-        window.clearTimeout(safeAreaRefreshTimerId);
-      }
-
-      if (!isMobileViewport()) {
-        return;
-      }
-
-      safeAreaRefreshTimerId = window.setTimeout(function () {
-        safeAreaRefreshTimerId = 0;
-        forceMobileSafeAreaRefresh();
-      }, 80);
     }
 
     function syncDesktopHeaderLayout() {
@@ -480,10 +464,6 @@
     $(window).on("resize", syncDesktopHeaderLayout);
     syncDesktopHeaderLayout();
 
-    if (document.readyState === "complete") {
-      scheduleMobileSafeAreaRefresh();
-    } else {
-      $(window).on("load", scheduleMobileSafeAreaRefresh);
-    }
+    forceMobileSafeAreaRefresh();
   };
 })(window);
